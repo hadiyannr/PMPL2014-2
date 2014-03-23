@@ -8,11 +8,10 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Kategori', 'url'=>array('index')),
-	array('label'=>'Create Kategori', 'url'=>array('create')),
-	array('label'=>'Update Kategori', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete Kategori', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Kategori', 'url'=>array('admin')),
+	array('label'=>'Daftar Kategori', 'url'=>array('index')),
+	array('label'=>'Buat Kategori', 'url'=>array('create')),
+	array('label'=>'Ubah Kategori', 'url'=>array('update', 'id'=>$model->id)),
+	array('label'=>'Hapus Kategori', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),	
 );
 ?>
 

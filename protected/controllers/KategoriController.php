@@ -116,22 +116,12 @@ class KategoriController extends Controller
 		if(!isset($_GET['ajax']))
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
 	}
-
-	/**
-	 * Lists all models.
-	 */
-	public function actionIndex()
-	{
-		$dataProvider=new CActiveDataProvider('Kategori');
-		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
-		));
-	}
+	
 
 	/**
 	 * Manages all models.
 	 */
-	public function actionAdmin()
+	public function actionIndex()
 	{
 		$model=new Kategori('search');
 		$model->unsetAttributes();  // clear any default values

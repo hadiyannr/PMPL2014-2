@@ -7,6 +7,8 @@
  * @property integer $id
  * @property string $waktuMulai
  * @property integer $durasi
+ * @property string $tanggal
+ * @property string $nama
  *
  * The followings are the available model relations:
  * @property Pengerjaantryout[] $pengerjaantryouts
@@ -30,11 +32,12 @@ class Tryout extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
+			array('waktuMulai, durasi, tanggal, nama', 'required'),
 			array('durasi', 'numerical', 'integerOnly'=>true),
-			array('waktuMulai', 'length', 'max'=>45),
+			array('nama', 'length', 'max'=>75),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, waktuMulai, durasi', 'safe', 'on'=>'search'),
+			array('id, waktuMulai, durasi, tanggal, nama', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -59,7 +62,9 @@ class Tryout extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'waktuMulai' => 'Waktu Mulai',
-			'durasi' => 'Durasi',
+			'durasi' => 'Durasi(menit)',
+			'tanggal' => 'Tanggal',
+			'nama' => 'Nama',
 		);
 	}
 
@@ -84,6 +89,8 @@ class Tryout extends CActiveRecord
 		$criteria->compare('id',$this->id);
 		$criteria->compare('waktuMulai',$this->waktuMulai,true);
 		$criteria->compare('durasi',$this->durasi);
+		$criteria->compare('tanggal',$this->tanggal,true);
+		$criteria->compare('nama',$this->nama,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

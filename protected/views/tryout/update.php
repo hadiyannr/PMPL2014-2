@@ -3,16 +3,15 @@
 /* @var $model Tryout */
 
 $this->breadcrumbs=array(
-	'Tryouts'=>array('index'),
+	'Tryout'=>array('index'),
 	$model->id=>array('view','id'=>$model->id),
-	'Update',
+	'Ubah',
 );
 
 $this->menu=array(
-	array('label'=>'List Tryout', 'url'=>array('index')),
-	array('label'=>'Create Tryout', 'url'=>array('create')),
-	array('label'=>'View Tryout', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage Tryout', 'url'=>array('admin')),
+	array('label'=>'Daftar Tryout', 'url'=>array('index')),
+	array('label'=>'Buat Tryout', 'url'=>array('create')),
+	array('label'=>'Lihat Tryout', 'url'=>array('view', 'id'=>$model->id)),	
 );
 ?>
 

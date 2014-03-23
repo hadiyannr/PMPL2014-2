@@ -3,16 +3,15 @@
 /* @var $model Tryout */
 
 $this->breadcrumbs=array(
-	'Tryouts'=>array('index'),
-	'Create',
+	'Tryout'=>array('index'),
+	'Buat',
 );
 
 $this->menu=array(
-	array('label'=>'List Tryout', 'url'=>array('index')),
-	array('label'=>'Manage Tryout', 'url'=>array('admin')),
+	array('label'=>'Daftar Tryout', 'url'=>array('index')),	
 );
 ?>
 
-<h1>Create Tryout</h1>
+<h1>Buat Tryout</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

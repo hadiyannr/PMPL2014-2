@@ -3,16 +3,15 @@
 /* @var $model Kategori */
 
 $this->breadcrumbs=array(
-	'Kategoris'=>array('index'),
-	'Create',
+	'Kategori'=>array('index'),
+	'Buat',
 );
 
 $this->menu=array(
-	array('label'=>'List Kategori', 'url'=>array('index')),
-	array('label'=>'Manage Kategori', 'url'=>array('admin')),
+	array('label'=>'Daftar Kategori', 'url'=>array('index')),	
 );
 ?>
 
-<h1>Create Kategori</h1>
+<h1>Buat Kategori</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

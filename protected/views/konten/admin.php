@@ -26,6 +26,12 @@ $('.search-form form').submit(function(){
 
 <h1>Manajemen Konten</h1>
 
+<?php echo CHtml::link('Pencarian Lanjutan','#',array('class'=>'search-button')); ?>
+<div class="search-form" style="display:none">
+<?php $this->renderPartial('_search',array(
+	'model'=>$model,
+)); ?>
+</div><!-- search-form -->
 
 
 
@@ -46,9 +52,3 @@ $('.search-form form').submit(function(){
 		),
 	),
 )); ?>
-<?php echo CHtml::link('Pencarian Lanjutan','#',array('class'=>'search-button')); ?>
-<div class="search-form" style="display:none">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
-</div><!-- search-form -->
