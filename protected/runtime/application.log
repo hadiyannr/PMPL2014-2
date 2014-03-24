@@ -697,3 +697,14 @@ Stack trace:
 #26 {main}
 REQUEST_URI=/siapmasukui/index.php/tryout/create
 ---
+2014/03/24 11:53:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "create".' in C:\xampp\htdocs\yiiframework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CController.php(270): CController->missingAction('create')
+#1 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('create')
+#2 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('soal/create')
+#3 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\siapmasukui\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/siapmasukui/index.php/soal/create
+HTTP_REFERER=http://localhost/siapmasukui/index.php/soal
+---
