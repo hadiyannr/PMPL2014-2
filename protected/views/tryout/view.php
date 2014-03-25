@@ -11,7 +11,7 @@ $this->menu=array(
 	array('label'=>'Daftar Tryout', 'url'=>array('index')),
 	array('label'=>'Buat Tryout', 'url'=>array('create')),
 	array('label'=>'Ubah Tryout', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Hapus Tryout', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Anda yakin akan menghapus tryout ini?')),	
+	array('label'=>'Hapus Tryout', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Anda yakin akan menghapus tryout ini?')),
 );
 ?>
 
@@ -25,4 +25,7 @@ $this->menu=array(
 		'waktuMulai',
 		'durasi',
 	),
-)); ?>
+));   
+    
+?>
+<?php echo CHtml::link('Daftar Soal',array('soal/index/','idTryout'=>$model->id));?>

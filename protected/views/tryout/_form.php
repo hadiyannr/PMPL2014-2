@@ -15,7 +15,7 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note">Isian bertanda <span class="required">*</span> wajib diisi.</p>
 
 	<?php echo $form->errorSummary($model); ?>
         
@@ -30,8 +30,8 @@
 		<?php echo $form->labelEx($model,'tanggal'); ?>
 		<?php 
                     $this->widget('zii.widgets.jui.CJuiDatePicker', array(
-                        'name' => CHtml::activeName($model, 'waktuMulai'),
-                        'value' => $model->attributes['waktuMulai'],
+                        'name' => CHtml::activeName($model, 'tanggal'),
+                        'value' => $model->attributes['tanggal'],
                         'options'=>array(
                                 'showAnim'=>'fold',
                                 'dateFormat'=>'yy-mm-dd',
@@ -67,7 +67,7 @@
 	
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton('Simpan'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

@@ -23,7 +23,6 @@
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('tanggal')); ?>:</b>
 	<?php echo CHtml::encode($data->tanggal); ?>
-	<br />
-
-
+	<br />        
+        
 </div>
