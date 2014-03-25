@@ -5,24 +5,12 @@
 
 <div class="view">
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('id')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('nomor')); ?>:</b>
+	<?php echo CHtml::link(CHtml::encode($data->nomor), array('view', 'nomor'=>$data->nomor)); ?>
 	<br />
         
         <b><?php echo CHtml::encode($data->getAttributeLabel('nama')); ?>:</b>
 	<?php echo CHtml::encode($data->nama); ?>
-	<br />
-        
-	<b><?php echo CHtml::encode($data->getAttributeLabel('waktuMulai')); ?>:</b>
-	<?php echo CHtml::encode($data->waktuMulai); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('durasi')); ?>:</b>
-	<?php echo CHtml::encode($data->durasi); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('tanggal')); ?>:</b>
-	<?php echo CHtml::encode($data->tanggal); ?>
-	<br />        
+	<br />        	
         
 </div>

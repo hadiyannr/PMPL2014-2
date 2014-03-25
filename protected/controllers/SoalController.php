@@ -22,7 +22,7 @@ class SoalController extends Controller
 	/**
 	 * Manages all models.
 	 */
-	public function actionIndex()
+	public function actionIndex($idTryout)
 	{
 		$model=new Soal('search');
 		$model->unsetAttributes();  // clear any default values
@@ -33,8 +33,8 @@ class SoalController extends Controller
 			'model'=>$model,
 		));
 	}
-	
-        /**
+
+	/**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
@@ -43,7 +43,7 @@ class SoalController extends Controller
 	 */
 	public function loadModel($id)
 	{
-		$model=Soal::model()->findByPk($id);
+		$model=Tryout::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;

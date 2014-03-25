@@ -21,47 +21,15 @@
         
         
         <div class="row">
-		<?php echo $form->labelEx($model,'nama'); ?>
-		<?php echo $form->textField($model,'nama'); ?>
-		<?php echo $form->error($model,'nama'); ?>
+		<?php echo $form->labelEx($model,'nomor'); ?>
+		<?php echo $form->textField($model,'nomor'); ?>
+		<?php echo $form->error($model,'nomor'); ?>
 	</div>
         
         <div class="row">
-		<?php echo $form->labelEx($model,'tanggal'); ?>
-		<?php 
-                    $this->widget('zii.widgets.jui.CJuiDatePicker', array(
-                        'name' => CHtml::activeName($model, 'tanggal'),
-                        'value' => $model->attributes['tanggal'],
-                        'options'=>array(
-                                'showAnim'=>'fold',
-                                'dateFormat'=>'yy-mm-dd',
-                        ),
-
-                     ));
-                ?>
-		<?php echo $form->error($model,'tanggal'); ?>
-	</div>
-        
-	<div class="row">
-		<?php echo $form->labelEx($model,'waktuMulai'); ?>
-		<?php 
-                    $this->widget('application.extensions.timepicker.timepicker', array(                        
-                        'model'=>$model,
-                        'name'=>'waktuMulai',
-                        'select'=> 'time',
-                        'options' => array(
-                            'showOn'=>'focus',
-                            'timeFormat'=>'hh:mm',
-                        ),
-                    ));
-                ?>
-		<?php echo $form->error($model,'waktuMulai'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'durasi'); ?>
-		<?php echo $form->textField($model,'durasi'); ?>
-		<?php echo $form->error($model,'durasi'); ?>
+		<?php echo $form->labelEx($model,'pertanyaan'); ?>
+		<?php echo $form->textArea($model,'pertanyaan',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->error($model,'pertanyaan'); ?>
 	</div>
 
 	
