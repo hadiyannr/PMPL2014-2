@@ -28,4 +28,8 @@ $this->menu=array(
 ));   
     
 ?>
-<?php echo CHtml::link('Daftar Soal',array('soal/index/','idTryout'=>$model->id));?>
+<?php 
+    echo CHtml::link('Daftar Soal',array('soal/index/','idtryout'=>$model->id));
+    
+?>
+

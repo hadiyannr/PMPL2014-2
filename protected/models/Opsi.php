@@ -4,17 +4,14 @@
  * This is the model class for table "opsi".
  *
  * The followings are the available columns in table 'opsi':
- * @property integer $idTryout
- * @property integer $idSoal
- * @property integer $idPengerjaan
- * @property string $nomor
+ * @property integer $id
+ * @property integer $idsoal
  * @property integer $isJawaban
+ * @property string $nomor
  * @property string $pernyataan
  *
  * The followings are the available model relations:
- * @property Pengerjaantryout $idPengerjaan0
- * @property Soal $idTryout0
- * @property Soal $idSoal0
+ * @property Soal $idsoal0
  */
 class Opsi extends CActiveRecord
 {
@@ -34,12 +31,12 @@ class Opsi extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('idTryout, idSoal, idPengerjaan, pernyataan', 'required'),
-			array('idTryout, idSoal, idPengerjaan, isJawaban', 'numerical', 'integerOnly'=>true),
-			array('nomor', 'length', 'max'=>5),
+			array('idsoal, nomor, pernyataan', 'required'),
+			array('idsoal, isJawaban', 'numerical', 'integerOnly'=>true),
+			array('nomor', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idTryout, idSoal, idPengerjaan, nomor, isJawaban, pernyataan', 'safe', 'on'=>'search'),
+			array('id, idsoal, isJawaban, nomor, pernyataan', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -51,9 +48,7 @@ class Opsi extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'idPengerjaan0' => array(self::BELONGS_TO, 'Pengerjaantryout', 'idPengerjaan'),
-			'idTryout0' => array(self::BELONGS_TO, 'Soal', 'idTryout'),
-			'idSoal0' => array(self::BELONGS_TO, 'Soal', 'idSoal'),
+			'idsoal0' => array(self::BELONGS_TO, 'Soal', 'idsoal'),
 		);
 	}
 
@@ -63,11 +58,10 @@ class Opsi extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'idTryout' => 'Id Tryout',
-			'idSoal' => 'Id Soal',
-			'idPengerjaan' => 'Id Pengerjaan',
-			'nomor' => 'Nomor',
+			'id' => 'ID',
+			'idsoal' => 'Idsoal',
 			'isJawaban' => 'Is Jawaban',
+			'nomor' => 'Nomor',
 			'pernyataan' => 'Pernyataan',
 		);
 	}
@@ -90,11 +84,10 @@ class Opsi extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('idTryout',$this->idTryout);
-		$criteria->compare('idSoal',$this->idSoal);
-		$criteria->compare('idPengerjaan',$this->idPengerjaan);
-		$criteria->compare('nomor',$this->nomor,true);
+		$criteria->compare('id',$this->id);
+		$criteria->compare('idsoal',$this->idsoal);
 		$criteria->compare('isJawaban',$this->isJawaban);
+		$criteria->compare('nomor',$this->nomor,true);
 		$criteria->compare('pernyataan',$this->pernyataan,true);
 
 		return new CActiveDataProvider($this, array(

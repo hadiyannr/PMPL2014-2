@@ -4,14 +4,15 @@
  * This is the model class for table "soal".
  *
  * The followings are the available columns in table 'soal':
- * @property integer $idTryout
+ * @property integer $id
+ * @property integer $idtryout
  * @property string $pertanyaan
  * @property integer $nomor
  *
  * The followings are the available model relations:
+ * @property Jawaban[] $jawabans
  * @property Opsi[] $opsis
- * @property Opsi[] $opsis1
- * @property Tryout $idTryout0
+ * @property Tryout $idtryout0
  */
 class Soal extends CActiveRecord
 {
@@ -31,12 +32,13 @@ class Soal extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('idTryout, nomor', 'required'),
-			array('idTryout, nomor', 'numerical', 'integerOnly'=>true),
-			array('pertanyaan', 'safe'),
+			array('idtryout, pertanyaan, nomor', 'required'),
+			array('idtryout, nomor', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idTryout, pertanyaan, nomor', 'safe', 'on'=>'search'),
+			array('id, idtryout, pertanyaan, nomor', 'safe', 'on'=>'search'),
+                    
+                         array('idtryout+nomor', 'application.extensions.uniqueMultiColumnValidator'),
 		);
 	}
 
@@ -48,9 +50,9 @@ class Soal extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'opsis' => array(self::HAS_MANY, 'Opsi', 'idTryout'),
-			'opsis1' => array(self::HAS_MANY, 'Opsi', 'idSoal'),
-			'idTryout0' => array(self::BELONGS_TO, 'Tryout', 'idTryout'),
+			'jawabans' => array(self::HAS_MANY, 'Jawaban', 'idsoal'),
+			'opsis' => array(self::HAS_MANY, 'Opsi', 'idsoal'),
+			'idtryout0' => array(self::BELONGS_TO, 'Tryout', 'idtryout'),
 		);
 	}
 
@@ -60,7 +62,8 @@ class Soal extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'idTryout' => 'Id Tryout',
+			'id' => 'ID',
+			'idtryout' => 'Idtryout',
 			'pertanyaan' => 'Pertanyaan',
 			'nomor' => 'Nomor',
 		);
@@ -84,7 +87,8 @@ class Soal extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('idTryout',$this->idTryout);
+		$criteria->compare('id',$this->id);
+		$criteria->compare('idtryout',$this->idtryout);
 		$criteria->compare('pertanyaan',$this->pertanyaan,true);
 		$criteria->compare('nomor',$this->nomor);
 

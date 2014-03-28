@@ -4,11 +4,14 @@
  * This is the model class for table "jawaban".
  *
  * The followings are the available columns in table 'jawaban':
- * @property integer $idPengerjaan
- * @property integer $idTryout
- * @property integer $idSoal
- * @property integer $isiJawaban
- * @property integer $isTrue
+ * @property integer $id
+ * @property integer $idpengerjaan
+ * @property integer $idsoal
+ * @property string $isiJawaban
+ *
+ * The followings are the available model relations:
+ * @property Soal $idsoal0
+ * @property Pengerjaantryout $idpengerjaan0
  */
 class Jawaban extends CActiveRecord
 {
@@ -28,11 +31,12 @@ class Jawaban extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('idPengerjaan, idTryout, idSoal', 'required'),
-			array('idPengerjaan, idTryout, idSoal, isiJawaban, isTrue', 'numerical', 'integerOnly'=>true),
+			array('idpengerjaan, idsoal', 'required'),
+			array('idpengerjaan, idsoal', 'numerical', 'integerOnly'=>true),
+			array('isiJawaban', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idPengerjaan, idTryout, idSoal, isiJawaban, isTrue', 'safe', 'on'=>'search'),
+			array('id, idpengerjaan, idsoal, isiJawaban', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -44,6 +48,8 @@ class Jawaban extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'idsoal0' => array(self::BELONGS_TO, 'Soal', 'idsoal'),
+			'idpengerjaan0' => array(self::BELONGS_TO, 'Pengerjaantryout', 'idpengerjaan'),
 		);
 	}
 
@@ -53,11 +59,10 @@ class Jawaban extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'idPengerjaan' => 'Id Pengerjaan',
-			'idTryout' => 'Id Tryout',
-			'idSoal' => 'Id Soal',
+			'id' => 'ID',
+			'idpengerjaan' => 'Idpengerjaan',
+			'idsoal' => 'Idsoal',
 			'isiJawaban' => 'Isi Jawaban',
-			'isTrue' => 'Is True',
 		);
 	}
 
@@ -79,11 +84,10 @@ class Jawaban extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('idPengerjaan',$this->idPengerjaan);
-		$criteria->compare('idTryout',$this->idTryout);
-		$criteria->compare('idSoal',$this->idSoal);
-		$criteria->compare('isiJawaban',$this->isiJawaban);
-		$criteria->compare('isTrue',$this->isTrue);
+		$criteria->compare('id',$this->id);
+		$criteria->compare('idpengerjaan',$this->idpengerjaan);
+		$criteria->compare('idsoal',$this->idsoal);
+		$criteria->compare('isiJawaban',$this->isiJawaban,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
