@@ -107,4 +107,18 @@ class Soal extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+        public static function isComplete($id){
+//            return sizeof($model()->opsis)>0;
+            return sizeof(Soal::model()->findByPk($id)->opsis)>0;            
+        }
+        
+        public function getHtmlAdminOpsi(){
+            $opsi = $this->opsis;
+            $htmlopsi = '';
+            foreach($opsi as $o){
+                $htmlopsi .= $o->pernyataan.'<br>';
+            }
+            return $htmlopsi;
+        }
+        
 }

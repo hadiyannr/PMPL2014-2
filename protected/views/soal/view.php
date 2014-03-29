@@ -16,12 +16,17 @@ $this->menu=array(
 );
 ?>
 
-<h1>Lihat Soal No.<?php echo $model->nomor; ?> "<?php echo Tryout::model()->findByPk($model->idtryout)->nama;?>"</h1>
+<h1>Soal No.<?php echo $model->nomor; ?> "<?php echo Tryout::model()->findByPk($model->idtryout)->nama;?>"</h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(				
-		'pertanyaan',
-		'nomor',
+                'nomor',
+		'pertanyaan',                
+                array(               // related city displayed as a link
+                    'label'=>'Opsi',
+                    'type'=>'raw',
+                    'value'=>$opsi
+                ),
 	),
 )); ?>

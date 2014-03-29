@@ -16,8 +16,7 @@
 )); ?>
 
 	<p class="note">Isian bertanda <span class="required">*</span> wajib diisi.</p>
-
-	<?php echo $form->errorSummary($model); ?>
+	
         
         
         <div class="row">
