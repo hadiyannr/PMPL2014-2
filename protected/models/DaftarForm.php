@@ -35,7 +35,7 @@ class DaftarForm extends CFormModel {
         if (!$this->hasErrors()) {
 
             if($this->password != $this->confirmPassword){
-                Yii::app()->user->setFlash('message', "komfirmasi password salah");   
+                Yii::app()->user->setFlash('message', "konfirmasi password salah");   
                 $this->addError('confirmPassword', $error);
             }
             
@@ -60,11 +60,11 @@ class DaftarForm extends CFormModel {
     public function register() {
         $model = new Pengguna;
         $model->username = $this->username;
-        $model->password = $this->password;
+        $model->password = md5($this->password);
         $model->email = $this->email;
         $model->isActive = 0;
         $model->isAdmin = 0;
-        $model->save();
+        $model->save();        
     }
 
 }

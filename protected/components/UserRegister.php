@@ -16,7 +16,8 @@ class UserRegister extends Portlet
         {            
             $model->attributes=$_POST['DaftarForm'];            
             if($model->validate()){                
-                $model->register();
+                $model->register();     
+                Yii::app()->user->setFlash("Selamat anda telah terdaftar, silahkan lakukan aktivasi melalui email");
             }
             $this->controller->refresh();                            
                 

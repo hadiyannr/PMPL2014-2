@@ -10,7 +10,7 @@ class UserLogin extends Portlet
         {            
             $model->attributes=$_POST['LoginForm'];            
             if($model->validate()){
-                $model->login();
+                $model->login();                
             }            
             $this->controller->refresh();                            
         }

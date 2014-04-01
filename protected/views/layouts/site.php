@@ -28,9 +28,7 @@
                             <li>
                                 <?php echo CHtml::link("Home", array('')); ?>
                             </li>        
-                            <li>
-                                <?php echo CHtml::link("Konten", array('')); ?>
-                            </li>
+                                <?php $this->widget('KontenKategori'); ?>
                             <li>
                                 <?php echo CHtml::link("Tryout", array('')); ?>
                             </li>
@@ -55,17 +53,12 @@
                                 </li>        			
                             <?php } ?>
                         </ul> 		      
+                        <!--login and register modal, call component-->
+                        <?php $this->widget('UserLogin',array('visible'=>Yii::app()->user->isGuest)); ?>
+
+                        <?php $this->widget('UserRegister',array('visible'=>Yii::app()->user->isGuest)); ?>
+                        <!-- end of modal -->
                     </nav>	
-
-                    <!-- Login & register code -->			
-
-
-                    <!--login code, call component-->
-                    <?php $this->widget('UserLogin',array('visible'=>Yii::app()->user->isGuest)); ?>
-
-                    <?php $this->widget('UserRegister',array('visible'=>Yii::app()->user->isGuest)); ?>
-                    <!-- end of modal -->
-
 
                 </div>
             </div>
@@ -85,7 +78,7 @@
 
         <div class="content">
             <div class="container">
-
+                <?php echo $content;?>
             </div>
         </div>
 

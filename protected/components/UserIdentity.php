@@ -14,8 +14,8 @@ class UserIdentity extends CUserIdentity
         $record=Pengguna::model()->findByAttributes(array('username'=>$this->username));
         if($record===null){
             $this->errorCode=self::ERROR_USERNAME_INVALID; 
-            Yii::app()->user->setFlash('message', "username atau password salah");
-        }else if($record->password!==$this->password){
+            Yii::app()->user->setFlash('message', "username belum terdaftar");
+        }else if($record->password !== md5($this->password)){
             $this->errorCode=self::ERROR_PASSWORD_INVALID;
             Yii::app()->user->setFlash('message', "username atau password salah");
         }else if($record->isActive == 0){
@@ -24,6 +24,7 @@ class UserIdentity extends CUserIdentity
         }else{
             $this->_id=$record->id;
             $this->setState('username', $record->username);
+            $this->setState('id', $record->id);
             $this->errorCode=self::ERROR_NONE;
         }
         
