@@ -9,6 +9,7 @@
  * @property string $email
  * @property string $password
  * @property integer $isAdmin
+ * @property integer $isActive
  *
  * The followings are the available model relations:
  * @property Pengerjaantryout[] $pengerjaantryouts
@@ -32,12 +33,12 @@ class Pengguna extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('username, email, password, isAdmin', 'required'),
-			array('isAdmin', 'numerical', 'integerOnly'=>true),
+			array('username, email, password, isAdmin, isActive', 'required'),
+			array('isAdmin, isActive', 'numerical', 'integerOnly'=>true),
 			array('username, email, password', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, username, email, password, isAdmin', 'safe', 'on'=>'search'),
+			array('id, username, email, password, isAdmin, isActive', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -50,7 +51,7 @@ class Pengguna extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'pengerjaantryouts' => array(self::HAS_MANY, 'Pengerjaantryout', 'idPengguna'),
-			'profils' => array(self::HAS_MANY, 'Profil', 'id'),
+			'profils' => array(self::HAS_MANY, 'Profil', 'idpengguna'),
 		);
 	}
 
@@ -65,6 +66,7 @@ class Pengguna extends CActiveRecord
 			'email' => 'Email',
 			'password' => 'Password',
 			'isAdmin' => 'Is Admin',
+			'isActive' => 'Is Active',
 		);
 	}
 
@@ -91,6 +93,7 @@ class Pengguna extends CActiveRecord
 		$criteria->compare('email',$this->email,true);
 		$criteria->compare('password',$this->password,true);
 		$criteria->compare('isAdmin',$this->isAdmin);
+		$criteria->compare('isActive',$this->isActive);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

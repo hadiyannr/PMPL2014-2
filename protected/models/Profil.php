@@ -8,9 +8,10 @@
  * @property string $nama
  * @property string $fotoUrl
  * @property integer $jenisKelamin
+ * @property integer $idpengguna
  *
  * The followings are the available model relations:
- * @property Pengguna $id0
+ * @property Pengguna $idpengguna0
  */
 class Profil extends CActiveRecord
 {
@@ -30,13 +31,12 @@ class Profil extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id, nama, jenisKelamin', 'required'),
-			array('id, jenisKelamin', 'numerical', 'integerOnly'=>true),
+			array('jenisKelamin, idpengguna', 'numerical', 'integerOnly'=>true),
 			array('nama', 'length', 'max'=>100),
 			array('fotoUrl', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, nama, fotoUrl, jenisKelamin', 'safe', 'on'=>'search'),
+			array('id, nama, fotoUrl, jenisKelamin, idpengguna', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -48,7 +48,7 @@ class Profil extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'id0' => array(self::BELONGS_TO, 'Pengguna', 'id'),
+			'idpengguna0' => array(self::BELONGS_TO, 'Pengguna', 'idpengguna'),
 		);
 	}
 
@@ -62,6 +62,7 @@ class Profil extends CActiveRecord
 			'nama' => 'Nama',
 			'fotoUrl' => 'Foto Url',
 			'jenisKelamin' => 'Jenis Kelamin',
+			'idpengguna' => 'Idpengguna',
 		);
 	}
 
@@ -87,6 +88,7 @@ class Profil extends CActiveRecord
 		$criteria->compare('nama',$this->nama,true);
 		$criteria->compare('fotoUrl',$this->fotoUrl,true);
 		$criteria->compare('jenisKelamin',$this->jenisKelamin);
+		$criteria->compare('idpengguna',$this->idpengguna);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

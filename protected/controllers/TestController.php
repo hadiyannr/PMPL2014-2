@@ -18,4 +18,10 @@ class TestController extends Controller{
         $this->render("index",array('model'=>$model));
     }
     
+    public function actionTest(){
+        echo crypt("dingdong","a")."<br>";
+        echo crypt("dingdong","a")."<br>";
+        echo crypt("dingdong","a")."<br>";
+    }
+    
 }

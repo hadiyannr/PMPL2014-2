@@ -13,12 +13,7 @@ class SiteController extends Controller
 	 * when an action is not explicitly requested by users.
 	 */
 	public function actionIndex()
-	{
-            
-                if(isset($_POST['username'])){
-                    echo 'Hello '. $_POST['username'];
-                    return;
-                }
+	{                            
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
 		$this->render('index');
@@ -36,16 +31,7 @@ class SiteController extends Controller
 			else
 				$this->render('error', $error);
 		}
-	}
-
-	
-	/**
-	 * Displays the login page
-	 */
-	public function actionLogin()
-	{
-		echo 'hai';
-	}
+	}	
 
 	/**
 	 * Logs out the current user and redirect to homepage.
@@ -53,6 +39,6 @@ class SiteController extends Controller
 	public function actionLogout()
 	{
 		Yii::app()->user->logout();
-		$this->redirect(Yii::app()->homeUrl);
+		$this->redirect('index');
 	}
 }
