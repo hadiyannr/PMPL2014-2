@@ -46,7 +46,7 @@
                             <?php } ?>
                             <?php if (!Yii::app()->user->isGuest) { ?>
                                 <li>
-                                    <a href="">Profil</a>
+                                    <?php echo CHtml::link("Profil", array('profil/index')); ?>
                                 </li>      
                                 <li>
                                     <?php echo CHtml::link("Logout", array('site/logout')); ?>
@@ -86,8 +86,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 social">
-                        <a href="#"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/ico-facebook.png" alt="FB"\><span>FACEBOOK</span></a>
-                        <a href="#"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/ico-twitter.png" alt="Twitter"\><span>TWITTER</span></a>
+                        <a href="#"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/ico-facebook.png" alt="FB"><span>FACEBOOK</span></a>
+                        <a href="#"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/ico-twitter.png" alt="Twitter"><span>TWITTER</span></a>
                     </div>
                 </div>
                 <div class="row">

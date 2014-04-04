@@ -5,7 +5,7 @@
  *
  * The followings are the available columns in table 'pengerjaantryout':
  * @property integer $id
- * @property string $nilai
+ * @property integer $nilai
  * @property integer $idPengguna
  * @property integer $idTryout
  *
@@ -16,6 +16,9 @@
  */
 class Pengerjaantryout extends CActiveRecord
 {
+    public $avg;
+    public $max;
+    public $min;
 	/**
 	 * @return string the associated database table name
 	 */

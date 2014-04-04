@@ -131,6 +131,7 @@ class Tryout extends CActiveRecord
         
         
         public function isRegistered($id){
-            $model = Pengerjaantryout::model()->findByAttributes(array('idpengguna'=>$id,'idtryout'=>$this->id));
+            $model = Pengerjaantryout::model()->findByAttributes(array('idPengguna'=>$id,'idTryout'=>$this->id));
+            return $model != null;
         }
 }

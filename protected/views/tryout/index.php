@@ -8,12 +8,12 @@ $this->breadcrumbs = array(
 ?>
 <ul class="nav nav-tabs">
     <?php if (sizeof($model[0])): ?>
-        <li class="active"><a href="#present" data-toggle="tab">Sedang Berlangsung</a></li>
-        <li><a href="#future" data-toggle="tab">Tryout Tersedia</a></li>
-        <li><a href="#past" data-toggle="tab">Tryout Lama</a></li>  
+        <li class="active"><a href="#present" data-toggle="tab">MyTryout</a></li>
+        <li><a href="#future" data-toggle="tab">Ujian Tersedia</a></li>
+        <li><a href="#past" data-toggle="tab">Statistik Tryout</a></li>  
     <?php else: ?>        
-        <li class="active"><a href="#future" data-toggle="tab">Tryout Tersedia</a></li>
-        <li><a href="#past" data-toggle="tab">Tryout Lama</a></li>  
+        <li class="active"><a href="#future" data-toggle="tab">Ujian Tersedia</a></li>
+        <li><a href="#past" data-toggle="tab">Statistik Tryout</a></li>  
     <?php endif; ?>
 </ul>
 
@@ -82,11 +82,14 @@ $this->breadcrumbs = array(
                         <?php echo $to->durasi; ?>
                     </td>                                        
                     <td>
-                        <?php  ?>
+                        <?php if(Yii::app()->user->isGuest):?>                        
+                        <p style="font-size:10px;">Login/Register untuk mendaftar Tryout</p>
+                        <?php  elseif(!$to->isRegistered(Yii::app()->user->id)):?>
                         <form method="post">
                             <input type="hidden" name="Register[id]" value="<?php echo $to->id;?>">
                             <input type="submit" class="btn btn-primary" value="Daftar">
-                        </form>
+                        </form>                        
+                        <?php endif;?>
                     </td>
                 </tr>
             <?php } ?>
@@ -124,7 +127,10 @@ $this->breadcrumbs = array(
                         <?php echo $to->durasi; ?>
                     </td>                                        
                     <td>
-                        <?php echo CHtml::link("Lihat", array('statistic', 'id' => $to->id),array('class'=>'btn btn-primary')); ?>  
+                        <form method="post">
+                            <input type="hidden" name="Statistic[id]" value="<?php echo $to->id;?>">
+                            <input type="submit" class="btn btn-primary" value="Lihat">
+                        </form>
                     </td>
                 </tr>
             <?php } ?>
