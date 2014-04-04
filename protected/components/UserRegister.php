@@ -24,5 +24,5 @@ class UserRegister extends Portlet
         }        
         $this->render('userRegister',array('model'=>$model));
     }
-
+    
 }

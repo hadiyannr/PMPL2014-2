@@ -107,4 +107,30 @@ class Tryout extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+        
+        public function status(){            
+            $now = date('Y-m-d');
+            if($this->tanggal < $now){
+                return -1;
+            }else if($this->tanggal == $now){
+                $start = $this->waktuMulai;                                      
+                $end = date("H:i:s",  strtotime($this->waktuMulai)+(60*$this->durasi));                
+                $now = date("H:i:s");
+                if($now < $start){
+                    return -1;
+                }elseif($now > $end){
+                    return 1;
+                }else{
+                    return 0;
+                }
+                
+            }else{
+                return 1;   
+            }
+        }
+        
+        
+        public function isRegistered($id){
+            $model = Pengerjaantryout::model()->findByAttributes(array('idpengguna'=>$id,'idtryout'=>$this->id));
+        }
 }

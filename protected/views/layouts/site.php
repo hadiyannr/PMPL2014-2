@@ -26,11 +26,11 @@
                     <nav role="navigation">
                         <ul class="nav navbar-nav">
                             <li>
-                                <?php echo CHtml::link("Home", array('')); ?>
+                                <?php echo CHtml::link("Home", array('site/index')); ?>
                             </li>        
                                 <?php $this->widget('KontenKategori'); ?>
                             <li>
-                                <?php echo CHtml::link("Tryout", array('')); ?>
+                                <?php echo CHtml::link("Tryout", array('tryout/index')); ?>
                             </li>
 
                         </ul> 
@@ -73,7 +73,7 @@
                         </div>
                     </div>
                 </form>
-            </div><br>
+            </div><br><br>
         </header>
 
         <div class="content">

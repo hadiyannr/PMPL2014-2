@@ -34,11 +34,11 @@ class DaftarForm extends CFormModel {
         $error = 'error';
         if (!$this->hasErrors()) {
 
-            if($this->password != $this->confirmPassword){
-                Yii::app()->user->setFlash('message', "konfirmasi password salah");   
+            if ($this->password != $this->confirmPassword) {
+                Yii::app()->user->setFlash('message', "konfirmasi password salah");
                 $this->addError('confirmPassword', $error);
             }
-            
+
             $record = Pengguna::model()->findByAttributes(array('username' => $this->username));
             if ($record != null) {
                 Yii::app()->user->setFlash('message', "username telah terdaftar");
@@ -64,7 +64,17 @@ class DaftarForm extends CFormModel {
         $model->email = $this->email;
         $model->isActive = 0;
         $model->isAdmin = 0;
-        $model->save();        
-    }
+        $model->save();
+//        $activation = md5(uniqid(rand(), true));
+//        $message_part1 = "Silahkan masuk ke link ini untuk melakukan aktivasi akun SiapMasukUI.com";
+//        $message_part2 = "http://localhost/siapmasukui/index.php/activate" . '?email=' . urlencode($model->email) . '&activation=' . $activation;                        
+//        
+//        $yiimail = new YiiMailMessage;
+//        $yiimail->setBody($message_part1 . $message_part2, 'text/html');
+//        $yiimail->subject = '[SiapMasukUI.com]Aktivasi akun';        
+//        $yiimail->addTo($model->email);
+//        $yiimail->from = Yii::app()->params['adminEmail'];
+//        Yii::app()->mail->send($yiimail);
+    }   
 
 }

@@ -32,8 +32,8 @@
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				array('label'=>'Home', 'url'=>array('/admin/index')),
-                                array('label'=>'Konten', 'url'=>array('/konten/index')),
-                                array('label'=>'Tryout', 'url'=>array('/tryout/index')),
+                                array('label'=>'Konten', 'url'=>array('/adminKonten/index')),
+                                array('label'=>'Tryout', 'url'=>array('/adminTryout/index')),                            
 				array('label'=>'Login', 'url'=>array('/admin/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/admin/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),

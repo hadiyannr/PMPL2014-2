@@ -11,18 +11,6 @@ $this->menu=array(
 	array('label'=>'Buat Tryout', 'url'=>array('create')),
 );
 
-Yii::app()->clientScript->registerScript('search', "
-$('.search-button').click(function(){
-	$('.search-form').toggle();
-	return false;
-});
-$('.search-form form').submit(function(){
-	$('#tryout-grid').yiiGridView('update', {
-		data: $(this).serialize()
-	});
-	return false;
-});
-");
 ?>
 
 <h1>Manajemen Tryout</h1>
@@ -35,6 +23,7 @@ $('.search-form form').submit(function(){
 	'columns'=>array(
 		'id',
                 'nama',
+                'tanggal',
 		'waktuMulai',
 		'durasi',
 		array(

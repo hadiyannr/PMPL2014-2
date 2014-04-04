@@ -16,6 +16,7 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+                'application.extensions.yii-mail.*',
 	),
 
 	'modules'=>array(
@@ -80,6 +81,26 @@ return array(
 				*/
 			),
 		),
+//                'email'=>array(
+//                    'class'=>'application.extensions.email.Email',
+//                    'delivery'=>'php', //Will use the php mailing function.  
+//                    //May also be set to 'debug' to instead dump the contents of the email into the view
+//                ),
+                'mail' => array(
+                        'class' => 'application.extensions.yii-mail.YiiMail',
+                                'transportType'=>'smtp', /// case sensitive!
+                                'transportOptions'=>array(
+                                    'host'=>'smtp.gmail.com',
+                                    'username'=>'youremail@gmail.com',                        
+                                'password'=>'yourpassword',
+                                'port'=>'465',
+                                'encryption'=>'ssl',
+                        ),
+                        'viewPath' => 'application.views.mail',
+                        'logging' => true,
+                        'dryRun' => false
+                ),
+            
 	),
 
 	// application-level parameters that can be accessed
