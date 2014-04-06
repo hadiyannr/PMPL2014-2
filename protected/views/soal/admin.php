@@ -3,7 +3,7 @@
 /* @var $model Soal */
 
 $this->breadcrumbs=array(
-	'Tryout'=>array('tryout/index'),	
+	'Tryout'=>array('adminTryout/index'),	
         'Soal',
 );
 

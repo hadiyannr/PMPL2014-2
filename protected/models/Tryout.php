@@ -106,26 +106,17 @@ class Tryout extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
-	}
-        
-        public function status(){            
-            $now = date('Y-m-d');
-            if($this->tanggal < $now){
+	}       
+        public function status(){   
+            $waktuMulai = $this->tanggal ." " . $this->waktuMulai;
+            $waktuSelesai = date('Y-m-d H:i',  strtotime("+{$this->durasi} minutes",  strtotime($waktuMulai)));
+            $now = date('Y-m-d H:i');
+            if($now < $waktuMulai){
+                return 1;               
+            }elseif($now > $waktuSelesai){
                 return -1;
-            }else if($this->tanggal == $now){
-                $start = $this->waktuMulai;                                      
-                $end = date("H:i:s",  strtotime($this->waktuMulai)+(60*$this->durasi));                
-                $now = date("H:i:s");
-                if($now < $start){
-                    return -1;
-                }elseif($now > $end){
-                    return 1;
-                }else{
-                    return 0;
-                }
-                
             }else{
-                return 1;   
+                return 0;
             }
         }
         

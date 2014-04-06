@@ -26,8 +26,7 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'isi'); ?>
-		<?php // echo $form->textArea($model,'isi',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->labelEx($model,'isi'); ?>		
                 <?php 
                     $this->widget('application.extensions.tinymce.ETinyMce', 
                             array(

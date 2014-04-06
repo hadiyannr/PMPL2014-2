@@ -37,6 +37,7 @@ return array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
                         'class'=>'application.components.EWebUser', 
+                        'loginUrl' => array('site/index'),
 		),
 		// uncomment the following to enable URLs in path-format
 		
@@ -102,7 +103,7 @@ return array(
                 ),
             
 	),
-
+        'timeZone' => 'Asia/Jakarta',
 	// application-level parameters that can be accessed
 	// using Yii::app()->params['paramName']
 	'params'=>array(

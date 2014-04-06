@@ -108,7 +108,6 @@ class Soal extends CActiveRecord
 		return parent::model($className);
 	}
         public static function isComplete($id){
-//            return sizeof($model()->opsis)>0;
             return sizeof(Soal::model()->findByPk($id)->opsis)>0;            
         }
         

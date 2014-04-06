@@ -5,7 +5,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-11" overflow: scroll>
-            <h1 class="text-center">Try Out <?php echo $tryoutName;?></h1>
+            <h1 class="text-center">Try Out <?php echo $tryoutModel->nama;?></h1>
             <br>
             <table class="table table-striped">
                 <tr>

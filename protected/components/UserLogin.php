@@ -11,8 +11,12 @@ class UserLogin extends Portlet
             $model->attributes=$_POST['LoginForm'];            
             if($model->validate()){
                 $model->login();                
-            }            
-            $this->controller->refresh();                            
+            }
+            if(Yii::app()->user->isAdmin()){
+                $this->controller->redirect(array('admin/index'));
+            }else{
+                $this->controller->refresh();
+            }
         }
         
         $this->render('userLogin',array('model'=>$model));

@@ -22,14 +22,28 @@ class TestController extends Controller{
     }
     
     public function actionTest(){                 
-        echo CHtml::link('ini link',
-                 "#",
-                 array("submit"=>array('tulis', 'm'=>"lol"),'confirm' => 'Are you sure?')
-                
-                ); 
+        $model = Soal::model()->findByPk(6);
+        foreach($model->opsis as $a){
+            echo $a->pernyataan;
+        }
+        
     }
     
     public function actionTulis($m){
         echo $m;
     }       
+    
+    public function actionTrigger(){
+//        echo 'test';
+//        for($i=1;$i<=10;$i++){
+//            for($j=0;$j<5;$j++){
+//                $model = new Opsi;
+//                $model->idsoal = $i;
+//                $model->isJawaban = $j==0?1:0;
+//                $model->nomor = "".$j;
+//                $model->pernyataan = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, enim, aut, recusandae ";
+//                $model->save();
+//            }            
+//        }
+    }    
 }

@@ -25,17 +25,9 @@ class SoalController extends Controller {
      */
     public function accessRules() {
         return array(
-            array('allow', // allow all users to perform 'index' and 'view' actions
-                'actions' => array('index', 'view'),
-                'users' => array('*'),
-            ),
-            array('allow', // allow authenticated user to perform 'create' and 'update' actions
-                'actions' => array('create', 'update'),
-                'users' => array('@'),
-            ),
-            array('allow', // allow admin user to perform 'admin' and 'delete' actions
-                'actions' => array('admin', 'delete'),
-                'users' => array('admin'),
+            array('allow',
+                'actions' => array('index', 'view', 'create', 'update', 'delete'),
+                'expression' => 'Yii::app()->user->isAdmin()',
             ),
             array('deny', // deny all users
                 'users' => array('*'),
@@ -49,10 +41,10 @@ class SoalController extends Controller {
      */
     public function actionView($id) {
         $model = $this->loadModel($id);
-        $htmlopsi = $model->getHtmlAdminOpsi();        
+        $htmlopsi = $model->getHtmlAdminOpsi();
         $this->render('view', array(
             'model' => $model,
-            'opsi'=>$htmlopsi,
+            'opsi' => $htmlopsi,
         ));
     }
 
@@ -82,24 +74,24 @@ class SoalController extends Controller {
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id the ID of the model to be updated
      */
-     public function actionUpdate($id) {
+    public function actionUpdate($id) {
         $model = $this->loadModel($id);
-        
+
         // Uncomment the following line if AJAX validation is needed
         // $this->performAjaxValidation($model);
-        
+
         $modelOpsi = array(new Opsi, new Opsi, new Opsi, new Opsi, new Opsi);
-        
-        $tmpOpsi = Yii::app()->db->createCommand()->select('*')->from('opsi')->where('idsoal=:idsoal', array(':idsoal'=>$id))->queryAll();        
-        
-        if(sizeof($tmpOpsi) > 0){                      
-            $i=0;
-            foreach($tmpOpsi as $to){                
-                $modelOpsi[$i] = Opsi::model()->findByPk($tmpOpsi[$i]['id']);                                                
+
+        $tmpOpsi = Yii::app()->db->createCommand()->select('*')->from('opsi')->where('idsoal=:idsoal', array(':idsoal' => $id))->queryAll();
+
+        if (sizeof($tmpOpsi) > 0) {
+            $i = 0;
+            foreach ($tmpOpsi as $to) {
+                $modelOpsi[$i] = Opsi::model()->findByPk($tmpOpsi[$i]['id']);
                 $i++;
             }
         }
-        
+
         // Uncomment the following line if AJAX validation is needed
         // $this->performAjaxValidation($model);
 
@@ -107,12 +99,12 @@ class SoalController extends Controller {
 
             $valid = true;
             $model->attributes = $_POST['Soal'];
-            $valid = $valid && $model->validate();            
+            $valid = $valid && $model->validate();
 
             for ($i = 0; $i < 5; $i++) {
                 if (isset($_POST['Opsi'][$i])) {
                     $modelOpsi[$i]->attributes = $_POST['Opsi'][$i];
-                    $modelOpsi[$i]->idsoal = $model->id;                    
+                    $modelOpsi[$i]->idsoal = $model->id;
                     $valid = $valid && $modelOpsi[$i]->validate();
                 }
             }
@@ -151,7 +143,7 @@ class SoalController extends Controller {
      * Manages all models.
      */
     public function actionIndex($idtryout) {
-        $model = new Soal('search');        
+        $model = new Soal('search');
         $model->unsetAttributes();  // clear any default values
         if (isset($_GET['idtryout'])) {
             $model->idtryout = $_GET['idtryout'];

@@ -105,4 +105,8 @@ class Opsi extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+        
+        public function getOption($no){
+            return chr($no + 97).".".$this->pernyataan;
+        }                
 }

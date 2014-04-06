@@ -45,7 +45,14 @@ $this->breadcrumbs = array(
                         <?php echo $to->durasi; ?>
                     </td>                                        
                     <td>
-                        <?php echo CHtml::link("Kerjakan", array('perform', 'id' => $to->id),array('class'=>'btn btn-primary')); ?>
+                        <?php if($to->status() == 0):?>
+                        <form method="post">
+                            <input type="hidden" name="Perform[id]" value="<?php echo $to->id;?>">
+                            <input type="submit" class="btn btn-primary" value="Kerjakan">
+                        </form>    
+                        <?php else:?>
+                            Belum dibuka
+                        <?php endif;?>                        
                     </td>
                 </tr>
             <?php } ?>
