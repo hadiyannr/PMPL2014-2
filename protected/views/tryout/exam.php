@@ -15,7 +15,7 @@
             
         <?php foreach($soalList as $soal):?>        
         <div class="jumbotron">
-            <p class="text-justify" id="soal">
+            <p class="text-justify" id="no<?php echo $soal->nomor;?>">
                 <?php echo $soal->nomor,'. ',$soal->pertanyaan;?>
             </p>
         </div>
@@ -23,10 +23,9 @@
             <?php foreach($soal->opsis as $opsi):?>
             <div class="radio" id="<?php echo $soal->nomor;?>">
                 <label>
-                    <input type="radio" 
-                           name="jawaban[<?php echo $soal->nomor;?>]" 
-                           id="optionsRadios" 
-                           ondblclick="uncheckRadio(<?php echo $soal->nomor;?>);"
+                    <input type="radio"                            
+                           class="radioButton"
+                           name="jawaban[<?php echo $soal->nomor;?>]"                                                       
                            value="<?php echo $opsi->nomor;?>"
                            <?php
                                 if(isset($jawaban[$soal->nomor]->isiJawaban)){
@@ -47,7 +46,19 @@
             </div>
         </form>
         
-        
+        <script>
+            var prev = {};
+            $("input[type=radio]").click(function(){
+                if (prev && prev.value == this.value) {
+                    $(this).prop('checked', !prev.status);
+                }
+                prev = {
+                    value: this.value,
+                    status: this.checked
+                };
+            });
+        </script>
         
     </div>
 </div>
+<?php $this->renderPartial('tryoutNavigation',array('soalCount'=> sizeof($soalList),'tryout'=>$tryout));?>

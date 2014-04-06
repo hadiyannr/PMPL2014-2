@@ -8,6 +8,9 @@
         <title><?php echo CHtml::encode($this->pageTitle); ?></title>	
         <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/bootstrap.min.css">	
         <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/main.css">
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/jquery-1.11.0.min.js"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/bootstrap.min.js"></script>			
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/main.js"></script>
     </head>
     <body>	
         <?php if(Yii::app()->user->hasFlash('message')):?>
@@ -104,9 +107,6 @@
                     </div>
                 </div>
             </div>
-        </footer>
-        <script src="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/jquery-1.11.0.min.js"></script>
-        <script src="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/bootstrap.min.js"></script>			
-        <script src="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/main.js"></script>
+        </footer>       
     </body>
 </html>

@@ -33,6 +33,24 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+/**************tryout navigation**************/
+.tryoutNavigation{
+    position: fixed;
+    top : 120px;
+    right : 30px;
+}
+.tryoutTime{
+    position: fixed;
+    top : 120px;
+    left : 30px;
+    border: 1px solid black;
+    width: 90px;
+    height: 40px;
+    background-color: lightblue;
+}
+
+
 /********************************************************/
 .content{
     min-height: 365px;

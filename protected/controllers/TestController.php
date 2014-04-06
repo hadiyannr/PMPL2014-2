@@ -22,11 +22,9 @@ class TestController extends Controller{
     }
     
     public function actionTest(){                 
-        $model = Soal::model()->findByPk(6);
-        foreach($model->opsis as $a){
-            echo $a->pernyataan;
-        }
-        
+        $model = Tryout::model()->findByPk(6);        
+        echo $model->getRemainingTime();                
+
     }
     
     public function actionTulis($m){
