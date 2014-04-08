@@ -21,6 +21,10 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('isPublished')); ?>:</b>
 	<?php echo CHtml::encode($data->isPublished); ?>
 	<br />
+        
+        <b><?php echo CHtml::encode($data->getAttributeLabel('Editor')); ?>:</b>
+	<?php echo CHtml::encode($data->idAdmin0->username); ?>
+	<br />
 
 
 </div>

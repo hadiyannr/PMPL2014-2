@@ -14,4 +14,8 @@ class KontenController extends Controller
             $model = Konten::model()->findAllByAttributes(array('idcategory'=>$idcategory));
             $this->render('kontenList',array('model'=>$model));
         }
+        
+        public function actionSearch($keyword){                        
+            
+        }
 }

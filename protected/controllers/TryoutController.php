@@ -68,7 +68,7 @@ class TryoutController extends Controller {
         }
         
         
-        if(isset($_POST['Submit'])){
+        if($tryout->status() < 0 || isset($_POST['Submit'])){
             $lembarJawab->hitungNilai();
             $lembarJawab->save();
             $this->redirect(array('index'));

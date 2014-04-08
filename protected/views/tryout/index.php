@@ -24,6 +24,7 @@ $this->breadcrumbs = array(
             <tr>
                 <th>No</th>
                 <th>Nama</th>       
+                <th>Tanggal</th>
                 <th>Waktu Mulai</th>
                 <th>Durasi</th>
                 <th>Kerjakan!</th>
@@ -38,6 +39,9 @@ $this->breadcrumbs = array(
                     <td>
                         <?php echo $to->nama ?>  
                     </td>                    
+                    <td>
+                        <?php echo $to->tanggal ?>  
+                    </td>  
                     <td>
                         <?php echo date('H:i',  strtotime($to->waktuMulai)); ?>
                     </td>

@@ -19,13 +19,17 @@ $this->menu=array(
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'tryout-grid',
 	'dataProvider'=>$model->search(),
-//	'filter'=>$model,
 	'columns'=>array(
 		'id',
                 'nama',
                 'tanggal',
 		'waktuMulai',
 		'durasi',
+                array(
+                        'name' => 'idAdmin0.username',
+                        'header' =>'Last edited By',
+                        'value' => $model->idAdmin0['username'],
+                ),
 		array(
 			'class'=>'CButtonColumn',
 		),

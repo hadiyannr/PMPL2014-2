@@ -24,6 +24,11 @@ $this->menu=array(
                 'nama',
 		'waktuMulai',
 		'durasi',
+                array(
+                        'name' => 'Last edited By',
+                        'header' =>'Last edited By',
+                        'value' => $model->idAdmin0['username'],
+                ),
 	),
 ));   
     

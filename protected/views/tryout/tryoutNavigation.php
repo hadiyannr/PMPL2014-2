@@ -40,23 +40,22 @@
     $waktuSelesai = $tryout->getWaktuSelesai();
     $waktuSelesai *= 1000;
 ?>
-<script>
+<script>    
+    timer = setInterval(function () {
+        var finish = new Date();
+        finish.setTime(<?php echo $waktuSelesai;?>);
+        var now = new Date();   
+        if(finish <= now){
+            clearInterval(timer);
+            document.getElementById("tryoutForm").submit();
+        }        
+    }, 500);
+    
     function checkTime(i) {
         if (i < 10) {
             i = "0" + i;
         }
         return i;
-    }
-    function autoSubmit(){
-        var finish = new Date();
-        finish.setTime(<?php echo $waktuSelesai;?>);
-        var today = new Date();   
-        if(finish <= today){
-            document.getElementById("tryoutForm").submit();
-        }        
-        l = setTimeout(function () {
-            autoSubmit()
-        }, 500);
     }
     function startTime() {        
         var today = new Date();   

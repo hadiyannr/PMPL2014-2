@@ -29,6 +29,12 @@ $this->menu=array(
 			'header' => 'Status Publikasi',
 			'value' => '(($data->isPublished == 1) ? "Terpublikasi" : "Draf")',
 		),
+            
+                array(
+                        'name' => 'idAdmin0.username',
+                        'header' =>'Last edited By',
+                        'value' => $model->idAdmin0['username'],
+                ),
 		array(
 			'class'=>'CButtonColumn',
 		),

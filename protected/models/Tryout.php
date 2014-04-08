@@ -9,10 +9,12 @@
  * @property integer $durasi
  * @property string $tanggal
  * @property string $nama
+ * @property integer $idAdmin
  *
  * The followings are the available model relations:
  * @property Pengerjaantryout[] $pengerjaantryouts
  * @property Soal[] $soals
+ * @property Pengguna $idAdmin0
  */
 class Tryout extends CActiveRecord
 {
@@ -33,11 +35,11 @@ class Tryout extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('waktuMulai, durasi, tanggal, nama', 'required'),
-			array('durasi', 'numerical', 'integerOnly'=>true),
+			array('durasi,idAdmin', 'numerical', 'integerOnly'=>true),
 			array('nama', 'length', 'max'=>75),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, waktuMulai, durasi, tanggal, nama', 'safe', 'on'=>'search'),
+			array('id, waktuMulai, durasi, tanggal, nama,idAdmin', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -51,6 +53,7 @@ class Tryout extends CActiveRecord
 		return array(
 			'pengerjaantryouts' => array(self::HAS_MANY, 'Pengerjaantryout', 'idTryout'),
 			'soals' => array(self::HAS_MANY, 'Soal', 'idTryout'),
+                        'idAdmin0' => array(self::BELONGS_TO, 'Pengguna', 'idAdmin'),
 		);
 	}
 
@@ -91,6 +94,7 @@ class Tryout extends CActiveRecord
 		$criteria->compare('durasi',$this->durasi);
 		$criteria->compare('tanggal',$this->tanggal,true);
 		$criteria->compare('nama',$this->nama,true);
+                $criteria->compare('idAdmin',$this->idAdmin);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

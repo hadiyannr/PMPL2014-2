@@ -43,9 +43,10 @@ class AdminKontenController extends Controller
 	 */
 	public function actionView($id)
 	{
-		$this->render('view',array(
-			'model'=>$this->loadModel($id),
-		));
+            CController::forward('konten/index');
+//		$this->render('view',array(
+//			'model'=>$this->loadModel($id),
+//		));
 	}
 
 	/**
@@ -62,6 +63,7 @@ class AdminKontenController extends Controller
 		if(isset($_POST['Konten']))
 		{
 			$model->attributes=$_POST['Konten'];
+                        $model->idAdmin = Yii::app()->user->id;
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -86,6 +88,7 @@ class AdminKontenController extends Controller
 		if(isset($_POST['Konten']))
 		{
 			$model->attributes=$_POST['Konten'];
+                        $model->idAdmin = Yii::app()->user->id;
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}

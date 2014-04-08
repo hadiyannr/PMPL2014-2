@@ -28,5 +28,10 @@ $this->menu=array(
 			'header' => 'Status Publikasi',
 			'value' => (($model->isPublished == 1) ? "Terpublikasi" : "Draf"),
 		),
+                array(
+                        'name' => 'Editor',
+                        'header' =>'Last edited By',
+                        'value' => $model->idAdmin0['username'],
+                ),
 	),
 )); ?>

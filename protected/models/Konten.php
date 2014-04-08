@@ -9,8 +9,10 @@
  * @property string $isi
  * @property string $judul
  * @property integer $isPublished
+ * @property integer $idAdmin
  *
  * The followings are the available model relations:
+ * @property Pengguna $idAdmin0
  * @property Kategori $idcategory0
  */
 class Konten extends CActiveRecord
@@ -31,13 +33,13 @@ class Konten extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('idcategory, judul', 'required'),
+			array('idcategory, judul,isPublished, idAdmin', 'required'),
 			array('idcategory, isPublished', 'numerical', 'integerOnly'=>true),
 			array('judul', 'length', 'max'=>99),
 			array('isi', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, idcategory, isi, judul, isPublished', 'safe', 'on'=>'search'),
+			array('id, idcategory, isi, judul, isPublished, idAdmin', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -49,6 +51,7 @@ class Konten extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+                        'idAdmin0' => array(self::BELONGS_TO, 'Pengguna', 'idAdmin'),
 			'kategori' => array(self::BELONGS_TO, 'Kategori', 'idcategory'),                        
 		);
 	}
@@ -64,6 +67,7 @@ class Konten extends CActiveRecord
 			'isi' => 'Isi',
 			'judul' => 'Judul',
 			'isPublished' => 'Status Publikasi',
+                        'idAdmin' => 'Editor',
 		);
 	}
 
@@ -90,6 +94,7 @@ class Konten extends CActiveRecord
 		$criteria->compare('isi',$this->isi,true);
 		$criteria->compare('judul',$this->judul,true);
 		$criteria->compare('isPublished',$this->isPublished);
+                $criteria->compare('idAdmin',$this->idAdmin);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
