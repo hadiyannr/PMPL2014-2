@@ -22,9 +22,9 @@ class TestController extends Controller{
     }
     
     public function actionTest(){                 
-        $model = Tryout::model()->findByPk(6);        
-        echo $model->getRemainingTime();                
-
+        $tryout = Tryout::model()->findByPk(6);        
+        $waktuSelesai = $tryout->getWaktuSelesai();
+        echo ';'.$waktuSelesai;
     }
     
     public function actionTulis($m){

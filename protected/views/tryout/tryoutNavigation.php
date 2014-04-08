@@ -1,6 +1,6 @@
 <?php
     /* @var $this TryoutController */
-    /* @var $tryout Tryout*/
+    /* @var $tryout Tryout */
 ?>
 <div class="btn-group-vertical tryoutNavigation">
     <label class="text-center">Menu <br>Navigasi</label>
@@ -27,21 +27,54 @@
     
     <?php endfor;?>
     <br>
+    <div class="text-center">
+        <input type="submit" value="Simpan" name="Save" class="btn btn-success" style="margin-bottom: 2px;"><br>
+        <input type="submit" value="Kumpulkan" name="Submit" class="btn btn-success">    
+    </div>
 </div>
 
 <div class="tryoutTime well" id="tryoutTime">
     
 </div>
-
-<script>    
-    setTimeout ( "displayTime()", 1000 );
-    
-    function displayTime() {        
-        <?php 
-            $remaining = $tryout->getRemainingTime();
-        ?>                
-        document.getElementById('tryoutTime').innerHTML = <?php echo "'",$remaining,"'";?>;        
-        setTimeout ( "displayTime()", 500 );
-    }    
-    
+<?php
+    $waktuSelesai = $tryout->getWaktuSelesai();
+    $waktuSelesai *= 1000;
+?>
+<script>
+    function checkTime(i) {
+        if (i < 10) {
+            i = "0" + i;
+        }
+        return i;
+    }
+    function autoSubmit(){
+        var finish = new Date();
+        finish.setTime(<?php echo $waktuSelesai;?>);
+        var today = new Date();   
+        if(finish <= today){
+            document.getElementById("tryoutForm").submit();
+        }        
+        l = setTimeout(function () {
+            autoSubmit()
+        }, 500);
+    }
+    function startTime() {        
+        var today = new Date();   
+        var finish = new Date();
+        finish.setTime(<?php echo $waktuSelesai;?>);
+        var remaining = new Date(finish - today);        
+        var h = remaining.getHours() - 7;
+        var m = remaining.getMinutes();
+        var s = remaining.getSeconds();
+        // add a zero in front of numbers<10
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('tryoutTime').innerHTML = h + ":" + m + ":" + s;
+        t = setTimeout(function () {
+            startTime()
+        }, 500);
+        
+    }
+    startTime();
+    autoSubmit();
 </script>

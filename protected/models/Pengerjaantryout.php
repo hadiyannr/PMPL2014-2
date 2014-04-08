@@ -10,7 +10,7 @@
  * @property integer $idTryout
  *
  * The followings are the available model relations:
- * @property Opsi[] $opsis
+ * @property Jawaban[] $jawabans
  * @property Pengguna $idPengguna0
  * @property Tryout $idTryout0
  */
@@ -36,8 +36,7 @@ class Pengerjaantryout extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('idPengguna, idTryout', 'required'),
-			array('idPengguna, idTryout', 'numerical', 'integerOnly'=>true),
-			array('nilai', 'length', 'max'=>45),
+			array('nilai, idPengguna, idTryout', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, nilai, idPengguna, idTryout', 'safe', 'on'=>'search'),
@@ -52,7 +51,7 @@ class Pengerjaantryout extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'opsis' => array(self::HAS_MANY, 'Opsi', 'idPengerjaan'),
+			'jawabans' => array(self::HAS_MANY,'Jawaban', 'idpengerjaan'),
 			'idPengguna0' => array(self::BELONGS_TO, 'Pengguna', 'idPengguna'),
 			'idTryout0' => array(self::BELONGS_TO, 'Tryout', 'idTryout'),
 		);
@@ -90,7 +89,7 @@ class Pengerjaantryout extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('nilai',$this->nilai,true);
+		$criteria->compare('nilai',$this->nilai);   
 		$criteria->compare('idPengguna',$this->idPengguna);
 		$criteria->compare('idTryout',$this->idTryout);
 
@@ -109,4 +108,16 @@ class Pengerjaantryout extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+        
+        public function hitungNilai(){
+            $nilai = 0;
+            foreach($this->jawabans as $jawaban){
+                if($jawaban->idsoal0->opsis[$jawaban->isiJawaban]->isJawaban == 1){
+                    $nilai+=3; 
+                }else{
+                    $nilai--;
+                }
+            }            
+            $this->nilai = $nilai;
+        }
 }

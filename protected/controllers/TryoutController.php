@@ -1,5 +1,6 @@
 <?php
 /* @var $to Tryout */
+/* @var $tryout Tryout */
 
 class TryoutController extends Controller {
 
@@ -11,14 +12,14 @@ class TryoutController extends Controller {
         $futureTO = array();
         foreach($model as $to){
             if($to->status() < 0){
-                $pastTO[] = $to;
+                $futureTO[] = $to;
             }else if($to->isRegistered(Yii::app()->user->id)){
                 $myTO[] = $to;
             }else{
-                $futureTO[] = $to;
+                $pastTO[] = $to;                
             }
         }
-        $model = array($myTO,$futureTO,$pastTO);        
+        $model = array($myTO,$pastTO,$futureTO);        
         
         
         if(isset($_POST['Register'])){
@@ -33,11 +34,10 @@ class TryoutController extends Controller {
     }
     
     public function actionPerform(){
-        $id = $_POST['Perform']['id'];
-        $tryout = Tryout::model()->findByPk($id);
+        $id = $_POST['Perform']['id'];       
+        $tryout = Tryout::model()->findByPk($id);                
         $soalList = Soal::model()->findAllByAttributes(array('idtryout' => $id));
-        $lembarJawab = Pengerjaantryout::model()->findByAttributes(array('idPengguna'=>Yii::app()->user->id));
-        
+        $lembarJawab = Pengerjaantryout::model()->findByAttributes(array('idPengguna'=>Yii::app()->user->id,'idTryout'=>$tryout->id));        
         $jawaban = array();
         foreach($soalList as $soal){
             $jawabanFromDB = Jawaban::model()->findByAttributes(array('idsoal'=>$soal->id));
@@ -66,6 +66,13 @@ class TryoutController extends Controller {
                 }                
             }
         }
+        
+        
+        if(isset($_POST['Submit'])){
+            $lembarJawab->hitungNilai();
+            $lembarJawab->save();
+            $this->redirect(array('index'));
+        }                
         
         $this->render('exam',array('soalList'=>$soalList, 'tryout'=>$tryout,'jawaban'=>$jawaban));
     }

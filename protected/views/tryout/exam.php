@@ -10,12 +10,12 @@
     <h1 class="text-center">Try Out <?php echo $tryout->nama;?></h1>
     <br><br>
     <div class="container-fluid">
-        <form method="post" name="form">
+        <form method="post" name="form" id="tryoutForm">
             
             
         <?php foreach($soalList as $soal):?>        
-        <div class="jumbotron">
-            <p class="text-justify" id="no<?php echo $soal->nomor;?>">
+        <div class="jumbotron" id="no<?php echo $soal->nomor;?>">
+            <p class="text-justify">
                 <?php echo $soal->nomor,'. ',$soal->pertanyaan;?>
             </p>
         </div>
@@ -41,11 +41,14 @@
         <?php endforeach;?>
             
             <div class="text-center">
-                <input type="submit" value="Kumpulkan" class="btn btn-success">
+                <input type="submit" name="Save" value="Simpan" class="btn btn-success">
+                <input type="submit" name="Submit" value="Kumpulkan" class="btn btn-success">
                 <input type="hidden" name="Perform[id]" value="<?php echo $tryout->id;?>">
             </div>
+            <?php $this->renderPartial('tryoutNavigation',array('soalCount'=> sizeof($soalList),'tryout'=>$tryout));?>
         </form>
         
+        <!--Script uncheck radio button-->
         <script>
             var prev = {};
             $("input[type=radio]").click(function(){
@@ -61,4 +64,3 @@
         
     </div>
 </div>
-<?php $this->renderPartial('tryoutNavigation',array('soalCount'=> sizeof($soalList),'tryout'=>$tryout));?>

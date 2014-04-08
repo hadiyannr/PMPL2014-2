@@ -112,7 +112,7 @@ class Tryout extends CActiveRecord
             $waktuSelesai = date('Y-m-d H:i',  strtotime("+{$this->durasi} minutes",  strtotime($waktuMulai)));
             $now = date('Y-m-d H:i');
             if($now < $waktuMulai){
-                return 1;               
+                return 1;
             }elseif($now > $waktuSelesai){
                 return -1;
             }else{
@@ -130,12 +130,11 @@ class Tryout extends CActiveRecord
             $waktuMulai = $this->tanggal ." " . $this->waktuMulai;
             $waktuSelesai = date('Y-m-d H:i:s',  strtotime("+{$this->durasi} minutes",  strtotime($waktuMulai)));            
             $seconds = strtotime($waktuSelesai) - strtotime(date('Y-m-d H:i:s'));            
-            $hours = str_pad(floor($seconds / 3600), 2, '0', STR_PAD_LEFT);
-            $mins = str_pad(floor(($seconds - ($hours*3600)) / 60), 2, '0', STR_PAD_LEFT);
-            $secs = str_pad(floor($seconds % 60), 2, '0', STR_PAD_LEFT);
-//            $hours = floor($seconds / 3600);
-//            $mins = floor(($seconds - ($hours*3600)) / 60);
-//            $secs = floor($seconds % 60);
-            return $hours.":".$mins.":".$secs;
+            return $seconds;
+        }
+        
+        public function getWaktuSelesai(){
+            $waktuMulai = $this->tanggal ." " . $this->waktuMulai;            
+            return date(strtotime("+{$this->durasi} minutes",  strtotime($waktuMulai)));
         }
 }
