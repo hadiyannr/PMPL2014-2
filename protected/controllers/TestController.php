@@ -21,10 +21,11 @@ class TestController extends Controller{
         $this->render("index",array('model'=>$model,'x'=>$inivar));
     }
     
-    public function actionTest(){                 
-        $tryout = Tryout::model()->findByPk(6);        
-        $waktuSelesai = $tryout->getWaktuSelesai();
-        echo ';'.$waktuSelesai;
+    public function actionTest(){                         
+        $model = new Pengguna;
+        $model->email = 'hanifnaufal7557@gmail.com';
+        $model->username = 'userkkk';
+        $this->sendEmail($model);
     }
     
     public function actionTulis($m){
@@ -44,4 +45,35 @@ class TestController extends Controller{
 //            }            
 //        }
     }    
+    
+    
+    public function sendEmail($pengguna){            
+        $activationCode = crypt('dingdonglala13', $pengguna->username.$pengguna->email);
+        $link = 'localhost/siapmasukui/index.php/site/activation?username='.$pengguna->username.'&code='.$activationCode.'';
+        Yii::import('application.extensions.phpmailer.JPhpMailer');
+        $mail = new JPhpMailer;
+        $mail->IsSMTP();
+        $mail->Host = 'smtp.gmail.com';
+        $mail->SMTPAuth = true;        
+        $mail->SMTPSecure = 'tls';
+        $mail->Username = 'siapmasukui@gmail.com';
+        $mail->Password = 'dingdonglala13';
+        $mail->CharSet="utf-8";
+        $mail->SetFrom('siapmasukui@gmail.com', 'Admin SiapMasukUI.com');
+        $mail->Subject = "[SiapMasukUI.com] Verifikasi Pendaftaran";        
+        $mail->MsgHTML('<div style="text-align:left">'
+                . '<h1>SiapMasukUI.com</h1><br>'
+                . '<p>Selamat datang '.$pengguna->username.',</p> '
+                . '<p>Terimakasih sudah mendaftar di SiapMasukUI.com.</p> '
+                . '<p>Ikuti tautan di bawah ini untuk melengkapi pendaftaran</p> '
+                . '<p><a href="'.$link.'">klik untuk aktivasi akun</a></p>'
+                . '<br><p>Hormat kami,</p> <p>Admin <a href="siapmasukui.com">SiapMasukUI.com</a></p> '
+                . '</div>');
+        $mail->AddAddress("$pengguna->email", $pengguna->username);
+        $mail->Send();                        
+                                        
+        if(!$mail->Send()) {
+            echo "Mailer Error: " . $mail->ErrorInfo;
+        }
+    }
 }

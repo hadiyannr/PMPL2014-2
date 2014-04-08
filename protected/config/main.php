@@ -15,8 +15,7 @@ return array(
 	// autoloading model and component classes
 	'import'=>array(
 		'application.models.*',
-		'application.components.*',
-                'application.extensions.yii-mail.*',
+		'application.components.*',                
 	),
 
 	'modules'=>array(
@@ -39,8 +38,7 @@ return array(
                         'class'=>'application.components.EWebUser', 
                         'loginUrl' => array('site/index'),
 		),
-		// uncomment the following to enable URLs in path-format
-		
+                                                
 		'urlManager'=>array(
 			'urlFormat'=>'path',
 			'rules'=>array(
@@ -87,20 +85,7 @@ return array(
 //                    'delivery'=>'php', //Will use the php mailing function.  
 //                    //May also be set to 'debug' to instead dump the contents of the email into the view
 //                ),
-                'mail' => array(
-                        'class' => 'application.extensions.yii-mail.YiiMail',
-                                'transportType'=>'smtp', /// case sensitive!
-                                'transportOptions'=>array(
-                                    'host'=>'smtp.gmail.com',
-                                    'username'=>'youremail@gmail.com',                        
-                                'password'=>'yourpassword',
-                                'port'=>'465',
-                                'encryption'=>'ssl',
-                        ),
-                        'viewPath' => 'application.views.mail',
-                        'logging' => true,
-                        'dryRun' => false
-                ),
+                
             
 	),
         'timeZone' => 'Asia/Jakarta',
@@ -108,6 +93,6 @@ return array(
 	// using Yii::app()->params['paramName']
 	'params'=>array(
 		// this is used in contact page
-		'adminEmail'=>'webmaster@example.com',
+		'adminEmail'=>'siapmasukui@gmail.com',
 	),
 );

@@ -37,6 +37,20 @@ class SiteController extends Controller
 	public function actionLogout()
 	{
 		Yii::app()->user->logout();
-		$this->redirect(array('site/index'));
+		$this->redirect(array('index'));
 	}
+        
+        public function actionActivation($username, $code){           
+            $pengguna = Pengguna::model()->findByAttributes(array('username'=>$username));
+            $correctCode = crypt('dingdonglala13', $pengguna->username.$pengguna->email);
+            if(strcmp($code, $correctCode) == 0){                
+                $pengguna->isActive = 1;                                
+                $pengguna->save();                
+                Yii::app()->user->setFlash('message',"Selamat, akun anda telah aktif. Silahkan login.");
+                $this->redirect(array('index'));
+            }else{
+                Yii::app()->user->setFlash('message',"Terjadi kesalahan dalam aktivasi akun");
+                $this->redirect(array('index'));
+            }
+        }
 }
