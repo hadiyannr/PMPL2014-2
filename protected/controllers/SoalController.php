@@ -106,9 +106,14 @@ class SoalController extends Controller {
                     $modelOpsi[$i]->attributes = $_POST['Opsi'][$i];
                     $modelOpsi[$i]->idsoal = $model->id;
                     $valid = $valid && $modelOpsi[$i]->validate();
+                }                
+                
+                if($_POST['Opsi']['jawaban'] == $i){
+                    $modelOpsi[$i]->isJawaban = 1;
+                }else{                                        
+                    $modelOpsi[$i]->isJawaban = 0;                    
                 }
-            }
-
+            }            
             if ($valid) {
                 if ($model->save()) {
                     for ($i = 0; $i < 5; $i++) {

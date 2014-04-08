@@ -41,13 +41,24 @@
             for($i = 0; $i < 5; $i++){ 
         ?>
         <div class="row">
-		<?php echo $form->labelEx($modelOpsi[$i],'opsi ke '.($i + 1)); ?>
-		<?php echo $form->textArea($modelOpsi[$i],'['.$i.']pernyataan',array('rows'=>2, 'cols'=>40)); ?>                                
+            
+		<?php 
+                    $check = '';
+                    if($modelOpsi[$i]->isJawaban == 1){$check = ' checked';};
+                    $radio ='&nbsp;'
+                        . '<input '
+                        . 'type="radio" '
+                        . 'name="Opsi[jawaban]" '
+                        . 'value="'.$i.'"'
+                        . ' required'
+                        . $check
+                        . '>'; 
+                        echo $form->labelEx($modelOpsi[$i],'opsi ke '.($i + 1).$radio); ?>
+		<?php echo $form->textArea($modelOpsi[$i],'['.$i.']pernyataan',array('rows'=>2, 'cols'=>40)); ?>                                                
 		<?php echo $form->error($modelOpsi[$i],'['.$i.']pernyataan'); ?>
             
                 <?php echo $form->hiddenField($modelOpsi[$i],'['.$i.']idsoal',array('value'=>0)); ?>
-                <?php echo $form->hiddenField($modelOpsi[$i],'['.$i.']nomor',array('value'=>$i)); ?>
-                <?php echo $form->hiddenField($modelOpsi[$i],'['.$i.']isJawaban',array('value'=>0)); ?>
+                <?php echo $form->hiddenField($modelOpsi[$i],'['.$i.']nomor',array('value'=>$i)); ?>                
 	</div>
         <?php }}?>
         

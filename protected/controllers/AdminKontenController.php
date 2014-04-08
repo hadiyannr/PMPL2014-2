@@ -44,9 +44,6 @@ class AdminKontenController extends Controller
 	public function actionView($id)
 	{
             CController::forward('konten/index');
-//		$this->render('view',array(
-//			'model'=>$this->loadModel($id),
-//		));
 	}
 
 	/**
