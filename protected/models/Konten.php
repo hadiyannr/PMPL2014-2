@@ -71,34 +71,15 @@ class Konten extends CActiveRecord
 		);
 	}
 
-	/**
-	 * Retrieves a list of models based on the current search/filter conditions.
-	 *
-	 * Typical usecase:
-	 * - Initialize the model fields with values from filter form.
-	 * - Execute this method to get CActiveDataProvider instance which will filter
-	 * models according to data in model fields.
-	 * - Pass data provider to CGridView, CListView or any similar widget.
-	 *
-	 * @return CActiveDataProvider the data provider that can return the models
-	 * based on the search/filter conditions.
-	 */
-	public function search()
-	{
-		// @todo Please modify the following code to remove attributes that should not be searched.
+	
+	public static function search($keyword)
+	{		
+		$criteria=new CDbCriteria;		                
+		$criteria->with = array('kategori');
+		$criteria->compare('isi',$keyword,true);
+		$criteria->compare('judul',$keyword,true);		
 
-		$criteria=new CDbCriteria;
-
-		$criteria->compare('id',$this->id);
-		$criteria->compare('idcategory',$this->idcategory);
-		$criteria->compare('isi',$this->isi,true);
-		$criteria->compare('judul',$this->judul,true);
-		$criteria->compare('isPublished',$this->isPublished);
-                $criteria->compare('idAdmin',$this->idAdmin);
-
-		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
-		));
+		return Konten::model()->findAll($criteria);
 	}
 
 	/**

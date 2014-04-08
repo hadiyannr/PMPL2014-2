@@ -66,17 +66,8 @@
                 </div>
             </div>
 
-            <!-- search bar-->
-            <div class="col-xs-5 col-sm-2 pull-right">
-                <form class="navbar-form" role="search">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
-                        <div class="input-group-btn">
-                            <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
-                        </div>
-                    </div>
-                </form>
-            </div><br><br><br>
+            <?php $this->widget('Search',array('visible'=>Yii::app()->user->isGuest)); ?>
+            <br><br><br>
         </header>
 
         <div class="content">

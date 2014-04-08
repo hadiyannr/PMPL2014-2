@@ -15,7 +15,8 @@ class KontenController extends Controller
             $this->render('kontenList',array('model'=>$model));
         }
         
-        public function actionSearch($keyword){                        
-            
+        public function actionSearch($keyword){              
+            $model = Konten::search($keyword);
+            $this->render('kontenList',array('model'=>$model));
         }
 }
