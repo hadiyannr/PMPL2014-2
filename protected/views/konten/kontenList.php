@@ -6,4 +6,5 @@ $this->breadcrumbs=array(
 );
 foreach ($model as $konten){?>
     <?php echo CHtml::link($konten->judul,array('index','id'=>$konten->id))?>
+    <br>
 <?php }?>
