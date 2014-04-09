@@ -15,7 +15,7 @@ return array(
 	// autoloading model and component classes
 	'import'=>array(
 		'application.models.*',
-		'application.components.*',                
+		'application.components.*',
 	),
 
 	'modules'=>array(
@@ -38,7 +38,7 @@ return array(
                         'class'=>'application.components.EWebUser', 
                         'loginUrl' => array('site/index'),
 		),
-                                                
+            
 		'urlManager'=>array(
 			'urlFormat'=>'path',
 			'rules'=>array(
@@ -80,11 +80,6 @@ return array(
 				*/
 			),
 		),
-//                'email'=>array(
-//                    'class'=>'application.extensions.email.Email',
-//                    'delivery'=>'php', //Will use the php mailing function.  
-//                    //May also be set to 'debug' to instead dump the contents of the email into the view
-//                ),
                 
             
 	),
