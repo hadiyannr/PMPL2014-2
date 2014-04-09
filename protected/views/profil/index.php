@@ -25,7 +25,7 @@ $this->breadcrumbs = array(
         <p><i class="glyphicon glyphicon-gift"></i> <?php echo $model->tanggalLahir;?></p>
         <p><i class="glyphicon glyphicon-briefcase"></i> <?php echo $model->asalSma;?></p>
         <p><i class="glyphicon glyphicon-screenshot"></i> <?php echo $model->targetJurusan;?></p>
-        <?php echo CHtml::link('Ubah',array('update'),array('class'=>'btn btn-primary'));?>
-    </div>
-    
+        <?php echo CHtml::link('Ubah Profil',array('update'),array('class'=>'btn btn-primary'));?>
+        <?php echo CHtml::link('Riwayat Tryout',array('pengerjaanTryout/history'),array('class'=>'btn btn-success'));?>
+    </div>        
 </div>

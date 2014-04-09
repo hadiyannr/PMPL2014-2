@@ -35,16 +35,41 @@ class PengerjaanTryoutController extends Controller
                         }                    
                     }                
                 }
-            }
-
-
-            if($tryout->status() < 0 || isset($_POST['Submit'])){
                 $lembarJawab->hitungNilai();
                 $lembarJawab->save();
-                $this->redirect(array('index'));
+            }
+            
+            if($tryout->status() < 0 || isset($_POST['Submit'])){                
+                $this->redirect(array('tryout/index'));
             }                
 
             $this->render('exam',array('soalList'=>$soalList, 'tryout'=>$tryout,'jawaban'=>$jawaban));
+        }
+        
+        public function actionHistory(){
+            if(isset($_POST['Tryout']['id'])){                  
+                $this->redirect(array('result','idTryout'=>$_POST['Tryout']['id']));
+            }
+            
+            $criteria = new CDbCriteria();
+            $criteria->join = 'JOIN pengerjaantryout p ON t.id = p.idTryout';
+            $criteria->compare('idPengguna', Yii::app()->user->id);
+            $model = Tryout::model()->findAll($criteria);
+            $this->render('historyList',array('model'=>$model));
+        }
+        
+        public function actionResult($idTryout){
+            $pengerjaan = PengerjaanTryout::model()->findByAttributes(array('idTryout'=>$idTryout));
+            $detail = $pengerjaan->getDetail($idTryout);
+            
+            $soalList = Soal::model()->findAllByAttributes(array('idtryout' => $idTryout));
+            $jawaban = array();
+            foreach($soalList as $soal){
+                $jawabanFromDB = Jawaban::model()->findByAttributes(array('idsoal'=>$soal->id));                
+                $jawaban[$soal->nomor] = $jawabanFromDB;                
+            }
+            
+            $this->render('examResult',array('pengerjaan'=>$pengerjaan,'detail'=>$detail,'soalList'=>$soalList,'jawaban'=>$jawaban));
         }
 
 }

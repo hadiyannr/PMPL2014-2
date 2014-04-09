@@ -26,7 +26,8 @@ class TestController extends Controller{
 //        $model->email = 'hanifnaufal7557@gmail.com';
 //        $model->username = 'userkkk';
 //        $this->sendEmail($model);
-        $this->render("test");
+//        $this->render("test");
+        echo ';'.sizeof(Pengerjaantryout::model()->findByAttributes(array('idTryout'=>6)));
     }
     
     public function actionTulis($m){

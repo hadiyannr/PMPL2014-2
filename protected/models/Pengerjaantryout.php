@@ -120,4 +120,37 @@ class Pengerjaantryout extends CActiveRecord
             }            
             $this->nilai = $nilai;
         }
+        
+        public function getDetail($idTryout){            
+            //Cari ranking
+            $criteria = new CDbCriteria;
+            $criteria->order = 'nilai DESC';        
+            $criteria->compare('idTryout',$idTryout);                    
+            $model = Pengerjaantryout::model()->findAll($criteria);
+            $rank = 0;
+            for($i = 0; $i < sizeof($model);$i++){
+                if($model[$i]->idPengguna == $this->idPengguna){
+                    $rank = $i+1;
+                }
+            }
+            
+            //cari detail
+            $benar = 0;
+            $salah = 0;            
+            foreach($this->jawabans as $jawaban){
+                if($jawaban->idsoal0->opsis[$jawaban->isiJawaban]->isJawaban == 1){
+                    $benar++;
+                }else{
+                    $salah++;
+                }
+            }            
+            $kosong = sizeof(Soal::model()->findAllByAttributes(array('idtryout'=>$idTryout)))  - ($benar + $salah);
+            
+            return array(
+                'rank' =>$rank,
+                'benar' =>$benar,
+                'salah' =>$salah,
+                'kosong' =>$kosong,
+            );
+        }
 }

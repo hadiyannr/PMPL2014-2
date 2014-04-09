@@ -6,20 +6,16 @@ $this->breadcrumbs = array(
     'Tryout',
 );
 ?>
-<ul class="nav nav-tabs">
-    <?php if (sizeof($model[0])): ?>
+<ul class="nav nav-tabs">    
         <li class="active"><a href="#present" data-toggle="tab">MyTryout</a></li>
         <li><a href="#future" data-toggle="tab">Ujian Tersedia</a></li>
-        <li><a href="#past" data-toggle="tab">Statistik Tryout</a></li>  
-    <?php else: ?>        
-        <li class="active"><a href="#future" data-toggle="tab">Ujian Tersedia</a></li>
-        <li><a href="#past" data-toggle="tab">Statistik Tryout</a></li>  
-    <?php endif; ?>
+        <li><a href="#past" data-toggle="tab">Statistik Tryout</a></li>      
 </ul>
 
 <div class="tab-content">
-    <?php if (sizeof($model[0])): ?>
+    
     <div class="tab-pane fade in active" id="present">
+        <?php if (sizeof($model[0])): ?>
         <table class="table">
             <tr>
                 <th>No</th>
@@ -61,9 +57,12 @@ $this->breadcrumbs = array(
                 </tr>
             <?php } ?>
         </table>
+        <?php else:?>        
+            <br>
+            <span style="font-size:18px;"><i>Tidak ada daftar di MyTryout. Silahkan daftar pada menu Ujian Tersedia</i></span>
+        <?php endif;?>
     </div>
-    <?php endif;?>
-    <div class="tab-pane <?php if(sizeof($model[0])==0){echo 'fade in active';}?>" id="future">
+    <div class="tab-pane" id="future">
         <table class="table">
             <tr>
                 <th>No</th>
