@@ -42,7 +42,7 @@ class SiteController extends Controller
         
         public function actionActivation($username, $code){           
             $pengguna = Pengguna::model()->findByAttributes(array('username'=>$username));
-            $correctCode = crypt('dingdonglala13', $pengguna->username.$pengguna->email);
+            $correctCode = crypt(Yii::app()->params['adminPassword'], $pengguna->username.$pengguna->email);
             if(strcmp($code, $correctCode) == 0){                
                 $pengguna->isActive = 1;                                
                 $pengguna->save();                
