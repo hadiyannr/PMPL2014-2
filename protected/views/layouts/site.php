@@ -35,6 +35,12 @@
                             <li>
                                 <?php echo CHtml::link("Tryout", array('tryout/index')); ?>
                             </li>
+                            
+                            <?php if(Yii::app()->user->isAdmin()):?>
+                            <li>
+                                <?php echo CHtml::link("Admin", array('admin/index')); ?>
+                            </li>
+                            <?php endif;?>
 
                         </ul> 
 

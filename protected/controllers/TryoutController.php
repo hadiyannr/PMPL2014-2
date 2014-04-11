@@ -5,7 +5,7 @@
 class TryoutController extends Controller {
 
     public $layout = '//layouts/site';
-    public function actionIndex() {    
+    public function actionIndex() {
         $model = Tryout::model()->findAll();
         $pastTO = array();
         $myTO = array();
@@ -60,6 +60,7 @@ class TryoutController extends Controller {
             $model->idPengguna = Yii::app()->user->id;
             $model->save();
             Yii::app()->user->setFlash('message',"anda telah berhasil mendaftar tryout");
-        }                
+            $this->refresh();
+        }
     }
 }

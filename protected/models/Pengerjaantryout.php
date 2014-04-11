@@ -6,6 +6,7 @@
  * The followings are the available columns in table 'pengerjaantryout':
  * @property integer $id
  * @property integer $nilai
+ * @property integer $isSubmitted
  * @property integer $idPengguna
  * @property integer $idTryout
  *
@@ -36,10 +37,10 @@ class Pengerjaantryout extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('idPengguna, idTryout', 'required'),
-			array('nilai, idPengguna, idTryout', 'numerical', 'integerOnly'=>true),
+			array('nilai,isSubmitted, idPengguna, idTryout', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, nilai, idPengguna, idTryout', 'safe', 'on'=>'search'),
+			array('id, nilai,isSubmitted, idPengguna, idTryout', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -65,6 +66,7 @@ class Pengerjaantryout extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'nilai' => 'Nilai',
+                        'isSubmitted' => 'Is Submitted',
 			'idPengguna' => 'Id Pengguna',
 			'idTryout' => 'Id Tryout',
 		);
@@ -90,6 +92,7 @@ class Pengerjaantryout extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('nilai',$this->nilai);   
+                $criteria->compare('isSubmitted',$this->isSubmitted);
 		$criteria->compare('idPengguna',$this->idPengguna);
 		$criteria->compare('idTryout',$this->idTryout);
 

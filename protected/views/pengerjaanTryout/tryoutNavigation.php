@@ -39,25 +39,18 @@
 <?php
     $waktuSelesai = $tryout->getWaktuSelesai();
     $waktuSelesai *= 1000;
-?>
-<script>    
-    timer = setInterval(function () {
-        var finish = new Date();
-        finish.setTime(<?php echo $waktuSelesai;?>);
-        var now = new Date();   
-        if(finish <= now){
-            clearInterval(timer);
-            document.getElementById("tryoutForm").submit();
-        }        
-    }, 500);
     
+?>
+<script>            
     function checkTime(i) {
         if (i < 10) {
             i = "0" + i;
         }
         return i;
     }
-    function startTime() {        
+        
+    
+    timer = setInterval(function () {
         var today = new Date();   
         var finish = new Date();
         finish.setTime(<?php echo $waktuSelesai;?>);
@@ -69,11 +62,36 @@
         m = checkTime(m);
         s = checkTime(s);
         document.getElementById('tryoutTime').innerHTML = h + ":" + m + ":" + s;
-        t = setTimeout(function () {
-            startTime()
-        }, 500);
         
-    }
-    startTime();
-    autoSubmit();
+    }, 500);
+    
+    submit = setInterval(function () {
+        var finish = new Date();
+        finish.setTime(<?php echo $waktuSelesai;?>);
+        var now = new Date();   
+        if(finish <= now){
+            clearInterval(timer);
+            clearInterval(submit);
+            document.getElementById("tryoutForm").submit();
+        }        
+    }, 500);
+//    function startTime() {
+//        var today = new Date();   
+//        var finish = new Date();
+//        finish.setTime(<?php // echo $waktuSelesai;?>);
+//        var remaining = new Date(finish - today);        
+//        var h = remaining.getHours() - 7;
+//        var m = remaining.getMinutes();
+//        var s = remaining.getSeconds();
+//        // add a zero in front of numbers<10
+//        m = checkTime(m);
+//        s = checkTime(s);
+//        document.getElementById('tryoutTime').innerHTML = h + ":" + m + ":" + s;
+//        t = setTimeout(function () {
+//            startTime()
+//        }, 500);
+//        
+//    }
+//    startTime();
+//    autoSubmit();
 </script>

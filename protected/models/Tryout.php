@@ -113,8 +113,8 @@ class Tryout extends CActiveRecord
 	}       
         public function status(){   
             $waktuMulai = $this->tanggal ." " . $this->waktuMulai;
-            $waktuSelesai = date('Y-m-d H:i',  strtotime("+{$this->durasi} minutes",  strtotime($waktuMulai)));
-            $now = date('Y-m-d H:i');
+            $waktuSelesai = date('Y-m-d H:i:s',  strtotime("+{$this->durasi} minutes",  strtotime($waktuMulai)));
+            $now = date('Y-m-d H:i:s');
             if($now < $waktuMulai){
                 return 1;
             }elseif($now > $waktuSelesai){
@@ -130,15 +130,15 @@ class Tryout extends CActiveRecord
             return $model != null;
         }
         
-        public function getRemainingTime(){
-            $waktuMulai = $this->tanggal ." " . $this->waktuMulai;
-            $waktuSelesai = date('Y-m-d H:i:s',  strtotime("+{$this->durasi} minutes",  strtotime($waktuMulai)));            
-            $seconds = strtotime($waktuSelesai) - strtotime(date('Y-m-d H:i:s'));            
-            return $seconds;
-        }
+//        public function getRemainingTime(){
+//            $waktuMulai = $this->tanggal ." " . $this->waktuMulai;
+//            $waktuSelesai = date('Y-m-d H:i:s',  strtotime("+{$this->durasi} minutes",  strtotime($waktuMulai)));            
+//            $seconds = strtotime($waktuSelesai) - strtotime(date('Y-m-d H:i:s'));            
+//            return $seconds;
+//        }
         
         public function getWaktuSelesai(){
-            $waktuMulai = $this->tanggal ." " . $this->waktuMulai;            
+            $waktuMulai = $this->tanggal ." " . $this->waktuMulai;
             return date(strtotime("+{$this->durasi} minutes",  strtotime($waktuMulai)));
         }
 }

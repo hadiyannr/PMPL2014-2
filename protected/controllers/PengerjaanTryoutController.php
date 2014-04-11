@@ -4,11 +4,12 @@ class PengerjaanTryoutController extends Controller
 {       
         public $layout = '//layouts/site';
 	public function actionPerform(){
-            $id = $_POST['Perform']['id'];       
-            $tryout = Tryout::model()->findByPk($id);                
+            $id = $_POST['Perform']['id'];
+            $tryout = Tryout::model()->findByPk($id);
             $soalList = Soal::model()->findAllByAttributes(array('idtryout' => $id));
-            $lembarJawab = Pengerjaantryout::model()->findByAttributes(array('idPengguna'=>Yii::app()->user->id,'idTryout'=>$tryout->id));        
+            $lembarJawab = Pengerjaantryout::model()->findByAttributes(array('idPengguna'=>Yii::app()->user->id,'idTryout'=>$tryout->id));
             $jawaban = array();
+            //init jawaban dari db(kalo ada)
             foreach($soalList as $soal){
                 $jawabanFromDB = Jawaban::model()->findByAttributes(array('idsoal'=>$soal->id));
                 if($jawabanFromDB == null){
@@ -20,8 +21,6 @@ class PengerjaanTryoutController extends Controller
                     $jawaban[$soal->nomor] = $jawabanFromDB;
                 }            
             }
-
-
 
             if(isset($_POST['jawaban'])){            
                 foreach($soalList as $soal){
@@ -39,10 +38,14 @@ class PengerjaanTryoutController extends Controller
                 $lembarJawab->save();
             }
             
-            if($tryout->status() < 0 || isset($_POST['Submit'])){                
+            if($tryout->status() < 0 || isset($_POST['Submit'])){                                
+                $lembarJawab->isSubmitted = 1;
+                $lembarJawab->save();
                 $this->redirect(array('tryout/index'));
-            }                
-
+            }
+            
+            
+            
             $this->render('exam',array('soalList'=>$soalList, 'tryout'=>$tryout,'jawaban'=>$jawaban));
         }
         

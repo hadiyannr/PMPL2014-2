@@ -22,12 +22,9 @@ class TestController extends Controller{
     }
     
     public function actionTest(){                         
-//        $model = new Pengguna;
-//        $model->email = 'hanifnaufal7557@gmail.com';
-//        $model->username = 'userkkk';
-//        $this->sendEmail($model);
-//        $this->render("test");
-        echo ';'.sizeof(Pengerjaantryout::model()->findByAttributes(array('idTryout'=>6)));
+        $tryout= Tryout::model()->findByPk(6);
+        $waktuSelesai = $tryout->status();                
+        
     }
     
     public function actionTulis($m){

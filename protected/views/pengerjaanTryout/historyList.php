@@ -3,7 +3,7 @@
 /* @var $this TryoutController */
 /* @var $model Tryouts */
 /* @var $to Tryouts */
-?>TryoutController */
+/*TryoutController */
 /* @var $model Tryouts */
 /* @var $to Tryouts */
 ?>

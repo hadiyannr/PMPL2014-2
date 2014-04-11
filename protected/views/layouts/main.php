@@ -33,7 +33,8 @@
 			'items'=>array(
 				array('label'=>'Home', 'url'=>array('/admin/index')),
                                 array('label'=>'Konten', 'url'=>array('/adminKonten/index'), 'visible'=>Yii::app()->user->isAdmin()),
-                                array('label'=>'Tryout', 'url'=>array('/adminTryout/index'), 'visible'=>Yii::app()->user->isAdmin()),                            
+                                array('label'=>'Tryout', 'url'=>array('/adminTryout/index'), 'visible'=>Yii::app()->user->isAdmin()),
+                                array('label'=>'Web Home', 'url'=>array('/site/index')),
 				array('label'=>'Login', 'url'=>array('/admin/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),

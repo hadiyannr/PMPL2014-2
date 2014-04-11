@@ -45,7 +45,13 @@ $this->breadcrumbs = array(
                         <?php echo $to->durasi; ?>
                     </td>                                        
                     <td>
-                        <?php if($to->status() == 0):?>
+                        <?php
+                            $pengerjaan = Pengerjaantryout::model()->findByAttributes(array('idTryout'=>$to->id));
+                        ?>
+                        
+                        <?php if($pengerjaan->isSubmitted == 1):?>
+                            Sudah mengerjakan
+                        <?php elseif($to->status() == 0):?>
                         <form method="post">
                             <input type="hidden" name="Perform[id]" value="<?php echo $to->id;?>">
                             <input type="submit" class="btn btn-primary" value="Kerjakan">
