@@ -75,23 +75,4 @@
             document.getElementById("tryoutForm").submit();
         }        
     }, 500);
-//    function startTime() {
-//        var today = new Date();   
-//        var finish = new Date();
-//        finish.setTime(<?php // echo $waktuSelesai;?>);
-//        var remaining = new Date(finish - today);        
-//        var h = remaining.getHours() - 7;
-//        var m = remaining.getMinutes();
-//        var s = remaining.getSeconds();
-//        // add a zero in front of numbers<10
-//        m = checkTime(m);
-//        s = checkTime(s);
-//        document.getElementById('tryoutTime').innerHTML = h + ":" + m + ":" + s;
-//        t = setTimeout(function () {
-//            startTime()
-//        }, 500);
-//        
-//    }
-//    startTime();
-//    autoSubmit();
 </script>

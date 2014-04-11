@@ -32,8 +32,24 @@ class ProfilController extends Controller {
             if($uploading){
                 $model->fotoUrl= Yii::app()->user->id . '.' .explode("/", $model->image->getType())[1];
             }
-                
-             if ($model->save()) {
+//            $imageValidation = true;
+//            $message= '';
+//            
+//            if(strtolower($model->image->type) != 'jpg' || strtolower($model->image->type) != 'png'){
+//                $imageValidation = false;
+//                $message = 'Tipe file salah, harus .jpg atau .png';
+//            }
+//            if($model->image->getSize() > 20000000){
+//                $imageValidation = false;
+//                $message = 'Ukuran harus kurang dari 20MB';
+//            }
+//            
+//            if(!$imageValidation){                
+//                $model->addError('image', $message);
+//            }                         
+            
+            
+            if($model->save()) {
                 if($uploading){
                     $model->image->saveAs(Yii::app()->basePath.'/../images/profilPic/'.$model->fotoUrl);
                 }

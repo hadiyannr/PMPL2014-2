@@ -21,7 +21,8 @@
             </tr>
             <?php
             $no = 1;
-            foreach ($model as $to) { ?>                    
+            foreach ($model as $to) { ?>   
+                <?php if($to->status() == -1):?>
                 <tr>
                     <td>
                         <?php echo $no++;?>
@@ -45,6 +46,7 @@
                         </form>                            
                     </td>
                 </tr>
+                <?php endif;?>
             <?php } ?>
         </table>
         <?php else:?>        
