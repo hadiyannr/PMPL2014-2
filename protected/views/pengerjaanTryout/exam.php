@@ -1,5 +1,5 @@
 <?php
-    /* @var $this TryoutController */
+    /* @var $this PengerjaanTryoutController */
     /* @var $tryout Tryout */
     /* @var $soalList Soals */
     /* @var $soal Soal */

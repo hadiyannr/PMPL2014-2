@@ -40,9 +40,7 @@ class Profil extends CActiveRecord
 			array('nama', 'length', 'max'=>100),
 			array('fotoUrl, asalSma', 'length', 'max'=>255),
 			array('targetJurusan', 'length', 'max'=>200),
-			array('tanggalLahir', 'safe'),
-//                        array('image', 'file', 'types'=>'jpg, gif, png','wrongType'=>'Format gambar harus jpg, gif, png'),
-//                        array('image', 'file', 'maxSize'=>1024*1024*15, 'tooLarge'=>'File harus kurang dari 15MB'),
+			array('tanggalLahir', 'safe'),                   
                     
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.

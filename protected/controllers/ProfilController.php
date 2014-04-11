@@ -28,34 +28,37 @@ class ProfilController extends Controller {
             $model->attributes = $_POST['Profil'];
             $model->idPengguna = Yii::app()->user->id;
             $model->image=CUploadedFile::getInstance($model,'image');
-            $uploading = $model->image != null;
+            $uploading = $model->image != null;            
             if($uploading){
-                $model->fotoUrl= Yii::app()->user->id . '.' .explode("/", $model->image->getType())[1];
-            }
-//            $imageValidation = true;
-//            $message= '';
-//            
-//            if(strtolower($model->image->type) != 'jpg' || strtolower($model->image->type) != 'png'){
-//                $imageValidation = false;
-//                $message = 'Tipe file salah, harus .jpg atau .png';
-//            }
-//            if($model->image->getSize() > 20000000){
-//                $imageValidation = false;
-//                $message = 'Ukuran harus kurang dari 20MB';
-//            }
-//            
-//            if(!$imageValidation){                
-//                $model->addError('image', $message);
-//            }                         
+                $filetype = explode("/", $model->image->getType())[1];
+                $model->fotoUrl= Yii::app()->user->id . '.' .$filetype; 
+                
+                
+                $imageValidation = true;
+                $message= '';                
+                                
+                if($filetype != 'jpeg' && $filetype != 'png'&& $filetype != 'jpg'){
+                    $imageValidation = false;
+                    $message = 'Tipe file salah, harus .jpg atau .png';
+                }
+                
+                if($model->image->getSize() > 20000000){
+                    $imageValidation = false;
+                    $message = 'Ukuran harus kurang dari 20MB';
+                }
+
+                if(!$imageValidation){                                          
+                    $model->addError('image', $message);                    
+                }
+            }           
             
-            
-            if($model->save()) {
+            if(!$model->hasErrors() && $model->save()) {
                 if($uploading){
                     $model->image->saveAs(Yii::app()->basePath.'/../images/profilPic/'.$model->fotoUrl);
                 }
                 $this->redirect(array('index'));
             }
-        }        
+        }                
         $this->render('update',array('model'=>$model));
     }
     

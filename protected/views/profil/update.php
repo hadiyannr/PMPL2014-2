@@ -18,6 +18,7 @@
         <?php
             $accountStatus = array(1 => 'Laki - Laki', 0 => 'Perempuan');
             echo $form->radioButtonList($model, 'jenisKelamin', $accountStatus, array('separator' => '<br>'));
+            echo $form->error($model, 'jenisKelamin');
         ?>        
     </div>
 

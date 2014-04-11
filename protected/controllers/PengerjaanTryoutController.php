@@ -41,12 +41,18 @@ class PengerjaanTryoutController extends Controller
             if($tryout->status() < 0 || isset($_POST['Submit'])){                                
                 $lembarJawab->isSubmitted = 1;
                 $lembarJawab->save();
-                $this->redirect(array('tryout/index'));
+                $this->redirect(array('postExam','id'=>$lembarJawab->id));
             }
             
             
             
             $this->render('exam',array('soalList'=>$soalList, 'tryout'=>$tryout,'jawaban'=>$jawaban));
+        }
+        
+        public function actionPostExam($id){
+            $model = Pengerjaantryout::model()->findByPk($id);
+            $detail = $model->getDetail($model->idTryout);
+            $this->render('postExam',array('model'=>$model,'detail'=>$detail));            
         }
         
         public function actionHistory(){
@@ -74,5 +80,5 @@ class PengerjaanTryoutController extends Controller
             
             $this->render('examResult',array('pengerjaan'=>$pengerjaan,'detail'=>$detail,'soalList'=>$soalList,'jawaban'=>$jawaban));
         }
-
+                
 }
