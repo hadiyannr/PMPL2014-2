@@ -227,7 +227,7 @@ class ETinyMce extends CInputWidget
     *
     * @var boolean
     */
-   private $useCompression = true;
+   private $useCompression = false;
 
    //***************************************************************************
    // Local properties
