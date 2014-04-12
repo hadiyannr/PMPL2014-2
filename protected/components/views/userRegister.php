@@ -23,8 +23,8 @@
                         <label>Confirm Password</label>
                         <input name="DaftarForm[confirmPassword]" type="password" class="form-control" placeholder="Confirm Password" required>
                     </div>					  			 	  			 					  
-                    <button type="submit" class="btn btn-primary">Register</button>					
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>			        	
+                    <button type="submit" class="btn btn-primary">Daftar</button>					
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Batal</button>			        	
                 </form>
             </div>			      
         </div>
