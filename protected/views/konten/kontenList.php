@@ -5,6 +5,8 @@ $this->breadcrumbs=array(
 	'Daftar Konten',
 );
 foreach ($model as $konten){?>
-    <?php echo CHtml::link($konten->judul,array('index','id'=>$konten->id))?>
-    <br>
+	<div class="col-md-4" overflow: scroll>
+	    <?php echo CHtml::link($konten->judul,array('index','id'=>$konten->id))?>
+	    <br>
+    </div>
 <?php }?>
