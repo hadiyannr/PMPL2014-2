@@ -20,7 +20,7 @@
                         <label>Remember Me</label>
                     </div>					
                     <button type="submit" class="btn btn-primary">Login</button>					
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>			        	
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Batal</button>			        	
                 </form>                                                   
             </div>			      
         </div>

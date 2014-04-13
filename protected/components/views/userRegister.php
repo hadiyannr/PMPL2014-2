@@ -9,7 +9,7 @@
                 <form role="form" method="post">			          
                     <div class="form-group">
                         <label>Username</label>
-                        <input name="DaftarForm[username]" type="text" class="form-control" placeholder="username" required>
+                        <input name="DaftarForm[username]" type="text" class="form-control" placeholder="username" pattern="^[a-zA-Z0-9]{5,}$" required>
                     </div>
                     <div class="form-group">
                         <label>Email address</label>
@@ -17,14 +17,14 @@
                     </div>
                     <div class="form-group">
                         <label>Password</label>
-                        <input name="DaftarForm[password]" type="password" class="form-control" placeholder="Password" required>
+                        <input name="DaftarForm[password]" type="password" class="form-control" placeholder="Password" pattern="^[*]{5,}$" required>
                     </div>				
                     <div class="form-group">
                         <label>Confirm Password</label>
                         <input name="DaftarForm[confirmPassword]" type="password" class="form-control" placeholder="Confirm Password" required>
                     </div>					  			 	  			 					  
-                    <button type="submit" class="btn btn-primary">Register</button>					
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>			        	
+                    <button type="submit" class="btn btn-primary">Daftar</button>					
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Batal</button>			        	
                 </form>
             </div>			      
         </div>
