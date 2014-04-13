@@ -86,7 +86,10 @@ $this->breadcrumbs=array(
 												<?php echo $konten->judul;?>
 											</h2>
 											<p align="justify">
-												<?php echo $konten->isi;?>
+												<?php 
+													$prev = $konten->isi;
+													echo substr($prev, 0, 100);
+												?>
 											</p>
 											<p>
 												<?php echo CHtml::link("More details",array('index','id'=>$konten->id))?>
@@ -110,7 +113,10 @@ $this->breadcrumbs=array(
 											<?php echo $konten->judul;?>
 										</h2>
 										<p align="justify">
-											<?php echo $konten->isi;?>
+											<?php 
+												$prev = $konten->isi;
+												echo substr($prev, 0, 100);
+											?>
 										</p>
 										<p>
 											<?php echo CHtml::link("More details",array('index','id'=>$konten->id))?>
