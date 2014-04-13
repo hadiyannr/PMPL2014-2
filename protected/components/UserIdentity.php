@@ -17,7 +17,7 @@ class UserIdentity extends CUserIdentity
             Yii::app()->user->setFlash('message', "username belum terdaftar");
         }else if($record->password !== md5($this->password)){
             $this->errorCode=self::ERROR_PASSWORD_INVALID;
-            Yii::app()->user->setFlash('message', "username atau password salah");
+            Yii::app()->user->setFlash('message', "username atau password tidak cocok");
         }else if($record->isActive == 0){
             $this->errorCode=self::ERROR_USERNAME_INVALID;
             Yii::app()->user->setFlash('message', "username belum aktif");

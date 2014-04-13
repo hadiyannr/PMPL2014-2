@@ -56,6 +56,9 @@
     </div>
     
     <?php echo CHtml::submitButton($model->isNewRecord ? 'Buat' : 'Simpan',array('class'=>'btn btn-primary')); ?>    
+    <?php     
+        echo CHtml::link('Batal',array('site/index'),array('class'=>'btn btn-danger')); 
+    ?>    
     <!--</form>-->
 <?php $this->endWidget(); ?>
 </div>

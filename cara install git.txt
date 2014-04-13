@@ -6,3 +6,5 @@ ke direktori xampp/htdocs/siapmasukui (bikin folder)
 git init
 git remote add (url dapet dari github)
 git pull
+
+
