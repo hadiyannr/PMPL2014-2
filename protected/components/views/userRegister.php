@@ -17,7 +17,7 @@
                     </div>
                     <div class="form-group">
                         <label>Password</label>
-                        <input name="DaftarForm[password]" type="password" class="form-control" placeholder="Password" pattern="^[*]{5,}$" required>
+                        <input name="DaftarForm[password]" type="password" class="form-control" placeholder="Password" pattern="^[w]*{5,}$" required>
                     </div>				
                     <div class="form-group">
                         <label>Confirm Password</label>
