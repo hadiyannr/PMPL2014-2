@@ -8,14 +8,15 @@ $this->breadcrumbs=array(
 ?>
 
 <br>
-<div class="text-center">
-    <h1><?php echo $konten->judul;?></h1>
-    <?php if(Yii::app()->user->isAdmin()){
-        echo '('.CHtml::link('edit',array('adminKonten/update','id'=>$konten->id)).")";
-    }?>
+<div class="col-md-7 column">
+    <div class="text-center">
+        <h1><?php echo $konten->judul;?></h1>
+        <?php if(Yii::app()->user->isAdmin()){
+            echo '('.CHtml::link('edit',array('adminKonten/update','id'=>$konten->id)).")";
+        }?>
+    </div>
+    <?php echo $konten->isi;?>
 </div>
-<div></div>
-<?php echo $konten->isi;?>
 <div class="pull-right">
     Share:
     <?php    

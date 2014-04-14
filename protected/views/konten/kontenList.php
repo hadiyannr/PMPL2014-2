@@ -73,11 +73,10 @@ $this->breadcrumbs=array(
 						    <br>
 					    </div> -->
 					    <?php 
-					    	$judul = $konten->judul;
 					    if ($counter==0) {?>
 					    	<div class="panel panel-default">
 								<div class="panel-heading">
-									<a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-898425" href="#panel-element-<?php echo $counter;?>"><?php echo "$konten->judul" ?></a>
+									 <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-898425" href="#panel-element-<?php echo $counter;?>"><?php echo "$konten->judul" ?></a>
 								</div>
 								<div id="panel-element-<?php echo $counter;?>" class="panel-collapse collapse">
 									<div class="panel-body">
@@ -85,7 +84,7 @@ $this->breadcrumbs=array(
 											<h2>
 												<?php echo $konten->judul;?>
 											</h2>
-											<p align="justify">
+											<p>
 												<?php 
 													$prev = $konten->isi;
 													echo substr($prev, 0, 100);
@@ -98,37 +97,37 @@ $this->breadcrumbs=array(
 									</div>
 								</div>
 							</div>
-					    <?php
-					    	$counter++;
+						<?php
+						    $counter++;
 					    } 
 					    else {?>
-					    	<div class="panel panel-default">
-							<div class="panel-heading">
-								 <a class="panel-title" data-toggle="collapse" data-parent="#panel-898425" href="#panel-element-<?php echo $counter;?>">Fakultas Kedokteran Gigi</a>
-							</div>
-							<div id="panel-element-<?php echo $counter;?>" class="panel-collapse collapse">
-								<div class="panel-body">
-									<div class="col-md-12 column">
-										<h2>
-											<?php echo $konten->judul;?>
-										</h2>
-										<p align="justify">
-											<?php 
-												$prev = $konten->isi;
-												echo substr($prev, 0, 100);
-											?>
-										</p>
-										<p>
-											<?php echo CHtml::link("More details",array('index','id'=>$konten->id))?>
-										</p>
+						    <div class="panel panel-default">
+								<div class="panel-heading">
+									 <a class="panel-title" data-toggle="collapse" data-parent="#panel-898425" href="#panel-element-<?php echo $counter;?>"><?php echo "$konten->judul" ?></a>
+								</div>
+								<div id="panel-element-<?php echo $counter;?>" class="panel-collapse collapse">
+									<div class="panel-body">
+										<div class="col-md-12 column">
+											<h2>
+												<?php echo $konten->judul;?>
+											</h2>
+											<p>
+												<?php 
+													$prev = $konten->isi;
+													echo substr($prev, 0, 100);
+												?>
+											</p>
+											<p>
+												<?php echo CHtml::link("More details",array('index','id'=>$konten->id))?>
+											</p>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-					    <?php 
-					    	$counter++;
-					    }?>
-					<?php }?>
+						    <?php 
+						    	$counter++;
+						    }?>
+						<?php }?>
 					</div>
 				</div>
 			</div>
