@@ -24,7 +24,8 @@
             <div class="header-nav">
                 <div class="container">
                     <div class="navbar-header">
-                        <a href="" class="navbar-brand">SiapMasukUI.com</a>
+                        <?php echo CHtml::link("SiapMasukUI.com", array('site/index'),array('class'=>'navbar-brand')); ?>
+                        <!-- <a href="" class="navbar-brand">SiapMasukUI.com</a> -->
                     </div>
                     <nav role="navigation">
                         <ul class="nav navbar-nav">
