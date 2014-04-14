@@ -8,7 +8,7 @@ $this->breadcrumbs=array(
 	<div class="row clearfix">
 		<div class="col-md-12 column">
 			<div class="row clearfix">
-				<div class="col-md-9 column">
+				<!-- <div class="col-md-9 column">
 					<div class="carousel slide" id="carousel-748657" style="width: 600px"> 
 						<ol class="carousel-indicators">
 							<li class="active" data-slide-to="0" data-target="#carousel-748657">
@@ -55,7 +55,7 @@ $this->breadcrumbs=array(
 						</div> <a class="left carousel-control" href="#carousel-748657" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-748657" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
 					</div>
 				</div>
-				<?php $counter = 0; ?>
+ -->				<?php $counter = 0; ?>
 				<div class="col-md-12 column">
 				<!-- <div class="panel-group" id="panel-898425" style="margin: 5px;"> -->			
 					<?php foreach ($model as $konten):?>
