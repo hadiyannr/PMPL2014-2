@@ -57,15 +57,13 @@ $this->breadcrumbs=array(
 				</div>
 				<?php $counter = 0; ?>
 				<div class="col-md-12 column">
-				<div class="panel-group" id="panel-898425" style="margin: 5px;">			
+				<!-- <div class="panel-group" id="panel-898425" style="margin: 5px;"> -->			
 					<?php foreach ($model as $konten):?>
 						<!--  -->
 						<?php if($counter%3==0):?>
 							<div class="rowa">
 						<?php endif;?>
-
-						
-						<div class="col-md-4 column" style="margin: 5px ; border-right: 1px solid #eee; height: 10em;">
+						<div class="col-md-4" style="border-right: 1px solid #eee; height: 10em;">
 							<h3><?php echo CHtml::link($konten->judul,array('index','id'=>$konten->id))?></h3>
 							<p> <?php 
 								$prev = $konten->isi; 
@@ -77,7 +75,7 @@ $this->breadcrumbs=array(
 							</p>
 						</div>
 
-						<?php if($counter%3==2 || $counter == sizeof($model) - 1):?>
+						<?php if($counter%3==2 || $counter == sizeof($model)-1):?>
 							</div>
 						<?php endif;?>
 							

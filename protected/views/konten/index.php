@@ -8,7 +8,7 @@ $this->breadcrumbs=array(
 ?>
 
 <br>
-<div class="col-md-7 column">
+<div class="col-md-7 column" style="border-right: 1px solid #eee;">
     <div class="text-center">
         <h1><?php echo $konten->judul;?></h1>
         <?php if(Yii::app()->user->isAdmin()){

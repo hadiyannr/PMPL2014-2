@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.9
+-- version 4.1.6
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 08, 2014 at 12:52 PM
--- Server version: 5.5.34
--- PHP Version: 5.4.22
+-- Generation Time: Apr 14, 2014 at 02:24 PM
+-- Server version: 5.6.16
+-- PHP Version: 5.5.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -84,15 +84,29 @@ CREATE TABLE IF NOT EXISTS `konten` (
   PRIMARY KEY (`id`),
   KEY `category_fk_idx` (`idcategory`),
   KEY `admin_konten_idx` (`idAdmin`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=20 ;
 
 --
 -- Dumping data for table `konten`
 --
 
 INSERT INTO `konten` (`id`, `idcategory`, `isi`, `judul`, `isPublished`, `idAdmin`) VALUES
-(1, 1, '<p>Ini konten</p>\r\n<p>Coba kontennya diisi dums..<br />coba lorem deh..</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, voluptatibus, a, quod accusamus nemo dicta laborum vitae rerum ipsum quaerat earum reiciendis aut nulla quo asperiores voluptates nihil labore veniam!<br />Culpa, earum, ab laborum doloremque odio facere et labore reiciendis eius odit accusantium delectus perspiciatis laudantium tempora in voluptas quas saepe accusamus sit error! Aliquam odio unde eveniet explicabo repellat!<br />Doloribus, voluptatum, molestias, magni hic a harum reprehenderit ut repellat velit facere quaerat omnis ea tempore! Accusantium, deserunt, quos praesentium eligendi temporibus molestiae quibusdam eaque beatae atque libero id maxime!<br />Impedit, qui, voluptas, distinctio quam soluta ullam natus perferendis alias praesentium iure recusandae commodi temporibus veritatis cupiditate laudantium maiores error voluptate atque aliquam ad doloremque veniam nesciunt dolores odit dignissimos!<br />Minima, quaerat, cum sint non quod perspiciatis autem et alias culpa similique quo magni voluptas esse in impedit rem accusamus sit ullam eius quos. Culpa possimus amet reiciendis numquam eligendi.<br />Temporibus, modi, fugit, nisi veritatis explicabo dolore adipisci culpa accusamus molestiae maiores vero eum praesentium et non repudiandae. Aliquid et illum vel vitae consectetur porro est quia ex culpa dolore.<br />Consequatur, quam, atque, neque, unde esse culpa ex nesciunt voluptatibus itaque aut est odio velit recusandae similique nemo laborum quibusdam voluptates pariatur quo commodi quae id fugiat enim animi accusamus.<br />Sapiente, impedit iste error vitae magni ea maiores. Eius, soluta, ullam, perferendis quidem rem neque impedit harum dolores quasi officia necessitatibus molestiae aliquid maiores! Minus ipsam quasi autem temporibus commodi!<br />Placeat, laborum, nam, recusandae voluptates itaque nihil neque iure consequatur nostrum inventore ut repudiandae animi vitae quisquam veniam facilis laboriosam autem. Fuga, rem, omnis suscipit doloremque repudiandae molestias itaque sapiente?<br />Nisi, minus, eum, quia incidunt animi architecto quidem harum neque repellendus deserunt est similique voluptate blanditiis ab consequatur iure labore sint veniam debitis nihil. Soluta sit nostrum dignissimos accusamus ducimus.<br />Esse, facilis, laborum, quo tempore beatae dolores sequi deserunt fugit voluptatem veniam corrupti cupiditate expedita aut nam necessitatibus tenetur explicabo! Reiciendis dicta expedita dolorem! Eius, error quibusdam id dolorum distinctio?<br />Ipsam, nam, veritatis molestias quod quibusdam neque numquam itaque explicabo quo cupiditate unde repudiandae incidunt natus nisi quas excepturi voluptatibus animi praesentium a accusantium! Totam, dicta excepturi pariatur quia vitae.<br />Ratione, eveniet laudantium excepturi enim non dolores consequuntur cumque provident. Aliquid, eligendi, rem quibusdam quae asperiores repellat ipsum molestiae natus eaque sed unde itaque quia? Commodi, ipsum necessitatibus doloribus fuga.<br />Aliquid, earum, ut, aliquam nulla odit necessitatibus tempora optio quaerat unde cum suscipit expedita ipsam ea facere corporis labore laboriosam esse dolores non dolorem quisquam nihil quis voluptas perferendis ipsa!<br />Similique, perferendis, recusandae, magnam sint praesentium quod non enim fugiat saepe quisquam assumenda deserunt eligendi veritatis incidunt tempore doloremque libero doloribus nisi ad laudantium dignissimos quae natus. Deserunt, enim, blanditiis.<br />Vero, aliquid in expedita et architecto sint facilis optio dicta excepturi adipisci. Blanditiis, autem, quidem, quasi, asperiores qui beatae cum officiis optio quam distinctio praesentium totam mollitia alias veritatis non.<br />Sapiente, vel quam quae eos natus voluptatum eveniet dolor doloribus saepe beatae deserunt quis et quisquam illo amet quasi laudantium molestiae voluptatibus asperiores deleniti nostrum quas magni accusantium omnis veritatis.</p>', 'Ini lorem', 1, 4),
-(2, 1, '<blockquote>\r\n<p>Ini fakultas Baling baling&Atilde;<img title="Cool" src="http://localhost/siapmasukui/assets/f59c1a9e/tiny_mce/plugins/emotions/img/smiley-cool.gif" alt="Cool" border="0" /></p>\r\n</blockquote>', 'Fakultas Baling Baling', 1, NULL);
+(3, 1, '<p>Berdirinya FEUI ditetapkan dengan SK. Menteri Pendidikan dan Kebudayaan No. 360/BPT/1951, dengan hanya satu jurusan yaitu Jurusan Ekonomi Perusahaan. Pada saat itu FEUI memiliki tujuh guru besar: Prof. Mr. Hazairin, Djokosoetono, Prof.Dr. A. Kraal, Prof. Dr. DH. Burger, Prof. Mr. Dr. WGL Lemaire dan Prof. Mr. Dr. WHE Noach. Sebagai hasil pengembangan dan pemindahan Jurusan Sosial Ekonomi dari Fakultas Hukum memiliki 3 jurusan, yaitu Umum, Sosiologi Ekonomi dan Ekonomi Perusahaan.</p>\r\n<p>Pada tahun ini ditandai sebagai dasar terbentuknya Departemen Ilmu Ekonomi yang kita kenal sekarang ini. Pada saat yang sama dibentuk dua bagian yaitu seminar Ekonomi Perusahaan yang dipimpin Oleh Prof. Dr. A. Kraal dan Balai Penyelidikan Ekonomi dan Masyarakat, yang setahun kemudian diubah menjadi Lembaga Penyelidikan Ekonomi dan Masyarakat, dengan ketua pertamanya Prof. Dr. Soemitro. Disamping itu, dibuka pula Perpustakaan Fakultas di Jalan Diponegoro dipimpin oleh Prof. Dr. PL. van der Vilde.</p>\r\n<p>Program studi yang ada di FEUI terdiri dari:</p>\r\n<ul>\r\n<li> Di bawah Koordinasi Departemen</li>\r\n</ul>\r\n<p style="padding-left: 60px;">1. S1 Reguler Ilmu Ekonomi<br />2. S1 Reguler Ilmu Ekonomi Islam<br />3. S2 Ilmu Ekonomi<br />4. Magister Perencanaan dan Kebijakan Publik (MPKP)<br />5. S3 Ilmu Ekonomi</p>\r\n<ul>\r\n<li> Di bawah Koordinasi Departemen Manajemen</li>\r\n</ul>\r\n<p style="padding-left: 60px;">1. S1 Reguler Manajemen<br />2. S1 Ekstensi Manajemen<br />3. S1 Reguler Bisnis Islam<br />4. S2 Ilmu Manajemen<br />5. Magister Manajemen (MM)<br />6. S3 Ilmu Manajemen</p>\r\n<ul>\r\n<li> Di Bawah Koordinasi Departemen Akuntansi</li>\r\n</ul>\r\n<p style="padding-left: 60px;">1. S1 Reguler Akuntansi<br />2. S1 Ekstensi Akuntansi<br />3. Pendidikan Profesi Akuntansi<br />4. S2 Ilmu Akuntansi<br />5. Magister Akuntansi (MAKSI)<br />6. S3 Ilmu Akuntansi</p>\r\n<p>&nbsp;</p>', 'Fakultas Ekonomi', 1, 4),
+(4, 1, '<p>Fakultas Ilmu Komputer di Universitas Indonesia tidak dapat dilepaskan dari Pusat Ilmu Komputer Universitas Indonesia. Pada tahun 1972 Rektor Universitas Indonesia mendirikan suatu lembaga baru, yang diberi nama Pusat Ilmu Komputer Universitas Indonesia, dan sebagai Direkturnya ditunjuk Dr. Indro S. Suwandi, yang bertanggung jawab kepada Rektor. Adapun tujuan dari lembaga ini, sesuai dengan namanya, adalah untuk mengembangkan Ilmu Komputer di Indonesia, khususnya di Universitas Indonesia.</p>\r\n<p>Berdasarkan Peraturan Pemerintah No. 5/1980 yang mengatur unit organisasi pengelola fasilitas komputer di perguruan tinggi, maka pada tahun 1985 dibentuk UPT Komputer UI. Namun karena nama PUSILKOM seringkali lebih dikenal, dan ruang gerak kegiatannya jauh lebih luas daripada tugas dan fungsi UPT Komputer, maka nama dan fungsi PUSILKOM tetap dipertahankan.</p>\r\n<p>Pada tanggal 21 Oktober 1993, Fakultas Ilmu Komputer (Fasilkom) UI resmi terbentuk berdasarkan Surat Keputusan Mendikbud no. 0370/O/1993. Fasilkom UI bertekad menjadi institusi pendidikan, penelitian dan pelayanan yang bermutu internasional dalam bidang Ilmu dan Teknologi Komputer. Dengan demikian, sejak tahun 1993 pengelola an Program Studi Ilmu Komputer jenjang S1 dan S2 berpindah dari Pusilkom ke Fasilkom.</p>\r\n<p>Program Studi yang ditawarkan di Fasilkom UI :</p>\r\n<ol>\r\n<li>S1 Ilmu Komputer Reguler</li>\r\n<li>S1 Sistem Informasi Reguler</li>\r\n<li>S1 Ilmu Komputer Paralel</li>\r\n<li>S1 Sistem Informasi Paralel</li>\r\n<li>S1 Ilmu Komputer kelas internasional</li>\r\n<li>S2 Magister Ilmu Komputer</li>\r\n<li>S2 Magister Teknologi Informasi</li>\r\n<li>S3 Ilmu Komputer</li>\r\n</ol>', 'Fakultas Ilmu Komputer', 1, 4),
+(6, 1, '', 'Fakultas Matematika & Ilmu Pengetahuan Alam', 1, 4),
+(7, 1, '', 'Fakultas Kesehatan Masyarakat', 1, 4),
+(8, 1, '', 'Fakultas Ilmu Sosial & Ilmu Politik', 1, 4),
+(9, 1, '', 'Fakultas Psikologi', 1, 4),
+(10, 1, '', 'Fakultas Ilmu Keperawatan', 1, 4),
+(11, 1, '', 'Fakultas Farmasi', 1, 4),
+(12, 1, '', 'Fakultas Ilmu Pengetahuan Budaya', 1, 4),
+(13, 1, '', 'Fakultas Kedokteran', 1, 4),
+(14, 1, '', 'Fakultas Kedokteran Gigi', 1, 4),
+(15, 1, '', 'Fakultas Hukum', 1, 4),
+(16, 2, '', 'SIMAK UI 2014', 1, 4),
+(17, 2, '', 'SBNMPTN 2014', 0, 4),
+(18, 1, '', 'Vokasi', 1, 4),
+(19, 1, '', 'Fakultas Teknik', 1, 4);
 
 -- --------------------------------------------------------
 
@@ -182,6 +196,7 @@ CREATE TABLE IF NOT EXISTS `pengerjaantryout` (
   `nilai` int(11) DEFAULT NULL,
   `idPengguna` int(11) NOT NULL,
   `idTryout` int(11) NOT NULL,
+  `isSubmitted` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `pengerjaan_pengguna_idx` (`idPengguna`),
   KEY `pengerjaan_tryout_idx` (`idTryout`)
@@ -191,13 +206,13 @@ CREATE TABLE IF NOT EXISTS `pengerjaantryout` (
 -- Dumping data for table `pengerjaantryout`
 --
 
-INSERT INTO `pengerjaantryout` (`id`, `nilai`, `idPengguna`, `idTryout`) VALUES
-(1, 100, 4, 4),
-(3, 90, 1, 4),
-(4, 85, 2, 4),
-(5, 57, 5, 4),
-(6, NULL, 4, 6),
-(7, NULL, 4, 7);
+INSERT INTO `pengerjaantryout` (`id`, `nilai`, `idPengguna`, `idTryout`, `isSubmitted`) VALUES
+(1, 100, 4, 4, 0),
+(3, 90, 1, 4, 0),
+(4, 85, 2, 4, 0),
+(5, 57, 5, 4, 0),
+(6, NULL, 4, 6, 0),
+(7, NULL, 4, 7, 0);
 
 -- --------------------------------------------------------
 
@@ -213,7 +228,7 @@ CREATE TABLE IF NOT EXISTS `pengguna` (
   `isAdmin` tinyint(1) NOT NULL,
   `isActive` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 --
 -- Dumping data for table `pengguna`
@@ -223,7 +238,8 @@ INSERT INTO `pengguna` (`id`, `username`, `email`, `password`, `isAdmin`, `isAct
 (1, 'hanif', 'hanif@hanif.com', 'dingdong', 1, 1),
 (2, 'user', 'user@user.com', 'user', 0, 0),
 (4, 'hanifnaufal', 'hanif@naufal.com', '0d5ae719d9c263ff078793a4f0bf25fd', 1, 1),
-(5, 'lala', 'lala@lala.com', '2e3817293fc275dbee74bd71ce6eb056', 0, 0);
+(5, 'lala', 'lala@lala.com', '2e3817293fc275dbee74bd71ce6eb056', 0, 0),
+(6, 'sisyltrg', 'argapdh@gmail.com', '0d5ae719d9c263ff078793a4f0bf25fd', 0, 0);
 
 -- --------------------------------------------------------
 
