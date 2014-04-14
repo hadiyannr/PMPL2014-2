@@ -8,7 +8,7 @@ $this->breadcrumbs=array(
 	<div class="row clearfix">
 		<div class="col-md-12 column">
 			<div class="row clearfix">
-				<div class="col-md-7 column">
+				<div class="col-md-9 column">
 					<div class="carousel slide" id="carousel-748657" style="width: 600px"> 
 						<ol class="carousel-indicators">
 							<li class="active" data-slide-to="0" data-target="#carousel-748657">
@@ -55,80 +55,34 @@ $this->breadcrumbs=array(
 						</div> <a class="left carousel-control" href="#carousel-748657" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-748657" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
 					</div>
 				</div>
-				<div class="col-md-4 column">
-					<!-- <div class="row clearfix">
-						<div class="col-md-12 column">
+				<?php $counter = 0; ?>
+				<div class="col-md-12 column">
+				<div class="panel-group" id="panel-898425" style="margin: 5px;">			
+					<?php foreach ($model as $konten):?>
+						<!--  -->
+						<?php if($counter%3==0):?>
+							<div class="row">
+						<?php endif;?>
+
+						
+						<div class="col-md-4 column">
+							<h3><?php echo CHtml::link($konten->judul,array('index','id'=>$konten->id))?></h3>
+							<p> <?php 
+								$prev = $konten->isi; 
+								echo substr($prev, 0, 100);
+								?>
+							</p>
+							<p>
+								<?php echo CHtml::link("More details",array('index','id'=>$konten->id))?>
+							</p>
 						</div>
-					</div>
-					<div class="row clearfix">
-						<div class="col-md-12 column">
-						</div>
-					</div> -->
-					<?php 	$counter = 0; ?>
-					<div class="panel-group" id="panel-898425">			
-					<?php
-					foreach ($model as $konten){?>
-						<!-- <div class="col-md-12" overflow: scroll>
-						    <?php echo CHtml::link($konten->judul,array('index','id'=>$konten->id))?>
-						    <br>
-					    </div> -->
-					    <?php 
-					    if ($counter==0) {?>
-					    	<div class="panel panel-default">
-								<div class="panel-heading">
-									 <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-898425" href="#panel-element-<?php echo $counter;?>"><?php echo "$konten->judul" ?></a>
-								</div>
-								<div id="panel-element-<?php echo $counter;?>" class="panel-collapse collapse">
-									<div class="panel-body">
-										<div class="col-md-12 column">
-											<h2>
-												<?php echo $konten->judul;?>
-											</h2>
-											<p>
-												<?php 
-													$prev = $konten->isi;
-													echo substr($prev, 0, 100);
-												?>
-											</p>
-											<p>
-												<?php echo CHtml::link("More details",array('index','id'=>$konten->id))?>
-											</p>
-										</div>
-									</div>
-								</div>
+
+						<?php if($counter%3==2 || $counter == sizeof($model) - 1):?>
 							</div>
-						<?php
-						    $counter++;
-					    } 
-					    else {?>
-						    <div class="panel panel-default">
-								<div class="panel-heading">
-									 <a class="panel-title" data-toggle="collapse" data-parent="#panel-898425" href="#panel-element-<?php echo $counter;?>"><?php echo "$konten->judul" ?></a>
-								</div>
-								<div id="panel-element-<?php echo $counter;?>" class="panel-collapse collapse">
-									<div class="panel-body">
-										<div class="col-md-12 column">
-											<h2>
-												<?php echo $konten->judul;?>
-											</h2>
-											<p>
-												<?php 
-													$prev = $konten->isi;
-													echo substr($prev, 0, 100);
-												?>
-											</p>
-											<p>
-												<?php echo CHtml::link("More details",array('index','id'=>$konten->id))?>
-											</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						    <?php 
-						    	$counter++;
-						    }?>
-						<?php }?>
-					</div>
+						<?php endif;?>
+							
+						<?php $counter++;?>
+					<?php endforeach;?>
 				</div>
 			</div>
 		</div>

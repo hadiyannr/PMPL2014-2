@@ -5497,3 +5497,22 @@ Stack trace:
 REQUEST_URI=/siapMasukUI/index.php/Konten
 >>>>>>> 93171084fdb03ffb218e284664581211ea80dd7c
 ---
+2014/04/14 15:34:34 [error] [php] Use of undefined constant counter - assumed 'counter' (C:\xampp\htdocs\siapMasukUI\protected\views\konten\kontenList.php:64)
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CController.php(869): KontenController->renderFile()
+#1 C:\xampp\htdocs\yiiframework\web\CController.php(782): KontenController->renderPartial()
+#2 C:\xampp\htdocs\siapMasukUI\protected\controllers\KontenController.php(15): KontenController->render()
+#3 unknown(0): KontenController->actionKategori()
+#4 C:\xampp\htdocs\yiiframework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\yiiframework\web\CController.php(286): KontenController->runAction()
+#8 C:\xampp\htdocs\yiiframework\web\CController.php(265): KontenController->runActionWithFilters()
+#9 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): KontenController->run()
+#10 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\siapMasukUI\index.php(13): CWebApplication->run()
+REQUEST_URI=/siapMasukUI/index.php/konten/kategori?idcategory=1
+in C:\xampp\htdocs\siapMasukUI\protected\views\konten\kontenList.php (64)
+in C:\xampp\htdocs\siapMasukUI\protected\controllers\KontenController.php (15)
+in C:\xampp\htdocs\siapMasukUI\index.php (13)
