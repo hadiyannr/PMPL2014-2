@@ -61,18 +61,18 @@ $this->breadcrumbs=array(
 					<?php foreach ($model as $konten):?>
 						<!--  -->
 						<?php if($counter%3==0):?>
-							<div class="row">
+							<div class="rowa">
 						<?php endif;?>
 
 						
-						<div class="col-md-4 column">
+						<div class="col-md-4 column" style="margin: 5px ; border-right: 1px solid #eee; height: 10em;">
 							<h3><?php echo CHtml::link($konten->judul,array('index','id'=>$konten->id))?></h3>
 							<p> <?php 
 								$prev = $konten->isi; 
 								echo substr($prev, 0, 100);
 								?>
 							</p>
-							<p>
+							<p class="more">
 								<?php echo CHtml::link("More details",array('index','id'=>$konten->id))?>
 							</p>
 						</div>
