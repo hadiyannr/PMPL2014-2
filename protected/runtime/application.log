@@ -5497,6 +5497,7 @@ Stack trace:
 REQUEST_URI=/siapMasukUI/index.php/Konten
 >>>>>>> 93171084fdb03ffb218e284664581211ea80dd7c
 ---
+<<<<<<< HEAD
 2014/04/14 15:34:34 [error] [php] Use of undefined constant counter - assumed 'counter' (C:\xampp\htdocs\siapMasukUI\protected\views\konten\kontenList.php:64)
 Stack trace:
 #0 C:\xampp\htdocs\yiiframework\web\CController.php(869): KontenController->renderFile()
@@ -5516,3 +5517,47 @@ REQUEST_URI=/siapMasukUI/index.php/konten/kategori?idcategory=1
 in C:\xampp\htdocs\siapMasukUI\protected\views\konten\kontenList.php (64)
 in C:\xampp\htdocs\siapMasukUI\protected\controllers\KontenController.php (15)
 in C:\xampp\htdocs\siapMasukUI\index.php (13)
+=======
+2014/04/14 13:54:07 [error] [exception.CException] exception 'CException' with message 'Property "Pengerjaantryout.isSubmitted" is not defined.' in C:\XAMPP\xampp\htdocs\yiiframework\base\CComponent.php:130
+Stack trace:
+#0 C:\XAMPP\xampp\htdocs\yiiframework\db\ar\CActiveRecord.php(145): CComponent->__get('isSubmitted')
+#1 C:\XAMPP\xampp\htdocs\SiapMasukUI.com\protected\views\tryout\index.php(52): CActiveRecord->__get('isSubmitted')
+#2 C:\XAMPP\xampp\htdocs\yiiframework\web\CBaseController.php(126): require('C:\XAMPP\xampp\...')
+#3 C:\XAMPP\xampp\htdocs\yiiframework\web\CBaseController.php(95): CBaseController->renderInternal('C:\XAMPP\xampp\...', Array, true)
+#4 C:\XAMPP\xampp\htdocs\yiiframework\web\CController.php(869): CBaseController->renderFile('C:\XAMPP\xampp\...', Array, true)
+#5 C:\XAMPP\xampp\htdocs\yiiframework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#6 C:\XAMPP\xampp\htdocs\SiapMasukUI.com\protected\controllers\TryoutController.php(33): CController->render('index', Array)
+#7 C:\XAMPP\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): TryoutController->actionIndex()
+#8 C:\XAMPP\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\XAMPP\xampp\htdocs\yiiframework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\XAMPP\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\XAMPP\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('index')
+#12 C:\XAMPP\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('tryout/index')
+#13 C:\XAMPP\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\XAMPP\xampp\htdocs\SiapMasukUI.com\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/SiapMasukUI.com/index.php/tryout/index
+HTTP_REFERER=http://localhost/SiapMasukUI.com/index.php/konten/kategori?idcategory=2
+---
+2014/04/14 13:54:31 [error] [exception.CException] exception 'CException' with message 'Property "Pengerjaantryout.isSubmitted" is not defined.' in C:\XAMPP\xampp\htdocs\yiiframework\base\CComponent.php:130
+Stack trace:
+#0 C:\XAMPP\xampp\htdocs\yiiframework\db\ar\CActiveRecord.php(145): CComponent->__get('isSubmitted')
+#1 C:\XAMPP\xampp\htdocs\SiapMasukUI.com\protected\views\tryout\index.php(52): CActiveRecord->__get('isSubmitted')
+#2 C:\XAMPP\xampp\htdocs\yiiframework\web\CBaseController.php(126): require('C:\XAMPP\xampp\...')
+#3 C:\XAMPP\xampp\htdocs\yiiframework\web\CBaseController.php(95): CBaseController->renderInternal('C:\XAMPP\xampp\...', Array, true)
+#4 C:\XAMPP\xampp\htdocs\yiiframework\web\CController.php(869): CBaseController->renderFile('C:\XAMPP\xampp\...', Array, true)
+#5 C:\XAMPP\xampp\htdocs\yiiframework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#6 C:\XAMPP\xampp\htdocs\SiapMasukUI.com\protected\controllers\TryoutController.php(33): CController->render('index', Array)
+#7 C:\XAMPP\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): TryoutController->actionIndex()
+#8 C:\XAMPP\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\XAMPP\xampp\htdocs\yiiframework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\XAMPP\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\XAMPP\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('index')
+#12 C:\XAMPP\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('tryout/index')
+#13 C:\XAMPP\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\XAMPP\xampp\htdocs\SiapMasukUI.com\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/SiapMasukUI.com/index.php/tryout/index
+HTTP_REFERER=http://localhost/SiapMasukUI.com/index.php/konten/kategori?idcategory=2
+---
+>>>>>>> ff4452d22c8acb4b8f9a7762bcfcc38d57f3ddf7
