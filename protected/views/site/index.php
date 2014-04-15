@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="row clearfix">
 		<!-- <div class="col-md-3 column"></div> -->
-		<div class="col-md-12 column">
+		<div class="col-md-8 column">
 			<div class="carousel slide" id="carousel-748657" style="width: 700px">
 				<ol class="carousel-indicators">
 					<li class="active" data-slide-to="0" data-target="#carousel-748657">
@@ -49,6 +49,23 @@
 				<a class="left carousel-control" href="#carousel-748657" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> 
 				<a class="right carousel-control" href="#carousel-748657" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
 			</div>
+			
+			</div>
+			<div class="col-md-4" style="border: 2px solid #eee; height: 450px">
+			<?php 
+				// foreach ($model as $randKonten): ?>
+				<!-- <div class="col-md-12 home-group" style="">
+					
+				</div>	 -->				
+			<?php //endforeach; ?>
+			</div>
+			<div class="col-md-12" style="border: 2px solid #eee; height: 200px; margin-top: 25px; margin-left: 5px">
+			<?php 
+				// foreach ($model as $randKonten): ?>
+				<!-- <div class="col-md-12 home-group" style="">
+					
+				</div>	 -->				
+			<?php //endforeach; ?>
 			</div>
 		</div>
 	</div>
