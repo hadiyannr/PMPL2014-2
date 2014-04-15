@@ -67,7 +67,7 @@
 				</div>					
 			<?php endforeach; ?>
 			</div>
-			<div class="col-md-12" style="border: 2px solid #eee; margin-top: 25px; margin-left: 5px">
+			<div class="col-md-12" style="border: 1px solid #eee; margin-top: 25px; margin-left: 0px;">
 			<div id="main-slider-space">
 				    <div class="slider-wrapper">
 			<?php
@@ -75,7 +75,7 @@
 				foreach ($model2 as $randKonten): ?>
 				<div id="slide<?php echo $counter?>" class="main-slide">
 				<div class="col-md-12 home-group2" style="">
-					<h3><?php echo CHtml::link($randKonten->judul,array('index','id'=>$randKonten->id),array('style'=>"color: #ecf0f1"))?></h3>
+					<h3><?php echo CHtml::link($randKonten->judul,array('konten/index','id'=>$randKonten->id),array('style'=>"color: #ecf0f1"))?></h3>
 					<p style="color: #ecf0f1"> <?php 
 						$prev = strip_tags($randKonten->isi); 
 						echo substr($prev, 0, 100);
