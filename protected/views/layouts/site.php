@@ -23,52 +23,60 @@
         <header>		
             <div class="header-nav">
                 <div class="container">
-                    <div class="navbar-header">
-                        <?php echo CHtml::link("SiapMasukUI.com", array('site/index'),array('class'=>'navbar-brand')); ?>
-                        <!-- <a href="" class="navbar-brand">SiapMasukUI.com</a> -->
-                    </div>
-                    <nav role="navigation">
-                        <ul class="nav navbar-nav">
-                            <li>
-                                <?php echo CHtml::link("Home", array('site/index')); ?>
-                            </li>        
-                                <?php $this->widget('KontenKategori'); ?>
-                            <li>
-                                <?php echo CHtml::link("Tryout", array('tryout/index')); ?>
-                            </li>
-                            
-                            <?php if(Yii::app()->user->isAdmin()):?>
-                            <li>
-                                <?php echo CHtml::link("Admin", array('admin/index')); ?>
-                            </li>
-                            <?php endif;?>
+                    
+                        
+                        <div class="navbar-header">
+                            <?php echo CHtml::link("SiapMasukUI.com", array('site/index'),array('class'=>'navbar-brand')); ?>                            
+                        </div>
+                        <?php $controllerName = $this->getId();?>
+                        <nav role="navigation" class="navbar-default">
+                            <ul class="nav navbar-nav">                                
+                                <li class="<?php echo (in_array($controllerName, array("site")))?"active":""?>">
+                                    <?php echo CHtml::link("Home", array('site/index')); ?>
+                                </li>        
+                                    <?php // $this->widget('KontenKategori'); ?>
+                                    <?php
+                                        $kategoris = Kategori::model()->findAll();
+                                        foreach ($kategoris as $kategori) {
+                                            echo '<li class="',(isset($_GET['idcategory']) && $_GET['idcategory'] == $kategori->id)?"active":"",'">',CHtml::link($kategori->nama, array('konten/kategori','idcategory'=>$kategori->id)),"</li>";
+                                        }
+                                    ?>
+                                <li class="<?php echo (in_array($controllerName, array("tryout","pengerjaanTryout")))?"active":""?>">
+                                    <?php echo CHtml::link("Tryout", array('tryout/index')); ?>
+                                </li>
 
-                        </ul> 
+                                <?php if(Yii::app()->user->isAdmin()):?>
+                                <li>
+                                    <?php echo CHtml::link("Admin", array('admin/index')); ?>
+                                </li>
+                                <?php endif;?>
 
-                        <ul class="nav navbar-nav navbar-right">		      	
-                            <?php if (Yii::app()->user->isGuest) { ?>
-                                <li>
-                                    <a href="#Login" data-toggle="modal">Login</a>
-                                </li>      
-                                <li>
-                                    <a href="#SignUp" data-toggle="modal">Daftar</a>
-                                </li>        			
-                            <?php } ?>
-                            <?php if (!Yii::app()->user->isGuest) { ?>
-                                <li>
-                                    <?php echo CHtml::link("Profil", array('profil/index')); ?>
-                                </li>      
-                                <li>
-                                    <?php echo CHtml::link("Logout", array('site/logout')); ?>
-                                </li>        			
-                            <?php } ?>
-                        </ul> 		      
-                        <!--login and register modal, call component-->
-                        <?php $this->widget('UserLogin',array('visible'=>Yii::app()->user->isGuest)); ?>
+                            </ul> 
 
-                        <?php $this->widget('UserRegister',array('visible'=>Yii::app()->user->isGuest)); ?>
-                        <!-- end of modal -->
-                    </nav>	
+                            <ul class="nav navbar-nav navbar-right">		      	
+                                <?php if (Yii::app()->user->isGuest) { ?>
+                                    <li>
+                                        <a href="#Login" data-toggle="modal">Login</a>
+                                    </li>      
+                                    <li>
+                                        <a href="#SignUp" data-toggle="modal">Daftar</a>
+                                    </li>        			
+                                <?php } ?>
+                                <?php if (!Yii::app()->user->isGuest) { ?>
+                                    <li class="<?php echo (in_array($controllerName, array("profil")))?"active":""?>">
+                                        <?php echo CHtml::link("Profil", array('profil/index')); ?>
+                                    </li>      
+                                    <li>
+                                        <?php echo CHtml::link("Logout", array('site/logout')); ?>
+                                    </li>        			
+                                <?php } ?>
+                            </ul> 		      
+                            <!--login and register modal, call component-->
+                            <?php $this->widget('UserLogin',array('visible'=>Yii::app()->user->isGuest)); ?>
+
+                            <?php $this->widget('UserRegister',array('visible'=>Yii::app()->user->isGuest)); ?>
+                            <!-- end of modal -->
+                        </nav>	                    
 
                 </div>
             </div>
