@@ -13,8 +13,12 @@ class SiteController extends Controller
 	 * when an action is not explicitly requested by users.
 	 */
 	public function actionIndex()
-	{                            		
-		$this->render('index');
+	{                        
+                $criteria = new CDbCriteria;
+                $criteria->order = "RAND()";
+                $criteria->limit = 5;
+                $model = Konten::model()->findAll($criteria);
+		$this->render('index',array('model'=>$model));
 	}
 
 	/**

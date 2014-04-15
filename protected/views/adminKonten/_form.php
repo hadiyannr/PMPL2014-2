@@ -1,5 +1,5 @@
 <?php
-/* @var $this KontenController */
+/* @var $this AdminKontenController */
 /* @var $model Konten */
 /* @var $form CActiveForm */
 ?>
