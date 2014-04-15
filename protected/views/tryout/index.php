@@ -153,5 +153,8 @@ $this->breadcrumbs = array(
         </table>
     </div>  
 </div>
-
-
+<?php if(!Yii::app()->user->isGuest):?>
+<div style="margin-top:200px;">
+    <?php echo CHtml::link('Riwayat Tryout',array('pengerjaanTryout/history'),array('class'=>'btn btn-success'));?>
+</div>
+<?php endif;?>
