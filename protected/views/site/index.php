@@ -53,20 +53,69 @@
 			</div>
 			<div class="col-md-4" style="border: 2px solid #eee; height: 450px">
 			<?php 
-				// foreach ($model as $randKonten): ?>
-				<!-- <div class="col-md-12 home-group" style="">
-					
-				</div>	 -->				
-			<?php //endforeach; ?>
+				foreach ($model1 as $randKonten): ?>
+				<div class="col-md-12 home-group" style="">
+					<h3><?php echo CHtml::link($randKonten->judul,array('index','id'=>$randKonten->id))?></h3>
+					<p> <?php 
+						$prev = $randKonten->isi; 
+						echo substr($prev, 0, 100);
+						?>
+					</p>
+					<p class="more">
+						<?php echo CHtml::link("More details",array('index','id'=>$randKonten->id))?>
+					</p>
+				</div>					
+			<?php endforeach; ?>
 			</div>
-			<div class="col-md-12" style="border: 2px solid #eee; height: 200px; margin-top: 25px; margin-left: 5px">
-			<?php 
-				// foreach ($model as $randKonten): ?>
-				<!-- <div class="col-md-12 home-group" style="">
-					
-				</div>	 -->				
-			<?php //endforeach; ?>
+			<div class="col-md-12" style="border: 2px solid #eee; margin-top: 25px; margin-left: 5px">
+			<div id="main-slider-space">
+				    <div class="slider-wrapper">
+			<?php
+				$counter=0; 
+				foreach ($model2 as $randKonten): ?>
+				<div id="slide<?php echo $counter?>" class="main-slide">
+				<div class="col-md-12 home-group" style="">
+					<h3><?php echo CHtml::link($randKonten->judul,array('index','id'=>$randKonten->id))?></h3>
+					<p> <?php 
+						$prev = $randKonten->isi; 
+						echo substr($prev, 0, 100);
+						?>
+					</p>
+					<p class="more">
+						<?php echo CHtml::link("More details",array('index','id'=>$randKonten->id))?>
+					</p>
+				</div>
+				</div>				
+			<?php $counter++; 
+				endforeach; ?>
+				</div>
 			</div>
+			<div id="main-slider-next" class="slider-buttons">
+				<button type="button" class="btn btn-default btn-lg">
+				  <span class="glyphicon glyphicon-arrow-right"></span>Next
+				</button>
+			</div>
+			</div>
+			<!-- <div>
+				<div id="main-slider-space">
+				    <div class="slider-wrapper">
+				        
+				        <div id="slide1" class="main-slide">
+				            
+				        </div>
+				        
+				        <div id="slide2" class="main-slide">
+				            
+				        </div>
+				        
+				        <div id="slide3" class="main-slide">
+				            
+				        </div>
+				        
+				    </div> 
+				</div>
+				<div id="main-slider-next" class="slider-buttons"></div>
+			</div> -->
 		</div>
 	</div>
 </div>

@@ -11,7 +11,7 @@ $(function(){
     // scroll to that index
     $('.slider-wrapper').animate(
       {'left' : -(slides.eq(i).position().left)},
-      600
+      300
     );
   });
 });

@@ -120,7 +120,7 @@ footer .row{
     margin-top: 4px;
 }
 
-/*CSS Addition*/
+/*CSS Addition 1*/
 .home-group {
 /*position: relative;
 width: 270px;
@@ -147,32 +147,37 @@ bottom: 1px;
 right: 1px;
 }
 
+/*CSS Addition 2*/
 #main-slider-space {
     overflow:hidden;
-    width:600px;
-    height:300px;
-    background-color:#C36;
-    margin-left:50px;
+    width:100%;
+    height:10em;
+    background-color:lightgray;
+    /*margin-left:50px;*/
 }
 
 .slider-wrapper {
     position:relative;
     left:0;
-    width:3000px;
+    width:1500px;
     height:100%;
 }
 
 .main-slide {
-    width:600px;
+    width:300px;
     height:100%;
     float:left;
 }
 
-#slide1 { background-color:#5FF; }
+/*#slide1 { background-color:#5FF; }
 #slide2 { background-color:#F5F; }
 #slide3 { background-color:#FF5; }
+#slide4 { background-color:#5F5; }
+#slide4 { background-color:#55F; }*/
 
 .slider-buttons {
+    margin-top:10px;
+    margin-left:5px;  
     position:absolute;
     width:30px;
     height:30px;
@@ -181,7 +186,9 @@ right: 1px;
 .slider-buttons:hover { cursor:pointer; }
 
 #main-slider-next {
-    background-color:#99CC66;
-    left:660px;
-    top:150px;
+    /*background-color:#99CC66;*/
+    margin-bottom:5px;
+    margin-left:2px; 
+    /*left:660px;
+    top:150px;*/
 }
