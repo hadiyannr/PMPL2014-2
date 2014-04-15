@@ -74,15 +74,15 @@
 				$counter=0; 
 				foreach ($model2 as $randKonten): ?>
 				<div id="slide<?php echo $counter?>" class="main-slide">
-				<div class="col-md-12 home-group" style="">
-					<h3><?php echo CHtml::link($randKonten->judul,array('index','id'=>$randKonten->id))?></h3>
-					<p> <?php 
-						$prev = $randKonten->isi; 
+				<div class="col-md-12 home-group2" style="">
+					<h3><?php echo CHtml::link($randKonten->judul,array('index','id'=>$randKonten->id),array('style'=>"color: #ecf0f1"))?></h3>
+					<p style="color: #ecf0f1"> <?php 
+						$prev = strip_tags($randKonten->isi); 
 						echo substr($prev, 0, 100);
 						?>
 					</p>
 					<p class="more">
-						<?php echo CHtml::link("More details",array('index','id'=>$randKonten->id))?>
+						<?php echo CHtml::link("More details",array('konten/index','id'=>$randKonten->id),array('style'=>"color: #ecf0f1"))?>
 					</p>
 				</div>
 				</div>				
@@ -96,26 +96,6 @@
 				</button>
 			</div>
 			</div>
-			<!-- <div>
-				<div id="main-slider-space">
-				    <div class="slider-wrapper">
-				        
-				        <div id="slide1" class="main-slide">
-				            
-				        </div>
-				        
-				        <div id="slide2" class="main-slide">
-				            
-				        </div>
-				        
-				        <div id="slide3" class="main-slide">
-				            
-				        </div>
-				        
-				    </div> 
-				</div>
-				<div id="main-slider-next" class="slider-buttons"></div>
-			</div> -->
 		</div>
 	</div>
 </div>

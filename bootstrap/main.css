@@ -14,11 +14,11 @@
 
 .header-nav{
     /*background-color:rgba(228, 230, 229, 0.85);	*/
-    background-color:lightgray;	
+    background-color:#2ecc71;	
 }
 
 .header-nav a{ 
-    color:black;	
+    color: #ecf0f1;	
 }
 
 .header-nav a:hover{ 
@@ -26,7 +26,10 @@
 }
 
 .navbar-header a{ 
-    color:black;	
+    color:#ecf0f1;	
+}
+.navbar-nav>li>a{
+    color: #ecf0f1
 }
 
 .navbar-header a:hover{ 
@@ -70,7 +73,7 @@
 
 /********************************************************/
 body{
-	background-color: white;
+	background-color: #ecf0f1;
 /*background: #a0a6aa;*/ /* Old browsers */
 /*background: -moz-linear-gradient(left, #a0a6aa 0%, #93d0ff 30%, #bae0ff 50%, #93d0ff 70%, #a0a6aa 100%);*/ /* FF3.6+ */
 /*background: -webkit-gradient(linear, left top, right top, color-stop(0%,#a0a6aa), color-stop(30%,#93d0ff), color-stop(50%,#bae0ff), color-stop(70%,#93d0ff), color-stop(100%,#a0a6aa));*/ /* Chrome,Safari4+ */
@@ -126,12 +129,25 @@ footer .row{
 width: 270px;
 padding: 20px;
 float: left;*/
-border: 2px solid #eee;
+border: 2px solid #bdc3c7;
 height: 10em;
 }
 
 .home-group:hover{
 background-color: #eee;
+}
+
+.home-group2 {
+/*position: relative;
+width: 270px;
+padding: 20px;
+float: left;*/
+border: 2px solid #bdc3c7;
+height: 10em;
+}
+
+.home-group2:hover{
+background-color: #2980b9;
 }
 
 .rowa {
@@ -144,35 +160,35 @@ p.more {
 text-align: right;
 position: absolute;
 bottom: 1px;
-right: 1px;
+right: 5px;
 }
 
 /*CSS Addition 2*/
 #main-slider-space {
     overflow:hidden;
-    width:100%;
+    width:1130px;
     height:10em;
-    background-color:lightgray;
+    background-color:#34495e;
     /*margin-left:50px;*/
 }
 
 .slider-wrapper {
     position:relative;
     left:0;
-    width:1500px;
+    width:1883.33px;
     height:100%;
 }
 
 .main-slide {
-    width:300px;
+    width:376.67px;
     height:100%;
     float:left;
 }
 
-/*#slide1 { background-color:#5FF; }
-#slide2 { background-color:#F5F; }
-#slide3 { background-color:#FF5; }
-#slide4 { background-color:#5F5; }
+/*#slide0 { background-color:#5FF; }
+#slide1 { background-color:#F5F; }
+#slide2 { background-color:#FF5; }
+#slide3 { background-color:#5F5; }
 #slide4 { background-color:#55F; }*/
 
 .slider-buttons {
