@@ -122,12 +122,16 @@ footer .row{
 
 /*CSS Addition*/
 .home-group {
-position: relative;
+/*position: relative;
 width: 270px;
 padding: 20px;
-float: left;
-border-right: 1px solid #eee;
-height: 15em;
+float: left;*/
+border: 2px solid #eee;
+height: 10em;
+}
+
+.home-group:hover{
+background-color: #eee;
 }
 
 .rowa {

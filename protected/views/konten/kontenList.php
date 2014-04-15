@@ -63,7 +63,7 @@ $this->breadcrumbs=array(
 						<?php if($counter%3==0):?>
 							<div class="rowa">
 						<?php endif;?>
-						<div class="col-md-4" style="border-right: 1px solid #eee; height: 10em;">
+						<div class="col-md-4 home-group">
 							<h3><?php echo CHtml::link($konten->judul,array('index','id'=>$konten->id))?></h3>
 							<p> <?php 
 								$prev = $konten->isi; 
