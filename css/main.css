@@ -12,7 +12,7 @@ body
 	/*background: -o-linear-gradient(top, #2888d6 0%,#a2c8e5 50%,#2989d8 100%);*/ /* Opera 11.10+ */
 	/*background: -ms-linear-gradient(top, #2888d6 0%,#a2c8e5 50%,#2989d8 100%);*/ /* IE10+ */
 	/*background: linear-gradient(to bottom, #2888d6 0%,#a2c8e5 50%,#2989d8 100%);*/ /* W3C */
-	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2888d6', endColorstr='#2989d8',GradientType=0 );*/ /* IE6-9 */*/
+	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2888d6', endColorstr='#2989d8',GradientType=0 );*/ /* IE6-9 */
 }
 
 #page
