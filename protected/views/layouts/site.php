@@ -81,7 +81,7 @@
                 </div>
             </div>
 
-            <?php $this->widget('Search',array('visible'=>Yii::app()->user->isGuest)); ?>
+            <?php $this->widget('Search'); ?>
             <br><br><br>
         </header>
 

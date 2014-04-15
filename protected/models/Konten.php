@@ -75,9 +75,8 @@ class Konten extends CActiveRecord
 	public static function search($keyword)
 	{		
 		$criteria=new CDbCriteria;		                
-		$criteria->with = array('kategori');
-		$criteria->compare('isi',$keyword,true);
-		$criteria->compare('judul',$keyword,true);		
+		$criteria->compare('isi',$keyword,true,"OR");
+		$criteria->compare('judul',$keyword,true,"OR");		
 
 		return Konten::model()->findAll($criteria);
 	}
