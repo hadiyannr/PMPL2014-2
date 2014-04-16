@@ -32,22 +32,22 @@
                         <nav role="navigation" class="navbar-default">
                             <ul class="nav navbar-nav">                                
                                 <li class="<?php echo (in_array($controllerName, array("site")))?"active":""?>">
-                                    <?php echo CHtml::link("Home", array('site/index')); ?>
+                                    <?php echo CHtml::link("Home", array('site/index'),array('style'=>"color: #ecf0f1")); ?>
                                 </li>        
-                                    <?php // $this->widget('KontenKategori'); ?>
-                                    <?php
-                                        $kategoris = Kategori::model()->findAll();
-                                        foreach ($kategoris as $kategori) {
-                                            echo '<li class="',(isset($_GET['idcategory']) && $_GET['idcategory'] == $kategori->id)?"active":"",'">',CHtml::link($kategori->nama, array('konten/kategori','idcategory'=>$kategori->id)),"</li>";
-                                        }
-                                    ?>
+                                <?php // $this->widget('KontenKategori'); ?>
+                                <?php
+                                    $kategoris = Kategori::model()->findAll();
+                                    foreach ($kategoris as $kategori) {
+                                        echo '<li class="',(isset($_GET['idcategory']) && $_GET['idcategory'] == $kategori->id)?"active":"",'">',CHtml::link($kategori->nama, array('konten/kategori','idcategory'=>$kategori->id),array('style'=>"color: #ecf0f1")),"</li>";
+                                    }
+                                ?>
                                 <li class="<?php echo (in_array($controllerName, array("tryout","pengerjaanTryout")))?"active":""?>">
-                                    <?php echo CHtml::link("Tryout", array('tryout/index')); ?>
+                                    <?php echo CHtml::link("Tryout", array('tryout/index'),array('style'=>"color: #ecf0f1")); ?>
                                 </li>
 
                                 <?php if(Yii::app()->user->isAdmin()):?>
                                 <li>
-                                    <?php echo CHtml::link("Admin", array('admin/index')); ?>
+                                    <?php echo CHtml::link("Admin", array('admin/index'),array('style'=>"color: #ecf0f1")); ?>
                                 </li>
                                 <?php endif;?>
 
@@ -64,10 +64,10 @@
                                 <?php } ?>
                                 <?php if (!Yii::app()->user->isGuest) { ?>
                                     <li class="<?php echo (in_array($controllerName, array("profil")))?"active":""?>">
-                                        <?php echo CHtml::link("Profil", array('profil/index')); ?>
+                                        <?php echo CHtml::link("Profil", array('profil/index'),array('style'=>"color: #ecf0f1")); ?>
                                     </li>      
                                     <li>
-                                        <?php echo CHtml::link("Logout", array('site/logout')); ?>
+                                        <?php echo CHtml::link("Logout", array('site/logout'),array('style'=>"color: #ecf0f1")); ?>
                                     </li>        			
                                 <?php } ?>
                             </ul> 		      
@@ -77,7 +77,7 @@
                             <?php $this->widget('UserRegister',array('visible'=>Yii::app()->user->isGuest)); ?>
                             <!-- end of modal -->
                         </nav>	                    
-
+                        
                 </div>
             </div>
 
