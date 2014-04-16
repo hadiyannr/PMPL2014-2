@@ -5691,3 +5691,47 @@ REQUEST_URI=/siapMasukUI/index.php/site/index
 in C:\xampp\htdocs\siapMasukUI\protected\views\site\index.php (60)
 in C:\xampp\htdocs\siapMasukUI\protected\controllers\SiteController.php (28)
 in C:\xampp\htdocs\siapMasukUI\index.php (13)
+2014/04/17 05:40:13 [warning] [application] Failed to set unsafe attribute "image" of "Profil".
+in C:\xampp\htdocs\siapMasukUI\protected\controllers\ProfilController.php (28)
+in C:\xampp\htdocs\siapMasukUI\index.php (13)
+2014/04/17 06:03:41 [error] [exception.CException] exception 'CException' with message 'Property "Search.style" is not defined.' in C:\xampp\htdocs\yiiframework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CWidgetFactory.php(161): CComponent->__set('style', 'color: #ecf0f1')
+#1 C:\xampp\htdocs\yiiframework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteController), 'Search', Array)
+#2 C:\xampp\htdocs\yiiframework\web\CBaseController.php(172): CBaseController->createWidget('Search', Array)
+#3 C:\xampp\htdocs\siapMasukUI\protected\views\layouts\site.php(95): CBaseController->widget('Search', Array)
+#4 C:\xampp\htdocs\yiiframework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#5 C:\xampp\htdocs\yiiframework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#6 C:\xampp\htdocs\yiiframework\web\CController.php(784): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\siapMasukUI\protected\controllers\SiteController.php(30): CController->render('index', Array)
+#8 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#9 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\yiiframework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('index')
+#13 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('site/index')
+#14 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\siapMasukUI\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/siapMasukUI/index.php/site/index
+HTTP_REFERER=http://localhost:1234/siapMasukUI/index.php/konten/search?keyword=Ilmu
+---
+2014/04/17 06:04:15 [error] [php] Invalid argument supplied for foreach() (C:\xampp\htdocs\yiiframework\web\CWidgetFactory.php:160)
+Stack trace:
+#0 C:\xampp\htdocs\siapMasukUI\protected\views\layouts\site.php(95): SiteController->widget()
+#1 C:\xampp\htdocs\yiiframework\web\CBaseController.php(126): require()
+#2 C:\xampp\htdocs\yiiframework\web\CBaseController.php(95): SiteController->renderInternal()
+#3 C:\xampp\htdocs\yiiframework\web\CController.php(784): SiteController->renderFile()
+#4 C:\xampp\htdocs\siapMasukUI\protected\controllers\SiteController.php(30): SiteController->render()
+#5 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#6 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\yiiframework\web\CController.php(286): SiteController->runAction()
+#8 C:\xampp\htdocs\yiiframework\web\CController.php(265): SiteController->runActionWithFilters()
+#9 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): SiteController->run()
+#10 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\siapMasukUI\index.php(13): CWebApplication->run()
+REQUEST_URI=/siapMasukUI/index.php/site/index
+in C:\xampp\htdocs\siapMasukUI\protected\views\layouts\site.php (95)
+in C:\xampp\htdocs\siapMasukUI\protected\controllers\SiteController.php (30)
+in C:\xampp\htdocs\siapMasukUI\index.php (13)

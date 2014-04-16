@@ -51,12 +51,12 @@
 			</div>
 			
 			</div>
-			<div class="col-md-4" style="border: 2px solid #eee; height: 450px;">
+			<div class="col-md-4" style="border: 2px solid #eee; height: 450px; overflow:scroll;">
 			<?php 
 				foreach ($model1 as $randKonten): ?>
-				<div class="col-md-12 home-group" style="background-color: #1abc9c">
+				<div class="col-md-12 home-group" style="background-color: #1abc9c; ">
 					<h3><?php echo CHtml::link($randKonten->judul,array('index','id'=>$randKonten->id),array('style'=>"color: #ecf0f1"))?></h3>
-					<p> <?php 
+					<p style="color: #ecf0f1"> <?php 
 						$prev = strip_tags($randKonten->isi); 
 						echo substr($prev, 0, 100);
 						?>

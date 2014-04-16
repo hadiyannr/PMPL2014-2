@@ -19,7 +19,7 @@
     </head>
     <body>	
         <?php if(Yii::app()->user->hasFlash('message')):?>
-        <nav class="user-nav text-right" style="background-color: #34495e; color:#ecf0f1;font-size: 20px;">
+        <nav class="user-nav text-right" style="background-color: #e74c3c; color:#ecf0f1;font-size: 20px;">
             <div class="container">
                     <?php echo Yii::app()->user->getFlash('message'); ?>
             </div>
@@ -92,7 +92,7 @@
                 </div>
             </div>
 
-            <?php $this->widget('Search'); ?>
+            <?php $this->widget('Search')?>
             <br><br><br>
         </header>
 
