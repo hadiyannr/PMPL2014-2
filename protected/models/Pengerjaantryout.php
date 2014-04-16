@@ -128,9 +128,9 @@ class Pengerjaantryout extends CActiveRecord
             //Cari ranking
             $criteria = new CDbCriteria;
             $criteria->order = 'nilai DESC';        
-            $criteria->compare('idTryout',$idTryout);                    
+            $criteria->compare('idTryout',$idTryout);
             $model = Pengerjaantryout::model()->findAll($criteria);
-            $rank = 0;
+            $rank = 1;
             for($i = 0; $i < sizeof($model);$i++){
                 if($model[$i]->idPengguna == $this->idPengguna){
                     $rank = $i+1;
@@ -146,7 +146,7 @@ class Pengerjaantryout extends CActiveRecord
                 }else{
                     $salah++;
                 }
-            }            
+            }
             $kosong = sizeof(Soal::model()->findAllByAttributes(array('idtryout'=>$idTryout)))  - ($benar + $salah);
             
             return array(

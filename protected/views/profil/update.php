@@ -1,3 +1,7 @@
+<?php
+/* @var $this ProfilController */
+/* @var $model Profil */
+?>
 <div class="col-md-4">
 
     <?php
@@ -28,6 +32,7 @@
             $this->widget('zii.widgets.jui.CJuiDatePicker', array(
                 'name' => CHtml::activeName($model, 'tanggalLahir'),
                 'value' => $model->attributes['tanggalLahir'],
+                'htmlOptions'=>array('readonly'=>'readonly'),
                 'options'=>array(
                         'showAnim'=>'fold',
                         'dateFormat'=>'yy-mm-dd',
@@ -45,7 +50,7 @@
     
     <div class="form-group">
         <label>Jurusan yang diinginkan</label>
-        <?php $this->renderPartial('targetJurusanOpt');?>
+        <?php $this->renderPartial('targetJurusanOpt',array('model'=>$model));?>
     </div>
     
     <div class="form-group">

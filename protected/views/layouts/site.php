@@ -8,18 +8,24 @@
         <title><?php echo CHtml::encode($this->pageTitle); ?></title>	
         <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/bootstrap.min.css">	
         <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/main.css">
+
+        <!--font-->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <style>body{font-family: 'Open Sans', sans-serif;}</style>
+
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/jquery-1.11.0.min.js"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/bootstrap.min.js"></script>			
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/main.js"></script>
     </head>
     <body>	
         <?php if(Yii::app()->user->hasFlash('message')):?>
-        <nav class="user-nav text-right" style="background-color: black; color:wheat;font-size: 20px;">
+        <nav class="user-nav text-right" style="background-color: #34495e; color:#ecf0f1;font-size: 20px;">
             <div class="container">
                     <?php echo Yii::app()->user->getFlash('message'); ?>
             </div>
         </nav>
         <?php endif;?>
+
         <header>		
             <div class="header-nav">
                 <div class="container">
@@ -33,14 +39,19 @@
                             <ul class="nav navbar-nav">                                
                                 <li class="<?php echo (in_array($controllerName, array("site")))?"active":""?>">
                                     <?php echo CHtml::link("Home", array('site/index'),array('style'=>"color: #ecf0f1")); ?>
-                                </li>        
-                                <?php // $this->widget('KontenKategori'); ?>
-                                <?php
-                                    $kategoris = Kategori::model()->findAll();
-                                    foreach ($kategoris as $kategori) {
-                                        echo '<li class="',(isset($_GET['idcategory']) && $_GET['idcategory'] == $kategori->id)?"active":"",'">',CHtml::link($kategori->nama, array('konten/kategori','idcategory'=>$kategori->id),array('style'=>"color: #ecf0f1")),"</li>";
-                                    }
-                                ?>
+                                </li>                                        
+
+                                <li class="dropdown">
+                                    <?php $coloring= (in_array($controllerName, array("konten")))?"background-color: #27ae60;":""?>
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="<?php echo $coloring;?>color: #ecf0f1">Konten <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <?php
+                                        $kategoris = Kategori::model()->findAll();
+                                        foreach ($kategoris as $kategori): ?>
+                                            <li> <?php echo CHtml::link($kategori->nama, array('konten/kategori','idcategory'=>$kategori->id),array('style'=>"color: #ecf0f1"));?></li>
+                                        <?php endforeach;?>
+                                    </ul>
+                                </li>
                                 <li class="<?php echo (in_array($controllerName, array("tryout","pengerjaanTryout")))?"active":""?>">
                                     <?php echo CHtml::link("Tryout", array('tryout/index'),array('style'=>"color: #ecf0f1")); ?>
                                 </li>
@@ -108,8 +119,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        Copyright &copy; <?php echo date('Y'); ?> by SiapMasukUI.com.<br/>
-                        
+                        Copyright &copy; <?php echo date('Y'); ?> by SiapMasukUI.com<br/>
                     </div>
                 </div>
             </div>

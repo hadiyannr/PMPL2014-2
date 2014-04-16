@@ -31,6 +31,7 @@
                     $this->widget('zii.widgets.jui.CJuiDatePicker', array(
                         'name' => CHtml::activeName($model, 'tanggal'),
                         'value' => $model->attributes['tanggal'],
+                        'htmlOptions'=>array('readonly'=>'readonly'),
                         'options'=>array(
                                 'showAnim'=>'fold',
                                 'dateFormat'=>'yy-mm-dd',
@@ -48,6 +49,7 @@
                         'model'=>$model,
                         'name'=>'waktuMulai',
                         'select'=> 'time',
+                        'htmlOptions'=>array('readonly'=>'readonly'),
                         'options' => array(
                             'showOn'=>'focus',
                             'timeFormat'=>'hh:mm',

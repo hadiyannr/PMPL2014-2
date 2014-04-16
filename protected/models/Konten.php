@@ -33,7 +33,7 @@ class Konten extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('idcategory, judul,isPublished, idAdmin', 'required'),
+			array('idcategory, judul, idAdmin', 'required'),
 			array('idcategory, isPublished', 'numerical', 'integerOnly'=>true),
 			array('judul', 'length', 'max'=>99),
 			array('isi', 'safe'),
@@ -76,7 +76,8 @@ class Konten extends CActiveRecord
 	{		
 		$criteria=new CDbCriteria;		                
 		$criteria->compare('isi',$keyword,true,"OR");
-		$criteria->compare('judul',$keyword,true,"OR");		
+		$criteria->compare('judul',$keyword,true,"OR");
+        $criteria->compare('isPublished','1');
 
 		return Konten::model()->findAll($criteria);
 	}

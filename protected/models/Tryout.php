@@ -35,7 +35,7 @@ class Tryout extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('waktuMulai, durasi, tanggal, nama', 'required'),
-			array('durasi,idAdmin', 'numerical', 'integerOnly'=>true),
+			array('durasi,idAdmin', 'numerical', 'integerOnly'=>true,'min'=>'1'),
 			array('nama', 'length', 'max'=>75),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
@@ -53,7 +53,7 @@ class Tryout extends CActiveRecord
 		return array(
 			'pengerjaantryouts' => array(self::HAS_MANY, 'Pengerjaantryout', 'idTryout'),
 			'soals' => array(self::HAS_MANY, 'Soal', 'idTryout'),
-                        'idAdmin0' => array(self::BELONGS_TO, 'Pengguna', 'idAdmin'),
+            'idAdmin0' => array(self::BELONGS_TO, 'Pengguna', 'idAdmin'),
 		);
 	}
 

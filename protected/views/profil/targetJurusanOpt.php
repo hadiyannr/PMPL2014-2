@@ -1,58 +1,69 @@
+<?php
+/* @var $this ProfilController */
+/* @var $model Profil */
+?>
+
 <select name="Profil[targetJurusan]" id="daftarJurusan" onchange="" size="1">
-            <option value="ARSITEKTUR">ARSITEKTUR</option>
-            <option value="ARSITEKTUR INTERIOR">ARSITEKTUR INTERIOR</option>
-            <option value="BIOLOGI">BIOLOGI</option>
-            <option value="FARMASI">FARMASI</option>
-            <option value="FISIKA">FISIKA</option>
-            <option value="GEOGRAFI">GEOGRAFI</option>
-            <option value="GIZI">GIZI</option>
-            <option value="ILMU KEPERAWATAN">ILMU KEPERAWATAN</option>
-            <option value="ILMU KESEHATAN MASYARAKAT">ILMU KESEHATAN MASYARAKAT</option>
-            <option value="ILMU KOMPUTER">ILMU KOMPUTER</option>
-            <option value="KIMIA">KIMIA</option>
-            <option value="MATEMATIKA">MATEMATIKA</option>
-            <option value="PENDIDIKAN DOKTER">PENDIDIKAN DOKTER</option>
-            <option value="PENDIDIKAN DOKTER GIGI">PENDIDIKAN DOKTER GIGI</option>
-            <option value="SISTEM INFORMASI">SISTEM INFORMASI</option>
-            <option value="TEKNIK ELEKTRO">TEKNIK ELEKTRO</option>
-            <option value="TEKNIK INDUSTRI">TEKNIK INDUSTRI</option>
-            <option value="TEKNIK KIMIA">TEKNIK KIMIA</option>
-            <option value="TEKNIK KOMPUTER">TEKNIK KOMPUTER</option>
-            <option value="TEKNIK LINGKUNGAN">TEKNIK LINGKUNGAN</option>
-            <option value="TEKNIK MESIN">TEKNIK MESIN</option>
-            <option value="TEKNIK METALURGI & MATERIAL">TEKNIK METALURGI & MATERIAL</option>
-            <option value="TEKNIK PERKAPALAN">TEKNIK PERKAPALAN</option>
-            <option value="TEKNIKSIPIL">TEKNIK SIPIL</option>
-            <option value="TEKNOLOGI BIOPROSES">TEKNOLOGI BIOPROSES</option>
-            <option value="AKUNTANSI">AKUNTANSI</option>
-            <option value="ANTROPOLOGI SOSIAL">ANTROPOLOGI SOSIAL</option>
-            <option value="ARKEOLOGI INDONESIA">ARKEOLOGI INDONESIA</option>
-            <option value="BAHASA DAN KEBUDAYAAN KOREA">BAHASA DAN KEBUDAYAAN KOREA</option>
-            <option value="ILMU ADMINISTRASI FISKAL">ILMU ADMINISTRASI FISKAL</option>
-            <option value="ILMU ADMINISTRASI NEGARA">ILMU ADMINISTRASI NEGARA</option>
-            <option value="ILMU ADMINISTRASI NIAGA">ILMU ADMINISTRASI NIAGA</option>
-            <option value="ILMU EKONOMI">ILMU EKONOMI</option>
-            <option value="ILMU EKONOMI ISLAM">ILMU EKONOMI ISLAM</option>
-            <option value="ILMU FILSAFAT">ILMU FILSAFAT</option>
-            <option value="ILMU HUBUNGAN INTERNASIONAL">ILMU HUBUNGAN INTERNASIONAL</option>
-            <option value="ILMU HUKUM">ILMU HUKUM</option>
-            <option value="ILMU KESEJAHTERAAN SOSIAL">ILMU KESEJAHTERAAN SOSIAL</option>
-            <option value="ILMU KOMUNIKASI">ILMU KOMUNIKASI</option>
-            <option value="ILMU PERPUSTAKAAN">ILMU PERPUSTAKAAN</option>
-            <option value="ILMU POLITIK">ILMU POLITIK</option>
-            <option value="ILMU PSIKOLOGI">ILMU PSIKOLOGI</option>
-            <option value="ILMU SEJARAH">ILMU SEJARAH</option>
-            <option value="KRIMINOLOGI">KRIMINOLOGI</option>
-            <option value="MANAJEMEN">MANAJEMEN</option>
-            <option value="SASTRA ARAB">SASTRA ARAB</option>
-            <option value="SASTRA BELANDA">SASTRA BELANDA</option>
-            <option value="SASTRA CINA">SASTRA CINA</option>
-            <option value="SASTRA DAERAH UNTUK SASTRA JAWA">SASTRA DAERAH UNTUK SASTRA JAWA</option>
-            <option value="SASTRA INDONESIA">SASTRA INDONESIA</option>
-            <option value="SASTRA INGGRIS">SASTRA INGGRIS</option>
-            <option value="SASTRA JEPANG">SASTRA JEPANG</option>
-            <option value="SASTRA JERMAN">SASTRA JERMAN</option>
-            <option value="SASTRA PERANCIS">SASTRA PERANCIS</option>
-            <option value="SASTRA RUSIA">SASTRA RUSIA</option>
-            <option value="SOSIOLOGI">SOSIOLOGI</option>
-        </select>
+    <?php
+    $jurusans = array("ARSITEKTUR",
+        "ARSITEKTUR INTERIOR",
+        "BIOLOGI",
+        "FARMASI",
+        "FISIKA",
+        "GEOGRAFI",
+        "GIZI",
+        "ILMU KEPERAWATAN",
+        "ILMU KESEHATAN MASYARAKAT",
+        "ILMU KOMPUTER",
+        "KIMIA",
+        "MATEMATIKA",
+        "PENDIDIKAN DOKTER",
+        "PENDIDIKAN DOKTER GIGI",
+        "SISTEM INFORMASI",
+        "TEKNIK ELEKTRO",
+        "TEKNIK INDUSTRI",
+        "TEKNIK KIMIA",
+        "TEKNIK KOMPUTER",
+        "TEKNIK LINGKUNGAN",
+        "TEKNIK MESIN",
+        "TEKNIK METALURGI & MATERIAL",
+        "TEKNIK PERKAPALAN",
+        "TEKNIKSIPIL",
+        "TEKNOLOGI BIOPROSES",
+        "AKUNTANSI",
+        "ANTROPOLOGI SOSIAL",
+        "ARKEOLOGI INDONESIA",
+        "BAHASA DAN KEBUDAYAAN KOREA",
+        "ILMU ADMINISTRASI FISKAL",
+        "ILMU ADMINISTRASI NEGARA",
+        "ILMU ADMINISTRASI NIAGA",
+        "ILMU EKONOMI",
+        "ILMU EKONOMI ISLAM",
+        "ILMU FILSAFAT",
+        "ILMU HUBUNGAN INTERNASIONAL",
+        "ILMU HUKUM",
+        "ILMU KESEJAHTERAAN SOSIAL",
+        "ILMU KOMUNIKASI",
+        "ILMU PERPUSTAKAAN",
+        "ILMU POLITIK",
+        "ILMU PSIKOLOGI",
+        "ILMU SEJARAH",
+        "KRIMINOLOGI",
+        "MANAJEMEN",
+        "SASTRA ARAB",
+        "SASTRA BELANDA",
+        "SASTRA CINA",
+        "SASTRA DAERAH UNTUK SASTRA JAWA",
+        "SASTRA INDONESIA",
+        "SASTRA INGGRIS",
+        "SASTRA JEPANG",
+        "SASTRA JERMAN",
+        "SASTRA PERANCIS",
+        "SASTRA RUSIA",
+        "SOSIOLOGI");
+        foreach($jurusans as $jurusan){
+            $check = ($jurusan == $model->targetJurusan)?"selected":"";
+            echo '<option value="'.$jurusan.'" '.$check.'>'.$jurusan.'</option>';
+        }
+    ?>
+</select>

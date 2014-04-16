@@ -44,6 +44,19 @@
     background-color: #1abc9c;
 }
 
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus{
+    background-color: #2ecc71;
+}
+.navbar-default .navbar-nav .open .dropdown-menu>li>a, .navbar-default .navbar-nav .open .dropdown-menu {
+    background-color: #2ecc71;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover{
+    background-color: #1abc9c;
+}
+
 /**************carousel**************/
 #myCarousel{
     width:80%;
@@ -82,15 +95,6 @@
 /********************************************************/
 body{
 	background-color: #ecf0f1;
-/*background: #a0a6aa; /* Old browsers */*/
-/*background: -moz-linear-gradient(left, #a0a6aa 0%, #93d0ff 30%, #bae0ff 50%, #93d0ff 70%, #a0a6aa 100%); /* FF3.6+ */*/
-/*background: -webkit-gradient(linear, left top, right top, color-stop(0%,#a0a6aa), color-stop(30%,#93d0ff), color-stop(50%,#bae0ff), color-stop(70%,#93d0ff), color-stop(100%,#a0a6aa)); /* Chrome,Safari4+ */*/
-/*background: -webkit-linear-gradient(left, #a0a6aa 0%,#93d0ff 30%,#bae0ff 50%,#93d0ff 70%,#a0a6aa 100%); /* Chrome10+,Safari5.1+ */*/
-/*background: -o-linear-gradient(left, #a0a6aa 0%,#93d0ff 30%,#bae0ff 50%,#93d0ff 70%,#a0a6aa 100%); /* Opera 11.10+ */*/
-/*background: -ms-linear-gradient(left, #a0a6aa 0%,#93d0ff 30%,#bae0ff 50%,#93d0ff 70%,#a0a6aa 100%); /* IE10+ */*/
-/*background: linear-gradient(to right, #a0a6aa 0%,#93d0ff 30%,#bae0ff 50%,#93d0ff 70%,#a0a6aa 100%); /* W3C */*/
-/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a0a6aa', endColorstr='#a0a6aa',GradientType=1 );*/ /* IE6-9 */
-
 }
 
 .content{

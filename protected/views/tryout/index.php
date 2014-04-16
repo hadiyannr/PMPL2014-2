@@ -33,39 +33,50 @@ $this->breadcrumbs = array(
                         <?php echo $no++;?>
                     </td>                    
                     <td>
-                        <?php echo $to->nama ?>  
-                    </td>                    
+                        <?php echo $to->nama ?>
+                    </td>
                     <td>
-                        <?php echo $to->tanggal ?>  
-                    </td>  
+                        <?php echo $to->tanggal ?>
+                    </td>
                     <td>
                         <?php echo date('H:i',  strtotime($to->waktuMulai)); ?>
                     </td>
                     <td>
                         <?php echo $to->durasi; ?>
-                    </td>                                        
+                    </td>
                     <td>
                         <?php
                             $pengerjaan = Pengerjaantryout::model()->findByAttributes(array('idTryout'=>$to->id));
                         ?>
-                        
+
                         <?php if($pengerjaan->isSubmitted == 1):?>
                             Sudah mengerjakan
                         <?php elseif($to->status() == 0):?>
                         <form method="post">
                             <input type="hidden" name="Perform[id]" value="<?php echo $to->id;?>">
                             <input type="submit" class="btn btn-primary" value="Kerjakan">
-                        </form>    
+                        </form>
                         <?php else:?>
                             Belum dibuka
-                        <?php endif;?>                        
+                        <?php endif;?>
                     </td>
                 </tr>
             <?php } ?>
         </table>
-        <?php else:?>        
+        <?php else:?>
             <br>
-            <span style="font-size:18px;"><i>Tidak ada daftar di MyTryout. Silahkan daftar pada menu Ujian Tersedia</i></span>
+            <span style="font-size:18px;">
+                <i>
+                    <?php
+                        if(Yii::app()->user->isGuest){
+                            echo 'Silahkan login untuk melihat daftar MyTryout';
+                        }else{
+                            echo 'Tidak ada daftar di MyTryout. Silahkan daftar pada menu Ujian Tersedia.';
+                        }
+                    ?>
+                </i>
+            </span>
+
         <?php endif;?>
     </div>
     <div class="tab-pane" id="future">

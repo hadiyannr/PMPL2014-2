@@ -18,7 +18,11 @@
 	<p class="note">Isian bertanda <span class="required">*</span> wajib diisi.</p>
 
 	<?php echo $form->errorSummary($model); ?>
-
+    <div class="row">
+        <?php echo $form->labelEx($model,'judul'); ?>
+        <?php echo $form->textField($model,'judul',array('size'=>60,'maxlength'=>99)); ?>
+        <?php echo $form->error($model,'judul'); ?>
+    </div>
 	<div class="row">
 		<?php echo $form->labelEx($model,'idcategory'); ?>
 		<?php echo $form->dropDownList($model,'idcategory',  Kategori::model()->getOptionList()); ?>
@@ -39,11 +43,7 @@
 		<?php echo $form->error($model,'isi'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'judul'); ?>
-		<?php echo $form->textField($model,'judul',array('size'=>60,'maxlength'=>99)); ?>
-		<?php echo $form->error($model,'judul'); ?>
-	</div>
+
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'isPublished'); ?>

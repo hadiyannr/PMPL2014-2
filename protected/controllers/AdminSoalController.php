@@ -137,11 +137,12 @@ class AdminSoalController extends Controller {
      * @param integer $id the ID of the model to be deleted
      */
     public function actionDelete($id) {
+        $to_id =$this->loadModel($id)->idtryout;
         $this->loadModel($id)->delete();
 
         // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
         if (!isset($_GET['ajax']))
-            $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+            $this->redirect(array('index','idtryout'=>$to_id));
     }
 
     /**

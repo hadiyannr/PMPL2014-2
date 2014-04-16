@@ -3,7 +3,7 @@
 class PengerjaanTryoutController extends Controller
 {       
         public $layout = '//layouts/site';
-	public function actionPerform(){
+	    public function actionPerform(){
             $id = $_POST['Perform']['id'];
             $tryout = Tryout::model()->findByPk($id);
             $soalList = Soal::model()->findAllByAttributes(array('idtryout' => $id));
@@ -68,7 +68,7 @@ class PengerjaanTryoutController extends Controller
         }
         
         public function actionResult($idTryout){
-            $pengerjaan = PengerjaanTryout::model()->findByAttributes(array('idTryout'=>$idTryout));
+            $pengerjaan = PengerjaanTryout::model()->findByAttributes(array('idTryout'=>$idTryout,'idPengguna'=>Yii::app()->user->id));
             $detail = $pengerjaan->getDetail($idTryout);
             
             $soalList = Soal::model()->findAllByAttributes(array('idtryout' => $idTryout));

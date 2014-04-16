@@ -21,7 +21,8 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'id',
-                'nama',
+        'nama',
+        'tanggal',
 		'waktuMulai',
 		'durasi',
                 array(

@@ -1,5 +1,5 @@
 <?php
-/* @var $this SoalController */
+/* @var $this AdminSoalController */
 /* @var $model Soal */
 /* @var $form CActiveForm */
 ?>
@@ -55,15 +55,9 @@
                     $check = '';
                     if($modelOpsi[$i]->isJawaban == 1){$check = ' checked';};
                     $radio ='&nbsp;'
-                        . '<input '
-                        . 'type="radio" '
-                        . 'name="Opsi[jawaban]" '
-                        . 'value="'.$i.'"'
-                        . ' required'
-                        . $check
-                        . '>'; 
+                        . '<input '.'type="radio" '.'name="Opsi[jawaban]" '.'value="'.$i.'"'.' required '.$check.'>';
                         echo $form->labelEx($modelOpsi[$i],'opsi ke '.($i + 1).$radio); ?>
-		<?php echo $form->textArea($modelOpsi[$i],'['.$i.']pernyataan',array('rows'=>2, 'cols'=>40)); ?>                                                
+		<?php echo $form->textArea($modelOpsi[$i],'['.$i.']pernyataan',array('rows'=>2, 'cols'=>40,'required'=>'required')); ?>
 		<?php echo $form->error($modelOpsi[$i],'['.$i.']pernyataan'); ?>
             
                 <?php echo $form->hiddenField($modelOpsi[$i],'['.$i.']idsoal',array('value'=>0)); ?>
@@ -74,7 +68,7 @@
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Buat' : 'Simpan'); ?>
                 <?php echo CHtml::Button('Batal',array(
-                          'submit'=>$this->createUrl('index'))); ?>                
+                          'submit'=>$this->createUrl('adminSoal/index',array('idtryout'=>$model->idtryout)))); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

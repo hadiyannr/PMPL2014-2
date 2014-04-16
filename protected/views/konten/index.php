@@ -22,7 +22,7 @@ $this->breadcrumbs=array(
     <?php    
     $this->widget('application.extensions.social.SocialShareWidget', array(
         'url' => 'localhost/'.Yii::app()->request->url,                  //required
-        'services' => array('facebook','google', 'twitter'),       //optional        
+        'services' => array('facebook'),       //optional
         'popup' => true,                               //optional
     ));
     ?>
