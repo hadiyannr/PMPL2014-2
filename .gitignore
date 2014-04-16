@@ -1,5 +1,5 @@
 /nbproject/private/
-/protected/runtime/
-/assets/
+/protected/runtime
+/assets
 /protected/config/main.php
-/.idea/
+/.idea
