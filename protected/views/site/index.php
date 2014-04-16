@@ -55,14 +55,14 @@
 			<?php 
 				foreach ($model1 as $randKonten): ?>
 				<div class="col-md-12 home-group" style="background-color: #1abc9c; ">
-					<h3><?php echo CHtml::link($randKonten->judul,array('index','id'=>$randKonten->id),array('style'=>"color: #ecf0f1"))?></h3>
+					<h3><?php echo CHtml::link($randKonten->judul,array('konten/index','id'=>$randKonten->id),array('style'=>"color: #ecf0f1"))?></h3>
 					<p style="color: #ecf0f1"> <?php 
 						$prev = strip_tags($randKonten->isi); 
 						echo substr($prev, 0, 100);
 						?>
 					</p>
 					<p class="more">
-						<?php echo CHtml::link("More details",array('index','id'=>$randKonten->id),array('style'=>"color: #ecf0f1"))?>
+						<?php echo CHtml::link("More details",array('konten/index','id'=>$randKonten->id),array('style'=>"color: #ecf0f1"))?>
 					</p>
 				</div>					
 			<?php endforeach; ?>
