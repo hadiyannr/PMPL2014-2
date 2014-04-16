@@ -17,7 +17,7 @@ class SiteController extends Controller
                 $criteria = new CDbCriteria;
                 $criteria->order = "RAND()";
                 $criteria->limit = 5;
-                $criteria->compare('idcategory','0');                
+                $criteria->compare('idcategory','2');
                 $model = Konten::model()->findAll($criteria);
                 
                 $criteria = new CDbCriteria;
