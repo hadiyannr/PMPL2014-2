@@ -51,23 +51,23 @@
 			</div>
 			
 			</div>
-			<div class="col-md-4" style="border: 2px solid #eee; height: 450px">
+			<div class="col-md-4" style="border: 2px solid #eee; height: 450px;">
 			<?php 
 				foreach ($model1 as $randKonten): ?>
-				<div class="col-md-12 home-group" style="">
-					<h3><?php echo CHtml::link($randKonten->judul,array('index','id'=>$randKonten->id))?></h3>
+				<div class="col-md-12 home-group" style="background-color: #1abc9c">
+					<h3><?php echo CHtml::link($randKonten->judul,array('index','id'=>$randKonten->id),array('style'=>"color: #ecf0f1"))?></h3>
 					<p> <?php 
-						$prev = $randKonten->isi; 
+						$prev = strip_tags($randKonten->isi); 
 						echo substr($prev, 0, 100);
 						?>
 					</p>
 					<p class="more">
-						<?php echo CHtml::link("More details",array('index','id'=>$randKonten->id))?>
+						<?php echo CHtml::link("More details",array('index','id'=>$randKonten->id),array('style'=>"color: #ecf0f1"))?>
 					</p>
 				</div>					
 			<?php endforeach; ?>
 			</div>
-			<div class="col-md-12" style="border: 1px solid #eee; margin-top: 25px; margin-left: 0px;">
+			<div class="col-md-12" style="border: 1px solid #eee; margin-top: 25px;">
 			<div id="main-slider-space">
 				    <div class="slider-wrapper">
 			<?php
