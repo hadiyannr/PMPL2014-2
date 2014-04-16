@@ -56,10 +56,10 @@
                             <ul class="nav navbar-nav navbar-right">		      	
                                 <?php if (Yii::app()->user->isGuest) { ?>
                                     <li>
-                                        <a href="#Login" data-toggle="modal">Login</a>
+                                        <a href="#Login" data-toggle="modal" style="color: #ecf0f1">Login</a>
                                     </li>      
                                     <li>
-                                        <a href="#SignUp" data-toggle="modal">Daftar</a>
+                                        <a href="#SignUp" data-toggle="modal" style="color: #ecf0f1">Daftar</a>
                                     </li>        			
                                 <?php } ?>
                                 <?php if (!Yii::app()->user->isGuest) { ?>

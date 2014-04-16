@@ -36,6 +36,14 @@
     color:black;	
 }
 
+.navbar-default .navbar-nav > .active > a {
+    background-color: #27ae60;
+}
+
+.navbar-default .navbar-nav > .active > a:hover {
+    background-color: #1abc9c;
+}
+
 /**************carousel**************/
 #myCarousel{
     width:80%;
