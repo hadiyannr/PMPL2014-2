@@ -106,7 +106,7 @@ class AdminKontenController extends Controller
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+			$this->redirect(array('index'));
 	}
 
 	/**
@@ -123,7 +123,6 @@ class AdminKontenController extends Controller
 			'model'=>$model,
 		));
 	}
-	
 
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.

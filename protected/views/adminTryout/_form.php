@@ -45,20 +45,20 @@
 	<div class="row">
 		<?php echo $form->labelEx($model,'waktuMulai'); ?>
 		<?php 
-                    $this->widget('application.extensions.timepicker.timepicker', array(                        
+                    $this->widget('application.extensions.timepicker.timepicker', array(
                         'model'=>$model,
                         'name'=>'waktuMulai',
                         'select'=> 'time',
-                        'htmlOptions'=>array('readonly'=>'readonly'),
                         'options' => array(
                             'showOn'=>'focus',
                             'timeFormat'=>'hh:mm',
                         ),
+                        'id'=>'timepicker',
                     ));
-                ?>
+        ?>
 		<?php echo $form->error($model,'waktuMulai'); ?>
 	</div>
-
+    <script>$('#timepicker').prop('readonly', true);</script>
 	<div class="row">
 		<?php echo $form->labelEx($model,'durasi'); ?>
 		<?php echo $form->textField($model,'durasi'); ?>
