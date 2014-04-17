@@ -180,7 +180,7 @@ right: 5px;
     overflow:hidden;
     width:1130px;
     height:10em;
-    background-color:#3498db;
+    /*background-color:#3498db;*/
     /*margin-left:50px;*/
 }
 
@@ -192,6 +192,7 @@ right: 5px;
 }
 
 .main-slide {
+    background-color:#3498db;
     width:376.67px;
     height:100%;
     float:left;
