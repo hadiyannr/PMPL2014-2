@@ -5691,767 +5691,167 @@ REQUEST_URI=/siapMasukUI/index.php/site/index
 in C:\xampp\htdocs\siapMasukUI\protected\views\site\index.php (60)
 in C:\xampp\htdocs\siapMasukUI\protected\controllers\SiteController.php (28)
 in C:\xampp\htdocs\siapMasukUI\index.php (13)
-2014/04/16 16:23:14 [warning] [application] Failed to set unsafe attribute "image" of "Profil".
-in C:\xampp\htdocs\siapmasukui\protected\controllers\ProfilController.php (28)
-in C:\xampp\htdocs\siapmasukui\index.php (13)
-2014/04/16 16:24:07 [warning] [application] Failed to set unsafe attribute "image" of "Profil".
-in C:\xampp\htdocs\siapmasukui\protected\controllers\ProfilController.php (28)
-in C:\xampp\htdocs\siapmasukui\index.php (13)
-2014/04/16 16:24:39 [warning] [application] Failed to set unsafe attribute "image" of "Profil".
-in C:\xampp\htdocs\siapmasukui\protected\controllers\ProfilController.php (28)
-in C:\xampp\htdocs\siapmasukui\index.php (13)
-2014/04/16 16:25:28 [warning] [application] Failed to set unsafe attribute "image" of "Profil".
-in C:\xampp\htdocs\siapmasukui\protected\controllers\ProfilController.php (28)
-in C:\xampp\htdocs\siapmasukui\index.php (13)
-2014/04/16 16:25:44 [warning] [application] Failed to set unsafe attribute "image" of "Profil".
-in C:\xampp\htdocs\siapmasukui\protected\controllers\ProfilController.php (28)
-in C:\xampp\htdocs\siapmasukui\index.php (13)
-2014/04/16 16:26:16 [warning] [application] Failed to set unsafe attribute "image" of "Profil".
-in C:\xampp\htdocs\siapmasukui\protected\controllers\ProfilController.php (28)
-in C:\xampp\htdocs\siapmasukui\index.php (13)
-2014/04/16 16:26:31 [warning] [application] Failed to set unsafe attribute "image" of "Profil".
-in C:\xampp\htdocs\siapmasukui\protected\controllers\ProfilController.php (28)
-in C:\xampp\htdocs\siapmasukui\index.php (13)
-2014/04/16 16:26:50 [warning] [application] Failed to set unsafe attribute "image" of "Profil".
-in C:\xampp\htdocs\siapmasukui\protected\controllers\ProfilController.php (28)
-in C:\xampp\htdocs\siapmasukui\index.php (13)
-2014/04/16 16:28:10 [warning] [application] Failed to set unsafe attribute "image" of "Profil".
-in C:\xampp\htdocs\siapmasukui\protected\controllers\ProfilController.php (28)
-in C:\xampp\htdocs\siapmasukui\index.php (13)
-2014/04/16 17:13:59 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\yiiframework\web\CController.php:336
+2014/04/17 05:40:13 [warning] [application] Failed to set unsafe attribute "image" of "Profil".
+in C:\xampp\htdocs\siapMasukUI\protected\controllers\ProfilController.php (28)
+in C:\xampp\htdocs\siapMasukUI\index.php (13)
+2014/04/17 06:03:41 [error] [exception.CException] exception 'CException' with message 'Property "Search.style" is not defined.' in C:\xampp\htdocs\yiiframework\base\CComponent.php:173
 Stack trace:
-#0 C:\xampp\htdocs\yiiframework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
-#1 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
-#2 C:\xampp\htdocs\yiiframework\web\filters\CFilter.php(40): CFilterChain->run()
-#3 C:\xampp\htdocs\yiiframework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
-#4 C:\xampp\htdocs\yiiframework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#5 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
-#6 C:\xampp\htdocs\yiiframework\web\CController.php(291): CFilterChain->run()
-#7 C:\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#8 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('index')
-#9 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('adminSoal/index')
-#10 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
-#11 C:\xampp\htdocs\siapmasukui\index.php(13): CApplication->run()
-#12 {main}
-REQUEST_URI=/siapmasukui/index.php/adminSoal/index
-HTTP_REFERER=http://localhost/siapmasukui/index.php/adminSoal/create?idtryout=7
----
-2014/04/16 17:20:22 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\yiiframework\web\CController.php:336
-Stack trace:
-#0 C:\xampp\htdocs\yiiframework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
-#1 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
-#2 C:\xampp\htdocs\yiiframework\web\filters\CFilter.php(40): CFilterChain->run()
-#3 C:\xampp\htdocs\yiiframework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
-#4 C:\xampp\htdocs\yiiframework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#5 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
-#6 C:\xampp\htdocs\yiiframework\web\CController.php(291): CFilterChain->run()
-#7 C:\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#8 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('index')
-#9 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('adminSoal/index')
-#10 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
-#11 C:\xampp\htdocs\siapmasukui\index.php(13): CApplication->run()
-#12 {main}
-REQUEST_URI=/siapmasukui/index.php/adminSoal/index
-HTTP_REFERER=http://localhost/siapmasukui/index.php/adminSoal/update/12
----
-2014/04/16 17:22:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "admin".' in C:\xampp\htdocs\yiiframework\web\CController.php:483
-Stack trace:
-#0 C:\xampp\htdocs\yiiframework\web\CController.php(270): CController->missingAction('admin')
-#1 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('admin')
-#2 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('adminSoal/admin')
-#3 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
-#4 C:\xampp\htdocs\siapmasukui\index.php(13): CApplication->run()
-#5 {main}
-REQUEST_URI=/siapmasukui/index.php/adminSoal/admin
-HTTP_REFERER=http://localhost/siapmasukui/index.php/adminSoal/12
----
-2014/04/16 17:23:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "admin".' in C:\xampp\htdocs\yiiframework\web\CController.php:483
-Stack trace:
-#0 C:\xampp\htdocs\yiiframework\web\CController.php(270): CController->missingAction('admin')
-#1 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('admin')
-#2 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('adminSoal/admin')
-#3 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
-#4 C:\xampp\htdocs\siapmasukui\index.php(13): CApplication->run()
-#5 {main}
-REQUEST_URI=/siapmasukui/index.php/adminSoal/admin
-HTTP_REFERER=http://localhost/siapmasukui/index.php/adminSoal/13
----
-2014/04/16 17:23:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\siapmasukui\protected\controllers\AdminSoalController.php:174
-Stack trace:
-#0 C:\xampp\htdocs\siapmasukui\protected\controllers\AdminSoalController.php(43): AdminSoalController->loadModel('13')
-#1 [internal function]: AdminSoalController->actionView('13')
-#2 C:\xampp\htdocs\yiiframework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AdminSoalController), Array)
-#3 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AdminSoalController), Object(ReflectionMethod), Array)
-#4 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams(Array)
-#5 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
-#6 C:\xampp\htdocs\yiiframework\web\filters\CFilter.php(40): CFilterChain->run()
-#7 C:\xampp\htdocs\yiiframework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
-#8 C:\xampp\htdocs\yiiframework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#9 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
-#10 C:\xampp\htdocs\yiiframework\web\CController.php(291): CFilterChain->run()
-#11 C:\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#12 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('view')
-#13 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('adminSoal/view')
-#14 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
-#15 C:\xampp\htdocs\siapmasukui\index.php(13): CApplication->run()
-#16 {main}
-REQUEST_URI=/siapmasukui/index.php/adminSoal/13
-HTTP_REFERER=http://localhost/siapmasukui/index.php/adminSoal/update/13
----
-2014/04/16 17:23:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\siapmasukui\protected\controllers\AdminSoalController.php:174
-Stack trace:
-#0 C:\xampp\htdocs\siapmasukui\protected\controllers\AdminSoalController.php(78): AdminSoalController->loadModel('13')
-#1 [internal function]: AdminSoalController->actionUpdate('13')
-#2 C:\xampp\htdocs\yiiframework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AdminSoalController), Array)
-#3 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AdminSoalController), Object(ReflectionMethod), Array)
-#4 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams(Array)
-#5 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
-#6 C:\xampp\htdocs\yiiframework\web\filters\CFilter.php(40): CFilterChain->run()
-#7 C:\xampp\htdocs\yiiframework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
-#8 C:\xampp\htdocs\yiiframework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#9 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
-#10 C:\xampp\htdocs\yiiframework\web\CController.php(291): CFilterChain->run()
-#11 C:\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#12 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('update')
-#13 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('adminSoal/updat...')
-#14 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
-#15 C:\xampp\htdocs\siapmasukui\index.php(13): CApplication->run()
-#16 {main}
-REQUEST_URI=/siapmasukui/index.php/adminSoal/update/13
-HTTP_REFERER=http://localhost/siapmasukui/index.php/adminSoal/13
----
-2014/04/16 17:23:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\siapmasukui\protected\controllers\AdminSoalController.php:174
-Stack trace:
-#0 C:\xampp\htdocs\siapmasukui\protected\controllers\AdminSoalController.php(43): AdminSoalController->loadModel('13')
-#1 [internal function]: AdminSoalController->actionView('13')
-#2 C:\xampp\htdocs\yiiframework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AdminSoalController), Array)
-#3 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AdminSoalController), Object(ReflectionMethod), Array)
-#4 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams(Array)
-#5 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
-#6 C:\xampp\htdocs\yiiframework\web\filters\CFilter.php(40): CFilterChain->run()
-#7 C:\xampp\htdocs\yiiframework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
-#8 C:\xampp\htdocs\yiiframework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#9 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
-#10 C:\xampp\htdocs\yiiframework\web\CController.php(291): CFilterChain->run()
-#11 C:\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#12 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('view')
-#13 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('adminSoal/view')
-#14 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
-#15 C:\xampp\htdocs\siapmasukui\index.php(13): CApplication->run()
-#16 {main}
-REQUEST_URI=/siapmasukui/index.php/adminSoal/13
-HTTP_REFERER=http://localhost/siapmasukui/index.php/adminSoal/create?idtryout=7
----
-2014/04/16 22:01:26 [error] [exception.CException] exception 'CException' with message 'Property "CJuiDatePicker.htmloptions" is not defined.' in C:\xampp\htdocs\yiiframework\base\CComponent.php:173
-Stack trace:
-#0 C:\xampp\htdocs\yiiframework\web\CWidgetFactory.php(161): CComponent->__set('htmloptions', Array)
-#1 C:\xampp\htdocs\yiiframework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(AdminTryoutController), 'zii.widgets.jui...', Array)
-#2 C:\xampp\htdocs\yiiframework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.jui...', Array)
-#3 C:\xampp\htdocs\siapmasukui\protected\views\adminTryout\_form.php(40): CBaseController->widget('zii.widgets.jui...', Array)
+#0 C:\xampp\htdocs\yiiframework\web\CWidgetFactory.php(161): CComponent->__set('style', 'color: #ecf0f1')
+#1 C:\xampp\htdocs\yiiframework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteController), 'Search', Array)
+#2 C:\xampp\htdocs\yiiframework\web\CBaseController.php(172): CBaseController->createWidget('Search', Array)
+#3 C:\xampp\htdocs\siapMasukUI\protected\views\layouts\site.php(95): CBaseController->widget('Search', Array)
 #4 C:\xampp\htdocs\yiiframework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
 #5 C:\xampp\htdocs\yiiframework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
-#6 C:\xampp\htdocs\yiiframework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
-#7 C:\xampp\htdocs\siapmasukui\protected\views\adminTryout\update.php(20): CController->renderPartial('_form', Array)
-#8 C:\xampp\htdocs\yiiframework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
-#9 C:\xampp\htdocs\yiiframework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
-#10 C:\xampp\htdocs\yiiframework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
-#11 C:\xampp\htdocs\yiiframework\web\CController.php(782): CController->renderPartial('update', Array, true)
-#12 C:\xampp\htdocs\siapmasukui\protected\controllers\AdminTryoutController.php(97): CController->render('update', Array)
-#13 [internal function]: AdminTryoutController->actionUpdate('5')
-#14 C:\xampp\htdocs\yiiframework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AdminTryoutController), Array)
-#15 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AdminTryoutController), Object(ReflectionMethod), Array)
-#16 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams(Array)
-#17 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
-#18 C:\xampp\htdocs\yiiframework\web\filters\CFilter.php(40): CFilterChain->run()
-#19 C:\xampp\htdocs\yiiframework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
-#20 C:\xampp\htdocs\yiiframework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#21 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
-#22 C:\xampp\htdocs\yiiframework\web\CController.php(291): CFilterChain->run()
-#23 C:\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#24 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('update')
-#25 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('adminTryout/upd...')
-#26 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
-#27 C:\xampp\htdocs\siapmasukui\index.php(13): CApplication->run()
-#28 {main}
-REQUEST_URI=/siapmasukui/index.php/adminTryout/update/5
-HTTP_REFERER=http://localhost/siapmasukui/index.php/adminTryout/index
----
-2014/04/16 22:01:31 [error] [exception.CException] exception 'CException' with message 'Property "CJuiDatePicker.htmloption" is not defined.' in C:\xampp\htdocs\yiiframework\base\CComponent.php:173
-Stack trace:
-#0 C:\xampp\htdocs\yiiframework\web\CWidgetFactory.php(161): CComponent->__set('htmloption', Array)
-#1 C:\xampp\htdocs\yiiframework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(AdminTryoutController), 'zii.widgets.jui...', Array)
-#2 C:\xampp\htdocs\yiiframework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.jui...', Array)
-#3 C:\xampp\htdocs\siapmasukui\protected\views\adminTryout\_form.php(40): CBaseController->widget('zii.widgets.jui...', Array)
-#4 C:\xampp\htdocs\yiiframework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
-#5 C:\xampp\htdocs\yiiframework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
-#6 C:\xampp\htdocs\yiiframework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
-#7 C:\xampp\htdocs\siapmasukui\protected\views\adminTryout\update.php(20): CController->renderPartial('_form', Array)
-#8 C:\xampp\htdocs\yiiframework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
-#9 C:\xampp\htdocs\yiiframework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
-#10 C:\xampp\htdocs\yiiframework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
-#11 C:\xampp\htdocs\yiiframework\web\CController.php(782): CController->renderPartial('update', Array, true)
-#12 C:\xampp\htdocs\siapmasukui\protected\controllers\AdminTryoutController.php(97): CController->render('update', Array)
-#13 [internal function]: AdminTryoutController->actionUpdate('5')
-#14 C:\xampp\htdocs\yiiframework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AdminTryoutController), Array)
-#15 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AdminTryoutController), Object(ReflectionMethod), Array)
-#16 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams(Array)
-#17 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
-#18 C:\xampp\htdocs\yiiframework\web\filters\CFilter.php(40): CFilterChain->run()
-#19 C:\xampp\htdocs\yiiframework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
-#20 C:\xampp\htdocs\yiiframework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#21 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
-#22 C:\xampp\htdocs\yiiframework\web\CController.php(291): CFilterChain->run()
-#23 C:\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#24 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('update')
-#25 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('adminTryout/upd...')
-#26 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
-#27 C:\xampp\htdocs\siapmasukui\index.php(13): CApplication->run()
-#28 {main}
-REQUEST_URI=/siapmasukui/index.php/adminTryout/update/5
-HTTP_REFERER=http://localhost/siapmasukui/index.php/adminTryout/index
----
-2014/04/16 22:19:45 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\siapmasukui\protected\views\konten\index.php:13)
-Stack trace:
-#0 C:\xampp\htdocs\yiiframework\web\CController.php(869): KontenController->renderFile()
-#1 C:\xampp\htdocs\yiiframework\web\CController.php(782): KontenController->renderPartial()
-#2 C:\xampp\htdocs\siapmasukui\protected\controllers\KontenController.php(9): KontenController->render()
-#3 unknown(0): KontenController->actionIndex()
-#4 C:\xampp\htdocs\yiiframework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
-#5 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
-#6 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
-#7 C:\xampp\htdocs\yiiframework\web\CController.php(286): KontenController->runAction()
-#8 C:\xampp\htdocs\yiiframework\web\CController.php(265): KontenController->runActionWithFilters()
-#9 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): KontenController->run()
-#10 C:\xampp\htdocs\yiiframework\web\CController.php(752): CWebApplication->runController()
-#11 C:\xampp\htdocs\siapmasukui\protected\controllers\AdminKontenController.php(46): AdminKontenController->forward()
-#12 unknown(0): AdminKontenController->actionView()
-#13 C:\xampp\htdocs\yiiframework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
-#14 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
-#15 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
-#16 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(133): AdminKontenController->runAction()
-#17 C:\xampp\htdocs\yiiframework\web\filters\CFilter.php(40): CFilterChain->run()
-#18 C:\xampp\htdocs\yiiframework\web\CController.php(1145): CAccessControlFilter->filter()
-#19 C:\xampp\htdocs\yiiframework\web\filters\CInlineFilter.php(58): AdminKontenController->filterAccessControl()
-#20 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
-#21 C:\xampp\htdocs\yiiframework\web\CController.php(291): CFilterChain->run()
-#22 C:\xampp\htdocs\yiiframework\web\CController.php(265): AdminKontenController->runActionWithFilters()
-#23 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): AdminKontenController->run()
-#24 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController()
-#25 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
-#26 C:\xampp\htdocs\siapmasukui\index.php(13): CWebApplication->run()
-REQUEST_URI=/siapmasukui/index.php/adminKonten/23
-in C:\xampp\htdocs\siapmasukui\protected\views\konten\index.php (13)
-in C:\xampp\htdocs\siapmasukui\protected\controllers\KontenController.php (9)
-in C:\xampp\htdocs\siapmasukui\protected\controllers\AdminKontenController.php (46)
-2014/04/16 22:20:31 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\siapmasukui\protected\views\konten\index.php:13)
-Stack trace:
-#0 C:\xampp\htdocs\yiiframework\web\CController.php(869): KontenController->renderFile()
-#1 C:\xampp\htdocs\yiiframework\web\CController.php(782): KontenController->renderPartial()
-#2 C:\xampp\htdocs\siapmasukui\protected\controllers\KontenController.php(9): KontenController->render()
-#3 unknown(0): KontenController->actionIndex()
-#4 C:\xampp\htdocs\yiiframework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
-#5 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
-#6 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
-#7 C:\xampp\htdocs\yiiframework\web\CController.php(286): KontenController->runAction()
-#8 C:\xampp\htdocs\yiiframework\web\CController.php(265): KontenController->runActionWithFilters()
-#9 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): KontenController->run()
-#10 C:\xampp\htdocs\yiiframework\web\CController.php(752): CWebApplication->runController()
-#11 C:\xampp\htdocs\siapmasukui\protected\controllers\AdminKontenController.php(46): AdminKontenController->forward()
-#12 unknown(0): AdminKontenController->actionView()
-#13 C:\xampp\htdocs\yiiframework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
-#14 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
-#15 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
-#16 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(133): AdminKontenController->runAction()
-#17 C:\xampp\htdocs\yiiframework\web\filters\CFilter.php(40): CFilterChain->run()
-#18 C:\xampp\htdocs\yiiframework\web\CController.php(1145): CAccessControlFilter->filter()
-#19 C:\xampp\htdocs\yiiframework\web\filters\CInlineFilter.php(58): AdminKontenController->filterAccessControl()
-#20 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
-#21 C:\xampp\htdocs\yiiframework\web\CController.php(291): CFilterChain->run()
-#22 C:\xampp\htdocs\yiiframework\web\CController.php(265): AdminKontenController->runActionWithFilters()
-#23 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): AdminKontenController->run()
-#24 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController()
-#25 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
-#26 C:\xampp\htdocs\siapmasukui\index.php(13): CWebApplication->run()
-REQUEST_URI=/siapmasukui/index.php/adminKonten/24
-in C:\xampp\htdocs\siapmasukui\protected\views\konten\index.php (13)
-in C:\xampp\htdocs\siapmasukui\protected\controllers\KontenController.php (9)
-in C:\xampp\htdocs\siapmasukui\protected\controllers\AdminKontenController.php (46)
-2014/04/16 22:22:35 [error] [exception.CDbException] exception 'CDbException' with message 'Table "konten" does not have a column named "select".' in C:\xampp\htdocs\yiiframework\db\schema\CDbCommandBuilder.php:694
-Stack trace:
-#0 C:\xampp\htdocs\yiiframework\db\ar\CActiveRecord.php(1518): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Object(CDbCriteria), '', Array, '`t`.')
-#1 C:\xampp\htdocs\siapmasukui\protected\controllers\KontenController.php(14): CActiveRecord->findByAttributes(Object(CDbCriteria))
-#2 [internal function]: KontenController->actionIndex('24')
-#3 C:\xampp\htdocs\yiiframework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(KontenController), Array)
-#4 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(KontenController), Object(ReflectionMethod), Array)
-#5 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams(Array)
-#6 C:\xampp\htdocs\yiiframework\web\CController.php(286): CController->runAction(Object(CInlineAction))
-#7 C:\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#8 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('index')
-#9 C:\xampp\htdocs\yiiframework\web\CController.php(752): CWebApplication->runController('konten/index')
-#10 C:\xampp\htdocs\siapmasukui\protected\controllers\AdminKontenController.php(46): CController->forward('konten/index')
-#11 [internal function]: AdminKontenController->actionView('24')
-#12 C:\xampp\htdocs\yiiframework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AdminKontenController), Array)
-#13 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AdminKontenController), Object(ReflectionMethod), Array)
-#14 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams(Array)
-#15 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
-#16 C:\xampp\htdocs\yiiframework\web\filters\CFilter.php(40): CFilterChain->run()
-#17 C:\xampp\htdocs\yiiframework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
-#18 C:\xampp\htdocs\yiiframework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#19 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
-#20 C:\xampp\htdocs\yiiframework\web\CController.php(291): CFilterChain->run()
-#21 C:\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#22 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('view')
-#23 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('adminKonten/vie...')
-#24 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
-#25 C:\xampp\htdocs\siapmasukui\index.php(13): CApplication->run()
-#26 {main}
-REQUEST_URI=/siapmasukui/index.php/adminKonten/24
----
-2014/04/16 22:22:51 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\siapmasukui\protected\views\konten\index.php:13)
-Stack trace:
-#0 C:\xampp\htdocs\yiiframework\web\CController.php(869): KontenController->renderFile()
-#1 C:\xampp\htdocs\yiiframework\web\CController.php(782): KontenController->renderPartial()
-#2 C:\xampp\htdocs\siapmasukui\protected\controllers\KontenController.php(15): KontenController->render()
-#3 unknown(0): KontenController->actionIndex()
-#4 C:\xampp\htdocs\yiiframework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
-#5 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
-#6 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
-#7 C:\xampp\htdocs\yiiframework\web\CController.php(286): KontenController->runAction()
-#8 C:\xampp\htdocs\yiiframework\web\CController.php(265): KontenController->runActionWithFilters()
-#9 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): KontenController->run()
-#10 C:\xampp\htdocs\yiiframework\web\CController.php(752): CWebApplication->runController()
-#11 C:\xampp\htdocs\siapmasukui\protected\controllers\AdminKontenController.php(46): AdminKontenController->forward()
-#12 unknown(0): AdminKontenController->actionView()
-#13 C:\xampp\htdocs\yiiframework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
-#14 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
-#15 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
-#16 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(133): AdminKontenController->runAction()
-#17 C:\xampp\htdocs\yiiframework\web\filters\CFilter.php(40): CFilterChain->run()
-#18 C:\xampp\htdocs\yiiframework\web\CController.php(1145): CAccessControlFilter->filter()
-#19 C:\xampp\htdocs\yiiframework\web\filters\CInlineFilter.php(58): AdminKontenController->filterAccessControl()
-#20 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
-#21 C:\xampp\htdocs\yiiframework\web\CController.php(291): CFilterChain->run()
-#22 C:\xampp\htdocs\yiiframework\web\CController.php(265): AdminKontenController->runActionWithFilters()
-#23 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): AdminKontenController->run()
-#24 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController()
-#25 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
-#26 C:\xampp\htdocs\siapmasukui\index.php(13): CWebApplication->run()
-REQUEST_URI=/siapmasukui/index.php/adminKonten/24
-in C:\xampp\htdocs\siapmasukui\protected\views\konten\index.php (13)
-in C:\xampp\htdocs\siapmasukui\protected\controllers\KontenController.php (15)
-in C:\xampp\htdocs\siapmasukui\protected\controllers\AdminKontenController.php (46)
-2014/04/16 22:23:09 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\siapmasukui\protected\views\konten\index.php:13)
-Stack trace:
-#0 C:\xampp\htdocs\yiiframework\web\CController.php(869): KontenController->renderFile()
-#1 C:\xampp\htdocs\yiiframework\web\CController.php(782): KontenController->renderPartial()
-#2 C:\xampp\htdocs\siapmasukui\protected\controllers\KontenController.php(15): KontenController->render()
-#3 unknown(0): KontenController->actionIndex()
-#4 C:\xampp\htdocs\yiiframework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
-#5 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
-#6 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
-#7 C:\xampp\htdocs\yiiframework\web\CController.php(286): KontenController->runAction()
-#8 C:\xampp\htdocs\yiiframework\web\CController.php(265): KontenController->runActionWithFilters()
-#9 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): KontenController->run()
-#10 C:\xampp\htdocs\yiiframework\web\CController.php(752): CWebApplication->runController()
-#11 C:\xampp\htdocs\siapmasukui\protected\controllers\AdminKontenController.php(46): AdminKontenController->forward()
-#12 unknown(0): AdminKontenController->actionView()
-#13 C:\xampp\htdocs\yiiframework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
-#14 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
-#15 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
-#16 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(133): AdminKontenController->runAction()
-#17 C:\xampp\htdocs\yiiframework\web\filters\CFilter.php(40): CFilterChain->run()
-#18 C:\xampp\htdocs\yiiframework\web\CController.php(1145): CAccessControlFilter->filter()
-#19 C:\xampp\htdocs\yiiframework\web\filters\CInlineFilter.php(58): AdminKontenController->filterAccessControl()
-#20 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
-#21 C:\xampp\htdocs\yiiframework\web\CController.php(291): CFilterChain->run()
-#22 C:\xampp\htdocs\yiiframework\web\CController.php(265): AdminKontenController->runActionWithFilters()
-#23 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): AdminKontenController->run()
-#24 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController()
-#25 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
-#26 C:\xampp\htdocs\siapmasukui\index.php(13): CWebApplication->run()
-REQUEST_URI=/siapmasukui/index.php/adminKonten/24
-in C:\xampp\htdocs\siapmasukui\protected\views\konten\index.php (13)
-in C:\xampp\htdocs\siapmasukui\protected\controllers\KontenController.php (15)
-in C:\xampp\htdocs\siapmasukui\protected\controllers\AdminKontenController.php (46)
-2014/04/16 22:30:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "admin".' in C:\xampp\htdocs\yiiframework\web\CController.php:483
-Stack trace:
-#0 C:\xampp\htdocs\yiiframework\web\CController.php(270): CController->missingAction('admin')
-#1 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('admin')
-#2 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('adminSoal/admin')
-#3 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
-#4 C:\xampp\htdocs\siapmasukui\index.php(13): CApplication->run()
-#5 {main}
-REQUEST_URI=/siapmasukui/index.php/adminSoal/admin
-HTTP_REFERER=http://localhost/siapmasukui/index.php/adminSoal/17
----
-2014/04/16 22:30:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\siapmasukui\protected\controllers\AdminSoalController.php:174
-Stack trace:
-#0 C:\xampp\htdocs\siapmasukui\protected\controllers\AdminSoalController.php(43): AdminSoalController->loadModel('17')
-#1 [internal function]: AdminSoalController->actionView('17')
-#2 C:\xampp\htdocs\yiiframework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AdminSoalController), Array)
-#3 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AdminSoalController), Object(ReflectionMethod), Array)
-#4 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams(Array)
-#5 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
-#6 C:\xampp\htdocs\yiiframework\web\filters\CFilter.php(40): CFilterChain->run()
-#7 C:\xampp\htdocs\yiiframework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
-#8 C:\xampp\htdocs\yiiframework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#9 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
-#10 C:\xampp\htdocs\yiiframework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yiiframework\web\CController.php(784): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\siapMasukUI\protected\controllers\SiteController.php(30): CController->render('index', Array)
+#8 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#9 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\yiiframework\web\CController.php(286): CController->runAction(Object(CInlineAction))
 #11 C:\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#12 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('view')
-#13 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('adminSoal/view')
+#12 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('index')
+#13 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('site/index')
 #14 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
-#15 C:\xampp\htdocs\siapmasukui\index.php(13): CApplication->run()
+#15 C:\xampp\htdocs\siapMasukUI\index.php(13): CApplication->run()
 #16 {main}
-REQUEST_URI=/siapmasukui/index.php/adminSoal/17
-HTTP_REFERER=http://localhost/siapmasukui/index.php/adminSoal/create?idtryout=4
+REQUEST_URI=/siapMasukUI/index.php/site/index
+HTTP_REFERER=http://localhost:1234/siapMasukUI/index.php/konten/search?keyword=Ilmu
 ---
-2014/04/16 22:30:36 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\yiiframework\web\CController.php:336
+2014/04/17 06:04:15 [error] [php] Invalid argument supplied for foreach() (C:\xampp\htdocs\yiiframework\web\CWidgetFactory.php:160)
 Stack trace:
-#0 C:\xampp\htdocs\yiiframework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
-#1 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
-#2 C:\xampp\htdocs\yiiframework\web\filters\CFilter.php(40): CFilterChain->run()
-#3 C:\xampp\htdocs\yiiframework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
-#4 C:\xampp\htdocs\yiiframework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#5 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
-#6 C:\xampp\htdocs\yiiframework\web\CController.php(291): CFilterChain->run()
-#7 C:\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#8 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('')
-#9 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('adminSoal')
-#10 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
-#11 C:\xampp\htdocs\siapmasukui\index.php(13): CApplication->run()
-#12 {main}
-REQUEST_URI=/siapmasukui/index.php/adminSoal
----
-2014/04/16 22:32:12 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\yiiframework\web\CController.php:336
-Stack trace:
-#0 C:\xampp\htdocs\yiiframework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
-#1 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
-#2 C:\xampp\htdocs\yiiframework\web\filters\CFilter.php(40): CFilterChain->run()
-#3 C:\xampp\htdocs\yiiframework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
-#4 C:\xampp\htdocs\yiiframework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#5 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
-#6 C:\xampp\htdocs\yiiframework\web\CController.php(291): CFilterChain->run()
-#7 C:\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#8 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('index')
-#9 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('adminSoal/index')
-#10 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
-#11 C:\xampp\htdocs\siapmasukui\index.php(13): CApplication->run()
-#12 {main}
-REQUEST_URI=/siapmasukui/index.php/adminSoal/index
-HTTP_REFERER=http://localhost/siapmasukui/index.php/adminSoal/18
----
-2014/04/16 22:33:15 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\yiiframework\web\CController.php:336
-Stack trace:
-#0 C:\xampp\htdocs\yiiframework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
-#1 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
-#2 C:\xampp\htdocs\yiiframework\web\filters\CFilter.php(40): CFilterChain->run()
-#3 C:\xampp\htdocs\yiiframework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
-#4 C:\xampp\htdocs\yiiframework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#5 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
-#6 C:\xampp\htdocs\yiiframework\web\CController.php(291): CFilterChain->run()
-#7 C:\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#8 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('')
-#9 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('adminSoal')
-#10 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
-#11 C:\xampp\htdocs\siapmasukui\index.php(13): CApplication->run()
-#12 {main}
-REQUEST_URI=/siapmasukui/index.php/adminSoal
----
-2014/04/16 23:11:57 [error] [php] Undefined variable: searchMessage (C:\xampp\htdocs\siapmasukui\protected\controllers\KontenController.php:29)
-Stack trace:
-#0 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
-#1 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
-#2 C:\xampp\htdocs\yiiframework\web\CController.php(286): KontenController->runAction()
-#3 C:\xampp\htdocs\yiiframework\web\CController.php(265): KontenController->runActionWithFilters()
-#4 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): KontenController->run()
-#5 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController()
-#6 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
-#7 C:\xampp\htdocs\siapmasukui\index.php(13): CWebApplication->run()
-REQUEST_URI=/siapmasukui/index.php/konten/search?keyword=fakul
-in C:\xampp\htdocs\siapmasukui\protected\controllers\KontenController.php (29)
-in C:\xampp\htdocs\siapmasukui\index.php (13)
-2014/04/16 23:21:55 [error] [php] Undefined variable: searchMessage (C:\xampp\htdocs\siapmasukui\protected\views\konten\kontenList.php:13)
-Stack trace:
-#0 C:\xampp\htdocs\yiiframework\web\CController.php(869): KontenController->renderFile()
-#1 C:\xampp\htdocs\yiiframework\web\CController.php(782): KontenController->renderPartial()
-#2 C:\xampp\htdocs\siapmasukui\protected\controllers\KontenController.php(23): KontenController->render()
-#3 unknown(0): KontenController->actionKategori()
-#4 C:\xampp\htdocs\yiiframework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
-#5 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#0 C:\xampp\htdocs\siapMasukUI\protected\views\layouts\site.php(95): SiteController->widget()
+#1 C:\xampp\htdocs\yiiframework\web\CBaseController.php(126): require()
+#2 C:\xampp\htdocs\yiiframework\web\CBaseController.php(95): SiteController->renderInternal()
+#3 C:\xampp\htdocs\yiiframework\web\CController.php(784): SiteController->renderFile()
+#4 C:\xampp\htdocs\siapMasukUI\protected\controllers\SiteController.php(30): SiteController->render()
+#5 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
 #6 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
-#7 C:\xampp\htdocs\yiiframework\web\CController.php(286): KontenController->runAction()
-#8 C:\xampp\htdocs\yiiframework\web\CController.php(265): KontenController->runActionWithFilters()
-#9 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): KontenController->run()
+#7 C:\xampp\htdocs\yiiframework\web\CController.php(286): SiteController->runAction()
+#8 C:\xampp\htdocs\yiiframework\web\CController.php(265): SiteController->runActionWithFilters()
+#9 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): SiteController->run()
 #10 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController()
 #11 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
-#12 C:\xampp\htdocs\siapmasukui\index.php(13): CWebApplication->run()
-REQUEST_URI=/siapmasukui/index.php/konten/kategori?idcategory=1
-in C:\xampp\htdocs\siapmasukui\protected\views\konten\kontenList.php (13)
-in C:\xampp\htdocs\siapmasukui\protected\controllers\KontenController.php (23)
-in C:\xampp\htdocs\siapmasukui\index.php (13)
-2014/04/16 23:58:48 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\siapmasukui\protected\models\Pengerjaantryout.php:143)
-Stack trace:
-#0 C:\xampp\htdocs\yiiframework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
-#1 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
-#2 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
-#3 C:\xampp\htdocs\yiiframework\web\CController.php(286): PengerjaanTryoutController->runAction()
-#4 C:\xampp\htdocs\yiiframework\web\CController.php(265): PengerjaanTryoutController->runActionWithFilters()
-#5 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): PengerjaanTryoutController->run()
-#6 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController()
-#7 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
-#8 C:\xampp\htdocs\siapmasukui\index.php(13): CWebApplication->run()
-REQUEST_URI=/siapmasukui/index.php/pengerjaanTryout/result?idTryout=7
-in C:\xampp\htdocs\siapmasukui\protected\models\Pengerjaantryout.php (143)
-in C:\xampp\htdocs\siapmasukui\protected\controllers\PengerjaanTryoutController.php (72)
-in C:\xampp\htdocs\siapmasukui\index.php (13)
-2014/04/16 23:59:10 [error] [php] Undefined index: jawabans (C:\xampp\htdocs\siapmasukui\protected\models\Pengerjaantryout.php:143)
-Stack trace:
-#0 C:\xampp\htdocs\yiiframework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
-#1 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
-#2 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
-#3 C:\xampp\htdocs\yiiframework\web\CController.php(286): PengerjaanTryoutController->runAction()
-#4 C:\xampp\htdocs\yiiframework\web\CController.php(265): PengerjaanTryoutController->runActionWithFilters()
-#5 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): PengerjaanTryoutController->run()
-#6 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController()
-#7 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
-#8 C:\xampp\htdocs\siapmasukui\index.php(13): CWebApplication->run()
-REQUEST_URI=/siapmasukui/index.php/pengerjaanTryout/result?idTryout=7
-in C:\xampp\htdocs\siapmasukui\protected\models\Pengerjaantryout.php (143)
-in C:\xampp\htdocs\siapmasukui\protected\controllers\PengerjaanTryoutController.php (72)
-in C:\xampp\htdocs\siapmasukui\index.php (13)
-2014/04/17 00:05:59 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\siapmasukui\protected\models\Pengerjaantryout.php:134)
-Stack trace:
-#0 C:\xampp\htdocs\yiiframework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
-#1 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
-#2 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
-#3 C:\xampp\htdocs\yiiframework\web\CController.php(286): PengerjaanTryoutController->runAction()
-#4 C:\xampp\htdocs\yiiframework\web\CController.php(265): PengerjaanTryoutController->runActionWithFilters()
-#5 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): PengerjaanTryoutController->run()
-#6 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController()
-#7 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
-#8 C:\xampp\htdocs\siapmasukui\index.php(13): CWebApplication->run()
-REQUEST_URI=/siapmasukui/index.php/pengerjaanTryout/result?idTryout=7
-in C:\xampp\htdocs\siapmasukui\protected\models\Pengerjaantryout.php (134)
-in C:\xampp\htdocs\siapmasukui\protected\controllers\PengerjaanTryoutController.php (72)
-in C:\xampp\htdocs\siapmasukui\index.php (13)
-2014/04/17 00:06:08 [error] [php] Undefined index: idPengguna (C:\xampp\htdocs\siapmasukui\protected\models\Pengerjaantryout.php:134)
-Stack trace:
-#0 C:\xampp\htdocs\yiiframework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
-#1 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
-#2 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
-#3 C:\xampp\htdocs\yiiframework\web\CController.php(286): PengerjaanTryoutController->runAction()
-#4 C:\xampp\htdocs\yiiframework\web\CController.php(265): PengerjaanTryoutController->runActionWithFilters()
-#5 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): PengerjaanTryoutController->run()
-#6 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController()
-#7 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
-#8 C:\xampp\htdocs\siapmasukui\index.php(13): CWebApplication->run()
-REQUEST_URI=/siapmasukui/index.php/pengerjaanTryout/result?idTryout=7
-in C:\xampp\htdocs\siapmasukui\protected\models\Pengerjaantryout.php (134)
-in C:\xampp\htdocs\siapmasukui\protected\controllers\PengerjaanTryoutController.php (72)
-in C:\xampp\htdocs\siapmasukui\index.php (13)
-2014/04/17 06:44:31 [error] [exception.CException] exception 'CException' with message 'Property "timepicker.htmlOptions" is not defined.' in C:\xampp\htdocs\yiiframework\base\CComponent.php:173
+#12 C:\xampp\htdocs\siapMasukUI\index.php(13): CWebApplication->run()
+REQUEST_URI=/siapMasukUI/index.php/site/index
+in C:\xampp\htdocs\siapMasukUI\protected\views\layouts\site.php (95)
+in C:\xampp\htdocs\siapMasukUI\protected\controllers\SiteController.php (30)
+in C:\xampp\htdocs\siapMasukUI\index.php (13)
+2014/04/17 06:18:26 [error] [exception.CException] exception 'CException' with message 'Property "timepicker.htmlOptions" is not defined.' in C:\xampp\htdocs\yiiframework\base\CComponent.php:173
 Stack trace:
 #0 C:\xampp\htdocs\yiiframework\web\CWidgetFactory.php(161): CComponent->__set('htmlOptions', Array)
 #1 C:\xampp\htdocs\yiiframework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(AdminTryoutController), 'application.ext...', Array)
 #2 C:\xampp\htdocs\yiiframework\web\CBaseController.php(172): CBaseController->createWidget('application.ext...', Array)
-#3 C:\xampp\htdocs\siapmasukui\protected\views\adminTryout\_form.php(57): CBaseController->widget('application.ext...', Array)
+#3 C:\xampp\htdocs\siapMasukUI\protected\views\adminTryout\_form.php(57): CBaseController->widget('application.ext...', Array)
 #4 C:\xampp\htdocs\yiiframework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
 #5 C:\xampp\htdocs\yiiframework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
 #6 C:\xampp\htdocs\yiiframework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
-#7 C:\xampp\htdocs\siapmasukui\protected\views\adminTryout\create.php(17): CController->renderPartial('_form', Array)
+#7 C:\xampp\htdocs\siapMasukUI\protected\views\adminTryout\update.php(20): CController->renderPartial('_form', Array)
 #8 C:\xampp\htdocs\yiiframework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
 #9 C:\xampp\htdocs\yiiframework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
 #10 C:\xampp\htdocs\yiiframework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
-#11 C:\xampp\htdocs\yiiframework\web\CController.php(782): CController->renderPartial('create', Array, true)
-#12 C:\xampp\htdocs\siapmasukui\protected\controllers\AdminTryoutController.php(72): CController->render('create', Array)
-#13 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): AdminTryoutController->actionCreate()
-#14 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams(Array)
-#15 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
-#16 C:\xampp\htdocs\yiiframework\web\filters\CFilter.php(40): CFilterChain->run()
-#17 C:\xampp\htdocs\yiiframework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
-#18 C:\xampp\htdocs\yiiframework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#19 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
-#20 C:\xampp\htdocs\yiiframework\web\CController.php(291): CFilterChain->run()
-#21 C:\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#22 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('create')
-#23 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('adminTryout/cre...')
-#24 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
-#25 C:\xampp\htdocs\siapmasukui\index.php(13): CApplication->run()
-#26 {main}
-REQUEST_URI=/siapmasukui/index.php/adminTryout/create
-HTTP_REFERER=http://localhost/siapmasukui/index.php/adminTryout/index
+#11 C:\xampp\htdocs\yiiframework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#12 C:\xampp\htdocs\siapMasukUI\protected\controllers\AdminTryoutController.php(97): CController->render('update', Array)
+#13 [internal function]: AdminTryoutController->actionUpdate('7')
+#14 C:\xampp\htdocs\yiiframework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AdminTryoutController), Array)
+#15 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AdminTryoutController), Object(ReflectionMethod), Array)
+#16 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yiiframework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 C:\xampp\htdocs\yiiframework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\yiiframework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\yiiframework\web\CController.php(291): CFilterChain->run()
+#23 C:\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('update')
+#25 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('adminTryout/upd...')
+#26 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#27 C:\xampp\htdocs\siapMasukUI\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/siapMasukUI/index.php/adminTryout/update/7
+HTTP_REFERER=http://localhost:1234/siapMasukUI/index.php/adminTryout/7
 ---
-2014/04/17 06:46:05 [warning] [application] Failed to set unsafe attribute "image" of "Profil".
-in C:\xampp\htdocs\siapmasukui\protected\controllers\ProfilController.php (28)
-in C:\xampp\htdocs\siapmasukui\index.php (13)
-2014/04/17 06:49:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "admin".' in C:\xampp\htdocs\yiiframework\web\CController.php:483
-Stack trace:
-#0 C:\xampp\htdocs\yiiframework\web\CController.php(270): CController->missingAction('admin')
-#1 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('admin')
-#2 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('adminTryout/adm...')
-#3 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
-#4 C:\xampp\htdocs\siapmasukui\index.php(13): CApplication->run()
-#5 {main}
-REQUEST_URI=/siapmasukui/index.php/adminTryout/admin
-HTTP_REFERER=http://localhost/siapmasukui/index.php/adminTryout/9
----
-2014/04/17 06:49:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\siapmasukui\protected\controllers\AdminTryoutController.php:141
-Stack trace:
-#0 C:\xampp\htdocs\siapmasukui\protected\controllers\AdminTryoutController.php(47): AdminTryoutController->loadModel('9')
-#1 [internal function]: AdminTryoutController->actionView('9')
-#2 C:\xampp\htdocs\yiiframework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AdminTryoutController), Array)
-#3 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AdminTryoutController), Object(ReflectionMethod), Array)
-#4 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams(Array)
-#5 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
-#6 C:\xampp\htdocs\yiiframework\web\filters\CFilter.php(40): CFilterChain->run()
-#7 C:\xampp\htdocs\yiiframework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
-#8 C:\xampp\htdocs\yiiframework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#9 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
-#10 C:\xampp\htdocs\yiiframework\web\CController.php(291): CFilterChain->run()
-#11 C:\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#12 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('view')
-#13 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('adminTryout/vie...')
-#14 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
-#15 C:\xampp\htdocs\siapmasukui\index.php(13): CApplication->run()
-#16 {main}
-REQUEST_URI=/siapmasukui/index.php/adminTryout/9
-HTTP_REFERER=http://localhost/siapmasukui/index.php/adminTryout/create
----
-2014/04/17 06:54:05 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yiiframework\web\auth\CAccessControlFilter.php:182
-Stack trace:
-#0 C:\xampp\htdocs\yiiframework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(EWebUser), 'You are not aut...')
-#1 C:\xampp\htdocs\yiiframework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
-#2 C:\xampp\htdocs\yiiframework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
-#3 C:\xampp\htdocs\yiiframework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#4 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
-#5 C:\xampp\htdocs\yiiframework\web\CController.php(291): CFilterChain->run()
-#6 C:\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#7 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('admin')
-#8 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('adminTryout/adm...')
-#9 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
-#10 C:\xampp\htdocs\siapmasukui\index.php(13): CApplication->run()
-#11 {main}
-REQUEST_URI=/siapmasukui/index.php/adminTryout/admin
-HTTP_REFERER=http://localhost/siapmasukui/index.php/adminTryout/10
----
-2014/04/17 06:54:27 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yiiframework\web\auth\CAccessControlFilter.php:182
-Stack trace:
-#0 C:\xampp\htdocs\yiiframework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(EWebUser), 'You are not aut...')
-#1 C:\xampp\htdocs\yiiframework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
-#2 C:\xampp\htdocs\yiiframework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
-#3 C:\xampp\htdocs\yiiframework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#4 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
-#5 C:\xampp\htdocs\yiiframework\web\CController.php(291): CFilterChain->run()
-#6 C:\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#7 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('admin')
-#8 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('adminTryout/adm...')
-#9 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
-#10 C:\xampp\htdocs\siapmasukui\index.php(13): CApplication->run()
-#11 {main}
-REQUEST_URI=/siapmasukui/index.php/adminTryout/admin
----
-2014/04/17 06:55:13 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yiiframework\web\auth\CAccessControlFilter.php:182
-Stack trace:
-#0 C:\xampp\htdocs\yiiframework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(EWebUser), 'You are not aut...')
-#1 C:\xampp\htdocs\yiiframework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
-#2 C:\xampp\htdocs\yiiframework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
-#3 C:\xampp\htdocs\yiiframework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#4 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
-#5 C:\xampp\htdocs\yiiframework\web\CController.php(291): CFilterChain->run()
-#6 C:\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#7 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('admin')
-#8 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('adminTryout/adm...')
-#9 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
-#10 C:\xampp\htdocs\siapmasukui\index.php(13): CApplication->run()
-#11 {main}
-REQUEST_URI=/siapmasukui/index.php/adminTryout/admin
----
-2014/04/17 06:55:25 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yiiframework\web\auth\CAccessControlFilter.php:182
-Stack trace:
-#0 C:\xampp\htdocs\yiiframework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(EWebUser), 'You are not aut...')
-#1 C:\xampp\htdocs\yiiframework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
-#2 C:\xampp\htdocs\yiiframework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
-#3 C:\xampp\htdocs\yiiframework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#4 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
-#5 C:\xampp\htdocs\yiiframework\web\CController.php(291): CFilterChain->run()
-#6 C:\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#7 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('admin')
-#8 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('adminTryout/adm...')
-#9 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
-#10 C:\xampp\htdocs\siapmasukui\index.php(13): CApplication->run()
-#11 {main}
-REQUEST_URI=/siapmasukui/index.php/adminTryout/admin
----
-2014/04/17 06:56:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\siapmasukui\protected\controllers\AdminTryoutController.php:141
-Stack trace:
-#0 C:\xampp\htdocs\siapmasukui\protected\controllers\AdminTryoutController.php(47): AdminTryoutController->loadModel('10')
-#1 [internal function]: AdminTryoutController->actionView('10')
-#2 C:\xampp\htdocs\yiiframework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AdminTryoutController), Array)
-#3 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AdminTryoutController), Object(ReflectionMethod), Array)
-#4 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams(Array)
-#5 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
-#6 C:\xampp\htdocs\yiiframework\web\filters\CFilter.php(40): CFilterChain->run()
-#7 C:\xampp\htdocs\yiiframework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
-#8 C:\xampp\htdocs\yiiframework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#9 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
-#10 C:\xampp\htdocs\yiiframework\web\CController.php(291): CFilterChain->run()
-#11 C:\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#12 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('view')
-#13 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('adminTryout/vie...')
-#14 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
-#15 C:\xampp\htdocs\siapmasukui\index.php(13): CApplication->run()
-#16 {main}
-REQUEST_URI=/siapmasukui/index.php/adminTryout/10
-HTTP_REFERER=http://localhost/siapmasukui/index.php/adminTryout/create
----
-2014/04/17 07:02:11 [error] [exception.CException] exception 'CException' with message 'Property "timepicker.htmlOptions" is not defined.' in C:\xampp\htdocs\yiiframework\base\CComponent.php:173
+2014/04/17 06:19:17 [error] [exception.CException] exception 'CException' with message 'Property "timepicker.htmlOptions" is not defined.' in C:\xampp\htdocs\yiiframework\base\CComponent.php:173
 Stack trace:
 #0 C:\xampp\htdocs\yiiframework\web\CWidgetFactory.php(161): CComponent->__set('htmlOptions', Array)
 #1 C:\xampp\htdocs\yiiframework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(AdminTryoutController), 'application.ext...', Array)
 #2 C:\xampp\htdocs\yiiframework\web\CBaseController.php(172): CBaseController->createWidget('application.ext...', Array)
-#3 C:\xampp\htdocs\siapmasukui\protected\views\adminTryout\_form.php(57): CBaseController->widget('application.ext...', Array)
+#3 C:\xampp\htdocs\siapMasukUI\protected\views\adminTryout\_form.php(57): CBaseController->widget('application.ext...', Array)
 #4 C:\xampp\htdocs\yiiframework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
 #5 C:\xampp\htdocs\yiiframework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
 #6 C:\xampp\htdocs\yiiframework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
-#7 C:\xampp\htdocs\siapmasukui\protected\views\adminTryout\create.php(17): CController->renderPartial('_form', Array)
+#7 C:\xampp\htdocs\siapMasukUI\protected\views\adminTryout\update.php(20): CController->renderPartial('_form', Array)
 #8 C:\xampp\htdocs\yiiframework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
 #9 C:\xampp\htdocs\yiiframework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
 #10 C:\xampp\htdocs\yiiframework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
-#11 C:\xampp\htdocs\yiiframework\web\CController.php(782): CController->renderPartial('create', Array, true)
-#12 C:\xampp\htdocs\siapmasukui\protected\controllers\AdminTryoutController.php(72): CController->render('create', Array)
-#13 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): AdminTryoutController->actionCreate()
-#14 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams(Array)
-#15 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
-#16 C:\xampp\htdocs\yiiframework\web\filters\CFilter.php(40): CFilterChain->run()
-#17 C:\xampp\htdocs\yiiframework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
-#18 C:\xampp\htdocs\yiiframework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#19 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
-#20 C:\xampp\htdocs\yiiframework\web\CController.php(291): CFilterChain->run()
-#21 C:\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#22 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('create')
-#23 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('adminTryout/cre...')
-#24 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
-#25 C:\xampp\htdocs\siapmasukui\index.php(13): CApplication->run()
-#26 {main}
-REQUEST_URI=/siapmasukui/index.php/adminTryout/create
-HTTP_REFERER=http://localhost/siapmasukui/index.php/adminTryout/index
+#11 C:\xampp\htdocs\yiiframework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#12 C:\xampp\htdocs\siapMasukUI\protected\controllers\AdminTryoutController.php(97): CController->render('update', Array)
+#13 [internal function]: AdminTryoutController->actionUpdate('7')
+#14 C:\xampp\htdocs\yiiframework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AdminTryoutController), Array)
+#15 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AdminTryoutController), Object(ReflectionMethod), Array)
+#16 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yiiframework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 C:\xampp\htdocs\yiiframework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\yiiframework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\yiiframework\web\CController.php(291): CFilterChain->run()
+#23 C:\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('update')
+#25 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('adminTryout/upd...')
+#26 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#27 C:\xampp\htdocs\siapMasukUI\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/siapMasukUI/index.php/adminTryout/update/7
+HTTP_REFERER=http://localhost:1234/siapMasukUI/index.php/adminTryout/7
 ---
-2014/04/17 07:03:51 [error] [exception.CException] exception 'CException' with message 'Property "timepicker.readonly" is not defined.' in C:\xampp\htdocs\yiiframework\base\CComponent.php:173
+2014/04/17 06:19:28 [error] [exception.CException] exception 'CException' with message 'Property "timepicker.htmlOptions" is not defined.' in C:\xampp\htdocs\yiiframework\base\CComponent.php:173
 Stack trace:
-#0 C:\xampp\htdocs\yiiframework\web\CWidgetFactory.php(161): CComponent->__set('readonly', 'readonly')
+#0 C:\xampp\htdocs\yiiframework\web\CWidgetFactory.php(161): CComponent->__set('htmlOptions', Array)
 #1 C:\xampp\htdocs\yiiframework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(AdminTryoutController), 'application.ext...', Array)
 #2 C:\xampp\htdocs\yiiframework\web\CBaseController.php(172): CBaseController->createWidget('application.ext...', Array)
-#3 C:\xampp\htdocs\siapmasukui\protected\views\adminTryout\_form.php(58): CBaseController->widget('application.ext...', Array)
+#3 C:\xampp\htdocs\siapMasukUI\protected\views\adminTryout\_form.php(57): CBaseController->widget('application.ext...', Array)
 #4 C:\xampp\htdocs\yiiframework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
 #5 C:\xampp\htdocs\yiiframework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
 #6 C:\xampp\htdocs\yiiframework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
-#7 C:\xampp\htdocs\siapmasukui\protected\views\adminTryout\create.php(17): CController->renderPartial('_form', Array)
+#7 C:\xampp\htdocs\siapMasukUI\protected\views\adminTryout\update.php(20): CController->renderPartial('_form', Array)
+#8 C:\xampp\htdocs\yiiframework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#9 C:\xampp\htdocs\yiiframework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#10 C:\xampp\htdocs\yiiframework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#11 C:\xampp\htdocs\yiiframework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#12 C:\xampp\htdocs\siapMasukUI\protected\controllers\AdminTryoutController.php(97): CController->render('update', Array)
+#13 [internal function]: AdminTryoutController->actionUpdate('7')
+#14 C:\xampp\htdocs\yiiframework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AdminTryoutController), Array)
+#15 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AdminTryoutController), Object(ReflectionMethod), Array)
+#16 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yiiframework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 C:\xampp\htdocs\yiiframework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\yiiframework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\yiiframework\web\CController.php(291): CFilterChain->run()
+#23 C:\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('update')
+#25 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('adminTryout/upd...')
+#26 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#27 C:\xampp\htdocs\siapMasukUI\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/siapMasukUI/index.php/adminTryout/update/7
+HTTP_REFERER=http://localhost:1234/siapMasukUI/index.php/adminTryout/index
+---
+2014/04/17 06:19:45 [error] [exception.CException] exception 'CException' with message 'Property "timepicker.htmlOptions" is not defined.' in C:\xampp\htdocs\yiiframework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CWidgetFactory.php(161): CComponent->__set('htmlOptions', Array)
+#1 C:\xampp\htdocs\yiiframework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(AdminTryoutController), 'application.ext...', Array)
+#2 C:\xampp\htdocs\yiiframework\web\CBaseController.php(172): CBaseController->createWidget('application.ext...', Array)
+#3 C:\xampp\htdocs\siapMasukUI\protected\views\adminTryout\_form.php(57): CBaseController->widget('application.ext...', Array)
+#4 C:\xampp\htdocs\yiiframework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#5 C:\xampp\htdocs\yiiframework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#6 C:\xampp\htdocs\yiiframework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\siapMasukUI\protected\views\adminTryout\create.php(17): CController->renderPartial('_form', Array)
 #8 C:\xampp\htdocs\yiiframework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
 #9 C:\xampp\htdocs\yiiframework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
 #10 C:\xampp\htdocs\yiiframework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
 #11 C:\xampp\htdocs\yiiframework\web\CController.php(782): CController->renderPartial('create', Array, true)
-#12 C:\xampp\htdocs\siapmasukui\protected\controllers\AdminTryoutController.php(72): CController->render('create', Array)
+#12 C:\xampp\htdocs\siapMasukUI\protected\controllers\AdminTryoutController.php(72): CController->render('create', Array)
 #13 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): AdminTryoutController->actionCreate()
 #14 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams(Array)
 #15 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
@@ -6464,7 +5864,75 @@ Stack trace:
 #22 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('create')
 #23 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('adminTryout/cre...')
 #24 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
-#25 C:\xampp\htdocs\siapmasukui\index.php(13): CApplication->run()
+#25 C:\xampp\htdocs\siapMasukUI\index.php(13): CApplication->run()
 #26 {main}
-REQUEST_URI=/siapmasukui/index.php/adminTryout/create
+REQUEST_URI=/siapMasukUI/index.php/adminTryout/create
+HTTP_REFERER=http://localhost:1234/siapMasukUI/index.php/adminTryout/index
 ---
+2014/04/17 06:20:11 [error] [exception.CException] exception 'CException' with message 'Property "timepicker.htmlOptions" is not defined.' in C:\xampp\htdocs\yiiframework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CWidgetFactory.php(161): CComponent->__set('htmlOptions', Array)
+#1 C:\xampp\htdocs\yiiframework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(AdminTryoutController), 'application.ext...', Array)
+#2 C:\xampp\htdocs\yiiframework\web\CBaseController.php(172): CBaseController->createWidget('application.ext...', Array)
+#3 C:\xampp\htdocs\siapMasukUI\protected\views\adminTryout\_form.php(57): CBaseController->widget('application.ext...', Array)
+#4 C:\xampp\htdocs\yiiframework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#5 C:\xampp\htdocs\yiiframework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#6 C:\xampp\htdocs\yiiframework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\siapMasukUI\protected\views\adminTryout\create.php(17): CController->renderPartial('_form', Array)
+#8 C:\xampp\htdocs\yiiframework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#9 C:\xampp\htdocs\yiiframework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#10 C:\xampp\htdocs\yiiframework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#11 C:\xampp\htdocs\yiiframework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#12 C:\xampp\htdocs\siapMasukUI\protected\controllers\AdminTryoutController.php(72): CController->render('create', Array)
+#13 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): AdminTryoutController->actionCreate()
+#14 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\xampp\htdocs\yiiframework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\xampp\htdocs\yiiframework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\yiiframework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\yiiframework\web\CController.php(291): CFilterChain->run()
+#21 C:\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('create')
+#23 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('adminTryout/cre...')
+#24 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\xampp\htdocs\siapMasukUI\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/siapMasukUI/index.php/adminTryout/create
+HTTP_REFERER=http://localhost:1234/siapMasukUI/index.php/adminTryout/index
+---
+2014/04/17 06:22:32 [error] [exception.CException] exception 'CException' with message 'Property "timepicker.htmlOptions" is not defined.' in C:\xampp\htdocs\yiiframework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CWidgetFactory.php(161): CComponent->__set('htmlOptions', Array)
+#1 C:\xampp\htdocs\yiiframework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(AdminTryoutController), 'application.ext...', Array)
+#2 C:\xampp\htdocs\yiiframework\web\CBaseController.php(172): CBaseController->createWidget('application.ext...', Array)
+#3 C:\xampp\htdocs\siapMasukUI\protected\views\adminTryout\_form.php(57): CBaseController->widget('application.ext...', Array)
+#4 C:\xampp\htdocs\yiiframework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#5 C:\xampp\htdocs\yiiframework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#6 C:\xampp\htdocs\yiiframework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\siapMasukUI\protected\views\adminTryout\create.php(17): CController->renderPartial('_form', Array)
+#8 C:\xampp\htdocs\yiiframework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#9 C:\xampp\htdocs\yiiframework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#10 C:\xampp\htdocs\yiiframework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#11 C:\xampp\htdocs\yiiframework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#12 C:\xampp\htdocs\siapMasukUI\protected\controllers\AdminTryoutController.php(72): CController->render('create', Array)
+#13 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): AdminTryoutController->actionCreate()
+#14 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\xampp\htdocs\yiiframework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\xampp\htdocs\yiiframework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\yiiframework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\yiiframework\web\CController.php(291): CFilterChain->run()
+#21 C:\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('create')
+#23 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('adminTryout/cre...')
+#24 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\xampp\htdocs\siapMasukUI\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/siapMasukUI/index.php/adminTryout/create
+HTTP_REFERER=http://localhost:1234/siapMasukUI/index.php/adminTryout/index
+---
+2014/04/17 06:24:02 [warning] [application] Failed to set unsafe attribute "image" of "Profil".
+in C:\xampp\htdocs\siapMasukUI\protected\controllers\ProfilController.php (28)
+in C:\xampp\htdocs\siapMasukUI\index.php (13)
