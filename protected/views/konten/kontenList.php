@@ -35,6 +35,13 @@ $this->breadcrumbs=array(
 					<?php endforeach;?>
 				</div>
 			</div>
+            <div class="row clearfix text-center" style="margin:40px;">
+                <div class="col-md-4 col-md-offset-4">
+                    <?php $this->widget('CLinkPager', array(
+                        'pages' => $pages,
+                    )) ?>
+                </div>
+            </div>
 		</div>
 	</div>
 </div>
