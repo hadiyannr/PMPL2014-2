@@ -28,8 +28,9 @@ class KontenController extends Controller
         $pages->pageSize=9;
         $pages->applyLimit($criteria);
 
+        $kategori = Kategori::model()->findByPk($idcategory);
         $model = Konten::model()->findAll($criteria);
-        $this->render('kontenList',array('model'=>$model,'pages' => $pages));
+        $this->render('kontenList',array('model'=>$model,'pages' => $pages,'title'=>$kategori->nama));
     }
         
     public function actionSearch($keyword){
@@ -48,6 +49,6 @@ class KontenController extends Controller
         if(!sizeof($model)){
             $searchMessage = 'Tidak ada konten dengan isi ataupun judul yang mengandung kata "'.$keyword.'"';
         }
-        $this->render('kontenList',array('model'=>$model,'searchMessage'=>$searchMessage,'pages' => $pages));
+        $this->render('kontenList',array('model'=>$model,'searchMessage'=>$searchMessage,'pages' => $pages,'title'=>'Hasil Pencarian'));
     }
 }

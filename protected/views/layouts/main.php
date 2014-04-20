@@ -35,20 +35,20 @@
 
 
                 <div class="navbar-header">
-                    <?php echo CHtml::link("Admin SiapMasukUI.com", array('site/index'),array('class'=>'navbar-brand')); ?>
+                    <?php echo CHtml::link("Admin SiapMasukUI.com", array('admin/index'),array('class'=>'navbar-brand')); ?>
                 </div>
 
                 <?php $controllerName = $this->getId();?>
                 <nav role="navigation" class="navbar-default">
                     <?php if(Yii::app()->user->isAdmin()):?>
                     <ul class="nav navbar-nav">
-                        <li class="<?php echo (in_array($controllerName, array("site")))?"active":""?>">
+                        <li class="<?php echo (in_array($controllerName, array("admin")))?"active":""?>">
                             <?php echo CHtml::link("Home", array('admin/index'),array('style'=>"color: #ecf0f1")); ?>
                         </li>
-                        <li class="<?php echo (in_array($controllerName, array("site")))?"active":""?>">
+                        <li class="<?php echo (in_array($controllerName, array("adminKonten")))?"active":""?>">
                             <?php echo CHtml::link("Konten", array('adminKonten/index'),array('style'=>"color: #ecf0f1")); ?>
                         </li>
-                        <li class="<?php echo (in_array($controllerName, array("tryout","pengerjaanTryout")))?"active":""?>">
+                        <li class="<?php echo (in_array($controllerName, array("adminTryout")))?"active":""?>">
                             <?php echo CHtml::link("Tryout", array('adminTryout/index'),array('style'=>"color: #ecf0f1")); ?>
                         </li>
                         <?php endif;?>
