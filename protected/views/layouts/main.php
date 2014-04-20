@@ -40,8 +40,9 @@
 
                 <?php $controllerName = $this->getId();?>
                 <nav role="navigation" class="navbar-default">
-                    <?php if(Yii::app()->user->isAdmin()):?>
+
                     <ul class="nav navbar-nav">
+                        <?php if(Yii::app()->user->isAdmin()):?>
                         <li class="<?php echo (in_array($controllerName, array("admin")))?"active":""?>">
                             <?php echo CHtml::link("Home", array('admin/index'),array('style'=>"color: #ecf0f1")); ?>
                         </li>
