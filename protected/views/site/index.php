@@ -52,7 +52,7 @@
                 <div class="slider-wrapper">
                     <?php
                     $counter=0;
-                    foreach ($model2 as $randKonten): ?>
+                    foreach ($model as $randKonten): ?>
                         <div id="slide<?php echo $counter?>" class="main-slide">
                             <div class="col-md-12 home-group2" style="">
                                 <h3><?php echo CHtml::link($randKonten->judul,array('konten/index','id'=>$randKonten->id),array('style'=>"color: #ecf0f1"))?></h3>
