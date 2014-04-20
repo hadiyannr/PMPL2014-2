@@ -55,17 +55,40 @@ class AdminSoalController extends Controller {
     public function actionCreate($idtryout) {
         $model = new Soal;
         $model->setAttribute('idtryout', $idtryout);
-        // Uncomment the following line if AJAX validation is needed
-        // $this->performAjaxValidation($model);
+        $modelOpsi = array(new Opsi, new Opsi, new Opsi, new Opsi, new Opsi);
 
         if (isset($_POST['Soal'])) {
             $model->attributes = $_POST['Soal'];
-            if ($model->save())
+            $transaction = Yii::app()->db->beginTransaction();
+            try {
+                if ($model->validate() && $model->save()){
+                    for ($i = 0; $i < 5; $i++) {
+                        $modelOpsi[$i]->attributes = $_POST['Opsi'][$i];
+                        $modelOpsi[$i]->idsoal = $model->id;
+
+                        if($_POST['Opsi']['jawaban'] == $i){
+                            $modelOpsi[$i]->isJawaban = 1;
+                        }else{
+                            $modelOpsi[$i]->isJawaban = 0;
+                        }
+
+                        if(!($modelOpsi[$i]->validate() && $modelOpsi[$i]->save())){
+                            throw new Exception("Opsi rollback");
+                        }
+                    }
+                }else{
+                    throw new Exception("Soal rollback");
+                }
+                $transaction->commit();
                 $this->redirect(array('view', 'id' => $model->id));
+            } catch (Exception $e) {
+                $transaction->rollBack();
+            }
         }
 
         $this->render('create', array(
             'model' => $model,
+            'modelOpsi'=>$modelOpsi,
         ));
     }
 
@@ -76,58 +99,42 @@ class AdminSoalController extends Controller {
      */
     public function actionUpdate($id) {
         $model = $this->loadModel($id);
-
-        // Uncomment the following line if AJAX validation is needed
-        // $this->performAjaxValidation($model);
-
-        $modelOpsi = array(new Opsi, new Opsi, new Opsi, new Opsi, new Opsi);
-
-        $tmpOpsi = Yii::app()->db->createCommand()->select('*')->from('opsi')->where('idsoal=:idsoal', array(':idsoal' => $id))->queryAll();
-
-        if (sizeof($tmpOpsi) > 0) {
-            $i = 0;
-            foreach ($tmpOpsi as $to) {
-                $modelOpsi[$i] = Opsi::model()->findByPk($tmpOpsi[$i]['id']);
-                $i++;
-            }
+        $modelOpsi = array();
+        foreach($model->opsis as $opsi){
+            $modelOpsi[] = $opsi;
         }
-
-        // Uncomment the following line if AJAX validation is needed
-        // $this->performAjaxValidation($model);
-
         if (isset($_POST['Soal'])) {
-
-            $valid = true;
             $model->attributes = $_POST['Soal'];
-            $valid = $valid && $model->validate();
-
-            for ($i = 0; $i < 5; $i++) {
-                if (isset($_POST['Opsi'][$i])) {
-                    $modelOpsi[$i]->attributes = $_POST['Opsi'][$i];
-                    $modelOpsi[$i]->idsoal = $model->id;
-                    $valid = $valid && $modelOpsi[$i]->validate();
-                }                
-                
-                if($_POST['Opsi']['jawaban'] == $i){
-                    $modelOpsi[$i]->isJawaban = 1;
-                }else{                                        
-                    $modelOpsi[$i]->isJawaban = 0;                    
-                }
-            }            
-            if ($valid) {
-                if ($model->save()) {
+            $transaction = Yii::app()->db->beginTransaction();
+            try {
+                if ($model->validate() && $model->save()){
                     for ($i = 0; $i < 5; $i++) {
-                        $modelOpsi[$i]->save();
-                    }
-                }
-            }
+                        $modelOpsi[$i]->attributes = $_POST['Opsi'][$i];
+                        $modelOpsi[$i]->idsoal = $model->id;
 
-            $this->redirect(array('view', 'id' => $model->id));
+                        if($_POST['Opsi']['jawaban'] == $i){
+                            $modelOpsi[$i]->isJawaban = 1;
+                        }else{
+                            $modelOpsi[$i]->isJawaban = 0;
+                        }
+
+                        if(!($modelOpsi[$i]->validate() && $modelOpsi[$i]->save())){
+                            throw new Exception("Opsi rollback");
+                        }
+                    }
+                }else{
+                    throw new Exception("Soal rollback");
+                }
+                $transaction->commit();
+                $this->redirect(array('view', 'id' => $model->id));
+            } catch (Exception $e) {
+                $transaction->rollBack();
+            }
         }
 
-        $this->render('update', array(
+        $this->render('create', array(
             'model' => $model,
-            'modelOpsi' => $modelOpsi,
+            'modelOpsi'=>$modelOpsi,
         ));
     }
 

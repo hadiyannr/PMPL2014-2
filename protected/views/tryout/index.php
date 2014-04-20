@@ -6,6 +6,7 @@ $this->breadcrumbs = array(
     'Tryout',
 );
 ?>
+<div class="text-center title"><h2>Simulasi Masuk Universitas Indonesia</h2></div>
 <ul class="nav nav-tabs">    
         <li class="active"><a href="#present" data-toggle="tab">MyTryout</a></li>
         <li><a href="#future" data-toggle="tab">Ujian Tersedia</a></li>

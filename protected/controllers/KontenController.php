@@ -18,17 +18,37 @@ class KontenController extends Controller
     }
 
 	        
-        public function actionKategori($idcategory){                        
-            $model = Konten::model()->findAllByAttributes(array('idcategory'=>$idcategory,'isPublished'=>1));
-            $this->render('kontenList',array('model'=>$model));
-        }
+    public function actionKategori($idcategory){
+        $criteria=new CDbCriteria;
+        $criteria->compare('idcategory',$idcategory);
+        $criteria->compare('isPublished',1);
+        $count=Konten::model()->count($criteria);
+
+        $pages=new CPagination($count);
+        $pages->pageSize=9;
+        $pages->applyLimit($criteria);
+
+        $kategori = Kategori::model()->findByPk($idcategory);
+        $model = Konten::model()->findAll($criteria);
+        $this->render('kontenList',array('model'=>$model,'pages' => $pages,'title'=>$kategori->nama));
+    }
         
-        public function actionSearch($keyword){              
-            $model = Konten::search($keyword);
-            $searchMessage = "";
-            if(!sizeof($model)){
-                $searchMessage = 'Tidak ada konten dengan isi ataupun judul yang mengandung kata "'.$keyword.'"';
-            }
-            $this->render('kontenList',array('model'=>$model,'searchMessage'=>$searchMessage));
+    public function actionSearch($keyword){
+        $criteria=new CDbCriteria;
+        $criteria->compare('isi',$keyword,true,"OR");
+        $criteria->compare('judul',$keyword,true,"OR");
+        $criteria->compare('isPublished','1');
+        $count=Konten::model()->count($criteria);
+
+
+        $pages=new CPagination($count);
+        $pages->pageSize=9;
+        $pages->applyLimit($criteria);
+        $model = Konten::model()->findAll($criteria);
+        $searchMessage = "";
+        if(!sizeof($model)){
+            $searchMessage = 'Tidak ada konten dengan isi ataupun judul yang mengandung kata "'.$keyword.'"';
         }
+        $this->render('kontenList',array('model'=>$model,'searchMessage'=>$searchMessage,'pages' => $pages,'title'=>'Hasil Pencarian'));
+    }
 }

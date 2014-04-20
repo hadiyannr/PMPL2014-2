@@ -15,21 +15,21 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note">Isian bertanda <span class="required">*</span> wajib diisi.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
-        <div class="row">		
-		<?php echo $form->hiddenField($model,'idtryout'); ?>		
+        <div class="row">
+		<?php echo $form->hiddenField($model,'idtryout'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'pertanyaan'); ?>
 		<?php // echo $form->textArea($model,'pertanyaan',array('rows'=>6, 'cols'=>50)); ?>
-                <?php 
-                    $this->widget('application.extensions.tinymce.ETinyMce', 
+                <?php
+                    $this->widget('application.extensions.tinymce.ETinyMce',
                             array(
-                                'model'=>$model,                                
+                                'model'=>$model,
                                 'attribute'=>'pertanyaan',
                                 'editorTemplate'=>'full',
                                 'htmlOptions'=>array('rows'=>6,'cols'=>50,'class'=>'tinymce'),
@@ -40,30 +40,28 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'nomor'); ?>
-		<?php echo $form->textField($model,'nomor'); ?>
+		<?php echo $form->textField($model,'nomor',array('required'=>'required')); ?>
 		<?php echo $form->error($model,'nomor'); ?>
 	</div>
 
-        
-        <?php 
-            if(isset($modelOpsi)){
+
+        <?php
+
             for($i = 0; $i < 5; $i++){ 
         ?>
         <div class="row">
             
 		<?php 
-                    $check = '';
-                    if($modelOpsi[$i]->isJawaban == 1){$check = ' checked';};
-                    $radio ='&nbsp;'
-                        . '<input '.'type="radio" '.'name="Opsi[jawaban]" '.'value="'.$i.'"'.' required '.$check.'>';
-                        echo $form->labelEx($modelOpsi[$i],'opsi ke '.($i + 1).$radio); ?>
-		<?php echo $form->textArea($modelOpsi[$i],'['.$i.']pernyataan',array('rows'=>2, 'cols'=>40,'required'=>'required')); ?>
-		<?php echo $form->error($modelOpsi[$i],'['.$i.']pernyataan'); ?>
-            
+                $check = '';
+                if($modelOpsi[$i]->isJawaban == 1){$check = ' checked';};
+                $radio ='&nbsp;'.'<input '.'type="radio" '.'name="Opsi[jawaban]" '.'value="'.$i.'"'.' required '.$check.'>';
+                echo $form->labelEx($modelOpsi[$i],'opsi ke '.($i + 1).$radio); ?>
+                <?php echo $form->textArea($modelOpsi[$i],'['.$i.']pernyataan',array('rows'=>2, 'cols'=>40,'required'=>'required')); ?>
+                <?php echo $form->error($modelOpsi[$i],'['.$i.']pernyataan'); ?>
                 <?php echo $form->hiddenField($modelOpsi[$i],'['.$i.']idsoal',array('value'=>0)); ?>
                 <?php echo $form->hiddenField($modelOpsi[$i],'['.$i.']nomor',array('value'=>$i)); ?>                
-	</div>
-        <?php }}?>
+	    </div>
+        <?php }?>
         
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Buat' : 'Simpan'); ?>

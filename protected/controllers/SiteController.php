@@ -20,14 +20,8 @@ class SiteController extends Controller
                 $criteria->compare('idcategory','2');
                 $criteria->compare('isPublished','1');
                 $model = Konten::model()->findAll($criteria);
-                
-                $criteria = new CDbCriteria;
-                $criteria->order = "RAND()";
-                $criteria->limit = 5;
-                $criteria->compare('idcategory','1');
-                $criteria->compare('isPublished','1');
-                $model2 = Konten::model()->findAll($criteria);
-		$this->render('index',array('model1'=>$model,'model2'=>$model2));
+
+		$this->render('index',array('model'=>$model));
 	}
 
 	/**

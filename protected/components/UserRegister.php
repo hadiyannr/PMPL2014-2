@@ -15,10 +15,11 @@
             if(isset($_POST['DaftarForm']))
             {            
                 $model->attributes=$_POST['DaftarForm'];            
-                if($model->validate()){              
-                    $model->register();    
-                    $this->sendEmail($model);
+                if($model->validate() && $this->sendEmail($model)){
+                    $model->register();
                     Yii::app()->user->setFlash('message',"Selamat anda telah terdaftar, silahkan lakukan aktivasi melalui email");
+                }else{
+                    Yii::app()->user->setFlash('message',"Email tidak terkirim, silahkan coba kembali");
                 }
                 $this->controller->refresh();                            
                     
@@ -50,7 +51,7 @@
                     . '<br><p>Hormat kami,</p> <p>Admin <a href="siapmasukui.com">SiapMasukUI.com</a></p> '
                     . '</div>');
             $mail->AddAddress($pengguna->email, $pengguna->username);
-            $mail->Send();                                                                        
+            return $mail->Send();
         }
         
     }

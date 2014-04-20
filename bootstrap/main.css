@@ -10,6 +10,9 @@
 .bright-color{
     color: wheat;
 }
+.title{
+    margin-bottom: 30px;
+}
 /********************************************************/
 
 .header-nav{
@@ -17,8 +20,8 @@
     background-color:#2ecc71;	
 }
 
-.header-nav a{ 
-    color: #ecf0f1;	
+.header-nav a{
+    color: #ecf0f1;
 }
 
 .header-nav a:hover{ 
@@ -32,8 +35,8 @@
     color: #ecf0f1;
 }
 
-.navbar-header a:hover{ 
-    color:black;	
+.navbar-header a:hover{
+    color:black;
 }
 
 .navbar-default .navbar-nav > .active > a {
@@ -137,16 +140,18 @@ footer .row{
 
 /*CSS Addition 1*/
 .home-group {
-/*position: relative;
-width: 270px;
-padding: 20px;
-float: left;*/
-border: 2px solid #bdc3c7;
-height: 10em;
+    /*position: relative;
+    width: 270px;
+    float: left;*/
+    padding: 0 20px;
+    border: 2px solid #bdc3c7;
+    height: 12em;
+
 }
 
 .home-group:hover{
-background-color: #eee;
+/*background-color: #eee;*/
+    background-color: #CCFFFF;
 }
 
 .home-group2 {
@@ -169,10 +174,10 @@ clear: both;
 }
 
 p.more {
-text-align: right;
+/*text-align: right;*/
 position: absolute;
-bottom: 1px;
-right: 5px;
+bottom: 4px;
+right: 18px;
 }
 
 /*CSS Addition 2*/
@@ -197,12 +202,6 @@ right: 5px;
     height:100%;
     float:left;
 }
-
-/*#slide0 { background-color:#5FF; }
-#slide1 { background-color:#F5F; }
-#slide2 { background-color:#FF5; }
-#slide3 { background-color:#5F5; }
-#slide4 { background-color:#55F; }*/
 
 .slider-buttons {
     margin-top:10px;

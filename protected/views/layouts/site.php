@@ -64,7 +64,8 @@
 
                             </ul> 
 
-                            <ul class="nav navbar-nav navbar-right">		      	
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><?php $this->widget('Search')?></li>
                                 <?php if (Yii::app()->user->isGuest) { ?>
                                     <li>
                                         <a href="#Login" data-toggle="modal" style="color: #ecf0f1">Login</a>
@@ -91,9 +92,18 @@
                         
                 </div>
             </div>
+            <br/>
+            <div class="container">
+                <div class="pull-left">
+                    <?php if(isset($this->breadcrumbs)):?>
+                        <?php $this->widget('zii.widgets.CBreadcrumbs', array(
+                        'links'=>$this->breadcrumbs,
+                    )); ?><!-- breadcrumbs -->
+                    <?php endif?>
+                </div>
+<!--                --><?php //$this->widget('Search')?>
+            </div>
 
-            <?php $this->widget('Search')?>
-            <br><br><br>
         </header>
 
         <div class="content">

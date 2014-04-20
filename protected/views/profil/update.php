@@ -1,9 +1,17 @@
 <?php
 /* @var $this ProfilController */
 /* @var $model Profil */
-?>
-<div class="col-md-4">
 
+$this->breadcrumbs = array(
+    'Profil'=>array("index"),
+    'Ubah Profil',
+);
+echo '<br>';
+?>
+<div class="title text-center">
+    <h2>Ubah Profil</h2>
+</div>
+<div class="col-md-4">
     <?php
     $form = $this->beginWidget('CActiveForm', array(
         'id' => 'profil-form',
@@ -52,11 +60,18 @@
         <label>Jurusan yang diinginkan</label>
         <?php $this->renderPartial('targetJurusanOpt',array('model'=>$model));?>
     </div>
-    
+
     <div class="form-group">
         <img src="" width="100" height="50" alt="" class="img-rounded img-responsive" />
         <label>Foto</label>
-        <?php echo $form->fileField($model, 'image');?>
+        <img id="photo" src="<?php
+            if($model->fotoUrl == null){
+                echo Yii::app()->request->baseUrl.'/images/photo.png';
+            }else{
+                echo Yii::app()->request->baseUrl.'/images/profilPic/'.$model->fotoUrl;
+            }
+        ?>" alt="" class="img-rounded img-responsive" width="100px"/>
+        <?php echo $form->fileField($model, 'image',array('id'=>'fileField'));?>
         <?php echo $form->error($model, 'image'); ?>
     </div>
     
@@ -67,3 +82,21 @@
     <!--</form>-->
 <?php $this->endWidget(); ?>
 </div>
+
+<script>
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#photo').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $("#fileField").change(function(){
+        readURL(this);
+    });
+</script>

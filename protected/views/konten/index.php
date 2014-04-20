@@ -1,9 +1,10 @@
 <?php
 /* @var $this KontenController */
+/* @var $konten Konten */
 
 $this->breadcrumbs=array(
-	'Daftar Konten'=>array('daftar'),
-        'Konten'
+    $konten->kategori->nama => array('kategori','idcategory'=>$konten->idcategory),
+    $konten->judul,
 );
 ?>
 
