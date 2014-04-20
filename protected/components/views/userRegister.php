@@ -8,16 +8,16 @@
             <div class="modal-body">
                 <form role="form" method="post">			          
                     <div class="form-group">
-                        <label>Username</label>
-                        <input name="DaftarForm[username]" type="text" class="form-control" placeholder="username" pattern="^[a-zA-Z0-9]{5,}$" required>
+                        <label data-toggle="tooltip" data-placement="top" title="Please use your real name">Username</label>
+                        <input name="DaftarForm[username]" type="text" class="form-control" placeholder="No Space, at least 5 characters" pattern="^[a-zA-Z0-9]{5,}$" required>
                     </div>
                     <div class="form-group">
-                        <label>Email address</label>
-                        <input name="DaftarForm[email]" type="email" class="form-control" placeholder="Email" required>
+                        <label >Email address</label>
+                        <input name="DaftarForm[email]" type="email" class="form-control" placeholder="Your Email Adress" required>
                     </div>
                     <div class="form-group">
-                        <label>Password</label>
-                        <input name="DaftarForm[password]" type="password" class="form-control" placeholder="Password" pattern="^[w]*{5,}$" required>
+                        <label data-toggle="tooltip" data-placement="top" title="At least 5 characters, No Space, max 32 characters">Password</label>
+                        <input name="DaftarForm[password]" type="password" class="form-control" placeholder="No Space, 5-32 characters" pattern="^[a-zA-Z0-9]*{5,32}$" required>
                     </div>				
                     <div class="form-group">
                         <label>Confirm Password</label>
