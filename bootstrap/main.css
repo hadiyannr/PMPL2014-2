@@ -176,7 +176,7 @@ clear: both;
 p.more {
 /*text-align: right;*/
 position: absolute;
-bottom: 4px;
+bottom: 10px;
 right: 18px;
 }
 
