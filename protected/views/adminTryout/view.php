@@ -16,7 +16,7 @@ $this->menu=array(
 ?>
 
 <h1>Lihat Tryout #<?php echo $model->id; ?></h1>
-
+</br>
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
@@ -34,6 +34,7 @@ $this->menu=array(
 ));   
     
 ?>
+</br>
 <?php 
     echo CHtml::link('Daftar Soal',array('adminSoal/index/','idtryout'=>$model->id));
     
