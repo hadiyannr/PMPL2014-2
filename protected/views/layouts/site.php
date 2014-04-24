@@ -63,9 +63,8 @@
                                 <?php endif;?>
 
                             </ul> 
-
                             <ul class="nav navbar-nav navbar-right">
-                                <li><?php $this->widget('Search')?></li>
+                                
                                 <?php if (Yii::app()->user->isGuest) { ?>
                                     <li>
                                         <a href="#Login" data-toggle="modal" style="color: #ecf0f1">Login</a>
@@ -88,8 +87,8 @@
 
                             <?php $this->widget('UserRegister',array('visible'=>Yii::app()->user->isGuest)); ?>
                             <!-- end of modal -->
+                            <?php $this->widget('Search')?>
                         </nav>	                    
-                        
                 </div>
             </div>
             <br/>
