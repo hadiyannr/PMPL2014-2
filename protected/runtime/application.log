@@ -6427,3 +6427,64 @@ REQUEST_URI=/siapmasukui/index.php/adminSoal/22
 HTTP_REFERER=http://localhost/siapmasukui/index.php/adminSoal/create?idtryout=8
 >>>>>>> 8c10a79366ea759e1fc3173c0e96b499ba29b4c1
 ---
+2014/04/23 19:29:33 [warning] [application] Failed to set unsafe attribute "image" of "Profil".
+in C:\XAMPP\xampp\htdocs\SiapMasukUI.com\protected\controllers\ProfilController.php (28)
+in C:\XAMPP\xampp\htdocs\SiapMasukUI.com\index.php (13)
+2014/04/23 19:29:37 [warning] [application] Failed to set unsafe attribute "image" of "Profil".
+in C:\XAMPP\xampp\htdocs\SiapMasukUI.com\protected\controllers\ProfilController.php (28)
+in C:\XAMPP\xampp\htdocs\SiapMasukUI.com\index.php (13)
+2014/05/03 14:07:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "forum/admin/index".' in C:\XAMPP\xampp\htdocs\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\XAMPP\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('forum/admin/ind...')
+#1 C:\XAMPP\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\XAMPP\xampp\htdocs\SiapMasukUI.com\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/SiapMasukUI.com/index.php/forum/admin/index
+HTTP_REFERER=http://localhost/SiapMasukUI.com/index.php/forum
+---
+2014/05/03 14:07:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "forum/site/index".' in C:\XAMPP\xampp\htdocs\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\XAMPP\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('forum/site/inde...')
+#1 C:\XAMPP\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\XAMPP\xampp\htdocs\SiapMasukUI.com\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/SiapMasukUI.com/index.php/forum/site/index
+HTTP_REFERER=http://localhost/SiapMasukUI.com/index.php/forum
+---
+2014/05/03 14:20:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "forum/admin/index".' in C:\XAMPP\xampp\htdocs\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\XAMPP\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('forum/admin/ind...')
+#1 C:\XAMPP\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\XAMPP\xampp\htdocs\SiapMasukUI.com\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/SiapMasukUI.com/index.php/forum/admin/index
+HTTP_REFERER=http://localhost/SiapMasukUI.com/index.php/forum/forum/view/id/5
+---
+2014/05/03 14:20:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "forum/admin/index".' in C:\XAMPP\xampp\htdocs\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\XAMPP\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('forum/admin/ind...')
+#1 C:\XAMPP\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\XAMPP\xampp\htdocs\SiapMasukUI.com\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/SiapMasukUI.com/index.php/forum/admin/index
+HTTP_REFERER=http://localhost/SiapMasukUI.com/index.php/forum/forum/view/id/5
+---
+2014/05/03 14:21:05 [error] [exception.CDbException] exception 'CDbException' with message 'Table "pengguna" does not have a column named "siteid".' in C:\XAMPP\xampp\htdocs\yiiframework\db\schema\CDbCommandBuilder.php:694
+Stack trace:
+#0 C:\XAMPP\xampp\htdocs\yiiframework\db\ar\CActiveRecord.php(1518): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, '', Array, '`t`.')
+#1 C:\XAMPP\xampp\htdocs\SiapMasukUI.com\protected\modules\yii-forum\components\ForumBaseController.php(19): CActiveRecord->findByAttributes(Array)
+#2 C:\XAMPP\xampp\htdocs\yiiframework\web\CController.php(306): ForumBaseController->beforeAction(Object(CInlineAction))
+#3 C:\XAMPP\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 C:\XAMPP\xampp\htdocs\yiiframework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\XAMPP\xampp\htdocs\yiiframework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 C:\XAMPP\xampp\htdocs\yiiframework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 C:\XAMPP\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 C:\XAMPP\xampp\htdocs\yiiframework\web\CController.php(291): CFilterChain->run()
+#9 C:\XAMPP\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\XAMPP\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('')
+#11 C:\XAMPP\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('forum')
+#12 C:\XAMPP\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\XAMPP\xampp\htdocs\SiapMasukUI.com\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/SiapMasukUI.com/index.php/forum
+---
