@@ -21,7 +21,7 @@ class TestController extends Controller{
         $this->render("index",array('model'=>$model,'x'=>$inivar));
     }
     
-    public function actionTest(){                         
+    public function actionTest(){
         echo $this->getId();
     }
     

@@ -9,6 +9,9 @@
         <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/bootstrap.min.css">	
         <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/main.css">
 
+
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
         <!--font-->
         <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
         <style>body{font-family: 'Open Sans', sans-serif;}</style>
@@ -32,13 +35,13 @@
                     
                         
                         <div class="navbar-header">
-                            <?php echo CHtml::link("SiapMasukUI.com", array('site/index'),array('class'=>'navbar-brand')); ?>                            
+                            <?php echo CHtml::link("SiapMasukUI.com", array('/site/index'),array('class'=>'navbar-brand')); ?>
                         </div>
                         <?php $controllerName = $this->getId();?>
                         <nav role="navigation" class="navbar-default">
                             <ul class="nav navbar-nav">                                
                                 <li class="<?php echo (in_array($controllerName, array("site")))?"active":""?>">
-                                    <?php echo CHtml::link("Home", array('site/index'),array('style'=>"color: #ecf0f1")); ?>
+                                    <?php echo CHtml::link("Home", array('/site/index'),array('style'=>"color: #ecf0f1")); ?>
                                 </li>                                        
 
                                 <li class="dropdown">
@@ -48,17 +51,21 @@
                                         <?php
                                         $kategoris = Kategori::model()->findAll();
                                         foreach ($kategoris as $kategori): ?>
-                                            <li> <?php echo CHtml::link($kategori->nama, array('konten/kategori','idcategory'=>$kategori->id),array('style'=>"color: #ecf0f1"));?></li>
+                                            <li> <?php echo CHtml::link($kategori->nama, array('/konten/kategori','idcategory'=>$kategori->id),array('style'=>"color: #ecf0f1"));?></li>
                                         <?php endforeach;?>
                                     </ul>
                                 </li>
                                 <li class="<?php echo (in_array($controllerName, array("tryout","pengerjaanTryout")))?"active":""?>">
-                                    <?php echo CHtml::link("Tryout", array('tryout/index'),array('style'=>"color: #ecf0f1")); ?>
+                                    <?php echo CHtml::link("Tryout", array('/tryout/index'),array('style'=>"color: #ecf0f1")); ?>
+                                </li>
+
+                                <li class="<?php echo (in_array($controllerName, array("forum","Thread","User","Post")))?"active":""?>">
+                                    <?php echo CHtml::link("Forum", array('/forum'),array('style'=>"color: #ecf0f1")); ?>
                                 </li>
 
                                 <?php if(Yii::app()->user->isAdmin()):?>
                                 <li>
-                                    <?php echo CHtml::link("Admin", array('admin/index'),array('style'=>"color: #ecf0f1")); ?>
+                                    <?php echo CHtml::link("Admin", array('/admin/index'),array('style'=>"color: #ecf0f1")); ?>
                                 </li>
                                 <?php endif;?>
 
@@ -75,10 +82,10 @@
                                 <?php } ?>
                                 <?php if (!Yii::app()->user->isGuest) { ?>
                                     <li class="<?php echo (in_array($controllerName, array("profil")))?"active":""?>">
-                                        <?php echo CHtml::link("Profil", array('profil/index'),array('style'=>"color: #ecf0f1")); ?>
+                                        <?php echo CHtml::link("Profil", array('/profil/index'),array('style'=>"color: #ecf0f1")); ?>
                                     </li>      
                                     <li>
-                                        <?php echo CHtml::link("Logout", array('site/logout'),array('style'=>"color: #ecf0f1")); ?>
+                                        <?php echo CHtml::link("Logout", array('/site/logout'),array('style'=>"color: #ecf0f1")); ?>
                                     </li>        			
                                 <?php } ?>
                             </ul> 		      

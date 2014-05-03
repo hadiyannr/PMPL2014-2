@@ -14,7 +14,6 @@
  */
 class Forumuser extends CActiveRecord
 {
-	public $siteid, $name;
 	
     /**
      * Returns the static model of the specified AR class.
@@ -24,18 +23,13 @@ class Forumuser extends CActiveRecord
     public static function model($className = __CLASS__) {
         return parent::model($className);
     }
-	
-	public void afterConstruct(){
-		$this->siteid = $this->username;
-		$this->name = $this->username;
-	}
+
 	
     /**
      * @return string the associated database table name
      */
     public function tableName() {
-        //return 'forumuser';
-		return 'pengguna';
+		return 'Forumuser';
     }
 
     /**

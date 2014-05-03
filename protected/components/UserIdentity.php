@@ -25,10 +25,19 @@ class UserIdentity extends CUserIdentity
             $this->_id=$record->id;
             $this->setState('username', $record->username);
             $this->setState('id', $record->id);
+            $this->setState('isAdmin', ($this->isAdmin($record->id)));
             $this->errorCode=self::ERROR_NONE;
         }
         
         return !$this->errorCode;
+    }
+    function isAdmin($id) {
+        $user = Pengguna::model()->findByPk($id);
+        if ($user === null)
+            return 0;
+        else {
+            return intval($user->isAdmin) === 1;
+        }
     }
  
     public function getId()
