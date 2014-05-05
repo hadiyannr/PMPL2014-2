@@ -18,7 +18,9 @@
                     <div class="form-group">                        
                         <input type="checkbox" name="LoginForm[rememberMe]">
                         <label>Remember Me</label>
-                    </div>					
+                    </div>				
+					<!-- Untuk lupa password -->
+					<p> <?php echo CHtml::link('Lupa password?',array('site/forget'),array('style'=>'color:black;')) ?> </p>  	
                     <button type="submit" class="btn btn-primary">Login</button>					
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Batal</button>			        	
                 </form>                                                   
