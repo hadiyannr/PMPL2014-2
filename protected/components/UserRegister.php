@@ -37,7 +37,7 @@
             $mail->Port = 587;
             $mail->SMTPAuth = true;        
             $mail->SMTPSecure = 'tls';
-            $mail->Username = 'siapmasukui@gmail.com';
+            $mail->Username = Yii::app()->params['adminEmail'];
             $mail->Password = Yii::app()->params['adminPassword'];
             $mail->CharSet="utf-8";
             $mail->SetFrom(Yii::app()->params['adminEmail'], 'Admin SiapMasukUI.com');
