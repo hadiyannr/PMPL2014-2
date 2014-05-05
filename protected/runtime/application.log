@@ -6488,3 +6488,91 @@ Stack trace:
 #14 {main}
 REQUEST_URI=/SiapMasukUI.com/index.php/forum
 ---
+2014/05/05 10:28:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "forum".' in C:\xampp\htdocs\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('forum')
+#1 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siapMasukUI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/siapMasukUI/index.php/forum
+HTTP_REFERER=http://localhost:1234/siapMasukUI/
+---
+2014/05/05 10:29:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "forum".' in C:\xampp\htdocs\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('forum')
+#1 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siapMasukUI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/siapMasukUI/index.php/forum
+HTTP_REFERER=http://localhost:1234/siapMasukUI/
+---
+2014/05/05 10:29:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "forum/index".' in C:\xampp\htdocs\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('forum/index')
+#1 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siapMasukUI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/siapMasukUI/index.php/forum/index
+---
+2014/05/05 10:30:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "forum".' in C:\xampp\htdocs\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('forum')
+#1 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siapMasukUI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/siapMasukUI/index.php/forum
+HTTP_REFERER=http://localhost:1234/siapMasukUI/index.php/site/index
+---
+2014/05/05 10:36:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "forum".' in C:\xampp\htdocs\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('forum')
+#1 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siapMasukUI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/siapMasukUI/index.php/forum
+HTTP_REFERER=http://localhost:1234/siapMasukUI/index.php/site/index
+---
+2014/05/05 10:41:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "forum".' in C:\xampp\htdocs\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('forum')
+#1 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siapMasukUI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/siapMasukUI/index.php/forum
+HTTP_REFERER=http://localhost:1234/siapMasukUI/
+---
+2014/05/05 10:41:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "forum".' in C:\xampp\htdocs\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('forum')
+#1 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siapMasukUI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/siapMasukUI/index.php/forum
+HTTP_REFERER=http://localhost:1234/siapMasukUI/
+---
+2014/05/05 10:41:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "forum".' in C:\xampp\htdocs\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('forum')
+#1 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siapMasukUI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/siapMasukUI/index.php/forum
+HTTP_REFERER=http://localhost:1234/siapMasukUI/index.php/
+---
+2014/05/05 10:42:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "forum".' in C:\xampp\htdocs\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('forum')
+#1 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siapMasukUI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/siapMasukUI/index.php/forum
+HTTP_REFERER=http://localhost:1234/siapMasukUI/
+---
+2014/05/05 10:42:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "forum".' in C:\xampp\htdocs\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('forum')
+#1 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siapMasukUI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/siapMasukUI/index.php/forum
+---
