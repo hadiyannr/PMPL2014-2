@@ -20,7 +20,7 @@
                         <label>Remember Me</label>
                     </div>				
 					<!-- Untuk lupa password -->
-					<p> <?php echo CHtml::link('Lupa password?',array('site/forget')) ?> </p>  	
+					<p> <?php echo CHtml::link('Lupa password?',array('site/forget'),array('style'=>'color:black;')) ?> </p>  	
                     <button type="submit" class="btn btn-primary">Login</button>					
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Batal</button>			        	
                 </form>                                                   
