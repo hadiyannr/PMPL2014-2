@@ -6678,3 +6678,12 @@ Stack trace:
 REQUEST_URI=/SiapMasukUI.com/index.php/forum/thread/view/id/1
 HTTP_REFERER=http://localhost/SiapMasukUI.com/index.php/forum/forum/view/id/2
 ---
+2014/05/05 12:12:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "forum/site/forget".' in C:\XAMPP\xampp\htdocs\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\XAMPP\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('forum/site/forg...')
+#1 C:\XAMPP\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\XAMPP\xampp\htdocs\SiapMasukUI.com\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/SiapMasukUI.com/index.php/forum/site/forget
+HTTP_REFERER=http://localhost/SiapMasukUI.com/index.php/forum
+---
