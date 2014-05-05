@@ -1,7 +1,11 @@
-<form role="form">
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-  </div>
-  <button type="submit" class="btn btn-default">Submit</button>
+<form role="form" class="col-md-4" method="post">
+    <div class="form-group">
+      <label>Username</label>
+      <input type="text" name="username" class="form-control" placeholder="Username">
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="email" name="email" class="form-control" placeholder="Email">
+    </div>
+  <input type="submit" class="btn btn-default" name="submit" value="Submit">
 </form>

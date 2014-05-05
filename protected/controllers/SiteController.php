@@ -61,14 +61,26 @@ class SiteController extends Controller
         }
     }
 
-    protected function actionLupaPassword()
-        {  
-            $this->render('UbahPasswordForm');
+    public function actionForget()
+    {
+        if(isset($_POST['submit'])){
+            $pengguna = Pengguna::model()->findByAttributes(array("username"=>$_POST['username']));
+            if($pengguna == null || $pengguna->email != $_POST['email']){
+                Yii::app()->user->setFlash('message',"username atau password tidak cocok");
+                $this->refresh();
+            }elseif(!$this->sendEmail($pengguna)){
+                Yii::app()->user->setFlash('message',"Email tidak terkirim, silahkan coba lagi");
+            }else{
+                Yii::app()->user->setFlash('message',"Silahkan cek email untuk melanjutkan proses penggantian password");
+                $this->redirect(array("index"));
+            }
         }
+        $this->render('forgetPasswordForm');
+    }
 
-    public function actionForget($pengguna){            
+    public function sendEmail($pengguna){
             $activationCode = crypt('dingdonglala13', $pengguna->username.$pengguna->email);
-            $link = 'localhost/siapmasukui/index.php/site/activation?username='.$pengguna->username.'&code='.$activationCode.'';
+            $link = 'localhost/siapmasukui/index.php/site/confirmForgetPassword?username='.$pengguna->username.'&code='.$activationCode.'';
             Yii::import('application.extensions.phpmailer.JPhpMailer');
             $mail = new JPhpMailer();
             $mail->IsSMTP();
@@ -80,20 +92,38 @@ class SiteController extends Controller
             $mail->Password = Yii::app()->params['adminPassword'];
             $mail->CharSet="utf-8";
             $mail->SetFrom(Yii::app()->params['adminEmail'], 'Admin SiapMasukUI.com');
-            $mail->Subject = "[SiapMasukUI.com] Verifikasi Pendaftaran";        
+            $mail->Subject = "[SiapMasukUI.com] Lupa Password";
             $mail->MsgHTML('<div style="text-align:left">'
                     . '<h1>SiapMasukUI.com</h1><br>'
                     . '<p>Selamat datang '.$pengguna->username.',</p> '
-                    . '<p>Terimakasih sudah mendaftar di SiapMasukUI.com.</p> '
-                    . '<p>Ikuti tautan di bawah ini untuk melengkapi pendaftaran</p> '
-                    . '<p><a href="'.$link.'">klik untuk aktivasi akun</a></p>'
+                    . '<p>Ikuti tautan di bawah ini untuk melanjutkan proses penggantian password</p> '
+                    . '<p><a href="'.$link.'">klik untuk mengganti password</a></p>'
                     . '<br><p>Hormat kami,</p> <p>Admin <a href="siapmasukui.com">SiapMasukUI.com</a></p> '
                     . '</div>');
             $mail->AddAddress($pengguna->email, $pengguna->username);
             return $mail->Send();
         }
 
-    public function actionConfirm($username, $code){
-
+    public function actionConfirmForgetPassword($username, $code){
+        $pengguna = Pengguna::model()->findByAttributes(array('username'=>$username));
+        if(isset($_POST['submit'])){
+            if($_POST['password'] != $_POST['confirmpassword']){
+                Yii::app()->user->setFlash('message',"Konfirmasi password salah");
+            }else{
+                $pengguna->password = md5($_POST['password']);
+                $pengguna->save();
+                Yii::app()->user->setFlash('message',"Password berhasil diganti, silahkan login");
+                $this->redirect(array('index'));
+            }
+        }else{
+            $correctCode = crypt(Yii::app()->params['adminPassword'], $pengguna->username.$pengguna->email);
+            if(strcmp($code, $correctCode) == 0){
+                Yii::app()->user->setFlash('message',"Selamat, akun anda telah aktif. Silahkan login.");
+            }else{
+                Yii::app()->user->setFlash('message',"Terjadi kesalahan link dalam proses lupa password");
+                $this->redirect(array('index'));
+            }
+        }
+        $this->render('confirmForgetPasswordForm');
     }
 }
