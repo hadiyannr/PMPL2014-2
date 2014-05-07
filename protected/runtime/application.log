@@ -6777,3 +6777,23 @@ REQUEST_URI=/SiapMasukUI.com/index.php/forum/site/forget
 HTTP_REFERER=http://localhost/SiapMasukUI.com/index.php/forum
 >>>>>>> 520308e649ffdb2aa8f75b471fb29ff8180520e2
 ---
+2014/05/07 13:14:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "changePasswordForm".' in C:\xampp\htdocs\yiiframework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CController.php(270): CController->missingAction('changePasswordF...')
+#1 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('changePasswordF...')
+#2 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('profil/changePa...')
+#3 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\siapMasukUI\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/siapMasukUI/index.php/profil/changePasswordForm
+---
+2014/05/07 13:15:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "changePasswordForm".' in C:\xampp\htdocs\yiiframework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CController.php(270): CController->missingAction('changePasswordF...')
+#1 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('changePasswordF...')
+#2 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('profil/changePa...')
+#3 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\siapMasukUI\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/siapMasukUI/index.php/profil/changePasswordForm
+---

@@ -18,7 +18,7 @@ echo '<br>';
         ?>" alt="" class="img-rounded img-responsive" />
     </div>
     
-    <div class="col-sm-4 col-md-4">
+    <div class="col-sm-4 col-md-6">
         <blockquote>            
             <h3><?php echo $model->nama;?></h3> 
         </blockquote>        
@@ -28,6 +28,8 @@ echo '<br>';
         <p><i class="glyphicon glyphicon-screenshot" rel="jurusan" title="Jurusan yang diinginkan"></i> <?php echo $model->targetJurusan;?></p>
         <?php echo CHtml::link('Ubah Profil',array('update'),array('class'=>'btn btn-primary'));?>
         <?php echo CHtml::link('Riwayat Tryout',array('pengerjaanTryout/history'),array('class'=>'btn btn-success'));?>
+
+        <?php echo CHtml::link('Ubah Password',array('ubahPassword'),array('class'=>'btn btn-primary'));?>
     </div>        
 </div>
 <script>

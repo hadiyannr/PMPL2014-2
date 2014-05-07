@@ -61,6 +61,28 @@ class ProfilController extends Controller {
         }                
         $this->render('update',array('model'=>$model));
     }
+
+    public function actionUbahPassword()
+    {
+        if(isset($_POST['submit'])){
+            $pengguna = Pengguna::model()->findByPk(Yii::app()->user->id);
+            if($pengguna->password!=md5($_POST['OldPassword'])){
+                Yii::app()->user->setFlash('message',"Password lama salah");
+                $this->refresh();
+            }
+            elseif($_POST['password']!=$_POST['confirmpassword']){
+                Yii::app()->user->setFlash('message',"Password baru dan konfirmasi password baru tidak cocok");
+                $this->refresh();
+            }
+            else{
+                $pengguna->password = md5($_POST['password']);
+                $pengguna->save();
+                Yii::app()->user->setFlash('message',"Penggatian password berhasil");
+                $this->redirect(array("index"));                
+            }
+        }
+        $this->render('changePasswordForm');
+    }
     
     public function loadModel(){
         return Profil::model()->findByAttributes(array('idPengguna' => Yii::app()->user->id));

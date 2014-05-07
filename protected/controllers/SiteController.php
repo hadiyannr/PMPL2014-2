@@ -66,7 +66,7 @@ class SiteController extends Controller
         if(isset($_POST['submit'])){
             $pengguna = Pengguna::model()->findByAttributes(array("username"=>$_POST['username']));
             if($pengguna == null || $pengguna->email != $_POST['email']){
-                Yii::app()->user->setFlash('message',"username atau password tidak cocok");
+                Yii::app()->user->setFlash('message',"username atau email tidak cocok");
                 $this->refresh();
             }elseif(!$this->sendEmail($pengguna)){
                 Yii::app()->user->setFlash('message',"Email tidak terkirim, silahkan coba lagi");
