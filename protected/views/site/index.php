@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="row clearfix">
-        <div class="col-md-2 text-right">
+        <div class="col-md-2 text-left">
             <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/makara/makara-ui-fk.png" style="height: 65px" rel="tooltip-left" title="Fakultas Kedokteran"><br>
             <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/makara/makara-ui-fkg.png" style="height: 65px" rel="tooltip-left" title="Fakultas Kedokteran Gigi"><br>
             <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/makara/makara-ui-fmipa.png" style="height: 65px" rel="tooltip-left" title="Fakultas Matematika dan Ilmu Pengetahuan Alam"><br>
@@ -36,7 +36,7 @@
 			</div>
 
         </div>
-        <div class="col-md-2 text-left">
+        <div class="col-md-2 text-right">
             <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/makara/makara-ui-psikologi.png" style="height: 65px" rel="tooltip-right" title="Fakultas Psikologi"><br>
             <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/makara/makara-ui-fisip.png" style="height: 65px" rel="tooltip-right" title="Fakultas Ilmu Sosial dan Ilmu Politik"><br>
             <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/makara/makara-ui-fkm.png" style="height: 65px" rel="tooltip-right" title="Fakultas Kesehatan Masyarakat"><br>
