@@ -79,8 +79,8 @@ class SiteController extends Controller
     }
 
     public function sendEmail($pengguna){
-            $activationCode = crypt('dingdonglala13', $pengguna->username.$pengguna->email);
-            $link = 'localhost/siapmasukui/index.php/site/confirmForgetPassword?username='.$pengguna->username.'&code='.$activationCode.'';
+            $activationCode = crypt(Yii::app()->params['adminPassword'], $pengguna->username.$pengguna->email);
+            $link = Yii::app()->params['site'].'/index.php/site/confirmForgetPassword?username='.$pengguna->username.'&code='.$activationCode.'';
             Yii::import('application.extensions.phpmailer.JPhpMailer');
             $mail = new JPhpMailer();
             $mail->IsSMTP();
@@ -98,7 +98,7 @@ class SiteController extends Controller
                     . '<p>Selamat datang '.$pengguna->username.',</p> '
                     . '<p>Ikuti tautan di bawah ini untuk melanjutkan proses penggantian password</p> '
                     . '<p><a href="'.$link.'">klik untuk mengganti password</a></p>'
-                    . '<br><p>Hormat kami,</p> <p>Admin <a href="siapmasukui.com">SiapMasukUI.com</a></p> '
+                    . '<br><p>Hormat kami,</p> <p>Admin <a href="'.Yii::app()->params['site'].'">'.Yii::app()->params['site'].'</a></p> '
                     . '</div>');
             $mail->AddAddress($pengguna->email, $pengguna->username);
             return $mail->Send();

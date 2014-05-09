@@ -28,8 +28,8 @@
         }
         
          public function sendEmail($pengguna){            
-            $activationCode = crypt('dingdonglala13', $pengguna->username.$pengguna->email);
-            $link = 'localhost/siapmasukui/index.php/site/activation?username='.$pengguna->username.'&code='.$activationCode.'';
+            $activationCode = crypt(Yii::app()->params['adminPassword'], $pengguna->username.$pengguna->email);
+            $link = Yii::app()->params['site'].'/index.php/site/activation?username='.$pengguna->username.'&code='.$activationCode.'';
             Yii::import('application.extensions.phpmailer.JPhpMailer');
             $mail = new JPhpMailer();
             $mail->IsSMTP();
@@ -48,7 +48,7 @@
                     . '<p>Terimakasih sudah mendaftar di SiapMasukUI.com.</p> '
                     . '<p>Ikuti tautan di bawah ini untuk melengkapi pendaftaran</p> '
                     . '<p><a href="'.$link.'">klik untuk aktivasi akun</a></p>'
-                    . '<br><p>Hormat kami,</p> <p>Admin <a href="siapmasukui.com">SiapMasukUI.com</a></p> '
+                    . '<br><p>Hormat kami,</p> <p>Admin <a href="'.Yii::app()->params['site'].'">'.Yii::app()->params['site'].'</a></p> '
                     . '</div>');
             $mail->AddAddress($pengguna->email, $pengguna->username);
             return $mail->Send();

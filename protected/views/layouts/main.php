@@ -44,13 +44,16 @@
                     <ul class="nav navbar-nav">
                         <?php if(Yii::app()->user->isAdmin()):?>
                         <li class="<?php echo (in_array($controllerName, array("admin")))?"active":""?>">
-                            <?php echo CHtml::link("Home", array('admin/index'),array('style'=>"color: #ecf0f1")); ?>
+                            <?php echo CHtml::link("Home", array('/admin/index'),array('style'=>"color: #ecf0f1")); ?>
                         </li>
                         <li class="<?php echo (in_array($controllerName, array("adminKonten")))?"active":""?>">
-                            <?php echo CHtml::link("Konten", array('adminKonten/index'),array('style'=>"color: #ecf0f1")); ?>
+                            <?php echo CHtml::link("Konten", array('/adminKonten/index'),array('style'=>"color: #ecf0f1")); ?>
                         </li>
                         <li class="<?php echo (in_array($controllerName, array("adminTryout")))?"active":""?>">
-                            <?php echo CHtml::link("Tryout", array('adminTryout/index'),array('style'=>"color: #ecf0f1")); ?>
+                            <?php echo CHtml::link("Tryout", array('/adminTryout/index'),array('style'=>"color: #ecf0f1")); ?>
+                        </li>
+                        <li class="<?php echo (in_array($controllerName, array("kategori")))?"active":""?>">
+                            <?php echo CHtml::link("Kategori", array('/kategori/index'),array('style'=>"color: #ecf0f1")); ?>
                         </li>
                         <?php endif;?>
                         <li>
