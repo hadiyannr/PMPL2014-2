@@ -29,7 +29,7 @@
         
          public function sendEmail($pengguna){            
             $activationCode = crypt(Yii::app()->params['adminPassword'], $pengguna->username.$pengguna->email);
-            $link = Yii::app()->params['site'].'/index.php/site/activation?username='.$pengguna->username.'&code='.$activationCode.'';
+            $link = Yii::app()->params['site'].'/siapmasukui/index.php/site/activation?username='.$pengguna->username.'&code='.$activationCode.'';
             Yii::import('application.extensions.phpmailer.JPhpMailer');
             $mail = new JPhpMailer();
             $mail->IsSMTP();

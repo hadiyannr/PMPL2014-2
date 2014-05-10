@@ -128,9 +128,9 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <a href="#">ABOUT</a>&nbsp;&middot;&nbsp;
-                        <a href="#">PRIVACY POLICY</a>&nbsp;&middot;&nbsp;
-                        <a href="#">CONTACT</a>&nbsp&nbsp;
+                        <a href="#about" data-toggle="modal">ABOUT US</a>&nbsp;&middot;
+                        <!--                    <a href="#">PRIVACY POLICY</a>&nbsp;&middot;&nbsp;-->
+                        <a href="#">CONTACT</a>
                     </div>
                 </div>
                 <div class="row">
@@ -139,6 +139,22 @@
                     </div>
                 </div>
             </div>
-        </footer>       
+        </footer>
+        <div class="modal fade bs-example-modal-sm" id="about" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">About Us</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Arga Padan David</p>
+                        <p>Fariz Ikhwantri</p>
+                        <p>Muhamad Adiyat</p>
+                        <p>Muhammad Hanif Naufal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

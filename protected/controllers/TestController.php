@@ -22,7 +22,7 @@ class TestController extends Controller{
     }
     
     public function actionTest(){
-        echo $this->getId();
+        echo Yii::app()->params['site'].'/siapmasukui/index.php/site/activation?username=';
     }
     
     public function actionTulis($m){

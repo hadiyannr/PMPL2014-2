@@ -22,7 +22,8 @@ $this->breadcrumbs=array(
 </div>
 <div class="pull-right">
     Share:
-    <?php    
+    <?php
+//    echo Yii::app()->params['site'].Yii::app()->request->url;
     $this->widget('application.extensions.social.SocialShareWidget', array(
         'url' => Yii::app()->params['site'].'/'.Yii::app()->request->url,                  //required
         'services' => array('facebook'),       //optional
