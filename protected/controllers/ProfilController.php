@@ -77,7 +77,7 @@ class ProfilController extends Controller {
             else{
                 $pengguna->password = md5($_POST['password']);
                 $pengguna->save();
-                Yii::app()->user->setFlash('message',"Penggatian password berhasil");
+                Yii::app()->user->setFlash('message',"Penggantian password berhasil");
                 $this->redirect(array("index"));                
             }
         }
