@@ -142,8 +142,8 @@ class ForumController extends ForumBaseController
      */
     public function actionDelete($id)
     {
-        if(!Yii::app()->request->isPostRequest || !Yii::app()->request->isAjaxRequest)
-            throw new CHttpException(400, 'Invalid request');
+//        if(!Yii::app()->request->isPostRequest || !Yii::app()->request->isAjaxRequest)
+//            throw new CHttpException(400, 'Invalid request');
 
         // First, we make sure it even exists
         $forum = Forum::model()->findByPk($id);
@@ -151,6 +151,7 @@ class ForumController extends ForumBaseController
             throw new CHttpException(404, 'The requested page does not exist.');
 
         $forum->delete();
+        $this->redirect(array('index'));
     }
 
 }

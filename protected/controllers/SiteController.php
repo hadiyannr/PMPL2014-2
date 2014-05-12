@@ -17,7 +17,7 @@ class SiteController extends Controller
                 $criteria = new CDbCriteria;
                 $criteria->order = "RAND()";
                 $criteria->limit = 5;
-                $criteria->compare('idcategory','2');
+                $criteria->compare('idcategory','3');
                 $criteria->compare('isPublished','1');
                 $model = Konten::model()->findAll($criteria);
 
@@ -118,7 +118,7 @@ class SiteController extends Controller
         }else{
             $correctCode = crypt(Yii::app()->params['adminPassword'], $pengguna->username.$pengguna->email);
             if(strcmp($code, $correctCode) == 0){
-                Yii::app()->user->setFlash('message',"Selamat, akun anda telah aktif. Silahkan login.");
+                Yii::app()->user->setFlash('message',"Silahkan ganti password anda");
             }else{
                 Yii::app()->user->setFlash('message',"Terjadi kesalahan link dalam proses lupa password");
                 $this->redirect(array('index'));
