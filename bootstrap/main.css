@@ -220,3 +220,7 @@ right: 18px;
     /*left:660px;
     top:150px;*/
 }
+
+.soalTryout p:first-child{
+    display: inline;
+}

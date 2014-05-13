@@ -678,7 +678,7 @@ class ETinyMce extends CInputWidget
    {
       $options = array();
 
-      $this->plugins = array('safari','pagebreak','style','layer','table','save','advhr','advimage','advlink','emotions','spellchecker','inlinepopups','insertdatetime','preview','media','searchreplace','print','contextmenu','paste','directionality','fullscreen','noneditable','visualchars','nonbreaking','xhtmlxtras','template');
+      $this->plugins = array('safari','pagebreak','style','layer','table','save','advhr','advimage','advlink','emotions','spellchecker','inlinepopups','insertdatetime','preview','media','searchreplace','print','contextmenu','paste','directionality','fullscreen','noneditable','visualchars','nonbreaking','xhtmlxtras','template','tiny_mce_wiris');
 
       if ($this->contentCSS !== '') {
          $sc = "styleselect,";
@@ -697,7 +697,7 @@ class ETinyMce extends CInputWidget
       if (!empty($this->fontSizes)) {
          $options['theme_advanced_font_sizes'] = implode(',', $this->fontSizes);
       }
-      
+
       $options['theme'] = 'advanced';
       $options['theme_advanced_toolbar_location'] = 'top';
       $options['theme_advanced_toolbar_align'] = 'left';
@@ -705,7 +705,7 @@ class ETinyMce extends CInputWidget
 		$options['theme_advanced_buttons1'] = "save,newdocument,print,|,cut,copy,paste,pastetext,pasteword,|,search,replace,|,undo,redo,|,removeformat,cleanup,|,spellchecker,|,visualaid,visualchars,|,ltr,rtl,|,code,preview,fullscreen,|,help";
 		$options['theme_advanced_buttons2'] = "{$sc}formatselect,fontselect,fontsizeselect,|,forecolor,backcolor,|,bold,italic,underline,strikethrough,|,sub,sup{$c1}";
 		$options['theme_advanced_buttons3'] = "justifyleft,justifycenter,justifyright,justifyfull,|,bullist,numlist,|,outdent,indent,|,hr,advhr,nonbreaking,pagebreak,blockquote,|,charmap,emotions,media,image,|,link,unlink,anchor,|,insertdate,inserttime";
-		$options['theme_advanced_buttons4'] = "{$c2}tablecontrols,|,insertlayer,moveforward,movebackward,absolute,|,styleprops,del,ins,attribs,|,template";
+		$options['theme_advanced_buttons4'] = "{$c2}tablecontrols,|,insertlayer,moveforward,movebackward,absolute,|,styleprops,del,ins,attribs,|,template,tiny_mce_wiris_formulaEditor,tiny_mce_wiris_CAS";
 		$options['theme_advanced_toolbar_location'] = "'top'";
 		$options['theme_advanced_toolbar_align'] = "'left'";
 		$options['theme_advanced_statusbar_location'] = "bottom";

@@ -25,7 +25,6 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'pertanyaan'); ?>
-		<?php // echo $form->textArea($model,'pertanyaan',array('rows'=>6, 'cols'=>50)); ?>
                 <?php
                     $this->widget('application.extensions.tinymce.ETinyMce',
                             array(
@@ -34,6 +33,17 @@
                                 'editorTemplate'=>'full',
                                 'htmlOptions'=>array('rows'=>6,'cols'=>50,'class'=>'tinymce'),
                             ));
+//                    $this->widget('application.extensions.tinymce.ETinyMce',
+//                        array(
+//                            'model'=>$model,
+//                            'attribute'=>'pertanyaan',
+//                            'htmlOptions'=>array('rows'=>6,'cols'=>50,'class'=>'tinymce'),
+//                            'plugins'=>array('tiny_mce_wiris'),
+//                            'options'=>array(
+//                                'theme'=>'advanced',
+//                                'theme_advanced_buttons3'=>'tiny_mce_wiris_formulaEditor,tiny_mce_wiris_CAS',
+//                            ),
+//                        ));
                 ?>
 		<?php echo $form->error($model,'pertanyaan'); ?>
 	</div>
@@ -41,10 +51,8 @@
 	<div class="row">
 		<?php echo $form->labelEx($model,'nomor'); ?>
 		<?php echo $form->textField($model,'nomor',array('required'=>'required')); ?>
-		<?php echo $form->error($model,'nomor'); ?>
+    		<?php echo $form->error($model,'nomor'); ?>
 	</div>
-
-
         <?php
 
             for($i = 0; $i < 5; $i++){ 
@@ -56,10 +64,25 @@
                 if($modelOpsi[$i]->isJawaban == 1){$check = ' checked';};
                 $radio ='&nbsp;'.'<input '.'type="radio" '.'name="Opsi[jawaban]" '.'value="'.$i.'"'.' required '.$check.'>';
                 echo $form->labelEx($modelOpsi[$i],'opsi ke '.($i + 1).$radio); ?>
-                <?php echo $form->textArea($modelOpsi[$i],'['.$i.']pernyataan',array('rows'=>2, 'cols'=>40,'required'=>'required')); ?>
+
+                <?php
+                $this->widget('application.extensions.tinymce.ETinyMce',
+                    array(
+                        'model'=>$modelOpsi[$i],
+                        'attribute'=>'['.$i.']pernyataan',
+                        'htmlOptions'=>array('rows'=>1,'cols'=>40,'class'=>'tinymce'),
+                        'plugins'=>array('tiny_mce_wiris'),
+                        'options'=>array(
+                            'theme'=>'advanced',
+                            'theme_advanced_buttons3'=>'tiny_mce_wiris_formulaEditor,tiny_mce_wiris_CAS',
+                        ),
+                    ));
+                ?>
+
+<!--                --><?php //echo $form->textArea($modelOpsi[$i],'['.$i.']pernyataan',array('rows'=>2, 'cols'=>40,'required'=>'required')); ?>
                 <?php echo $form->error($modelOpsi[$i],'['.$i.']pernyataan'); ?>
                 <?php echo $form->hiddenField($modelOpsi[$i],'['.$i.']idsoal',array('value'=>0)); ?>
-                <?php echo $form->hiddenField($modelOpsi[$i],'['.$i.']nomor',array('value'=>$i)); ?>                
+                <?php echo $form->hiddenField($modelOpsi[$i],'['.$i.']nomor',array('value'=>$i)); ?>
 	    </div>
         <?php }?>
         

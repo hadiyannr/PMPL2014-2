@@ -22,7 +22,7 @@ $this->breadcrumbs=array(
                             <div class="column home-group">
                                 <h3><?php echo CHtml::link($konten->judul,array('index','id'=>$konten->id))?></h3>
                                 <p> <?php
-                                    $prev = $konten->isi;
+                                    $prev = strip_tags($konten->isi);
                                     echo substr($prev, 0, 100);
                                     ?>
                                 </p>

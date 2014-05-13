@@ -13,7 +13,7 @@ class UserLogin extends Portlet
                 $model->login();                
             }
             if(Yii::app()->user->isAdmin()){
-                $this->controller->redirect(array('admin/index'));
+                $this->controller->redirect(array('/admin/index'));
             }else{
                 $this->controller->refresh();
             }

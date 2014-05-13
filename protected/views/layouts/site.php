@@ -17,7 +17,7 @@
         <style>body{font-family: 'Open Sans', sans-serif;}</style>
 
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/jquery-1.11.0.min.js"></script>
-        <script src="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/bootstrap.min.js"></script>			
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/bootstrap.min.js"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/main.js"></script>
     </head>
     <body>	
