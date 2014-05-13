@@ -22,11 +22,11 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(				
                 'nomor',
-		'pertanyaan',                
+		        'pertanyaan',
                 array(               // related city displayed as a link
                     'label'=>'Opsi',
                     'type'=>'raw',
-                    'value'=>$opsi
+                    'value'=>$opsi==""?"tidak memiliki opsi":$opsi,
                 ),
 	),
 )); ?>

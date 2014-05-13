@@ -16,7 +16,13 @@
         <?php foreach($soalList as $soal):?>        
         <div class="jumbotron" id="no<?php echo $soal->nomor;?>">
             <p class="text-justify">
-                <?php echo $soal->nomor,'. ',$soal->pertanyaan;?>
+                <?php
+                    if($soal->isHasJawaban){
+                        echo $soal->nomor,'. ',$soal->pertanyaan;
+                    }else{
+                        echo $soal->pertanyaan;
+                    }
+                ?>
             </p>
         </div>
         <div class="col-md-offset-1">                        

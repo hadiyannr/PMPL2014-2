@@ -6,7 +6,9 @@ class PengerjaanTryoutController extends Controller
 	    public function actionPerform(){
             $id = $_POST['Perform']['id'];
             $tryout = Tryout::model()->findByPk($id);
-            $soalList = Soal::model()->findAllByAttributes(array('idtryout' => $id));
+            $criteria = new CDbCriteria();
+            $criteria->order = "nomor ASC,isHasJawaban ASC";
+            $soalList = Soal::model()->findAllByAttributes(array('idtryout' => $id),$criteria);
             $lembarJawab = Pengerjaantryout::model()->findByAttributes(array('idPengguna'=>Yii::app()->user->id,'idTryout'=>$tryout->id));
             $jawaban = array();
             //init jawaban dari db(kalo ada)

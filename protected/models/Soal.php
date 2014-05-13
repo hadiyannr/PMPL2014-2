@@ -8,6 +8,7 @@
  * @property integer $idtryout
  * @property string $pertanyaan
  * @property integer $nomor
+ * @property integer $isHasJawaban
  *
  * The followings are the available model relations:
  * @property Jawaban[] $jawabans
@@ -33,12 +34,12 @@ class Soal extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('idtryout, pertanyaan, nomor', 'required'),
-			array('idtryout, nomor', 'numerical', 'integerOnly'=>true),
+			array('idtryout, nomor, isHasJawaban', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, idtryout, pertanyaan, nomor', 'safe', 'on'=>'search'),
+			array('id, idtryout, pertanyaan, nomor, isHasJawaban', 'safe', 'on'=>'search'),
                     
-                         array('idtryout+nomor', 'application.extensions.uniqueMultiColumnValidator'),
+                         array('idtryout+nomor+isHasJawaban', 'application.extensions.uniqueMultiColumnValidator'),
 		);
 	}
 
@@ -66,6 +67,7 @@ class Soal extends CActiveRecord
 			'idtryout' => 'Idtryout',
 			'pertanyaan' => 'Pertanyaan',
 			'nomor' => 'Nomor',
+            'isHasJawaban' => 'Soal Berjawaban',
 		);
 	}
 
@@ -91,6 +93,7 @@ class Soal extends CActiveRecord
 		$criteria->compare('idtryout',$this->idtryout);
 		$criteria->compare('pertanyaan',$this->pertanyaan,true);
 		$criteria->compare('nomor',$this->nomor);
+        $criteria->compare('isHasJawaban',$this->isHasJawaban);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -107,9 +110,9 @@ class Soal extends CActiveRecord
 	{
 		return parent::model($className);
 	}
-        public static function isComplete($id){
-            return sizeof(Soal::model()->findByPk($id)->opsis)>0;            
-        }
+//        public static function isComplete($id){
+//            return sizeof(Soal::model()->findByPk($id)->opsis)>0;
+//        }
         
         public function getHtmlAdminOpsi(){
             $opsi = $this->opsis;

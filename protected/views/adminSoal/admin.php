@@ -9,6 +9,7 @@ $this->breadcrumbs=array(
 
 $this->menu=array(	
 	array('label'=>'Buat Soal', 'url'=>array('create?idtryout='.$_GET['idtryout'])),
+    array('label'=>'Buat Soal Cerita', 'url'=>array('createStory?idtryout='.$_GET['idtryout'])),
 );
 
 
@@ -26,7 +27,7 @@ $this->menu=array(
                 array(
                     'name'=>'Status',
                     'value'=>function($data){
-                            return Soal::model()->isComplete($data->id)?'Lengkap':'Belum memiliki opsi';
+                            return ($data->isHasJawaban)?'Soal':'Soal Cerita';
                         },
                 ),
 		array(

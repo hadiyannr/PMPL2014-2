@@ -26,7 +26,7 @@ class AdminSoalController extends Controller {
     public function accessRules() {
         return array(
             array('allow',
-                'actions' => array('index', 'view', 'create', 'update', 'delete'),
+                'actions' => array('index', 'view', 'create', 'update', 'delete','createStory','updateStory'),
                 'expression' => 'Yii::app()->user->isAdmin()',
             ),
             array('deny', // deny all users
@@ -92,6 +92,33 @@ class AdminSoalController extends Controller {
         ));
     }
 
+    public function actionCreateStory($idtryout){
+        $model = new Soal;
+        $model->setAttribute('idtryout', $idtryout);
+        $model->setAttribute('isHasJawaban', 0);
+        if(isset($_POST['Soal'])){
+            $model->attributes = $_POST['Soal'];
+
+            if($model->validate() && $model->save())
+            $this->redirect(array('view', 'id' => $model->id));
+        }
+        $this->render('createStory', array(
+            'model' => $model,
+        ));
+    }
+    public function actionUpdateStory($id){
+        $model = $this->loadModel($id);
+        if(isset($_POST['Soal'])){
+            $model->attributes = $_POST['Soal'];
+
+            if($model->validate() && $model->save())
+                $this->redirect(array('view', 'id' => $model->id));
+        }
+        $this->render('updateStory', array(
+            'model' => $model,
+        ));
+    }
+
     /**
      * Updates a particular model.
      * If update is successful, the browser will be redirected to the 'view' page.
@@ -99,6 +126,9 @@ class AdminSoalController extends Controller {
      */
     public function actionUpdate($id) {
         $model = $this->loadModel($id);
+        if($model->isHasJawaban == 0){
+            $this->redirect(array("updateStory","id"=>$id));
+        }
         $modelOpsi = array();
         foreach($model->opsis as $opsi){
             $modelOpsi[] = $opsi;

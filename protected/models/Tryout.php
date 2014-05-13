@@ -129,13 +129,7 @@ class Tryout extends CActiveRecord
             $model = Pengerjaantryout::model()->findByAttributes(array('idPengguna'=>$id,'idTryout'=>$this->id));
             return $model != null;
         }
-        
-//        public function getRemainingTime(){
-//            $waktuMulai = $this->tanggal ." " . $this->waktuMulai;
-//            $waktuSelesai = date('Y-m-d H:i:s',  strtotime("+{$this->durasi} minutes",  strtotime($waktuMulai)));            
-//            $seconds = strtotime($waktuSelesai) - strtotime(date('Y-m-d H:i:s'));            
-//            return $seconds;
-//        }
+
         
         public function getWaktuSelesai(){
             $waktuMulai = $this->tanggal ." " . $this->waktuMulai;
