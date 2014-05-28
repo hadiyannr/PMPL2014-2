@@ -15,11 +15,13 @@
             if(isset($_POST['DaftarForm']))
             {            
                 $model->attributes=$_POST['DaftarForm'];            
-                if($model->validate() && $this->sendEmail($model)){
-                    $model->register();
-                    Yii::app()->user->setFlash('message',"Selamat anda telah terdaftar, silahkan lakukan aktivasi melalui email");
-                }else{
-                    Yii::app()->user->setFlash('message',"Email tidak terkirim, silahkan coba kembali");
+                if($model->validate()){
+                    if($this->sendEmail($model)){
+                        if($model->register())
+                        Yii::app()->user->setFlash('message',"Selamat anda telah terdaftar, silahkan lakukan aktivasi melalui email");
+                    }else{
+                        Yii::app()->user->setFlash('message',"Email tidak terkirim, silahkan coba kembali");
+                    }
                 }
                 $this->controller->refresh();                            
                     
