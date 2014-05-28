@@ -3,7 +3,7 @@
     /* @var $tryout Tryout */
 ?>
 <div class="btn-group-vertical tryoutNavigation">
-    <label class="text-center">Menu <br>Navigasi</label>
+    <label class="text-center">Menu Navigasi</label>
     <?php for($i=1;$i<=$soalCount;$i++):?>
     
     <?php if($i % 10 == 1):?>
@@ -27,14 +27,16 @@
     
     <?php endfor;?>
     <br>
-    <div class="text-center">
-        <input type="submit" value="Simpan" name="Save" class="btn btn-success" style="margin-bottom: 2px;"><br>
-        <input type="submit" value="Kumpulkan" name="Submit" class="btn btn-success">    
+    <div class="text-left">
+        <input type="submit" value="Simpan" name="Save" class="btn btn-success btn-block" style="margin-bottom: 2px;">
+        <input type="submit" value="Kumpulkan" name="Submit" class="btn btn-success btn-block">    
     </div>
 </div>
 
-<div class="tryoutTime well" id="tryoutTime">
-    
+<div class="col-md-1">
+    <div class="tryoutTime well" id="tryoutTime">
+        
+    </div>
 </div>
 <?php
     $waktuSelesai = $tryout->getWaktuSelesai();

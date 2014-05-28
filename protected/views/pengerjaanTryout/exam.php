@@ -14,7 +14,7 @@
             
             
         <?php foreach($soalList as $soal):?>        
-        <div class="jumbotron" id="no<?php echo $soal->nomor;?>">
+        <div class="well" id="no<?php echo $soal->nomor;?>">
             <p class="text-justify">
                 <?php
                     if($soal->isHasJawaban){
