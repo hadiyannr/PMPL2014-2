@@ -51,7 +51,7 @@
                                         <?php
                                         $kategoris = Kategori::model()->findAll();
                                         foreach ($kategoris as $kategori): ?>
-                                            <li> <?php echo CHtml::link($kategori->nama, array('/konten/kategori','idcategory'=>$kategori->id),array('style'=>"color: #ecf0f1"));?></li>
+                                            <li> <?php echo CHtml::link($kategori->nama, array('/konten/konten/kategori','idcategory'=>$kategori->id),array('style'=>"color: #ecf0f1"));?></li>
                                         <?php endforeach;?>
                                     </ul>
                                 </li>
