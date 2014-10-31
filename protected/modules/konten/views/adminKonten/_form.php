@@ -32,7 +32,7 @@
 	<div class="row">
 		<?php echo $form->labelEx($model,'isi'); ?>		
                 <?php 
-                    $this->widget('application.extensions.tinymce.ETinyMce', 
+                    $this->widget('konten.extensions.tinymce.ETinyMce',
                             array(
                                 'model'=>$model,                                
                                 'attribute'=>'isi',
