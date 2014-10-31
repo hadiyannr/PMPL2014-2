@@ -50,7 +50,7 @@
                             <?php echo CHtml::link("Konten", array('/konten/adminKonten/index'),array('style'=>"color: #ecf0f1")); ?>
                         </li>
                         <li class="<?php echo (in_array($controllerName, array("adminTryout")))?"active":""?>">
-                            <?php echo CHtml::link("Tryout", array('/adminTryout/index'),array('style'=>"color: #ecf0f1")); ?>
+                            <?php echo CHtml::link("Tryout", array('/tryout/adminTryout/index'),array('style'=>"color: #ecf0f1")); ?>
                         </li>
                         <li class="<?php echo (in_array($controllerName, array("kategori")))?"active":""?>">
                             <?php echo CHtml::link("Kategori", array('/konten/kategori/index'),array('style'=>"color: #ecf0f1")); ?>

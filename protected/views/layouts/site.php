@@ -56,7 +56,7 @@
                                     </ul>
                                 </li>
                                 <li class="<?php echo (in_array($controllerName, array("tryout","pengerjaanTryout")))?"active":""?>">
-                                    <?php echo CHtml::link("Tryout", array('/tryout/index'),array('style'=>"color: #ecf0f1")); ?>
+                                    <?php echo CHtml::link("Tryout", array('/tryout/tryout/index'),array('style'=>"color: #ecf0f1")); ?>
                                 </li>
 
                                 <li class="<?php echo (in_array($controllerName, array("forum","Thread","User","Post")))?"active":""?>">
