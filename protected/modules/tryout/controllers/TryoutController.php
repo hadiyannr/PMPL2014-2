@@ -5,6 +5,8 @@
 class TryoutController extends Controller {
 
     public $layout = '//layouts/site';
+    private $statisticPageSize = 10;
+
     public function actionIndex() {
         $model = Tryout::model()->findAll();
         $pastTO = array();
@@ -27,7 +29,6 @@ class TryoutController extends Controller {
         }elseif(isset($_POST['Perform'])){
             CController::forward('pengerjaanTryout/perform');
         }elseif(isset($_POST['Statistic'])){
-            //CController::forward('statistic');
             $this->redirect(array('statistic','id'=>$_POST['Statistic']['id']));
         }
         
@@ -43,7 +44,7 @@ class TryoutController extends Controller {
         //pagination code
         $count = PengerjaanTryout::model()->count($criteria);
         $pages=new CPagination($count);
-        $pages->pageSize=10;
+        $pages->pageSize=$this->statisticPageSize;
         $pages->applyLimit($criteria);
 
         $listPengerjaan = PengerjaanTryout::model()->findAll($criteria);

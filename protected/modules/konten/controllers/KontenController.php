@@ -5,6 +5,7 @@
 class KontenController extends Controller
 {
     public $layout ='//layouts/site';
+    private $pageSize = 9;
 	public function actionIndex($id)
 	{
         $criteria = new CDbCriteria();
@@ -25,7 +26,7 @@ class KontenController extends Controller
         $count=Konten::model()->count($criteria);
 
         $pages=new CPagination($count);
-        $pages->pageSize=9;
+        $pages->pageSize=$this->pageSize;
         $pages->applyLimit($criteria);
 
         $kategori = Kategori::model()->findByPk($idcategory);
@@ -42,7 +43,7 @@ class KontenController extends Controller
 
 
         $pages=new CPagination($count);
-        $pages->pageSize=9;
+        $pages->pageSize=$this->pageSize;
         $pages->applyLimit($criteria);
         $model = Konten::model()->findAll($criteria);
         $searchMessage = "";
