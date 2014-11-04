@@ -9,7 +9,7 @@ class PengerjaanTryoutController extends Controller
             $criteria = new CDbCriteria();
             $criteria->order = "nomor ASC,isHasJawaban ASC";
             $soalList = Soal::model()->findAllByAttributes(array('idtryout' => $id),$criteria);
-            $lembarJawab = Pengerjaantryout::model()->findByAttributes(array('idPengguna'=>Yii::app()->user->id,'idTryout'=>$tryout->id));
+            $lembarJawab = PengerjaanTryout::model()->findByAttributes(array('idPengguna'=>Yii::app()->user->id,'idTryout'=>$tryout->id));
             $jawaban = array();
             //init jawaban dari db(kalo ada)
             foreach($soalList as $soal){
@@ -52,7 +52,7 @@ class PengerjaanTryoutController extends Controller
         }
         
         public function actionPostExam($id){
-            $model = Pengerjaantryout::model()->findByPk($id);
+            $model = PengerjaanTryout::model()->findByPk($id);
             $detail = $model->getDetail($model->idTryout);
             $this->render('postExam',array('model'=>$model,'detail'=>$detail));            
         }

@@ -39,14 +39,14 @@ class TryoutController extends Controller {
         $criteria->order = 'nilai DESC';        
         $criteria->compare('idTryout',$id);        
         $criteria->limit = 10;
-        $listPengguna = Pengerjaantryout::model()->findAll($criteria);
+        $listPengguna = PengerjaanTryout::model()->findAll($criteria);
         
         $tryoutModel = Tryout::model()->findByPk($id);
         
         $criteria = new CDbCriteria;
         $criteria->select = array("MAX(nilai) as max","MIN(nilai) as min","AVG(nilai) as avg");
         $criteria->compare('idTryout',$id);
-        $tryoutStatistic =Pengerjaantryout::model()->find($criteria);
+        $tryoutStatistic =PengerjaanTryout::model()->find($criteria);
         
         $this->render('statistic',array('listPengguna'=>$listPengguna,'tryoutModel'=>$tryoutModel,'tryoutStatistic'=>$tryoutStatistic));
     }
@@ -55,7 +55,7 @@ class TryoutController extends Controller {
         if(Yii::app()->user->isGuest){
             Yii::app()->user->setFlash('message',"Login untuk mendaftar");    
         }else{
-            $model = new Pengerjaantryout;
+            $model = new PengerjaanTryout;
             $model->idTryout = $id;
             $model->idPengguna = Yii::app()->user->id;
             $model->save();
