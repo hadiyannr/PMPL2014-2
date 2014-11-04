@@ -14,7 +14,7 @@
                     <th>Nilai</th>
                 </tr>
                 <?php $no = 1; ?>
-                <?php foreach ($listPengguna as $pto): ?>
+                <?php foreach ($listPengerjaan as $pto): ?>
                 <tr>                    
                     <td><?php echo $no++; ?></td>
                     <td><?php echo $pto->idPengguna0->username; ?></td>
@@ -22,6 +22,12 @@
                 </tr>                
                 <?php endforeach;?>
             </table>
+            <div class="text-center">
+                <?php $this->widget('CLinkPager', array(
+                    'pages' => $pages,
+                )) ?>
+            </div>
+            <br>
             <br>
             <table class="table table-bordered">                
                 <tr>

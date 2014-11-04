@@ -27,19 +27,26 @@ class TryoutController extends Controller {
         }elseif(isset($_POST['Perform'])){
             CController::forward('pengerjaanTryout/perform');
         }elseif(isset($_POST['Statistic'])){
-            CController::forward('statistic');
+            //CController::forward('statistic');
+            $this->redirect(array('statistic','id'=>$_POST['Statistic']['id']));
         }
         
         $this->render('index',array('model'=>$model));
     }    
     
-    public function actionStatistic(){        
-        $id = $_POST['Statistic']['id'];
+    public function actionStatistic($id){
         $criteria = new CDbCriteria;
-        $criteria->order = 'nilai DESC';        
-        $criteria->compare('idTryout',$id);        
-        $criteria->limit = 10;
-        $listPengguna = PengerjaanTryout::model()->findAll($criteria);
+        $criteria->order = 'nilai DESC';
+        $criteria->compare('idTryout',$id);
+        $criteria->compare('isSubmitted',1);
+
+        //pagination code
+        $count = PengerjaanTryout::model()->count($criteria);
+        $pages=new CPagination($count);
+        $pages->pageSize=10;
+        $pages->applyLimit($criteria);
+
+        $listPengerjaan = PengerjaanTryout::model()->findAll($criteria);
         
         $tryoutModel = Tryout::model()->findByPk($id);
         
@@ -47,8 +54,8 @@ class TryoutController extends Controller {
         $criteria->select = array("MAX(nilai) as max","MIN(nilai) as min","AVG(nilai) as avg");
         $criteria->compare('idTryout',$id);
         $tryoutStatistic =PengerjaanTryout::model()->find($criteria);
-        
-        $this->render('statistic',array('listPengguna'=>$listPengguna,'tryoutModel'=>$tryoutModel,'tryoutStatistic'=>$tryoutStatistic));
+
+        $this->render('statistic',array('listPengerjaan'=>$listPengerjaan,'tryoutModel'=>$tryoutModel,'tryoutStatistic'=>$tryoutStatistic, 'pages'=>$pages));
     }
     
     public function register($id){
