@@ -271,7 +271,7 @@ nav a, .navbar-header a {
 }
 
 li.active:hover, a:hover {
-  background-color: #fedc00 !important;
+  background-color: rgba(0,0,0,0) !important;
 }
 
 .carousel-inner .item img {
@@ -443,3 +443,5 @@ footer p, footer span {
   text-decoration: none;
   color: gray;
 }
+
+
