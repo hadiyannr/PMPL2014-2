@@ -1,0 +1,395 @@
+/* Design Pattern siapmasukui.com */
+
+/*  Color : bg stands for background color, ft stands for font color  */
+
+.bg-bright-yellow { background-color: #fedc00; }
+.ft-bright-yellow { color: #fedc00; }
+.bg-golden-yellow { background-color: #e1c433; }
+.ft-golden-yellow { color: #e1c433; }
+.bg-bright-red { background-color: #e01e25; }
+.ft-bright-red { color: #e01e25; }
+.bg-turqoise { background-color: #6fc5a4; }
+.ft-turqoise { color: #6fc5a4; }
+.bg-black { background-color: #000000; }
+.ft-black { color: #000000; }
+.bg-grey { background-color: #efefef; }
+.ft-grey { color: #efefef; }
+.bg-white { background-color: #ffffff; }
+.ft-white { color: #ffffff;}
+
+/* Layout */
+
+/* Typography : patterns */
+
+/* Webfont: LatoLatin-Regular */
+@font-face {
+    font-family: 'LatoLatin';
+    src: url('fonts/LatoLatin-Regular.eot'); /* IE9 Compat Modes */
+    src: url('fonts/LatoLatin-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/LatoLatin-Regular.woff') format('woff'), /* Modern Browsers */
+         url('fonts/LatoLatin-Regular.ttf') format('truetype'); 
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+/* Typography : implementation */
+
+.font-latolatin {font-family: LatoLatin;}
+.font-latolatinb {font-family: LatoLatin; font-weight: bold;}
+.font-latolatinl {font-family: LatoLatin; font-weight: lighter;}
+
+p {
+  font-family: LatoLatin;
+}
+
+nav > ul > li > a {
+  font-family: LatoLatin; font-weight: bold;
+  font-size: 125%;
+}
+
+.modal-title {
+  font-family: LatoLatin; font-weight: bold;
+}
+ 
+
+/* Form */
+
+input, .form-control {
+  border-radius: 0;
+  -webkit-border-radius: 0; 
+  -moz-border-radius: 0;
+}
+
+.form-group > label {
+  text-align: left;
+  float: left;
+}
+
+.form-group > label[type="checkbox"] {
+  margin-left: 0 !important;
+  background-color: red;
+}
+
+/* Button */
+.btn {
+  font-family: LatoLatin;
+  border-radius: 0;
+  -webkit-border-radius: 0; 
+  -moz-border-radius: 0;
+}
+
+.btn-primary {
+  color:white;
+  background-color: black;  
+}
+
+.btn-danger {
+  color:white;
+  background-color: #e01e25;  
+}
+
+/* Table */
+
+.table  th {
+   background-color: #000000;
+   color: white;
+ }
+
+tr:nth-child(even) {
+  background: #efefef;
+}
+
+.table tr:hover {
+  background-color: #FFED75;
+}
+
+/* Pagination */
+
+.pagination {
+  border-radius: 0;
+}
+.pagination > li > a,
+.pagination > li > span {
+  font-family: LatoLatin;
+  color: #e1c433;
+  margin-left: 4px;
+  border-color: black;
+}
+.pagination > li:first-child > a,
+.pagination > li:first-child > span {
+  border-color: black;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  background-color: black;
+  color: #fedc00 !important;
+}
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
+  border-color: black;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  background-color: black;
+  color: #fedc00 !important;
+}
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+  color: black !important;
+  background-color: #dddddd;
+  border-color: black;
+}
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  background-color: #fedc00;
+  border-color: black;
+}
+.pagination > .disabled > span,
+.pagination > .disabled > span:hover,
+.pagination > .disabled > span:focus,
+.pagination > .disabled > a,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > a:focus {
+  color: #fedc00 !important;
+  background-color: black;
+  border-color: black;
+}
+
+/* Notification */
+
+.success-notification {
+  background-color: #6fc5a4;
+}
+.error-notification {
+  background-color: #e01e25;
+}
+.notification-message {
+  color: #ffffff;
+  padding: 10px;
+  font-weight: bold;
+}
+
+/* Confirmation */
+
+.modal-dialog {
+  width: 300px;
+}
+.modal-content {
+  border-radius: 0;
+}
+.modal-header {
+  text-align: center;
+  border-bottom: 3px solid #fedc00;
+}
+.modal-title {
+  margin-left: 12px;
+  font-size: 24px;
+}
+.modal-body {
+  text-align: center;
+  padding: 10px;
+}
+.modal-footer {
+  text-align: center;
+  border-top: none;
+  padding: 10px;
+}
+.btn-modal-ok {
+  color: #ffffff;
+  border-radius: 0;
+  background-color: #6fc5a4;
+  border-color: #6fc5a4;
+  padding: 10px 52px;
+}
+.btn-modal-ok:hover {
+  color: #ffffff;
+  background-color: #56aa8a;
+}
+.btn-modal-cancel {
+  color: #ffffff;
+  border-radius: 0;
+  background-color: #e01e25;
+  border-color: #e01e25;
+  padding: 10px 40px;
+}
+.btn-modal-cancel:hover {
+  color: #ffffff;
+  background-color: #b4161c;
+}
+
+/* implementation */
+
+/* navigation */
+.header-nav {
+  background-color: #fedc00;
+  box-shadow: 0px 10px 25px grey;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* layout */
+
+/* layout implementation : home */
+header {
+}
+
+.logo {
+  height: 50px;
+  margin: 10px;
+}
+
+.icon {
+  height: 25px;
+  margin-right: 3px;
+}
+
+.nav-link {
+  float: left;
+}
+
+.navbar-default {
+  margin-top: 10px;
+}
+
+.navbar-nav {
+    margin-left: 10px;
+}
+
+nav a, .navbar-header a {
+  color: black !important;
+}
+
+.carousel-inner .item img {
+    display: block;
+    max-height: 698px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.breadcrumbs {
+  margin-top:50px;
+}
+
+.modal-content {
+  padding: 15px;
+}
+
+.carousel-inner .item img {
+  height: 300px;
+}
+
+.carousel-caption {
+  width: 100%;
+  height: 300px;
+  background-color:rgba(0,0,0,0.5);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.carousel-caption > h1 {
+  color: white;
+  text-align: left;
+  font-size: 400%;
+  margin-left: 10.417%;/* 200px; */
+  margin-right: 10.417%;/* 200px; */
+}
+
+.carousel-caption > p {
+  color: white;
+  text-align: left;
+  font-size: 150%;
+  margin-left: 10.417%;/* 200px; */
+  margin-right: 10.417%;/* 200px; */
+}
+
+.content-display-box {
+  max-width: 100%;
+  border-right: 1px solid black;
+  position: relative;
+}
+
+.content-display figure {
+  max-width: 100%;
+  margin:6.7% 0;
+  max-height: 450px;
+  overflow: hidden;
+  position: relative;
+  right: 15px;
+}
+
+.content-display figure img {
+  max-width: 100%;  
+}
+
+.content-display figure figcaption {
+  color: white;
+  background-color: rgba(0,0,0,0.5);
+  position: relative;
+  bottom: 50px;
+  height: 50px;
+  overflow: hidden;
+}
+
+.content-display figure figcaption span {
+  font-family: LatoLatin;
+  font-size: 100%;
+  margin-left: 3.7%;
+  display: inline-block;
+}
+
+.content-display p {
+  position: relative;
+  bottom: 40px;
+  text-align: justify;
+}
+
+.content-display a {
+  color: black;
+  float: right;
+  position: relative;
+  bottom: 40px;
+  font-size: 75%;
+}
+
+.remove-left-padding {
+  padding-left: 0;
+}
+
+.home-more p {
+  text-align: center;
+  margin-top: 80%;
+}
+
+.home-more a {
+  font-size: 200%;
+  margin-left: 6.36%; /*20px;*/
+}
+
+footer {
+  margin: 0;
+  padding:0;
+  color: white;
+  background-color: black;
+}
+
+footer .container-fluid {
+  padding-top:25px;
+  padding-bottom: 25px;
+}
+
+footer p, footer span {
+  color: #afafaf;
+  text-align: left;
+  text-align: justify;
+  line-height: 110%;
+}
+
+.footer-mid p {
+  text-align: center;
+}
