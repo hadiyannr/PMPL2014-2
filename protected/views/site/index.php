@@ -1,51 +1,112 @@
-<div class="container">
-	<div class="row clearfix">
-        <div class="col-md-2 text-left">
-            <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/makara/makara-ui-fk.png" style="height: 65px" rel="tooltip-left" title="Fakultas Kedokteran"><br>
-            <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/makara/makara-ui-fkg.png" style="height: 65px" rel="tooltip-left" title="Fakultas Kedokteran Gigi"><br>
-            <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/makara/makara-ui-fmipa.png" style="height: 65px" rel="tooltip-left" title="Fakultas Matematika dan Ilmu Pengetahuan Alam"><br>
-            <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/makara/makara-ui-ft.png" style="height: 65px" rel="tooltip-left" title="Fakultas Teknik"><br>
-            <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/makara/makara-ui-fh.png" style="height: 65px" rel="tooltip-left" title="Fakultas Hukum"><br>
-            <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/makara/makara-ui-fe.png" style="height: 65px" rel="tooltip-left" title="Fakultas Ekonomi"><br>
-            <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/makara/makara-ui-fib.png" style="height: 65px" rel="tooltip-left" title="Fakultas Ilmu Budaya"><br>
+<div class="carousel slide" id="carousel-748657" style="max-width: 100%">
+    <ol class="carousel-indicators">
+        <li class="active" data-slide-to="0" data-target="#carousel-748657">
+        </li>
+        <li data-slide-to="1" data-target="#carousel-748657">
+        </li>
+        <li data-slide-to="2" data-target="#carousel-748657">
+        </li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="item active" >
+            <img alt="" src="<?php echo Yii::app()->request->baseUrl; ?>/images/slider/Perpusat.jpg" style="width: 100%; height:1000px">
+            <div class="carousel-caption">
+                    <h1>UI Bebas Uang Mangkal WOAKWOAK</h1>
+                    <p>Khusus untuk Reguler melalui SIMAK, SBMPTN dan SNMPTN tahun 2014. Bebas Uang <br>Pangkal dan dapat mengajukan skema Biaya Operasional Pendidikan (BOP) berkeadilan </p>
+            </div>
         </div>
-
-		<div class="col-md-8">
-			<div class="carousel slide" id="carousel-748657" style="width: 100%">
-				<ol class="carousel-indicators">
-					<li class="active" data-slide-to="0" data-target="#carousel-748657">
-					</li>
-					<li data-slide-to="1" data-target="#carousel-748657">
-					</li>
-					<li data-slide-to="2" data-target="#carousel-748657">
-					</li>
-				</ol>
-			    <div class="carousel-inner">
-					<div class="item active" >
-						<img alt="" src="<?php echo Yii::app()->request->baseUrl; ?>/images/slider/01.jpg" style="width: 100%;">
-					</div>
-					<div class="item">
-						<img alt="" src="<?php echo Yii::app()->request->baseUrl; ?>/images/slider/02.jpg" style="width: 100%;">
-					</div>
-					<div class="item">
-						<img alt="" src="<?php echo Yii::app()->request->baseUrl; ?>/images/slider/03.jpg" style="width: 100%;">
-					</div>
-				</div>
-				<a class="left carousel-control" href="#carousel-748657" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> 
-				<a class="right carousel-control" href="#carousel-748657" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-			</div>
-
+        <div class="item">
+            <img alt="" src="<?php echo Yii::app()->request->baseUrl; ?>/images/slider/01.jpg" style="width: 100%; height:1000px">
+            <div class="carousel-caption">
+                    <h1>UI Bebas Uang Pangkal</h1>
+                    <p>Khusus untuk Reguler melalui SIMAK, SBMPTN dan SNMPTN tahun 2014. Bebas Uang <br>Pangkal dan dapat mengajukan skema Biaya Operasional Pendidikan (BOP) berkeadilan </p>
+            </div>
         </div>
-        <div class="col-md-2 text-right">
-            <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/makara/makara-ui-psikologi.png" style="height: 65px" rel="tooltip-right" title="Fakultas Psikologi"><br>
-            <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/makara/makara-ui-fisip.png" style="height: 65px" rel="tooltip-right" title="Fakultas Ilmu Sosial dan Ilmu Politik"><br>
-            <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/makara/makara-ui-fkm.png" style="height: 65px" rel="tooltip-right" title="Fakultas Kesehatan Masyarakat"><br>
-            <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/makara/makara-ui-fasilkom.png" style="height: 65px" rel="tooltip-right" title="Fakultas Ilmu Komputer"><br>
-            <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/makara/makara-ui-fik.png" style="height: 65px" rel="tooltip-right" title="Fakultas Ilmu Keperawatan"><br>
-            <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/makara/makara-ui-farmasi.png" style="height: 65px" rel="tooltip-right" title="Fakultas Farmasi"><br>
-            <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/makara/makara-ui-vokasi.png" style="height: 65px" rel="tooltip-right" title="Fakultas Vokasi"><br>
+        <div class="item">
+            <img alt="" src="<?php echo Yii::app()->request->baseUrl; ?>/images/slider/rektorat.jpg" style="width: 100%; height:1000px">
+            <div class="carousel-caption">
+                    <h1>UI Bebas Uang Pangkal</h1>
+                    <p>Khusus untuk Reguler melalui SIMAK, SBMPTN dan SNMPTN tahun 2014. Bebas Uang <br>Pangkal dan dapat mengajukan skema Biaya Operasional Pendidikan (BOP) berkeadilan </p>
+            </div>
         </div>
     </div>
+    <a class="left carousel-control" href="#carousel-748657" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> 
+    <a class="right carousel-control" href="#carousel-748657" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+<div class="container-fluid bg-bright-yellow remove-left-padding">
+    <div class="col-md-10 bg-white">
+        <div class="col-md-3">
+            <div class="content-display-box">
+                <div class="content-display">
+                    <figure class="content-display">
+                        <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/park-chan-hee.png" alt="">
+                        <figcaption>
+                            <span>Tips masuk UI oleh mahasiswi cantik bangat banget banget banget</span>
+                        </figcaption>
+                         <p>Lorem ipsum dolor sit amet, nobis quasi mollitia ex adipisci esse tenetur earum dolores reprehenderit laborum molestiae rem labore, iusto velit distinctio!</p>
+                         <a class="btn bg-bright-yellow" href="">MORE</a>
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="content-display-box">
+                <div class="content-display">
+                    <figure class="content-display">
+                        <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/park-chan-hee.png" alt="">
+                        <figcaption>
+                            <span>Tips masuk UI oleh mahasiswi cantik bangat banget banget banget</span>
+                        </figcaption>
+                         <p>Lorem ipsum dolor sit amet, nobis quasi mollitia ex adipisci esse tenetur earum dolores reprehenderit laborum molestiae rem labore, iusto velit distinctio!</p>
+                         <a class="btn bg-bright-yellow" href="">MORE</a>
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="content-display-box">
+                <div class="content-display">
+                    <figure class="content-display">
+                        <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/park-chan-hee.png" alt="">
+                        <figcaption>
+                            <span>Tips masuk UI oleh mahasiswi cantik bangat banget banget banget</span>
+                        </figcaption>
+                         <p>Lorem ipsum dolor sit amet, nobis quasi mollitia ex adipisci esse tenetur earum dolores reprehenderit laborum molestiae rem labore, iusto velit distinctio!</p>
+                         <a class="btn bg-bright-yellow" href="">MORE</a>
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="content-display-box">
+                <div class="content-display">
+                    <figure class="content-display">
+                        <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/park-chan-hee.png" alt="">
+                        <figcaption>
+                            <span>Tips masuk UI oleh mahasiswi cantik bangat banget banget banget</span>
+                        </figcaption>
+                         <p>Lorem ipsum dolor sit amet, nobis quasi mollitia ex adipisci esse tenetur earum dolores reprehenderit laborum molestiae rem labore, iusto velit distinctio!</p>
+                         <a class="btn bg-bright-yellow" href="">MORE</a>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2 home-more">
+        <p><a class="btn bg-black ft-bright-yellow" href="">MORE</a></p>
+    </div>
+</div>
+
+ 
+    <!--
+	<div class="row clearfix">
+
+        
+		<div class="col-md-8">
+			
+
+        </div>
+
     <div class="row clearfix">
         <div class="col-md-12" style="border: 1px solid #eee; margin-top: 25px;">
             <div id="main-slider-space">
@@ -79,7 +140,8 @@
             </div>
         </div>
     </div>
-
+    -->
+    
 </div>
 
 <script>

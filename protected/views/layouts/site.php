@@ -12,6 +12,7 @@
 
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/designPattern.css" />
         <!--font-->
         <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
         <style>body{font-family: 'Open Sans', sans-serif;}</style>
@@ -32,18 +33,14 @@
         <header>		
             <div class="header-nav">
                 <div class="container">
-                    
-                        
                         <div class="navbar-header">
-                            <?php echo CHtml::link("SiapMasukUI.com", array('/site/index'),array('class'=>'navbar-brand')); ?>
+                             <a href="<?php echo Yii::app()->request->baseUrl; ?>">
+                                <img class="logo" src="<?php echo Yii::app()->request->baseUrl; ?>/images/logo.png" alt="">
+                            </a>                      
                         </div>
                         <?php $controllerName = $this->getId();?>
                         <nav role="navigation" class="navbar-default">
                             <ul class="nav navbar-nav">                                
-                                <li class="<?php echo (in_array($controllerName, array("site")))?"active":""?>">
-                                    <?php echo CHtml::link("Home", array('/site/index'),array('style'=>"color: #ecf0f1")); ?>
-                                </li>                                        
-
                                 <li class="dropdown">
                                     <?php $coloring= (in_array($controllerName, array("konten")))?"background-color: #27ae60;":""?>
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="<?php echo $coloring;?>color: #ecf0f1">Konten <b class="caret"></b></a>
@@ -56,11 +53,17 @@
                                     </ul>
                                 </li>
                                 <li class="<?php echo (in_array($controllerName, array("tryout","pengerjaanTryout")))?"active":""?>">
-                                    <?php echo CHtml::link("Tryout", array('/tryout/tryout/index'),array('style'=>"color: #ecf0f1")); ?>
+                                    <a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/tryout/tryout/index">
+                                        <img class="icon" src="<?php echo Yii::app()->request->baseUrl; ?>/images/iconTO.png" alt="">
+                                        <span>Tryout</span>
+                                    </a>
                                 </li>
 
                                 <li class="<?php echo (in_array($controllerName, array("forum","Thread","User","Post")))?"active":""?>">
-                                    <?php echo CHtml::link("Forum", array('/forum'),array('style'=>"color: #ecf0f1")); ?>
+                                    <a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/forum">
+                                        <img class="icon" src="<?php echo Yii::app()->request->baseUrl; ?>/images/forum.png" alt="">
+                                        <span>Forum</span>
+                                    </a>
                                 </li>
 
                                 <?php if(Yii::app()->user->isAdmin()):?>
@@ -98,8 +101,10 @@
                         </nav>	                    
                 </div>
             </div>
-            <br/>
-            <div class="container">
+        </header>
+
+        <div class="content">
+             <div class="container">
                 <div class="pull-left">
                     <?php if(isset($this->breadcrumbs)):?>
                         <?php $this->widget('zii.widgets.CBreadcrumbs', array(
@@ -109,35 +114,32 @@
                 </div>
 <!--                --><?php //$this->widget('Search')?>
             </div>
-
-        </header>
-
-        <div class="content">
-            <div class="container">
-                <?php echo $content;?>
-            </div>
+            <?php if ($_SESSION['home'] == true): ?>
+                <?php echo $content ?>
+                <?php $_SESSION['home'] = false ?>
+            <?php else: ?>
+                <div class="container">
+                    <?php echo $content;?>
+                </div>
+            <?php endif ?>
         </div>
 
         <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 social">
-                        <a href="#"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/ico-facebook.png" alt="FB"><span>FACEBOOK</span></a>
-                        <a href="#"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/ico-twitter.png" alt="Twitter"><span>TWITTER</span></a>
-                    </div>
+            <div class="container-fluid">
+                <div class="col-md-3">
+                    <p><span class="ft-golden-yellow">SiapMasukUI.com</span> adalah website yang bertujuan mempersiapkan siswa SMA untuk lebih matang dalam menghadapi ujian saringan masuk UI. SiapMasukUi.com memberkan variasi soal TO beserta simulasi dan jawaban TO. Pengguna juga dapat melihat hasil statistik test mereka pada halaman profile pengguna.</p>
+                    <p>Fitur forum juga penting untu berdiskusi antar pengguna. Selain itu, terdapat portal berita yang disinkronisasikan dari humas.ui.ac.id.<br>Selamat bergabung!</p>
+                    <p><span class="ft-golden-yellow">WE ARE THE YELLOW JACKET!</span></p>
+                    
                 </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <a href="#about" data-toggle="modal">ABOUT US</a>&nbsp;&middot;
-                        <!--                    <a href="#">PRIVACY POLICY</a>&nbsp;&middot;&nbsp;-->
-                        <a href="#">CONTACT</a>
-                    </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-3 footer-mid">
+                    <p>&copy;</p>
+                    <p>siapmasukUI.com</p>
+                    <p>2014</p>
                 </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        Copyright &copy; <?php echo date('Y'); ?> by SiapMasukUI.com<br/>
-                    </div>
-                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-3"></div>
             </div>
         </footer>
         <div class="modal fade bs-example-modal-sm" id="about" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
@@ -150,7 +152,7 @@
                     <div class="modal-body">
                         <p>Arga Padan David</p>
                         <p>Fariz Ikhwantri</p>
-                        <p>Muhamad Adiyat</p>
+                        <p>Muhamad Adiyat halossss</p>
                         <p>Muhammad Hanif Naufal</p>
                     </div>
                 </div>

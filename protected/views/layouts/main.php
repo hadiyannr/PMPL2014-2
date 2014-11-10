@@ -28,7 +28,6 @@
 </head>
 
 <body>
-
     <header>
         <div class="header-nav">
             <div class="container">
@@ -126,7 +125,7 @@
                 <div class="modal-body">
                     <p>Arga Padan David</p>
                     <p>Fariz Ikhwantri</p>
-                    <p>Muhamad Adiyat</p>
+                    <p>Muhamad Adiyat halo</p>
                     <p>Muhammad Hanif Naufal</p>
                 </div>
             </div>

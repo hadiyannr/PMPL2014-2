@@ -14,13 +14,14 @@ class SiteController extends Controller
 	 */
 	public function actionIndex()
 	{                        
+                session_start();
+                $_SESSION['home'] = true;
                 $criteria = new CDbCriteria;
                 $criteria->order = "RAND()";
                 $criteria->limit = 5;
                 $criteria->compare('idcategory','3');
                 $criteria->compare('isPublished','1');
-                $model = Konten::model()->findAll($criteria);
-
+                $model = Konten::model()->findAll($criteria);   
 		$this->render('index',array('model'=>$model));
 	}
 

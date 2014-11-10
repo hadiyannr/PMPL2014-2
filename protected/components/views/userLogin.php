@@ -9,11 +9,11 @@
                 <form role="form" method="post">
                     <div class="form-group">
                         <label>Username</label>
-                        <input type="text" name="LoginForm[username]" class="form-control" placeholder="Username" required>
+                        <input type="text" name="LoginForm[username]" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label>Password</label>
-                        <input type="password" name="LoginForm[password]" class="form-control" placeholder="Password" required>
+                        <input type="password" name="LoginForm[password]" class="form-control"  required>
                     </div>					  			 					  
                     <div class="form-group">                        
                         <input type="checkbox" name="LoginForm[rememberMe]">

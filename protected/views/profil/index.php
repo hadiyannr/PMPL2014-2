@@ -27,7 +27,7 @@ echo '<br>';
         <p><i class="glyphicon glyphicon-briefcase" rel="asalSma" title="Asal Sma"></i> <?php echo $model->asalSma;?></p>
         <p><i class="glyphicon glyphicon-screenshot" rel="jurusan" title="Jurusan yang diinginkan"></i> <?php echo $model->targetJurusan;?></p>
         <?php echo CHtml::link('Ubah Profil',array('update'),array('class'=>'btn btn-primary'));?>
-        <?php echo CHtml::link('Riwayat Tryout',array('/tryout/pengerjaanTryout/history'),array('class'=>'btn btn-success'));?>
+        <?php echo CHtml::link('Riwayat Tryout',array('pengerjaanTryout/history'),array('class'=>'btn btn-success'));?>
 
         <?php echo CHtml::link('Ubah Password',array('ubahPassword'),array('class'=>'btn btn-primary'));?>
     </div>        
