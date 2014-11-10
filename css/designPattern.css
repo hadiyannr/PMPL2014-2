@@ -97,7 +97,7 @@ input, .form-control {
  }
 
 tr:nth-child(even) {
-  background: #efefef;
+  background: rgb(230,230,230);
 }
 
 .table tr:hover {
@@ -262,6 +262,15 @@ header {
 
 nav a, .navbar-header a {
   color: black !important;
+}
+
+.navbar-default .navbar-nav > .active > a {
+   background-color: #fedc00;
+  border-bottom: 5px solid black;
+}
+
+li.active:hover, a:hover {
+  background-color: #fedc00 !important;
 }
 
 .carousel-inner .item img {

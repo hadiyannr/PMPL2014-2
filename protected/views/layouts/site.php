@@ -126,20 +126,18 @@
 
         <footer>
             <div class="container-fluid">
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <p><span class="ft-golden-yellow">SiapMasukUI.com</span> adalah website yang bertujuan mempersiapkan siswa SMA untuk lebih matang dalam menghadapi ujian saringan masuk UI. SiapMasukUi.com memberkan variasi soal TO beserta simulasi dan jawaban TO. Pengguna juga dapat melihat hasil statistik test mereka pada halaman profile pengguna.</p>
                     <p>Fitur forum juga penting untu berdiskusi antar pengguna. Selain itu, terdapat portal berita yang disinkronisasikan dari humas.ui.ac.id.<br>Selamat bergabung!</p>
                     <p><span class="ft-golden-yellow">WE ARE THE YELLOW JACKET!</span></p>
                     
                 </div>
-                <div class="col-md-1"></div>
-                <div class="col-md-3 footer-mid">
+                <div class="col-md-4 footer-mid">
                     <p>&copy;</p>
                     <p>siapmasukUI.com</p>
                     <p>2014</p>
                 </div>
-                <div class="col-md-1"></div>
-                <div class="col-md-3"></div>
+                <div class="col-md-4"></div>
             </div>
         </footer>
         <div class="modal fade bs-example-modal-sm" id="about" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
