@@ -444,4 +444,12 @@ footer p, footer span {
   color: gray;
 }
 
+li.dropdown.open {
+  background-color: white;
+}
 
+ul.dropdown-menu {
+  background-color: red;
+  box-shadow: none !important;
+  border-radius: 0;
+}

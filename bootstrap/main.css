@@ -50,14 +50,21 @@
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus{
-    background-color: #2ecc71;
+    background-color: white;
 }
 .navbar-default .navbar-nav .open .dropdown-menu>li>a, .navbar-default .navbar-nav .open .dropdown-menu {
-    background-color: #2ecc71;
+    background-color: white;
+    box-shadow: none;
+    border-radius: 0;
+    border: 0;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>li {
+    border-bottom: 1px solid orange;
 }
 
 .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover{
-    background-color: #1abc9c;
+    background-color: white;
 }
 
 /**************carousel**************/
