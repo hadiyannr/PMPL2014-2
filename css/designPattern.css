@@ -108,6 +108,7 @@ tr:nth-child(even) {
 
 .pagination {
   border-radius: 0;
+  margin-right: 15px;
 }
 .pagination > li > a,
 .pagination > li > span {
@@ -272,7 +273,9 @@ nav a, .navbar-header a {
 }
 
 .breadcrumbs {
-  margin-top:50px;
+  margin-top: 50px;
+  margin-left: -15px;
+  padding-left: 17px !important;
 }
 
 .modal-content {
@@ -392,4 +395,14 @@ footer p, footer span {
 
 .footer-mid p {
   text-align: center;
+}
+
+/* layout implementation : konten */
+
+.judul-konten {
+  margin-left: -15px;
+  font-weight: bold;
+}
+.cari-berita {
+  margin-right: -15px;
 }
