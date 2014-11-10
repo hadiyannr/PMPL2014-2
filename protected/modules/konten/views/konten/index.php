@@ -5,29 +5,34 @@
 $this->breadcrumbs=array(
     $konten->kategori->nama => array('kategori','idcategory'=>$konten->idcategory),
     $konten->judul,
-);
-?>
+    );
+    ?>
 
-<br>
-<div class="col-md-10 column" style="border-right: 1px solid #eee; background-color: #bdc3c7;">
-    <div class="col-md-12 column" style="border-right: 1px solid #eee; background-color: #ecf0f1; margin:5px;">
-        <div class="text-center">
-            <h1><?php echo $konten->judul;?></h1>
-            <?php if(Yii::app()->user->isAdmin()){
-                echo '('.CHtml::link('edit',array('adminKonten/update','id'=>$konten->id)).")";
-            }?>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="isi-konten">
+                <h1 class="judul-isi-konten"><?php echo $konten->judul;?></h1>
+                <?php if(Yii::app()->user->isAdmin()){
+                    echo '('.CHtml::link('edit',array('adminKonten/update','id'=>$konten->id)).")";
+                }?>
+                <?php echo $konten->isi;?>
+            </div>
         </div>
-        <?php echo $konten->isi;?>
+        <div class="navigasi-konten">
+            <a class="link-navigasi-konten pull-left" href="#">Judul Sebelumnya</a>
+            <a class="link-navigasi-konten pull-right" href="#">Judul Selanjutnya</a>
+            <div class="clearfix"></div>
+        </div>
     </div>
-</div>
-<div class="pull-right">
-    Share:
-    <?php
+
+    <!-- <div class="pull-right">
+        Share:
+        <?php
 //    echo Yii::app()->params['site'].Yii::app()->request->url;
-    $this->widget('konten.extensions.social.SocialShareWidget', array(
+        $this->widget('konten.extensions.social.SocialShareWidget', array(
         'url' => Yii::app()->params['site'].'/'.Yii::app()->request->url,                  //required
         'services' => array('facebook'),       //optional
         'popup' => true,                               //optional
-    ));
-    ?>
-</div>
+        ));
+        ?>
+    </div> -->
