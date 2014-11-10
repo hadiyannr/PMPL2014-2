@@ -97,7 +97,7 @@
 
                             <?php $this->widget('UserRegister',array('visible'=>Yii::app()->user->isGuest)); ?>
                             <!-- end of modal -->
-                            <?php $this->widget('Search')?>
+    
                         </nav>	                    
                 </div>
             </div>
