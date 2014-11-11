@@ -42,8 +42,7 @@
                         <nav role="navigation" class="navbar-default">
                             <ul class="nav navbar-nav">                                
                                 <li class="dropdown">
-                                    <?php $coloring= (in_array($controllerName, array("konten")))?"background-color: #27ae60;":""?>
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="<?php echo $coloring;?>color: #ecf0f1">Konten <b class="caret"></b></a>
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #ecf0f1">Konten <b class="caret"></b></a>
                                     <ul class="dropdown-menu">
                                         <?php
                                         $kategoris = Kategori::model()->findAll();
