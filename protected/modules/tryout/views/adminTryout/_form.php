@@ -1,6 +1,6 @@
 <?php
-/* @var $this TryoutController */
-/* @var $model Tryout */
+/* @var $this AdminTryoutController */
+/* @var $tryoutModel Tryout */
 /* @var $form CActiveForm */
 ?>
 
@@ -20,17 +20,17 @@
         
         
         <div class="row">
-		<?php echo $form->labelEx($model,'nama'); ?>
-		<?php echo $form->textField($model,'nama'); ?>
-		<?php echo $form->error($model,'nama'); ?>
+		<?php echo $form->labelEx($tryoutModel,'nama'); ?>
+		<?php echo $form->textField($tryoutModel,'nama'); ?>
+		<?php echo $form->error($tryoutModel,'nama'); ?>
 	</div>
         
         <div class="row">
-		<?php echo $form->labelEx($model,'tanggal'); ?>
+		<?php echo $form->labelEx($tryoutModel,'tanggal'); ?>
 		<?php 
                     $this->widget('zii.widgets.jui.CJuiDatePicker', array(
-                        'name' => CHtml::activeName($model, 'tanggal'),
-                        'value' => $model->attributes['tanggal'],
+                        'name' => CHtml::activeName($tryoutModel, 'tanggal'),
+                        'value' => $tryoutModel->attributes['tanggal'],
                         'htmlOptions'=>array('readonly'=>'readonly'),
                         'options'=>array(
                                 'showAnim'=>'fold',
@@ -39,14 +39,14 @@
 
                      ));
                 ?>
-		<?php echo $form->error($model,'tanggal'); ?>
+		<?php echo $form->error($tryoutModel,'tanggal'); ?>
 	</div>
         
 	<div class="row">
-		<?php echo $form->labelEx($model,'waktuMulai'); ?>
+		<?php echo $form->labelEx($tryoutModel,'waktuMulai'); ?>
 		<?php 
                     $this->widget('tryout.extensions.timepicker.timepicker', array(
-                        'model'=>$model,
+                        'model'=>$tryoutModel,
                         'name'=>'waktuMulai',
                         'select'=> 'time',
                         'options' => array(
@@ -56,19 +56,19 @@
                         'id'=>'timepicker',
                     ));
         ?>
-		<?php echo $form->error($model,'waktuMulai'); ?>
+		<?php echo $form->error($tryoutModel,'waktuMulai'); ?>
 	</div>
     <script>$('#timepicker').prop('readonly', true);</script>
 	<div class="row">
-		<?php echo $form->labelEx($model,'durasi'); ?>
-		<?php echo $form->textField($model,'durasi'); ?>
-		<?php echo $form->error($model,'durasi'); ?>
+		<?php echo $form->labelEx($tryoutModel,'durasi'); ?>
+		<?php echo $form->textField($tryoutModel,'durasi'); ?>
+		<?php echo $form->error($tryoutModel,'durasi'); ?>
 	</div>
 
 	
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Buat' : 'Simpan'); ?>
+		<?php echo CHtml::submitButton($tryoutModel->isNewRecord ? 'Buat' : 'Simpan'); ?>
                 <?php echo CHtml::Button('Batal',array(
                           'submit'=>$this->createUrl('index'))); ?>                
 	</div>
