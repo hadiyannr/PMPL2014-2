@@ -48,13 +48,13 @@ class PengerjaanTryoutController extends Controller
             
             
             
-            $this->render('exam',array('soalList'=>$questionList, 'tryout'=>$tryoutModel,'jawaban'=>$answerList));
+            $this->render('exam',array('questionList'=>$questionList, 'tryoutModel'=>$tryoutModel,'answerList'=>$answerList));
         }
         
         public function actionPostExam($id){
             $answerSheetModel = PengerjaanTryout::model()->findByPk($id);
             $answerSheetDetail = $answerSheetModel->getDetail($answerSheetModel->idTryout);
-            $this->render('postExam',array('model'=>$answerSheetModel,'detail'=>$answerSheetDetail));
+            $this->render('postExam',array('answerSheetModel'=>$answerSheetModel,'answerSheetDetail'=>$answerSheetDetail));
         }
         
         public function actionHistory(){
@@ -65,8 +65,8 @@ class PengerjaanTryoutController extends Controller
             $criteria = new CDbCriteria();
             $criteria->join = 'JOIN pengerjaantryout p ON t.id = p.idTryout';
             $criteria->compare('idPengguna', Yii::app()->user->id);
-            $tryoutModel = Tryout::model()->findAll($criteria);
-            $this->render('historyList',array('model'=>$tryoutModel));
+            $tryoutModelList = Tryout::model()->findAll($criteria);
+            $this->render('historyList',array('tryoutModelList'=>$tryoutModelList));
         }
         
         public function actionResult($idTryout){
@@ -80,7 +80,7 @@ class PengerjaanTryoutController extends Controller
                 $answerList[$question->nomor] = $answerModel;
             }
             
-            $this->render('examResult',array('pengerjaan'=>$answerSheetModel,'detail'=>$answerSheetDetail,'soalList'=>$questionList,'jawaban'=>$answerList));
+            $this->render('examResult',array('answerSheetModel'=>$answerSheetModel,'answerSheetDetail'=>$answerSheetDetail,'questionList'=>$questionList,'answerList'=>$answerList));
         }
                 
 }

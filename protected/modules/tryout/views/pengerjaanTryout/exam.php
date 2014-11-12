@@ -1,45 +1,46 @@
 <?php
     /* @var $this PengerjaanTryoutController */
-    /* @var $tryout Tryout */
-    /* @var $soalList Soals */
-    /* @var $soal Soal */
+    /* @var $tryoutModel Tryout */
+    /* @var $questionList Soals */
+    /* @var $question Soal */
+    /* @var $answerList  */
 
 ?>
 
 <div>
-    <h1 class="text-center">Try Out <?php echo $tryout->nama;?></h1>
+    <h1 class="text-center">Try Out <?php echo $tryoutModel->nama;?></h1>
     <br><br>
     <div class="container-fluid">
         <form method="post" name="form" id="tryoutForm">
             
             
-        <?php foreach($soalList as $soal):?>        
-        <div class="well" id="no<?php echo $soal->nomor;?>">
+        <?php foreach($questionList as $question):?>
+        <div class="well" id="no<?php echo $question->nomor;?>">
             <p class="text-justify">
                 <?php
-                    if($soal->isHasJawaban){
-                        echo $soal->nomor,'. ',$soal->pertanyaan;
+                    if($question->isHasJawaban){
+                        echo $question->nomor,'. ',$question->pertanyaan;
                     }else{
-                        echo $soal->pertanyaan;
+                        echo $question->pertanyaan;
                     }
                 ?>
             </p>
         </div>
         <div class="col-md-offset-1">                        
-            <?php foreach($soal->opsis as $opsi):?>
-            <div class="radio" id="<?php echo $soal->nomor;?>">
+            <?php foreach($question->opsis as $option):?>
+            <div class="radio" id="<?php echo $question->nomor;?>">
                 <label>
                     <input type="radio"                            
                            class="radioButton"
-                           name="jawaban[<?php echo $soal->nomor;?>]"                                                       
-                           value="<?php echo $opsi->nomor;?>"
+                           name="jawaban[<?php echo $question->nomor;?>]"
+                           value="<?php echo $option->nomor;?>"
                            <?php
-                                if(isset($jawaban[$soal->nomor]->isiJawaban)){
-                                    echo ($jawaban[$soal->nomor]->isiJawaban == $opsi->nomor) ? "checked" : "";
+                                if(isset($answerList[$question->nomor]->isiJawaban)){
+                                    echo ($answerList[$question->nomor]->isiJawaban == $option->nomor) ? "checked" : "";
                                 }
                            ?>
                            >
-                    <?php echo $opsi->getOption($opsi->nomor);?>
+                    <?php echo $option->getOption($option->nomor);?>
                 </label>
             </div>                                    
             <?php endforeach;?>            			            
@@ -49,9 +50,9 @@
             <div class="text-center">
                 <input type="submit" name="Save" value="Simpan" class="btn btn-success">
                 <input type="submit" name="Submit" value="Kumpulkan" class="btn btn-success">
-                <input type="hidden" name="Perform[id]" value="<?php echo $tryout->id;?>">
+                <input type="hidden" name="Perform[id]" value="<?php echo $tryoutModel->id;?>">
             </div>
-            <?php $this->renderPartial('tryoutNavigation',array('soalCount'=> sizeof($soalList),'tryout'=>$tryout));?>
+            <?php $this->renderPartial('tryoutNavigation',array('questionCount'=> sizeof($questionList),'tryoutModel'=>$tryoutModel));?>
         </form>
         
         <!--Script uncheck radio button-->
