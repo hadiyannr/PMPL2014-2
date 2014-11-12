@@ -8,20 +8,20 @@ class TryoutController extends Controller {
     private $statisticPageSize = 10;
 
     public function actionIndex() {
-        $model = Tryout::model()->findAll();
-        $pastTO = array();
-        $myTO = array();
+        $tryoutModelList = Tryout::model()->findAll();
+        $pastTryout = array();
+        $myTryout = array();
         $futureTO = array();
-        foreach($model as $to){
-            if($to->status() < 0){
-                $futureTO[] = $to;
-            }else if($to->isRegistered(Yii::app()->user->id)){
-                $myTO[] = $to;
+        foreach($tryoutModelList as $tryout){
+            if($tryout->status() < 0){
+                $futureTO[] = $tryout;
+            }else if($tryout->isRegistered(Yii::app()->user->id)){
+                $myTryout[] = $tryout;
             }else{
-                $pastTO[] = $to;
+                $pastTryout[] = $tryout;
             }
         }
-        $model = array($myTO,$pastTO,$futureTO);        
+        $tryoutModelList = array($myTryout,$pastTryout,$futureTO);
         
         
         if(isset($_POST['Register'])){
@@ -32,7 +32,7 @@ class TryoutController extends Controller {
             $this->redirect(array('statistic','id'=>$_POST['Statistic']['id']));
         }
         
-        $this->render('index',array('model'=>$model));
+        $this->render('index',array('model'=>$tryoutModelList));
     }    
     
     public function actionStatistic($id){
@@ -47,7 +47,7 @@ class TryoutController extends Controller {
         $pages->pageSize=$this->statisticPageSize;
         $pages->applyLimit($criteria);
 
-        $listPengerjaan = PengerjaanTryout::model()->findAll($criteria);
+        $answerSheetList = PengerjaanTryout::model()->findAll($criteria);
         
         $tryoutModel = Tryout::model()->findByPk($id);
         
@@ -56,17 +56,17 @@ class TryoutController extends Controller {
         $criteria->compare('idTryout',$id);
         $tryoutStatistic =PengerjaanTryout::model()->find($criteria);
 
-        $this->render('statistic',array('listPengerjaan'=>$listPengerjaan,'tryoutModel'=>$tryoutModel,'tryoutStatistic'=>$tryoutStatistic, 'pages'=>$pages));
+        $this->render('statistic',array('listPengerjaan'=>$answerSheetList,'tryoutModel'=>$tryoutModel,'tryoutStatistic'=>$tryoutStatistic, 'pages'=>$pages));
     }
     
     public function register($id){
         if(Yii::app()->user->isGuest){
             Yii::app()->user->setFlash('message',"Login untuk mendaftar");    
         }else{
-            $model = new PengerjaanTryout;
-            $model->idTryout = $id;
-            $model->idPengguna = Yii::app()->user->id;
-            $model->save();
+            $answerSheetModel = new PengerjaanTryout;
+            $answerSheetModel->idTryout = $id;
+            $answerSheetModel->idPengguna = Yii::app()->user->id;
+            $answerSheetModel->save();
             Yii::app()->user->setFlash('message',"anda telah berhasil mendaftar tryout");
             $this->refresh();
         }
