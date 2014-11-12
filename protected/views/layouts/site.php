@@ -99,7 +99,7 @@
             </div>
         </header>
 
-        <div class="content">
+        <div class="content-home">
              <div class="container">
                 <div class="pull-left">
                     <?php if(isset($this->breadcrumbs)):?>

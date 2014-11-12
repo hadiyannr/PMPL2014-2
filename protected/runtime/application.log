@@ -7114,3 +7114,6 @@ Stack trace:
 REQUEST_URI=/siapmasukui/index.php/pengerjaanTryout/history
 HTTP_REFERER=http://localhost:7777/siapmasukui/index.php/profil/index
 ---
+2014/11/12 21:12:39 [warning] [application] Failed to set unsafe attribute "image" of "Profil".
+in C:\xampp\htdocs\siapmasukui\protected\controllers\ProfilController.php (28)
+in C:\xampp\htdocs\siapmasukui\index.php (13)

@@ -435,7 +435,43 @@ footer .col1-maps, footer .col2-maps {
 
 /* end of implementation : home */
 
+input[type="submit"] {
+  border-radius: 0;
+  background-color: black;
+  color: white;
+  border: 0;
+  padding: 1%;
+}
 
+.list-view div.preheader, .list-view div.post div.header {
+  background: none !important;
+  background-color: black !important;
+}
+
+.post .header {
+  color: white;
+}
+
+.post a{
+  color: white;
+  text-decoration: underline;
+}
+
+.post .header .content {
+    min-height: 100px !important;
+    padding-top:30px !important;
+    padding-bottom: 30px !important; 
+}
+
+.profile-view h3 {
+  margin-top: 0;
+  text-indent: 10px;
+  border-left: 5px solid #6fc5a4;
+}
+
+#ytProfil_jenisKelamin {
+  position: absolute;
+}
 
 /* layout implementation : konten */
 

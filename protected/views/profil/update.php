@@ -26,12 +26,15 @@ echo '<br>';
         <?php echo $form->error($model, 'nama'); ?>
     </div>
     <div class="form-group">
-        <label><?php echo $form->labelEx($model, 'jenisKelamin'); ?></label><br>        
-        <?php
-            $accountStatus = array(1 => 'Laki - Laki', 0 => 'Perempuan');
-            echo $form->radioButtonList($model, 'jenisKelamin', $accountStatus, array('separator' => '<br>'));
-            echo $form->error($model, 'jenisKelamin');
-        ?>        
+        <label><?php echo $form->labelEx($model, 'jenisKelamin'); ?></label><br>
+        <p>
+            <?php
+                $accountStatus = array(1 => 'Laki - Laki', 0 => 'Perempuan');
+                echo $form->radioButtonList($model, 'jenisKelamin', $accountStatus, array('separator' => '&nbsp'));
+                echo $form->error($model, 'jenisKelamin');
+            ?> 
+        </p>  
+               
     </div>
 
     <div class="form-group">       
