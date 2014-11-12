@@ -14,8 +14,8 @@ class KontenController extends Controller
         if(!Yii::app()->user->isAdmin()){
             $criteria->compare('isPublished',1);
         }
-        $model = Konten::model()->find($criteria);
-        $this->render('index',array('konten'=>$model));
+        $contentModel = Konten::model()->find($criteria);
+        $this->render('index',array('konten'=>$contentModel));
     }
 
 	        
@@ -29,9 +29,9 @@ class KontenController extends Controller
         $pages->pageSize=$this->pageSize;
         $pages->applyLimit($criteria);
 
-        $kategori = Kategori::model()->findByPk($idcategory);
-        $model = Konten::model()->findAll($criteria);
-        $this->render('kontenList',array('model'=>$model,'pages' => $pages,'title'=>$kategori->nama));
+        $categoryModel = Kategori::model()->findByPk($idcategory);
+        $contentModelList = Konten::model()->findAll($criteria);
+        $this->render('kontenList',array('model'=>$contentModelList,'pages' => $pages,'title'=>$categoryModel->nama));
     }
         
     public function actionSearch($keyword){

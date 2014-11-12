@@ -52,21 +52,21 @@ class AdminKontenController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Konten;
+		$contentModel=new Konten;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
 		if(isset($_POST['Konten']))
 		{
-			$model->attributes=$_POST['Konten'];
-                        $model->idAdmin = Yii::app()->user->id;
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+			$contentModel->attributes=$_POST['Konten'];
+                        $contentModel->idAdmin = Yii::app()->user->id;
+			if($contentModel->save())
+				$this->redirect(array('view','id'=>$contentModel->id));
 		}
 
 		$this->render('create',array(
-			'model'=>$model,
+			'model'=>$contentModel,
 		));
 	}
 
@@ -77,21 +77,21 @@ class AdminKontenController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
-		$model=$this->loadModel($id);
+		$contentModel=$this->loadModel($id);
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
 		if(isset($_POST['Konten']))
 		{
-			$model->attributes=$_POST['Konten'];
-                        $model->idAdmin = Yii::app()->user->id;
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+			$contentModel->attributes=$_POST['Konten'];
+                        $contentModel->idAdmin = Yii::app()->user->id;
+			if($contentModel->save())
+				$this->redirect(array('view','id'=>$contentModel->id));
 		}
 
 		$this->render('update',array(
-			'model'=>$model,
+			'model'=>$contentModel,
 		));
 	}
 
@@ -114,13 +114,13 @@ class AdminKontenController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$model=new Konten('search');
-		$model->unsetAttributes();  // clear any default values
+		$contentModel=new Konten('search');
+		$contentModel->unsetAttributes();  // clear any default values
 		if(isset($_GET['Konten']))
-			$model->attributes=$_GET['Konten'];
+			$contentModel->attributes=$_GET['Konten'];
 
 		$this->render('admin',array(
-			'model'=>$model,
+			'model'=>$contentModel,
 		));
 	}
 
@@ -133,10 +133,10 @@ class AdminKontenController extends Controller
 	 */
 	public function loadModel($id)
 	{
-		$model=Konten::model()->findByPk($id);
-		if($model===null)
+		$contentModel=Konten::model()->findByPk($id);
+		if($contentModel===null)
 			throw new CHttpException(404,'The requested page does not exist.');
-		return $model;
+		return $contentModel;
 	}
 
 	/**
