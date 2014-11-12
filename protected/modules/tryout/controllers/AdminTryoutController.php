@@ -54,21 +54,21 @@ class AdminTryoutController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Tryout;
+		$tryoutModel=new Tryout;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
 		if(isset($_POST['Tryout']))
 		{
-			$model->attributes=$_POST['Tryout'];
-                        $model->idAdmin = Yii::app()->user->id;
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+			$tryoutModel->attributes=$_POST['Tryout'];
+                        $tryoutModel->idAdmin = Yii::app()->user->id;
+			if($tryoutModel->save())
+				$this->redirect(array('view','id'=>$tryoutModel->id));
 		}
 
 		$this->render('create',array(
-			'model'=>$model,
+			'model'=>$tryoutModel,
 		));
 	}
 
@@ -79,21 +79,21 @@ class AdminTryoutController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
-		$model=$this->loadModel($id);
+		$tryoutModel=$this->loadModel($id);
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
 		if(isset($_POST['Tryout']))
 		{
-			$model->attributes=$_POST['Tryout'];
-                        $model->idAdmin = Yii::app()->user->id;
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+			$tryoutModel->attributes=$_POST['Tryout'];
+                        $tryoutModel->idAdmin = Yii::app()->user->id;
+			if($tryoutModel->save())
+				$this->redirect(array('view','id'=>$tryoutModel->id));
 		}
 
 		$this->render('update',array(
-			'model'=>$model,
+			'model'=>$tryoutModel,
 		));
 	}
 
@@ -117,13 +117,13 @@ class AdminTryoutController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$model=new Tryout('search');
-		$model->unsetAttributes();  // clear any default values
+		$tryoutModel=new Tryout('search');
+		$tryoutModel->unsetAttributes();  // clear any default values
 		if(isset($_GET['Tryout']))
-			$model->attributes=$_GET['Tryout'];
+			$tryoutModel->attributes=$_GET['Tryout'];
 
 		$this->render('admin',array(
-			'model'=>$model,
+			'model'=>$tryoutModel,
 		));
 	}
 
@@ -136,10 +136,10 @@ class AdminTryoutController extends Controller
 	 */
 	public function loadModel($id)
 	{
-		$model=Tryout::model()->findByPk($id);
-		if($model===null)
+		$tryoutModel=Tryout::model()->findByPk($id);
+		if($tryoutModel===null)
 			throw new CHttpException(404,'The requested page does not exist.');
-		return $model;
+		return $tryoutModel;
 	}
 
 	/**
