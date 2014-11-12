@@ -1,6 +1,6 @@
 <?php
 /* @var $this KontenController */
-/* @var $model Konten */
+/* @var $contentModel Konten */
 
 $this->breadcrumbs=array(
 	'Konten'=>array('index'),
@@ -14,4 +14,4 @@ $this->menu=array(
 
 <h1>Buat Konten</h1>
 
-<?php $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php $this->renderPartial('_form', array('contentModel'=>$contentModel)); ?>

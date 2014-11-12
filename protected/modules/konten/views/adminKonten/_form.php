@@ -1,6 +1,6 @@
 <?php
 /* @var $this AdminKontenController */
-/* @var $model Konten */
+/* @var $contentModel Konten */
 /* @var $form CActiveForm */
 ?>
 
@@ -17,42 +17,42 @@
 
 	<p class="note">Isian bertanda <span class="required">*</span> wajib diisi.</p>
 
-	<?php echo $form->errorSummary($model); ?>
+	<?php echo $form->errorSummary($contentModel); ?>
     <div class="row">
-        <?php echo $form->labelEx($model,'judul'); ?>
-        <?php echo $form->textField($model,'judul',array('size'=>60,'maxlength'=>99)); ?>
-        <?php echo $form->error($model,'judul'); ?>
+        <?php echo $form->labelEx($contentModel,'judul'); ?>
+        <?php echo $form->textField($contentModel,'judul',array('size'=>60,'maxlength'=>99)); ?>
+        <?php echo $form->error($contentModel,'judul'); ?>
     </div>
 	<div class="row">
-		<?php echo $form->labelEx($model,'idcategory'); ?>
-		<?php echo $form->dropDownList($model,'idcategory',  Kategori::model()->getOptionList()); ?>
-		<?php echo $form->error($model,'idcategory'); ?>
+		<?php echo $form->labelEx($contentModel,'idcategory'); ?>
+		<?php echo $form->dropDownList($contentModel,'idcategory',  Kategori::model()->getOptionList()); ?>
+		<?php echo $form->error($contentModel,'idcategory'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'isi'); ?>		
+		<?php echo $form->labelEx($contentModel,'isi'); ?>
                 <?php 
                     $this->widget('konten.extensions.tinymce.ETinyMce',
                             array(
-                                'model'=>$model,                                
+                                'model'=>$contentModel,
                                 'attribute'=>'isi',
                                 'editorTemplate'=>'full',
                                 'htmlOptions'=>array('rows'=>6,'cols'=>50,'class'=>'tinymce'),
                             ));
                 ?>
-		<?php echo $form->error($model,'isi'); ?>
+		<?php echo $form->error($contentModel,'isi'); ?>
 	</div>
 
 
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'isPublished'); ?>
-		<?php echo $form->checkbox($model, 'isPublished'); ?>
-		<?php echo $form->error($model,'isPublished'); ?>
+		<?php echo $form->labelEx($contentModel,'isPublished'); ?>
+		<?php echo $form->checkbox($contentModel, 'isPublished'); ?>
+		<?php echo $form->error($contentModel,'isPublished'); ?>
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Buat' : 'Simpan'); ?>
+		<?php echo CHtml::submitButton($contentModel->isNewRecord ? 'Buat' : 'Simpan'); ?>
                 <?php echo CHtml::Button('Batal',array(
                           'submit'=>$this->createUrl('index'))); ?>                
 	</div>        

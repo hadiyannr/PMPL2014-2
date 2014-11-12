@@ -66,7 +66,7 @@ class AdminKontenController extends Controller
 		}
 
 		$this->render('create',array(
-			'model'=>$contentModel,
+			'contentModel'=>$contentModel,
 		));
 	}
 
@@ -91,7 +91,7 @@ class AdminKontenController extends Controller
 		}
 
 		$this->render('update',array(
-			'model'=>$contentModel,
+			'contentModel'=>$contentModel,
 		));
 	}
 
@@ -120,7 +120,7 @@ class AdminKontenController extends Controller
 			$contentModel->attributes=$_GET['Konten'];
 
 		$this->render('admin',array(
-			'model'=>$contentModel,
+			'contentModel'=>$contentModel,
 		));
 	}
 

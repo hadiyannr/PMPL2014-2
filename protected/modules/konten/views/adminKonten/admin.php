@@ -1,6 +1,6 @@
 <?php
 /* @var $this KontenController */
-/* @var $model Konten */
+/* @var $contentModel Konten */
 
 $this->breadcrumbs=array(
 	'Konten',	
@@ -33,7 +33,7 @@ $this->menu=array(
                 array(
                         'name' => 'idAdmin0.username',
                         'header' =>'Last edited By',
-                        'value' => $model->idAdmin0['username'],
+                        'value' => $contentModel->idAdmin0['username'],
                 ),
 		array(
 			'class'=>'CButtonColumn',
