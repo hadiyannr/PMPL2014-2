@@ -15,11 +15,8 @@
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/designPattern.css" />
         <!--font-->
         <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-        <style>body{font-family: 'Open Sans', sans-serif;}</style>
 
-        <script src="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/jquery-1.11.0.min.js"></script>
-        <script src="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/bootstrap.min.js"></script>
-        <script src="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/main.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     </head>
     <body>	
         <?php if(Yii::app()->user->hasFlash('message')):?>
@@ -125,35 +122,78 @@
 
         <footer>
             <div class="container-fluid">
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <p><span class="ft-golden-yellow">SiapMasukUI.com</span> adalah website yang bertujuan mempersiapkan siswa SMA untuk lebih matang dalam menghadapi ujian saringan masuk UI. SiapMasukUi.com memberkan variasi soal TO beserta simulasi dan jawaban TO. Pengguna juga dapat melihat hasil statistik test mereka pada halaman profile pengguna.</p>
                     <p>Fitur forum juga penting untu berdiskusi antar pengguna. Selain itu, terdapat portal berita yang disinkronisasikan dari humas.ui.ac.id.<br>Selamat bergabung!</p>
                     <p><span class="ft-golden-yellow">WE ARE THE YELLOW JACKET!</span></p>
                     
                 </div>
-                <div class="col-md-4 footer-mid">
+                <div class="col-md-2 footer-mid">
                     <p>&copy;</p>
                     <p>siapmasukUI.com</p>
                     <p>2014</p>
                 </div>
-                <div class="col-md-4"></div>
-            </div>
-        </footer>
-        <div class="modal fade bs-example-modal-sm" id="about" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-sm">
-                <div class="modal-content">
-                    <div class="modal-header text-center">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title" id="myModalLabel">About Us</h4>
-                    </div>
-                    <div class="modal-body">
-                        <p>Arga Padan David</p>
-                        <p>Fariz Ikhwantri</p>
-                        <p>Muhamad Adiyat halossss</p>
-                        <p>Muhammad Hanif Naufal</p>
+                <div class="col-md-7">
+                    <div class="col-maps">
+                        <div class="col1-maps">
+                            <h5>Jelajahi kampus impian kamu disini!</h5>
+                            <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/iconGPS.png" alt="">
+                        </div>
+                        <div class="col2-maps">
+                            <div id="map" style="width: 100%; height:100%"></div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </footer>
+        
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/gmaps.js"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/jquery-1.11.0.min.js"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/bootstrap.min.js"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/main.js"></script>
+        <script>
+                var Site = {
+                init: function(){
+                    $('html').removeClass('no-js');
+                    if($('#zoom').length)
+                        Site.zoom();
+
+                    if($('#map').length)
+                        Site.map();
+                },
+
+                zoom: function() {
+                    $('#zoom').elevateZoom({
+                        zoomWindowWidth: 300,
+                        zoomWindowHeight: 300,
+                        easing:true
+                    });
+                },
+
+                map: function() {
+                    var mark = new GMaps({
+                        div:"#map",
+                        lat: -6.368074,
+                        lng: 106.829559
+
+                    })
+                    mark.addMarker({
+                        lat: -6.368074,
+                        lng: 106.829559,
+                        title: 'Universitas Indonesia',
+                        click: function(e) {
+                        alert('You clicked in this marker');
+                        }
+                    });
+                },  
+            };
+
+            $(function (){
+                Site.init();
+            });
+
+        </script>
     </body>
 </html>

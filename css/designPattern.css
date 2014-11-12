@@ -404,7 +404,38 @@ footer p, footer span {
 
 .footer-mid p {
   text-align: center;
+} 
+
+footer .col-md-7 {
+  background-color: #fedc00;
 }
+footer .col-maps {
+  height: 150px;
+}
+
+footer .col1-maps h5 {
+  color: black;
+}
+
+footer .col1-maps img {
+  height: 100px;
+}
+
+footer .col1-maps, footer .col2-maps {
+    float: left;
+    margin: 10px 10px;
+}
+
+.col-maps {
+}
+.col2-maps {
+  width: 460px;
+  height: 100%;
+}
+
+/* end of implementation : home */
+
+
 
 /* layout implementation : konten */
 
