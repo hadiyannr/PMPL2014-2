@@ -1,21 +1,21 @@
 <?php
 /* @var $this KontenController */
-/* @var $konten Konten */
+/* @var $contentModel Konten */
 
 $this->breadcrumbs=array(
-    $konten->kategori->nama => array('kategori','idcategory'=>$konten->idcategory),
-    $konten->judul,
+    $contentModel->kategori->nama => array('kategori','idcategory'=>$contentModel->idcategory),
+    $contentModel->judul,
     );
     ?>
 
     <div class="row">
         <div class="col-md-12">
             <div class="isi-konten">
-                <h1 class="judul-isi-konten"><?php echo $konten->judul;?></h1>
+                <h1 class="judul-isi-konten"><?php echo $contentModel->judul;?></h1>
                 <?php if(Yii::app()->user->isAdmin()){
-                    echo '('.CHtml::link('edit',array('adminKonten/update','id'=>$konten->id)).")";
+                    echo '('.CHtml::link('edit',array('adminKonten/update','id'=>$contentModel->id)).")";
                 }?>
-                <?php echo $konten->isi;?>
+                <?php echo $contentModel->isi;?>
             </div>
         </div>
         <div class="navigasi-konten">

@@ -1,6 +1,6 @@
 <?php
 /* @var $this KontenController */
-/* @var $model Kontens */
+/* @var $contentModelList Kontens */
 /* @var $title String */
 $this->breadcrumbs=array(
 	'Daftar Konten',
@@ -14,7 +14,7 @@ $this->breadcrumbs=array(
                     <div><?php if(isset($title)){echo '<h2>'.$title.'</h2>';}?></div>
                     <br/><br/>
                     <?php if(isset($searchMessage)){echo '<h4>'.$searchMessage.'</h4>';}?>
-					<?php foreach ($model as $konten):?>
+					<?php foreach ($contentModelList as $konten):?>
 						<?php if($counter%3==0):?>
 							<div class="row">
 						<?php endif;?>
@@ -31,7 +31,7 @@ $this->breadcrumbs=array(
                                 </p>
                             </div>
                         </div>
-						<?php if($counter%3==2 || $counter == sizeof($model)-1):?>
+						<?php if($counter%3==2 || $counter == sizeof($contentModelList)-1):?>
 							</div>
 						<?php endif;?>
 							

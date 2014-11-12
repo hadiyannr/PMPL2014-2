@@ -15,7 +15,7 @@ class KontenController extends Controller
             $criteria->compare('isPublished',1);
         }
         $contentModel = Konten::model()->find($criteria);
-        $this->render('index',array('konten'=>$contentModel));
+        $this->render('index',array('contentModel'=>$contentModel));
     }
 
 	        
@@ -31,7 +31,7 @@ class KontenController extends Controller
 
         $categoryModel = Kategori::model()->findByPk($idcategory);
         $contentModelList = Konten::model()->findAll($criteria);
-        $this->render('kontenList',array('model'=>$contentModelList,'pages' => $pages,'title'=>$categoryModel->nama));
+        $this->render('contentList',array('contentModelList'=>$contentModelList,'pages' => $pages,'title'=>$categoryModel->nama));
     }
         
     public function actionSearch($keyword){
@@ -45,11 +45,11 @@ class KontenController extends Controller
         $pages=new CPagination($count);
         $pages->pageSize=$this->pageSize;
         $pages->applyLimit($criteria);
-        $model = Konten::model()->findAll($criteria);
+        $contentModelList = Konten::model()->findAll($criteria);
         $searchMessage = "";
-        if(!sizeof($model)){
+        if(!sizeof($contentModelList)){
             $searchMessage = 'Tidak ada konten dengan isi ataupun judul yang mengandung kata "'.$keyword.'"';
         }
-        $this->render('kontenList',array('model'=>$model,'searchMessage'=>$searchMessage,'pages' => $pages,'title'=>'Hasil Pencarian'));
+        $this->render('contentList',array('contentModelList'=>$contentModelList,'searchMessage'=>$searchMessage,'pages' => $pages,'title'=>'Hasil Pencarian'));
     }
 }
