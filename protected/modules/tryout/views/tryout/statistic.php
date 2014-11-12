@@ -1,6 +1,8 @@
 <?php
 /* @var $this TryoutController */
-/* @var $pto Pengerjaantryout */
+/* @var $answerSheet Pengerjaantryout */
+/* @var $answerSheetList Pengerjaantryouts */
+
 ?>
 <div class="container-fluid">
     <div class="row">
@@ -14,11 +16,11 @@
                     <th>Nilai</th>
                 </tr>
                 <?php $no = 1; ?>
-                <?php foreach ($listPengerjaan as $pto): ?>
+                <?php foreach ($answerSheetList as $answerSheet): ?>
                 <tr>                    
                     <td><?php echo $no++; ?></td>
-                    <td><?php echo $pto->idPengguna0->username; ?></td>
-                    <td><?php echo $pto->nilai; ?></td>                    
+                    <td><?php echo $answerSheet->idPengguna0->username; ?></td>
+                    <td><?php echo $answerSheet->nilai; ?></td>
                 </tr>                
                 <?php endforeach;?>
             </table>

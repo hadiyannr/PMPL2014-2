@@ -32,7 +32,7 @@ class TryoutController extends Controller {
             $this->redirect(array('statistic','id'=>$_POST['Statistic']['id']));
         }
         
-        $this->render('index',array('model'=>$tryoutModelList));
+        $this->render('index',array('tryoutModelList'=>$tryoutModelList));
     }    
     
     public function actionStatistic($id){
@@ -56,7 +56,7 @@ class TryoutController extends Controller {
         $criteria->compare('idTryout',$id);
         $tryoutStatistic =PengerjaanTryout::model()->find($criteria);
 
-        $this->render('statistic',array('listPengerjaan'=>$answerSheetList,'tryoutModel'=>$tryoutModel,'tryoutStatistic'=>$tryoutStatistic, 'pages'=>$pages));
+        $this->render('statistic',array('answerSheetList'=>$answerSheetList,'tryoutModel'=>$tryoutModel,'tryoutStatistic'=>$tryoutStatistic, 'pages'=>$pages));
     }
     
     public function register($id){
