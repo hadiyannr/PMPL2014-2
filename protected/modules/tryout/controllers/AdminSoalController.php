@@ -40,11 +40,11 @@ class AdminSoalController extends Controller {
      * @param integer $id the ID of the model to be displayed
      */
     public function actionView($id) {
-        $model = $this->loadModel($id);
-        $htmlopsi = $model->getHtmlAdminOpsi();
+        $questionModel = $this->loadModel($id);
+        $htmlOption = $questionModel->getHtmlAdminOpsi();
         $this->render('view', array(
-            'model' => $model,
-            'opsi' => $htmlopsi,
+            'model' => $questionModel,
+            'opsi' => $htmlOption,
         ));
     }
 
@@ -53,26 +53,26 @@ class AdminSoalController extends Controller {
      * If creation is successful, the browser will be redirected to the 'view' page.
      */
     public function actionCreate($idtryout) {
-        $model = new Soal;
-        $model->setAttribute('idtryout', $idtryout);
-        $modelOpsi = array(new Opsi, new Opsi, new Opsi, new Opsi, new Opsi);
+        $questionModel = new Soal;
+        $questionModel->setAttribute('idtryout', $idtryout);
+        $modelOption = array(new Opsi, new Opsi, new Opsi, new Opsi, new Opsi);
 
         if (isset($_POST['Soal'])) {
-            $model->attributes = $_POST['Soal'];
+            $questionModel->attributes = $_POST['Soal'];
             $transaction = Yii::app()->db->beginTransaction();
             try {
-                if ($model->validate() && $model->save()){
+                if ($questionModel->validate() && $questionModel->save()){
                     for ($i = 0; $i < 5; $i++) {
-                        $modelOpsi[$i]->attributes = $_POST['Opsi'][$i];
-                        $modelOpsi[$i]->idsoal = $model->id;
+                        $modelOption[$i]->attributes = $_POST['Opsi'][$i];
+                        $modelOption[$i]->idsoal = $questionModel->id;
 
                         if($_POST['Opsi']['jawaban'] == $i){
-                            $modelOpsi[$i]->isJawaban = 1;
+                            $modelOption[$i]->isJawaban = 1;
                         }else{
-                            $modelOpsi[$i]->isJawaban = 0;
+                            $modelOption[$i]->isJawaban = 0;
                         }
 
-                        if(!($modelOpsi[$i]->validate() && $modelOpsi[$i]->save())){
+                        if(!($modelOption[$i]->validate() && $modelOption[$i]->save())){
                             throw new Exception("Opsi rollback");
                         }
                     }
@@ -80,42 +80,42 @@ class AdminSoalController extends Controller {
                     throw new Exception("Soal rollback");
                 }
                 $transaction->commit();
-                $this->redirect(array('view', 'id' => $model->id));
+                $this->redirect(array('view', 'id' => $questionModel->id));
             } catch (Exception $e) {
                 $transaction->rollBack();
             }
         }
 
         $this->render('create', array(
-            'model' => $model,
-            'modelOpsi'=>$modelOpsi,
+            'model' => $questionModel,
+            'modelOpsi'=>$modelOption,
         ));
     }
 
     public function actionCreateStory($idtryout){
-        $model = new Soal;
-        $model->setAttribute('idtryout', $idtryout);
-        $model->setAttribute('isHasJawaban', 0);
+        $questionModel = new Soal;
+        $questionModel->setAttribute('idtryout', $idtryout);
+        $questionModel->setAttribute('isHasJawaban', 0);
         if(isset($_POST['Soal'])){
-            $model->attributes = $_POST['Soal'];
+            $questionModel->attributes = $_POST['Soal'];
 
-            if($model->validate() && $model->save())
-            $this->redirect(array('view', 'id' => $model->id));
+            if($questionModel->validate() && $questionModel->save())
+            $this->redirect(array('view', 'id' => $questionModel->id));
         }
         $this->render('createStory', array(
-            'model' => $model,
+            'model' => $questionModel,
         ));
     }
     public function actionUpdateStory($id){
-        $model = $this->loadModel($id);
+        $questionModel = $this->loadModel($id);
         if(isset($_POST['Soal'])){
-            $model->attributes = $_POST['Soal'];
+            $questionModel->attributes = $_POST['Soal'];
 
-            if($model->validate() && $model->save())
-                $this->redirect(array('view', 'id' => $model->id));
+            if($questionModel->validate() && $questionModel->save())
+                $this->redirect(array('view', 'id' => $questionModel->id));
         }
         $this->render('updateStory', array(
-            'model' => $model,
+            'model' => $questionModel,
         ));
     }
 
@@ -125,30 +125,30 @@ class AdminSoalController extends Controller {
      * @param integer $id the ID of the model to be updated
      */
     public function actionUpdate($id) {
-        $model = $this->loadModel($id);
-        if($model->isHasJawaban == 0){
+        $questionModel = $this->loadModel($id);
+        if($questionModel->isHasJawaban == 0){
             $this->redirect(array("updateStory","id"=>$id));
         }
-        $modelOpsi = array();
-        foreach($model->opsis as $opsi){
-            $modelOpsi[] = $opsi;
+        $optionModelList = array();
+        foreach($questionModel->opsis as $option){
+            $optionModelList[] = $option;
         }
         if (isset($_POST['Soal'])) {
-            $model->attributes = $_POST['Soal'];
+            $questionModel->attributes = $_POST['Soal'];
             $transaction = Yii::app()->db->beginTransaction();
             try {
-                if ($model->validate() && $model->save()){
+                if ($questionModel->validate() && $questionModel->save()){
                     for ($i = 0; $i < 5; $i++) {
-                        $modelOpsi[$i]->attributes = $_POST['Opsi'][$i];
-                        $modelOpsi[$i]->idsoal = $model->id;
+                        $optionModelList[$i]->attributes = $_POST['Opsi'][$i];
+                        $optionModelList[$i]->idsoal = $questionModel->id;
 
                         if($_POST['Opsi']['jawaban'] == $i){
-                            $modelOpsi[$i]->isJawaban = 1;
+                            $optionModelList[$i]->isJawaban = 1;
                         }else{
-                            $modelOpsi[$i]->isJawaban = 0;
+                            $optionModelList[$i]->isJawaban = 0;
                         }
 
-                        if(!($modelOpsi[$i]->validate() && $modelOpsi[$i]->save())){
+                        if(!($optionModelList[$i]->validate() && $optionModelList[$i]->save())){
                             throw new Exception("Opsi rollback");
                         }
                     }
@@ -156,15 +156,15 @@ class AdminSoalController extends Controller {
                     throw new Exception("Soal rollback");
                 }
                 $transaction->commit();
-                $this->redirect(array('view', 'id' => $model->id));
+                $this->redirect(array('view', 'id' => $questionModel->id));
             } catch (Exception $e) {
                 $transaction->rollBack();
             }
         }
 
         $this->render('create', array(
-            'model' => $model,
-            'modelOpsi'=>$modelOpsi,
+            'model' => $questionModel,
+            'modelOpsi'=>$optionModelList,
         ));
     }
 
@@ -186,16 +186,16 @@ class AdminSoalController extends Controller {
      * Manages all models.
      */
     public function actionIndex($idtryout) {
-        $model = new Soal('search');
-        $model->unsetAttributes();  // clear any default values
+        $questionModel = new Soal('search');
+        $questionModel->unsetAttributes();  // clear any default values
         if (isset($_GET['idtryout'])) {
-            $model->idtryout = $_GET['idtryout'];
+            $questionModel->idtryout = $_GET['idtryout'];
         }
         if (isset($_GET['Soal']))
-            $model->attributes = $_GET['Soal'];
+            $questionModel->attributes = $_GET['Soal'];
 
         $this->render('admin', array(
-            'model' => $model,
+            'model' => $questionModel,
         ));
     }
 
@@ -207,10 +207,10 @@ class AdminSoalController extends Controller {
      * @throws CHttpException
      */
     public function loadModel($id) {
-        $model = Soal::model()->findByPk($id);
-        if ($model === null)
+        $questionModel = Soal::model()->findByPk($id);
+        if ($questionModel === null)
             throw new CHttpException(404, 'The requested page does not exist.');
-        return $model;
+        return $questionModel;
     }
 
     /**
