@@ -1,20 +1,21 @@
 <?php
 /* @var $this SoalController */
-/* @var $model Soal */
+/* @var $questionModel Soal */
+/* @var $optionModelList Soal */
 
 $this->breadcrumbs=array(
         'Tryout'=>array('adminTryout/index'),
-	'Soal'=>array('index?idtryout='.$model->idtryout),
-	$model->nomor=>array('view','id'=>$model->nomor),
+	'Soal'=>array('index?idtryout='.$questionModel->idtryout),
+	$questionModel->nomor=>array('view','id'=>$questionModel->nomor),
 	'Ubah',
 );
 
 $this->menu=array(
-	array('label'=>'Daftar Soal', 'url'=>array('index?idtryout='.$model->idtryout)),
-	array('label'=>'Buat Soal', 'url'=>array('create?idtryout='.$model->idtryout)),	
+	array('label'=>'Daftar Soal', 'url'=>array('index?idtryout='.$questionModel->idtryout)),
+	array('label'=>'Buat Soal', 'url'=>array('create?idtryout='.$questionModel->idtryout)),
 );
 ?>
 
-<h1>Ubah Soal <?php echo $model->id; ?></h1>
+<h1>Ubah Soal <?php echo $questionModel->id; ?></h1>
 
-<?php $this->renderPartial('_form', array('model'=>$model,'modelOpsi'=>$modelOpsi)); ?>
+<?php $this->renderPartial('_form', array('questionModel'=>$questionModel,'optionModelList'=>$optionModelList)); ?>

@@ -1,5 +1,5 @@
 <?php
-/* @var $this SoalController */
+/* @var $this AdminSoalController */
 /* @var $data Soal */
 ?>
 
