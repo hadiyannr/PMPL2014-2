@@ -5,17 +5,17 @@ class ProfilController extends Controller {
     public $layout = '//layouts/site';
 
     public function actionIndex() {
-        $model = $this->loadModel();
-        if ($model == null) {
+        $profilModel = $this->loadModel();
+        if ($profilModel == null) {
             $this->redirect(array('update'));
         }
-        $this->render('index', array('model' => $model));
+        $this->render('index', array('profilModel' => $profilModel));
     }
     
     public function actionView($id) {
-        $model = Profil::model()->findByPk($id);
+        $profilModel = Profil::model()->findByPk($id);
         
-        $this->render('index', array('model' => $model));
+        $this->render('index', array('profilModel' => $profilModel));
     }
 
     /**
@@ -24,20 +24,20 @@ class ProfilController extends Controller {
      * @param integer $id the ID of the model to be updated
      */
     public function actionUpdate() {       
-        $model = $this->loadModel();
-        if($model==null){
-            $model = new Profil;
-            $model->tanggalLahir= '1996-01-01';            
+        $profilModel = $this->loadModel();
+        if($profilModel==null){
+            $profilModel = new Profil;
+            $profilModel->tanggalLahir= '1996-01-01';            
         }
         
         if(isset($_POST['Profil'])){
-            $model->attributes = $_POST['Profil'];
-            $model->idPengguna = Yii::app()->user->id;
-            $model->image=CUploadedFile::getInstance($model,'image');
-            $uploading = $model->image != null;            
+            $profilModel->attributes = $_POST['Profil'];
+            $profilModel->idPengguna = Yii::app()->user->id;
+            $profilModel->image=CUploadedFile::getInstance($profilModel,'image');
+            $uploading = $profilModel->image != null;            
             if($uploading){
-                $filetype = explode("/", $model->image->getType())[1];
-                $model->fotoUrl= Yii::app()->user->id . '.' .$filetype; 
+                $filetype = explode("/", $profilModel->image->getType())[1];
+                $profilModel->fotoUrl= Yii::app()->user->id . '.' .$filetype; 
                 
                 
                 $imageValidation = true;
@@ -48,31 +48,31 @@ class ProfilController extends Controller {
                     $message = 'Tipe file salah, harus .jpg atau .png';
                 }
                 
-                if($model->image->getSize() > 20000000){
+                if($profilModel->image->getSize() > 20000000){
                     $imageValidation = false;
                     $message = 'Ukuran harus kurang dari 20MB';
                 }
 
                 if(!$imageValidation){                                          
-                    $model->addError('image', $message);                    
+                    $profilModel->addError('image', $message);                    
                 }
             }           
             
-            if(!$model->hasErrors() && $model->save()) {
+            if(!$profilModel->hasErrors() && $profilModel->save()) {
                 if($uploading){
-                    $model->image->saveAs(Yii::app()->basePath.'/../images/profilPic/'.$model->fotoUrl);
+                    $profilModel->image->saveAs(Yii::app()->basePath.'/../images/profilPic/'.$profilModel->fotoUrl);
                 }
                 $this->redirect(array('index'));
             }
         }                
-        $this->render('update',array('model'=>$model));
+        $this->render('update',array('profilModel'=>$profilModel));
     }
 
     public function actionUbahPassword()
     {
         if(isset($_POST['submit'])){
-            $pengguna = Pengguna::model()->findByPk(Yii::app()->user->id);
-            if($pengguna->password!=md5($_POST['OldPassword'])){
+            $penggunaModel = Pengguna::model()->findByPk(Yii::app()->user->id);
+            if($penggunaModel->password!=md5($_POST['OldPassword'])){
                 Yii::app()->user->setFlash('message',"Password lama salah");
                 $this->refresh();
             }
@@ -81,8 +81,8 @@ class ProfilController extends Controller {
                 $this->refresh();
             }
             else{
-                $pengguna->password = md5($_POST['password']);
-                $pengguna->save();
+                $penggunaModel->password = md5($_POST['password']);
+                $penggunaModel->save();
                 Yii::app()->user->setFlash('message',"Penggantian password berhasil");
                 $this->redirect(array("index"));                
             }
