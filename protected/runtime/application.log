@@ -7117,3 +7117,55 @@ HTTP_REFERER=http://localhost:7777/siapmasukui/index.php/profil/index
 2014/11/12 21:12:39 [warning] [application] Failed to set unsafe attribute "image" of "Profil".
 in C:\xampp\htdocs\siapmasukui\protected\controllers\ProfilController.php (28)
 in C:\xampp\htdocs\siapmasukui\index.php (13)
+2014/11/13 12:45:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "konten/admin/index".' in C:\xampp\htdocs\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/admin/in...')
+#1 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/admin/index
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/konten/adminKonten/update/id/37
+---
+2014/11/13 12:45:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "konten/admin/index".' in C:\xampp\htdocs\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/admin/in...')
+#1 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/admin/index
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/konten/adminKonten/update/id/37
+---
+2014/11/13 13:10:05 [error] [php] Undefined variable: loginModel (C:\xampp\htdocs\PMPL2014-2\protected\views\admin\login.php:28)
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CController.php(869): AdminController->renderFile()
+#1 C:\xampp\htdocs\yiiframework\web\CController.php(782): AdminController->renderPartial()
+#2 C:\xampp\htdocs\PMPL2014-2\protected\controllers\AdminController.php(52): AdminController->render()
+#3 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): AdminController->actionLogin()
+#4 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yiiframework\web\CController.php(286): AdminController->runAction()
+#6 C:\xampp\htdocs\yiiframework\web\CController.php(265): AdminController->runActionWithFilters()
+#7 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): AdminController->run()
+#8 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\PMPL2014-2\index.php(13): CWebApplication->run()
+REQUEST_URI=/PMPL2014-2/index.php/admin/login
+in C:\xampp\htdocs\PMPL2014-2\protected\views\admin\login.php (28)
+in C:\xampp\htdocs\PMPL2014-2\protected\controllers\AdminController.php (52)
+in C:\xampp\htdocs\PMPL2014-2\index.php (13)
+2014/11/13 13:10:52 [error] [php] Undefined variable: loginModel (C:\xampp\htdocs\PMPL2014-2\protected\views\admin\login.php:28)
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CController.php(869): AdminController->renderFile()
+#1 C:\xampp\htdocs\yiiframework\web\CController.php(782): AdminController->renderPartial()
+#2 C:\xampp\htdocs\PMPL2014-2\protected\controllers\AdminController.php(52): AdminController->render()
+#3 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): AdminController->actionLogin()
+#4 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yiiframework\web\CController.php(286): AdminController->runAction()
+#6 C:\xampp\htdocs\yiiframework\web\CController.php(265): AdminController->runActionWithFilters()
+#7 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): AdminController->run()
+#8 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\PMPL2014-2\index.php(13): CWebApplication->run()
+REQUEST_URI=/PMPL2014-2/index.php/admin/login
+in C:\xampp\htdocs\PMPL2014-2\protected\views\admin\login.php (28)
+in C:\xampp\htdocs\PMPL2014-2\protected\controllers\AdminController.php (52)
+in C:\xampp\htdocs\PMPL2014-2\index.php (13)

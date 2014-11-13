@@ -25,21 +25,21 @@ $this->breadcrumbs=array(
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'username'); ?>
-		<?php echo $form->textField($model,'username'); ?>
-		<?php echo $form->error($model,'username'); ?>
+		<?php echo $form->labelEx($loginModel,'username'); ?>
+		<?php echo $form->textField($loginModel,'username'); ?>
+		<?php echo $form->error($loginModel,'username'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'password'); ?>
-		<?php echo $form->passwordField($model,'password'); ?>
-		<?php echo $form->error($model,'password'); ?>		
+		<?php echo $form->labelEx($loginModel,'password'); ?>
+		<?php echo $form->passwordField($loginModel,'password'); ?>
+		<?php echo $form->error($loginModel,'password'); ?>		
 	</div>
 
 	<div class="row rememberMe">
-		<?php echo $form->checkBox($model,'rememberMe'); ?>
-		<?php echo $form->label($model,'rememberMe'); ?>
-		<?php echo $form->error($model,'rememberMe'); ?>
+		<?php echo $form->checkBox($loginModel,'rememberMe'); ?>
+		<?php echo $form->label($loginModel,'rememberMe'); ?>
+		<?php echo $form->error($loginModel,'rememberMe'); ?>
 	</div>
 
 	<div class="row buttons">
