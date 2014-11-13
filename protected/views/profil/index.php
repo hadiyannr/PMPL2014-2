@@ -30,7 +30,7 @@ echo '<br>';
 
     <div class="col-sm-4 col-md-6 profile-view">         
         <?php echo CHtml::link('Ubah Profil',array('update'),array('class'=>'btn btn-primary'));?>
-        <?php echo CHtml::link('Riwayat Tryout',array('pengerjaanTryout/history'),array('class'=>'btn btn-success'));?>
+        <?php echo CHtml::link('Riwayat Tryout',array('/tryout/pengerjaanTryout/history'),array('class'=>'btn btn-success'));?>
         <?php echo CHtml::link('Ubah Password',array('ubahPassword'),array('class'=>'btn btn-primary'));?>
     </div>     
 </div>
