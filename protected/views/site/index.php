@@ -43,7 +43,7 @@
                         <figcaption>
                             <span>Tips masuk UI oleh mahasiswi cantik bangat banget banget banget</span>
                         </figcaption>
-                         <p>Lorem ipsum dolor sit amet, nobis quasi mollitia ex adipisci esse tenetur earum dolores reprehenderit laborum molestiae rem labore, iusto velit distinctio!</p>
+                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, delectus, accusantium aliquam neque atque eos quam aperiam dolorum alias. Quidem ullam minus atque eos neque repudiandae, adipisci labore nobis corrupti.</p>
                          <a class="btn bg-bright-yellow" href="">MORE</a>
                     </figure>
                 </div>
@@ -57,7 +57,7 @@
                         <figcaption>
                             <span>Tips masuk UI oleh mahasiswi cantik bangat banget banget banget</span>
                         </figcaption>
-                         <p>Lorem ipsum dolor sit amet, nobis quasi mollitia ex adipisci esse tenetur earum dolores reprehenderit laborum molestiae rem labore, iusto velit distinctio!</p>
+                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut accusantium odit nihil veritatis maxime, ad ducimus consectetur, placeat, expedita, ea rem! Rerum doloremque facere magni eum beatae error doloribus, nisi!</p>
                          <a class="btn bg-bright-yellow" href="">MORE</a>
                     </figure>
                 </div>
@@ -71,7 +71,7 @@
                         <figcaption>
                             <span>Tips masuk UI oleh mahasiswi cantik bangat banget banget banget</span>
                         </figcaption>
-                         <p>Lorem ipsum dolor sit amet, nobis quasi mollitia ex adipisci esse tenetur earum dolores reprehenderit laborum molestiae rem labore, iusto velit distinctio!</p>
+                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia praesentium reprehenderit eius quaerat debitis laboriosam tenetur voluptate quia laborum ab nobis, dolor, voluptas maxime hic facere laudantium earum minus natus.</p>
                          <a class="btn bg-bright-yellow" href="">MORE</a>
                     </figure>
                 </div>
@@ -85,7 +85,7 @@
                         <figcaption>
                             <span>Tips masuk UI oleh mahasiswi cantik bangat banget banget banget</span>
                         </figcaption>
-                         <p>Lorem ipsum dolor sit amet, nobis quasi mollitia ex adipisci esse tenetur earum dolores reprehenderit laborum molestiae rem labore, iusto velit distinctio!</p>
+                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem placeat aspernatur sequi, deserunt voluptate nulla, optio voluptatem quisquam cumque nostrum. Laborum ut enim magnam itaque, ea mollitia, error quasi quas.</p>
                          <a class="btn bg-bright-yellow" href="">MORE</a>
                     </figure>
                 </div>

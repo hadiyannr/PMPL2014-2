@@ -20,7 +20,7 @@
     </head>
     <body>	
         <?php if(Yii::app()->user->hasFlash('message')):?>
-        <nav class="user-nav text-right" style="background-color: #e74c3c; color:#ecf0f1;font-size: 20px;">
+        <nav class="user-nav notif-error">
             <div class="container">
                     <?php echo Yii::app()->user->getFlash('message'); ?>
             </div>
