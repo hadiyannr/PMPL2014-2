@@ -7169,3 +7169,6 @@ REQUEST_URI=/PMPL2014-2/index.php/admin/login
 in C:\xampp\htdocs\PMPL2014-2\protected\views\admin\login.php (28)
 in C:\xampp\htdocs\PMPL2014-2\protected\controllers\AdminController.php (52)
 in C:\xampp\htdocs\PMPL2014-2\index.php (13)
+2014/11/13 13:38:03 [warning] [application] Failed to set unsafe attribute "image" of "Profil".
+in C:\xampp\htdocs\PMPL2014-2\protected\controllers\ProfilController.php (34)
+in C:\xampp\htdocs\PMPL2014-2\index.php (13)
