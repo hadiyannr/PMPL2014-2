@@ -416,7 +416,7 @@ footer .col-md-7 {
   background-color: #fedc00;
 }
 footer .col-maps {
-  height: 150px;
+  height: 190px;
 }
 
 footer .col1-maps h5 {
@@ -424,18 +424,20 @@ footer .col1-maps h5 {
 }
 
 footer .col1-maps img {
-  height: 100px;
+  height: 75px;
 }
 
-footer .col1-maps, footer .col2-maps {
+footer .col1-maps {
     float: left;
-    margin: 10px 10px;
+    margin: 1.321% ;
+    width: 13.315%;
 }
 
-.col-maps {
-}
-.col2-maps {
-  width: 460px;
+footer .col2-maps {
+  float: left;
+  margin: 1.321%  1.321%;
+  margin-left: 2.64%;
+  width: 79.33%;
   height: 100%;
 }
 
