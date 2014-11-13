@@ -8,6 +8,7 @@
  * @property integer $idcategory
  * @property string $isi
  * @property string $judul
+ * @property string $imagepath
  * @property integer $isPublished
  * @property integer $idAdmin
  *
@@ -17,6 +18,7 @@
  */
 class Konten extends CActiveRecord
 {
+    public $image;
 	/**
 	 * @return string the associated database table name
 	 */
@@ -66,8 +68,9 @@ class Konten extends CActiveRecord
 			'idcategory' => 'Kategori',
 			'isi' => 'Isi',
 			'judul' => 'Judul',
+            'imagepath' => 'Lokasi Gambar',
 			'isPublished' => 'Status Publikasi',
-                        'idAdmin' => 'Editor',
+            'idAdmin' => 'Editor',
 		);
 	}
 

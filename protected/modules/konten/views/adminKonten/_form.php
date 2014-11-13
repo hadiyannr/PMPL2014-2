@@ -13,6 +13,7 @@
 	// There is a call to performAjaxValidation() commented in generated controller code.
 	// See class documentation of CActiveForm for details on this.
 	'enableAjaxValidation'=>false,
+    'htmlOptions' => array('enctype' => 'multipart/form-data'),
 )); ?>
 
 	<p class="note">Isian bertanda <span class="required">*</span> wajib diisi.</p>
@@ -43,6 +44,20 @@
 		<?php echo $form->error($contentModel,'isi'); ?>
 	</div>
 
+    <div class="row">
+        <img src="" width="100" height="50" alt="" class="img-rounded img-responsive" />
+        <label>Foto</label>
+        <img id="photo" src="<?php
+        if($contentModel->imagepath == null){
+            echo Yii::app()->request->baseUrl.'/images/photo.png';
+        }else{
+            echo Yii::app()->request->baseUrl.'/images/ContentPic/'.$contentModel->imagepath;
+        }
+        ?>" alt="" class="img-rounded img-responsive" width="100px"/>
+        <?php echo $form->fileField($contentModel, 'image',array('id'=>'fileField'));?>
+        <?php echo $form->error($contentModel, 'image'); ?>
+    </div>
+
 
 
 	<div class="row">
@@ -59,3 +74,21 @@
 <?php $this->endWidget(); ?>
 
 </div><!-- form -->
+
+<script>
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#photo').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $("#fileField").change(function(){
+        readURL(this);
+    });
+</script>
