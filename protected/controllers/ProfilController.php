@@ -11,6 +11,12 @@ class ProfilController extends Controller {
         }
         $this->render('index', array('model' => $model));
     }
+    
+    public function actionView($id) {
+        $model = Profil::model()->findByPk($id);
+        
+        $this->render('index', array('model' => $model));
+    }
 
     /**
      * Updates a particular model.
