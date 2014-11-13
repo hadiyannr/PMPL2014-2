@@ -12,13 +12,13 @@
 )); ?>
 
 	<div class="row">
-		<?php echo $form->label($model,'id'); ?>
-		<?php echo $form->textField($model,'id'); ?>
+		<?php echo $form->label($kategoriModel,'id'); ?>
+		<?php echo $form->textField($kategoriModel,'id'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'nama'); ?>
-		<?php echo $form->textField($model,'nama',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->label($kategoriModel,'nama'); ?>
+		<?php echo $form->textField($kategoriModel,'nama',array('size'=>45,'maxlength'=>45)); ?>
 	</div>
 
 	<div class="row buttons">
