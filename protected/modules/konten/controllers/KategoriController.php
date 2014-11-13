@@ -44,7 +44,7 @@ class KategoriController extends Controller
 	public function actionView($id)
 	{
 		$this->render('view',array(
-			'model'=>$this->loadModel($id),
+			'kategoriModel'=>$this->loadModel($id),
 		));
 	}
 
@@ -54,20 +54,20 @@ class KategoriController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Kategori;
+		$kategoriModel = new Kategori;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
 		if(isset($_POST['Kategori']))
 		{
-			$model->attributes=$_POST['Kategori'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+			$kategoriModel->attributes=$_POST['Kategori'];
+			if($kategoriModel->save())
+				$this->redirect(array('view','id'=>$kategoriModel->id));
 		}
 
 		$this->render('create',array(
-			'model'=>$model,
+			'kategoriModel'=>$kategoriModel,
 		));
 	}
 
@@ -78,20 +78,20 @@ class KategoriController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
-		$model=$this->loadModel($id);
+		$kategoriModel=$this->loadModel($id);
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
 		if(isset($_POST['Kategori']))
 		{
-			$model->attributes=$_POST['Kategori'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+			$kategoriModel->attributes=$_POST['Kategori'];
+			if($kategoriModel->save())
+				$this->redirect(array('view','id'=>$kategoriModel->id));
 		}
 
 		$this->render('update',array(
-			'model'=>$model,
+			'kategoriModel'=>$kategoriModel,
 		));
 	}
 
@@ -115,13 +115,13 @@ class KategoriController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$model=new Kategori('search');
-		$model->unsetAttributes();  // clear any default values
+		$kategoriModel = new Kategori('search');
+		$kategoriModel->unsetAttributes();  // clear any default values
 		if(isset($_GET['Kategori']))
-			$model->attributes=$_GET['Kategori'];
+			$kategoriModel->attributes=$_GET['Kategori'];
 
 		$this->render('admin',array(
-			'model'=>$model,
+			'kategoriModel'=>$kategoriModel,
 		));
 	}
 
@@ -134,10 +134,10 @@ class KategoriController extends Controller
 	 */
 	public function loadModel($id)
 	{
-		$model=Kategori::model()->findByPk($id);
-		if($model===null)
+		$kategoriModel = Kategori::model()->findByPk($id);
+		if($kategoriModel===null)
 			throw new CHttpException(404,'The requested page does not exist.');
-		return $model;
+		return $kategoriModel;
 	}
 
 	/**

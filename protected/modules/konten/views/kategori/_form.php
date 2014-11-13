@@ -17,16 +17,16 @@
 
 	<p class="note">Isian bertanda <span class="required">*</span> wajib diisi.</p>
 
-	<?php echo $form->errorSummary($model); ?>
+	<?php echo $form->errorSummary($kategoriModel); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'nama'); ?>
-		<?php echo $form->textField($model,'nama',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'nama'); ?>
+		<?php echo $form->labelEx($kategoriModel,'nama'); ?>
+		<?php echo $form->textField($kategoriModel,'nama',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->error($kategoriModel,'nama'); ?>
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($kategoriModel->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
