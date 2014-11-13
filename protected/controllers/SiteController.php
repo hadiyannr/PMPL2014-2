@@ -21,8 +21,8 @@ class SiteController extends Controller
                 $criteria->limit = 5;
                 $criteria->compare('idcategory','3');
                 $criteria->compare('isPublished','1');
-                $model = Konten::model()->findAll($criteria);   
-		$this->render('index',array('model'=>$model));
+                $kontenModel = Konten::model()->findAll($criteria);   
+		$this->render('index',array('kontenModel'=>$kontenModel));
 	}
 
 	/**
@@ -49,11 +49,11 @@ class SiteController extends Controller
 	}
         
     public function actionActivation($username, $code){           
-        $pengguna = Pengguna::model()->findByAttributes(array('username'=>$username));
-        $correctCode = crypt(Yii::app()->params['adminPassword'], $pengguna->username.$pengguna->email);
+        $penggunaModel = Pengguna::model()->findByAttributes(array('username'=>$username));
+        $correctCode = crypt(Yii::app()->params['adminPassword'], $penggunaModel->username.$penggunaModel->email);
         if(strcmp($code, $correctCode) == 0){                
-            $pengguna->isActive = 1;                                
-            $pengguna->save();                
+            $penggunaModel->isActive = 1;                                
+            $penggunaModel->save();                
             Yii::app()->user->setFlash('message',"Selamat, akun anda telah aktif. Silahkan login.");
             $this->redirect(array('index'));
         }else{
@@ -65,11 +65,11 @@ class SiteController extends Controller
     public function actionForget()
     {
         if(isset($_POST['submit'])){
-            $pengguna = Pengguna::model()->findByAttributes(array("username"=>$_POST['username']));
-            if($pengguna == null || $pengguna->email != $_POST['email']){
+            $penggunaModel = Pengguna::model()->findByAttributes(array("username"=>$_POST['username']));
+            if($penggunaModel == null || $penggunaModel->email != $_POST['email']){
                 Yii::app()->user->setFlash('message',"username atau email tidak cocok");
                 $this->refresh();
-            }elseif(!$this->sendEmail($pengguna)){
+            }elseif(!$this->sendEmail($penggunaModel)){
                 Yii::app()->user->setFlash('message',"Email tidak terkirim, silahkan coba lagi");
             }else{
                 Yii::app()->user->setFlash('message',"Silahkan cek email untuk melanjutkan proses penggantian password");
@@ -106,18 +106,18 @@ class SiteController extends Controller
         }
 
     public function actionConfirmForgetPassword($username, $code){
-        $pengguna = Pengguna::model()->findByAttributes(array('username'=>$username));
+        $penggunaModel = Pengguna::model()->findByAttributes(array('username'=>$username));
         if(isset($_POST['submit'])){
             if($_POST['password'] != $_POST['confirmpassword']){
                 Yii::app()->user->setFlash('message',"Konfirmasi password salah");
             }else{
-                $pengguna->password = md5($_POST['password']);
-                $pengguna->save();
+                $penggunaModel->password = md5($_POST['password']);
+                $penggunaModel->save();
                 Yii::app()->user->setFlash('message',"Password berhasil diganti, silahkan login");
                 $this->redirect(array('index'));
             }
         }else{
-            $correctCode = crypt(Yii::app()->params['adminPassword'], $pengguna->username.$pengguna->email);
+            $correctCode = crypt(Yii::app()->params['adminPassword'], $penggunaModel->username.$penggunaModel->email);
             if(strcmp($code, $correctCode) == 0){
                 Yii::app()->user->setFlash('message',"Silahkan ganti password anda");
             }else{

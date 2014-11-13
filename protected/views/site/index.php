@@ -113,7 +113,7 @@
                 <div class="slider-wrapper">
                     <?php
                     $counter=0;
-                    foreach ($model as $randKonten): ?>
+                    foreach ($kontenModel as $randKonten): ?>
                         <div id="slide<?php echo $counter?>" class="main-slide">
                             <div class="col-md-12 home-group2" style="">
                                 <h3><?php 

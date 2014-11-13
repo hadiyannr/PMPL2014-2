@@ -34,7 +34,7 @@
 
 
                 <div class="navbar-header">
-                    <?php echo CHtml::link("Admin SiapMasukUI.com", array('admin/index'),array('class'=>'navbar-brand')); ?>
+                    <?php echo CHtml::link("Admin SiapMasukUI.com", array('/admin/index'),array('class'=>'navbar-brand')); ?>
                 </div>
 
                 <?php $controllerName = $this->getId();?>
