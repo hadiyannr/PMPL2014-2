@@ -1,16 +1,17 @@
 <?php
     /* @var $this TryoutController */
-    /* @var $tryout Tryout */
+    /* @var $tryoutModel Tryout */
+    /* @var $questionCount Tryout */
 ?>
 <div class="btn-group-vertical tryoutNavigation">
     <label class="text-center">Menu Navigasi</label>
-    <?php for($i=1;$i<=$soalCount;$i++):?>
+    <?php for($i=1;$i<=$questionCount;$i++):?>
     
     <?php if($i % 10 == 1):?>
     <div class="btn-group">
         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
             <?php 
-                echo $i;echo "-";echo $soalCount < ($i+9)?$soalCount:($i+9);
+                echo $i;echo "-";echo $questionCount < ($i+9)?$questionCount:($i+9);
             ?>            
             <span class="caret"></span>
         </button>
@@ -20,7 +21,7 @@
             
             <li><a href="#no<?php echo $i;?>"><?php echo $i;?></a></li>            
             
-    <?php if($i % 10 == 0 || $i == $soalCount):?>        
+    <?php if($i % 10 == 0 || $i == $questionCount):?>
         </ul>
     </div>
     <?php endif;?>
@@ -39,7 +40,7 @@
     </div>
 </div>
 <?php
-    $waktuSelesai = $tryout->getWaktuSelesai();
+    $waktuSelesai = $tryoutModel->getWaktuSelesai();
     $waktuSelesai *= 1000;
     
 ?>

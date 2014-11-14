@@ -1,6 +1,6 @@
 <?php
 /* @var $this TryoutController */
-/* @var $model Tryout */
+/* @var $tryoutModel Tryout */
 
 $this->breadcrumbs=array(
 	'Tryout',	
@@ -18,7 +18,7 @@ $this->menu=array(
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'tryout-grid',
-	'dataProvider'=>$model->search(),
+	'dataProvider'=>$tryoutModel->search(),
 	'columns'=>array(
 		'id',
                 'nama',
@@ -28,7 +28,7 @@ $this->menu=array(
                 array(
                         'name' => 'idAdmin0.username',
                         'header' =>'Last edited By',
-                        'value' => $model->idAdmin0['username'],
+                        'value' => $tryoutModel->idAdmin0['username'],
                 ),
 		array(
 			'class'=>'CButtonColumn',

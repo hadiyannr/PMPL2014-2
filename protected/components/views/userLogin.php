@@ -15,12 +15,12 @@
                         <label>Password</label>
                         <input type="password" name="LoginForm[password]" class="form-control"  required>
                     </div>					  			 					  
-                    <div class="form-group">                        
+                    <div class="form-group">    
+                        <span >Remember Me </span>                    
                         <input type="checkbox" name="LoginForm[rememberMe]">
-                        <label>Remember Me</label>
                     </div>				
 					<!-- Untuk lupa password -->
-					<p> <?php echo CHtml::link('Lupa password?',array('/site/Forget'),array('style'=>'color:black;')) ?> </p>
+					<p> <?php echo CHtml::link('Lupa password?',array('/site/Forget'),array('style'=>'color:#6fc5a4 !important;')) ?> </p>
                     <button type="submit" class="btn btn-primary">Login</button>					
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Batal</button>			        	
                 </form>                                                   

@@ -1,27 +1,28 @@
 <?php
     /* @var $this PengerjaanTryoutController */
-    /* @var $tryout Tryout */
-    /* @var $soalList Soals */
-    /* @var $soal Soal */
+    /* @var $answerSheetModel PengerjaanTryout */
+    /* @var $question Soal */t
+    /* @var $answerSheetDetail Soal */
+
 ?>
 <div class="row"> 
     <div class="col-md-2 centered"> 
         <table class="table">            
             <tr class="success">
                 <td class="text-right">Nilai</td>
-                <td><?php echo $model->nilai;?></td>
+                <td><?php echo $answerSheetModel->nilai;?></td>
             </tr>                        
             <tr>
                 <td class="text-right">Benar</td>
-                <td><?php echo $detail['benar'];?></td>
+                <td><?php echo $answerSheetDetail['benar'];?></td>
             </tr>    
             <tr>
                 <td class="text-right">Salah</td>
-                <td><?php echo $detail['salah'];?></td>
+                <td><?php echo $answerSheetDetail['salah'];?></td>
             </tr>                
             <tr>
                 <td class="text-right">Kosong</td>
-                <td><?php echo $detail['kosong'];?></td>
+                <td><?php echo $answerSheetDetail['kosong'];?></td>
             </tr>                
         </table>
         <div class="pull-right">

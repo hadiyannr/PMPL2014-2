@@ -43,8 +43,8 @@ class AdminSoalController extends Controller {
         $questionModel = $this->loadModel($id);
         $htmlOption = $questionModel->getHtmlAdminOpsi();
         $this->render('view', array(
-            'model' => $questionModel,
-            'opsi' => $htmlOption,
+            'questionModel' => $questionModel,
+            'htmlOption' => $htmlOption,
         ));
     }
 
@@ -55,7 +55,7 @@ class AdminSoalController extends Controller {
     public function actionCreate($idtryout) {
         $questionModel = new Soal;
         $questionModel->setAttribute('idtryout', $idtryout);
-        $modelOption = array(new Opsi, new Opsi, new Opsi, new Opsi, new Opsi);
+        $optionModelList = array(new Opsi, new Opsi, new Opsi, new Opsi, new Opsi);
 
         if (isset($_POST['Soal'])) {
             $questionModel->attributes = $_POST['Soal'];
@@ -63,16 +63,16 @@ class AdminSoalController extends Controller {
             try {
                 if ($questionModel->validate() && $questionModel->save()){
                     for ($i = 0; $i < 5; $i++) {
-                        $modelOption[$i]->attributes = $_POST['Opsi'][$i];
-                        $modelOption[$i]->idsoal = $questionModel->id;
+                        $optionModelList[$i]->attributes = $_POST['Opsi'][$i];
+                        $optionModelList[$i]->idsoal = $questionModel->id;
 
                         if($_POST['Opsi']['jawaban'] == $i){
-                            $modelOption[$i]->isJawaban = 1;
+                            $optionModelList[$i]->isJawaban = 1;
                         }else{
-                            $modelOption[$i]->isJawaban = 0;
+                            $optionModelList[$i]->isJawaban = 0;
                         }
 
-                        if(!($modelOption[$i]->validate() && $modelOption[$i]->save())){
+                        if(!($optionModelList[$i]->validate() && $optionModelList[$i]->save())){
                             throw new Exception("Opsi rollback");
                         }
                     }
@@ -86,9 +86,9 @@ class AdminSoalController extends Controller {
             }
         }
 
-        $this->render('create', array(
-            'model' => $questionModel,
-            'modelOpsi'=>$modelOption,
+        $this->render('update', array(
+            'questionModel' => $questionModel,
+            'optionModelList'=>$optionModelList,
         ));
     }
 
@@ -103,7 +103,7 @@ class AdminSoalController extends Controller {
             $this->redirect(array('view', 'id' => $questionModel->id));
         }
         $this->render('createStory', array(
-            'model' => $questionModel,
+            'questionModel' => $questionModel,
         ));
     }
     public function actionUpdateStory($id){
@@ -115,7 +115,7 @@ class AdminSoalController extends Controller {
                 $this->redirect(array('view', 'id' => $questionModel->id));
         }
         $this->render('updateStory', array(
-            'model' => $questionModel,
+            'questionModel' => $questionModel,
         ));
     }
 
@@ -163,8 +163,8 @@ class AdminSoalController extends Controller {
         }
 
         $this->render('create', array(
-            'model' => $questionModel,
-            'modelOpsi'=>$optionModelList,
+            'questionModel' => $questionModel,
+            'optionModelList'=>$optionModelList,
         ));
     }
 
@@ -195,7 +195,7 @@ class AdminSoalController extends Controller {
             $questionModel->attributes = $_GET['Soal'];
 
         $this->render('admin', array(
-            'model' => $questionModel,
+            'questionModel' => $questionModel,
         ));
     }
 

@@ -1,6 +1,6 @@
 <?php
-/* @var $this TryoutController */
-/* @var $model Tryout */
+/* @var $this AdminTryoutController */
+/* @var $tryoutModel Tryout */
 
 $this->breadcrumbs=array(
 	'Tryout'=>array('index'),
@@ -14,4 +14,4 @@ $this->menu=array(
 
 <h1>Buat Tryout</h1>
 
-<?php $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php $this->renderPartial('_form', array('tryoutModel'=>$tryoutModel)); ?>

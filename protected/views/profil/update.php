@@ -1,6 +1,6 @@
 <?php
 /* @var $this ProfilController */
-/* @var $model Profil */
+/* @var $profilModel Profil */
 
 $this->breadcrumbs = array(
     'Profil'=>array("index"),
@@ -21,25 +21,28 @@ echo '<br>';
     ?>
     <!--<form class="form" role="form">-->    
     <div class="form-group">
-        <label><?php echo $form->labelEx($model, 'nama'); ?></label>
-        <?php echo $form->textField($model, 'nama', array('class' => 'form-control', 'placeholder' => 'Nama')); ?>
-        <?php echo $form->error($model, 'nama'); ?>
+        <label><?php echo $form->labelEx($profilModel, 'nama'); ?></label>
+        <?php echo $form->textField($profilModel, 'nama', array('class' => 'form-control', 'placeholder' => 'Nama')); ?>
+        <?php echo $form->error($profilModel, 'nama'); ?>
     </div>
     <div class="form-group">
-        <label><?php echo $form->labelEx($model, 'jenisKelamin'); ?></label><br>        
-        <?php
-            $accountStatus = array(1 => 'Laki - Laki', 0 => 'Perempuan');
-            echo $form->radioButtonList($model, 'jenisKelamin', $accountStatus, array('separator' => '<br>'));
-            echo $form->error($model, 'jenisKelamin');
-        ?>        
+        <label><?php echo $form->labelEx($profilModel, 'jenisKelamin'); ?></label><br>
+        <p>
+            <?php
+                $accountStatus = array(1 => 'Laki - Laki', 0 => 'Perempuan');
+                echo $form->radioButtonList($profilModel, 'jenisKelamin', $accountStatus, array('separator' => '&nbsp'));
+                echo $form->error($profilModel, 'jenisKelamin');
+            ?> 
+        </p>  
+               
     </div>
 
     <div class="form-group">       
-        <label for="tanggal"><?php echo $form->labelEx($model, 'tanggalLahir'); ?></label><br>
+        <label for="tanggal"><?php echo $form->labelEx($profilModel, 'tanggalLahir'); ?></label><br>
         <?php 
             $this->widget('zii.widgets.jui.CJuiDatePicker', array(
-                'name' => CHtml::activeName($model, 'tanggalLahir'),
-                'value' => $model->attributes['tanggalLahir'],
+                'name' => CHtml::activeName($profilModel, 'tanggalLahir'),
+                'value' => $profilModel->attributes['tanggalLahir'],
                 'htmlOptions'=>array('readonly'=>'readonly'),
                 'options'=>array(
                         'showAnim'=>'fold',
@@ -51,31 +54,31 @@ echo '<br>';
     </div>
     
     <div class="form-group">
-        <label><?php echo $form->labelEx($model, 'asalSma'); ?></label>
-        <?php echo $form->textField($model, 'asalSma', array('class' => 'form-control', 'placeholder' => 'Asal Sma')); ?>
-        <?php echo $form->error($model, 'asalSma'); ?>
+        <label><?php echo $form->labelEx($profilModel, 'asalSma'); ?></label>
+        <?php echo $form->textField($profilModel, 'asalSma', array('class' => 'form-control', 'placeholder' => 'Asal Sma')); ?>
+        <?php echo $form->error($profilModel, 'asalSma'); ?>
     </div>
     
     <div class="form-group">
         <label>Jurusan yang diinginkan</label>
-        <?php $this->renderPartial('targetJurusanOpt',array('model'=>$model));?>
+        <?php $this->renderPartial('targetJurusanOpt',array('model'=>$profilModel));?>
     </div>
 
     <div class="form-group">
         <img src="" width="100" height="50" alt="" class="img-rounded img-responsive" />
         <label>Foto</label>
         <img id="photo" src="<?php
-            if($model->fotoUrl == null){
+            if($profilModel->fotoUrl == null){
                 echo Yii::app()->request->baseUrl.'/images/photo.png';
             }else{
-                echo Yii::app()->request->baseUrl.'/images/profilPic/'.$model->fotoUrl;
+                echo Yii::app()->request->baseUrl.'/images/profilPic/'.$profilModel->fotoUrl;
             }
         ?>" alt="" class="img-rounded img-responsive" width="100px"/>
-        <?php echo $form->fileField($model, 'image',array('id'=>'fileField'));?>
-        <?php echo $form->error($model, 'image'); ?>
+        <?php echo $form->fileField($profilModel, 'image',array('id'=>'fileField'));?>
+        <?php echo $form->error($profilModel, 'image'); ?>
     </div>
     
-    <?php echo CHtml::submitButton($model->isNewRecord ? 'Buat' : 'Simpan',array('class'=>'btn btn-primary')); ?>    
+    <?php echo CHtml::submitButton($profilModel->isNewRecord ? 'Buat' : 'Simpan',array('class'=>'btn btn-primary')); ?>    
     <?php     
         echo CHtml::link('Batal',array('site/index'),array('class'=>'btn btn-danger')); 
     ?>    

@@ -44,7 +44,7 @@ class AdminTryoutController extends Controller
 	public function actionView($id)
 	{
 		$this->render('view',array(
-			'model'=>$this->loadModel($id),
+			'tryoutModel'=>$this->loadModel($id),
 		));
 	}
 
@@ -68,7 +68,7 @@ class AdminTryoutController extends Controller
 		}
 
 		$this->render('create',array(
-			'model'=>$tryoutModel,
+			'tryoutModel'=>$tryoutModel,
 		));
 	}
 
@@ -93,7 +93,7 @@ class AdminTryoutController extends Controller
 		}
 
 		$this->render('update',array(
-			'model'=>$tryoutModel,
+			'tryoutModel'=>$tryoutModel,
 		));
 	}
 
@@ -123,7 +123,7 @@ class AdminTryoutController extends Controller
 			$tryoutModel->attributes=$_GET['Tryout'];
 
 		$this->render('admin',array(
-			'model'=>$tryoutModel,
+			'tryoutModel'=>$tryoutModel,
 		));
 	}
 

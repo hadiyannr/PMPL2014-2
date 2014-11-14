@@ -1,6 +1,6 @@
 <?php
 /* @var $this AdminSoalController */
-/* @var $model Soal */
+/* @var $questionModel Soal */
 /* @var $form CActiveForm */
 ?>
 
@@ -17,36 +17,36 @@
 
     <p class="note">Isian bertanda <span class="required">*</span> wajib diisi.</p>
 
-    <?php echo $form->errorSummary($model); ?>
+    <?php echo $form->errorSummary($questionModel); ?>
 
     <div class="row">
-        <?php echo $form->hiddenField($model,'idtryout'); ?>
+        <?php echo $form->hiddenField($questionModel,'idtryout'); ?>
     </div>
 
     <div class="row">
-        <?php echo $form->labelEx($model,'pertanyaan'); ?>
+        <?php echo $form->labelEx($questionModel,'pertanyaan'); ?>
         <?php
         $this->widget('tryout.extensions.tinymce.ETinyMce',
             array(
-                'model'=>$model,
+                'model'=>$questionModel,
                 'attribute'=>'pertanyaan',
                 'editorTemplate'=>'full',
                 'htmlOptions'=>array('rows'=>6,'cols'=>50,'class'=>'tinymce'),
             ));
         ?>
-        <?php echo $form->error($model,'pertanyaan'); ?>
+        <?php echo $form->error($questionModel,'pertanyaan'); ?>
     </div>
 
     <div class="row">
-        <?php echo $form->labelEx($model,'nomor'); ?>
-        <?php echo $form->textField($model,'nomor',array('required'=>'required')); ?>
-        <?php echo $form->error($model,'nomor'); ?>
+        <?php echo $form->labelEx($questionModel,'nomor'); ?>
+        <?php echo $form->textField($questionModel,'nomor',array('required'=>'required')); ?>
+        <?php echo $form->error($questionModel,'nomor'); ?>
     </div>
 
     <div class="row buttons">
-        <?php echo CHtml::submitButton($model->isNewRecord ? 'Buat' : 'Simpan'); ?>
+        <?php echo CHtml::submitButton($questionModel->isNewRecord ? 'Buat' : 'Simpan'); ?>
         <?php echo CHtml::Button('Batal',array(
-            'submit'=>$this->createUrl('adminSoal/index',array('idtryout'=>$model->idtryout)))); ?>
+            'submit'=>$this->createUrl('adminSoal/index',array('idtryout'=>$questionModel->idtryout)))); ?>
     </div>
 
     <?php $this->endWidget(); ?>

@@ -1,6 +1,8 @@
 <?php
 /* @var $this TryoutController */
-/* @var $to Tryout */
+/* @var $tryoutModelList Tryouts */
+/* @var $answerSheet PengerjaanTryout */
+/* @var $tryout Tryout */
 
 $this->breadcrumbs = array(
     'Tryout',
@@ -16,7 +18,7 @@ $this->breadcrumbs = array(
 <div class="tab-content">
     
     <div class="tab-pane fade in active" id="present">
-        <?php if (sizeof($model[0])): ?>
+        <?php if (sizeof($tryoutModelList[0])): ?>
         <table class="table">
             <tr>
                 <th>No</th>
@@ -28,33 +30,33 @@ $this->breadcrumbs = array(
             </tr>
             <?php
             $no = 1;
-            foreach ($model[0] as $to) { ?>                    
+            foreach ($tryoutModelList[0] as $tryout) { ?>
                 <tr>
                     <td>
                         <?php echo $no++;?>
                     </td>                    
                     <td>
-                        <?php echo $to->nama ?>
+                        <?php echo $tryout->nama ?>
                     </td>
                     <td>
-                        <?php echo $to->tanggal ?>
+                        <?php echo $tryout->tanggal ?>
                     </td>
                     <td>
-                        <?php echo date('H:i',  strtotime($to->waktuMulai)); ?>
+                        <?php echo date('H:i',  strtotime($tryout->waktuMulai)); ?>
                     </td>
                     <td>
-                        <?php echo $to->durasi; ?>
+                        <?php echo $tryout->durasi; ?>
                     </td>
                     <td>
                         <?php
-                            $pengerjaan = Pengerjaantryout::model()->findByAttributes(array('idTryout'=>$to->id));
+                            $answerSheet = Pengerjaantryout::model()->findByAttributes(array('idTryout'=>$tryout->id));
                         ?>
 
-                        <?php if($pengerjaan->isSubmitted == 1):?>
+                        <?php if($answerSheet->isSubmitted == 1):?>
                             Sudah mengerjakan
-                        <?php elseif($to->status() == 0):?>
+                        <?php elseif($tryout->status() == 0):?>
                         <form method="post">
-                            <input type="hidden" name="Perform[id]" value="<?php echo $to->id;?>">
+                            <input type="hidden" name="Perform[id]" value="<?php echo $tryout->id;?>">
                             <input type="submit" class="btn btn-primary" value="Kerjakan">
                         </form>
                         <?php else:?>
@@ -92,29 +94,29 @@ $this->breadcrumbs = array(
             </tr>
             <?php
             $no = 1;
-            foreach ($model[1] as $to) { ?>                    
+            foreach ($tryoutModelList[1] as $tryout) { ?>
                 <tr>
                     <td>
                         <?php echo $no++;?>
                     </td>                    
                     <td>
-                        <?php echo $to->nama ?>  
+                        <?php echo $tryout->nama ?>
                     </td>
                     <td>
-                        <?php echo $to->tanggal; ?>
+                        <?php echo $tryout->tanggal; ?>
                     </td>
                     <td>
-                        <?php echo date('H:i',  strtotime($to->waktuMulai)); ?>
+                        <?php echo date('H:i',  strtotime($tryout->waktuMulai)); ?>
                     </td>
                     <td>
-                        <?php echo $to->durasi; ?>
+                        <?php echo $tryout->durasi; ?>
                     </td>                                        
                     <td>
                         <?php if(Yii::app()->user->isGuest):?>                        
                         <p style="font-size:10px;">Login/Register untuk mendaftar Tryout</p>
-                        <?php  elseif(!$to->isRegistered(Yii::app()->user->id)):?>
+                        <?php  elseif(!$tryout->isRegistered(Yii::app()->user->id)):?>
                         <form method="post">
-                            <input type="hidden" name="Register[id]" value="<?php echo $to->id;?>">
+                            <input type="hidden" name="Register[id]" value="<?php echo $tryout->id;?>">
                             <input type="submit" class="btn btn-primary" value="Daftar">
                         </form>                        
                         <?php endif;?>
@@ -137,26 +139,26 @@ $this->breadcrumbs = array(
             </tr>
             <?php
             $no = 1;
-            foreach ($model[2] as $to) { ?>                    
+            foreach ($tryoutModelList[2] as $tryout) { ?>
                 <tr>
                     <td>
                         <?php echo $no++;?>
                     </td>                    
                     <td>
-                        <?php echo $to->nama ?>  
+                        <?php echo $tryout->nama ?>
                     </td>
                     <td>
-                        <?php echo $to->tanggal; ?>
+                        <?php echo $tryout->tanggal; ?>
                     </td>
                     <td>
-                        <?php echo date('H:i',  strtotime($to->waktuMulai)); ?>
+                        <?php echo date('H:i',  strtotime($tryout->waktuMulai)); ?>
                     </td>
                     <td>
-                        <?php echo $to->durasi; ?>
+                        <?php echo $tryout->durasi; ?>
                     </td>                                        
                     <td>
                         <form method="post">
-                            <input type="hidden" name="Statistic[id]" value="<?php echo $to->id;?>">
+                            <input type="hidden" name="Statistic[id]" value="<?php echo $tryout->id;?>">
                             <input type="submit" class="btn btn-primary" value="Lihat">
                         </form>
                     </td>

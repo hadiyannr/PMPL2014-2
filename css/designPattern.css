@@ -45,7 +45,7 @@ p {
 
 nav > ul > li > a {
   font-family: LatoLatin; font-weight: bold;
-  font-size: 125%;
+  font-size: 100%;
 }
 
 .modal-title {
@@ -240,12 +240,12 @@ header {
 }
 
 .logo {
-  height: 50px;
+  height: 30px;
   margin: 10px;
 }
 
 .icon {
-  height: 25px;
+  height: 10px;
   margin-right: 3px;
 }
 
@@ -254,7 +254,7 @@ header {
 }
 
 .navbar-default {
-  margin-top: 10px;
+  margin: 0; padding: 0;
 }
 
 .navbar-nav {
@@ -265,6 +265,9 @@ nav a, .navbar-header a {
   color: black !important;
 }
 
+nav span {
+  font-size: 100%;
+}
 .navbar-default .navbar-nav > .active > a {
    background-color: #fedc00;
   border-bottom: 5px solid black;
@@ -276,7 +279,7 @@ li.active:hover, a:hover {
 
 .carousel-inner .item img {
   display: block;
-  max-height: 698px;
+  max-height: 300px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -297,7 +300,7 @@ li.active:hover, a:hover {
 
 .carousel-caption {
   width: 100%;
-  height: 300px;
+  height: 150px;
   background-color:rgba(0,0,0,0.5);
   position: absolute;
   left: 0;
@@ -307,15 +310,16 @@ li.active:hover, a:hover {
 .carousel-caption > h1 {
   color: white;
   text-align: left;
-  font-size: 400%;
+  font-size: 200%;
   margin-left: 10.417%;/* 200px; */
   margin-right: 10.417%;/* 200px; */
+  margin-top: 0;
 }
 
 .carousel-caption > p {
   color: white;
   text-align: left;
-  font-size: 150%;
+  font-size: 100%;
   margin-left: 10.417%;/* 200px; */
   margin-right: 10.417%;/* 200px; */
 }
@@ -329,14 +333,15 @@ li.active:hover, a:hover {
 .content-display figure {
   max-width: 100%;
   margin:6.7% 0;
-  max-height: 450px;
   overflow: hidden;
   position: relative;
   right: 15px;
 }
 
 .content-display figure img {
-  max-width: 100%;  
+  height: 66%;
+  width: 100%; /* 182px; */
+   /* 121px; */
 }
 
 .content-display figure figcaption {
@@ -351,11 +356,12 @@ li.active:hover, a:hover {
 .content-display figure figcaption span {
   font-family: LatoLatin;
   font-size: 100%;
-  margin-left: 3.7%;
+  margin:5%;
   display: inline-block;
 }
 
 .content-display p {
+  font-size: 87.5%;
   position: relative;
   bottom: 40px;
   text-align: justify;
@@ -365,7 +371,7 @@ li.active:hover, a:hover {
   color: black;
   float: right;
   position: relative;
-  bottom: 40px;
+  bottom: 60px;
   font-size: 75%;
 }
 
@@ -404,6 +410,84 @@ footer p, footer span {
 
 .footer-mid p {
   text-align: center;
+} 
+
+footer .col-md-7 {
+  background-color: #fedc00;
+}
+footer .col-maps {
+  height: 190px;
+}
+
+footer .col1-maps h5 {
+  color: black;
+}
+
+footer .col1-maps img {
+  height: 75px;
+}
+
+footer .col1-maps {
+    float: left;
+    margin: 1.321% ;
+    width: 13.315%;
+}
+
+footer .col2-maps {
+  float: left;
+  margin: 1.321%  1.321%;
+  margin-left: 2.64%;
+  width: 79.33%;
+  height: 100%;
+}
+
+/* end of implementation : home */
+
+input[type="submit"] {
+  border-radius: 0;
+  background-color: black;
+  color: white;
+  border: 0;
+  padding: 1%;
+}
+
+.list-view div.preheader, .list-view div.post div.header {
+  background: none !important;
+  background-color: black !important;
+}
+
+.post .header {
+  color: white;
+}
+
+.post a{
+  color: white;
+  text-decoration: underline;
+}
+
+.post .header .content {
+    min-height: 100px !important;
+    padding-top:30px !important;
+    padding-bottom: 30px !important; 
+}
+
+.profile-view h3 {
+  margin-top: 0;
+  text-indent: 10px;
+  border-left: 5px solid #6fc5a4;
+}
+
+#ytProfil_jenisKelamin {
+  position: absolute;
+}
+
+.notif-error {
+  background-color: #e01e25;
+  color:white;
+  font-size: 125%;
+  padding:10px;
+  text-align: center;
+  font-family: "LatoLatin";
 }
 
 /* layout implementation : konten */

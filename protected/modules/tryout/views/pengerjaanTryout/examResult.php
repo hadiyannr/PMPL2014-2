@@ -1,6 +1,9 @@
 <?php
 /* @var $this PengerjaanTryoutController */
-/* @var $pengerjaan PengerjaanTryout */
+/* @var $answerSheetModel PengerjaanTryout */
+/* @var $answerSheetDetail */
+/* @var $questionList Soals */
+/* @var $answerList Jawabans */
 
 ?>
 
@@ -9,26 +12,26 @@
         <table class="table">
             <tr>
                 <td>Rank</td>
-                <td><?php echo $detail['rank'];?></td>
+                <td><?php echo $answerSheetDetail['rank'];?></td>
             </tr>    
             <tr>
                 <td>Nilai</td>
-                <td><?php echo $pengerjaan->nilai;?></td>
+                <td><?php echo $answerSheetModel->nilai;?></td>
             </tr>                
         </table>
         
         <table class="table">
             <tr>
                 <td>Benar</td>
-                <td><?php echo $detail['benar'];?></td>
+                <td><?php echo $answerSheetDetail['benar'];?></td>
             </tr>    
             <tr>
                 <td>Salah</td>
-                <td><?php echo $detail['salah'];?></td>
+                <td><?php echo $answerSheetDetail['salah'];?></td>
             </tr>                
             <tr>
                 <td>Kosong</td>
-                <td><?php echo $detail['kosong'];?></td>
+                <td><?php echo $answerSheetDetail['kosong'];?></td>
             </tr>                
         </table>
     </div>
@@ -46,7 +49,7 @@
     </div>
     <div id="collapseThree" class="panel-collapse collapse">
       <div class="panel-body">
-          <?php $this->renderPartial('examHistoryDetail',array('soalList'=>$soalList,'jawaban'=>$jawaban));?>
+          <?php $this->renderPartial('examHistoryDetail',array('questionList'=>$questionList,'answerList'=>$answerList));?>
       </div>
     </div>
   </div>

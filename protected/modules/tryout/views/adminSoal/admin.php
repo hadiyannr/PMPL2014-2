@@ -1,6 +1,6 @@
 <?php
 /* @var $this SoalController */
-/* @var $model Soal */
+/* @var $questionModel Soal */
 
 $this->breadcrumbs=array(
 	'Tryout'=>array('adminTryout/index'),	
@@ -20,7 +20,7 @@ $this->menu=array(
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'soal-grid',
-        'dataProvider'=>$model->search(),	
+        'dataProvider'=>$questionModel->search(),
 	'columns'=>array(		
                 'nomor',
 		'pertanyaan',                

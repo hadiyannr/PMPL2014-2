@@ -1,15 +1,14 @@
 <?php
-/* @var $this <?php
-/* @var $this TryoutController */
-/* @var $model Tryouts */
-/* @var $to Tryouts */
-/*TryoutController */
-/* @var $model Tryouts */
-/* @var $to Tryouts */
+
+/* @var $this PengerjaanTryoutController */
+/* @var $tryoutModelList Tryouts */
+/* @var $tryout Tryouts */
+
+
 ?>
 <h2 class="text-center">Riwayat Tryout</h2>
 <br><br>
-<?php if (sizeof($model)): ?>
+<?php if (sizeof($tryoutModelList)): ?>
         <table class="table">
             <tr>
                 <th>No</th>
@@ -21,27 +20,27 @@
             </tr>
             <?php
             $no = 1;
-            foreach ($model as $to) { ?>   
-                <?php if($to->status() == -1):?>
+            foreach ($tryoutModelList as $tryout) { ?>
+                <?php if($tryout->status() == -1):?>
                 <tr>
                     <td>
                         <?php echo $no++;?>
                     </td>                    
                     <td>
-                        <?php echo $to->nama ?>  
+                        <?php echo $tryout->nama ?>
                     </td>                    
                     <td>
-                        <?php echo $to->tanggal ?>  
+                        <?php echo $tryout->tanggal ?>
                     </td>  
                     <td>
-                        <?php echo date('H:i', strtotime($to->waktuMulai)); ?>
+                        <?php echo date('H:i', strtotime($tryout->waktuMulai)); ?>
                     </td>
                     <td>
-                        <?php echo $to->durasi; ?>
+                        <?php echo $tryout->durasi; ?>
                     </td>                                        
                     <td>                        
                         <form method="post">                            
-                            <input type="hidden" name="Tryout[id]" value="<?php echo $to->id;?>">
+                            <input type="hidden" name="Tryout[id]" value="<?php echo $tryout->id;?>">
                             <input type="submit" class="btn btn-primary" value="Lihat">
                         </form>                            
                     </td>
