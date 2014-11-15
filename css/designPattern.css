@@ -235,8 +235,32 @@ tr:nth-child(even) {
 
 /* layout */
 
+
 /* layout implementation : home */
+
+
+html, body {
+  height: 100%;
+}
+
 header {
+  position: fixed;
+  z-index: 100;
+  height: 54px; /* 7.286166842661035%; */
+  margin-bottom: 0;
+  width: 100%;
+}
+
+header .header-nav, header .header-nav .container {
+  height:100%;
+}
+.content-home {
+  padding-top:54px;
+  height: 100%;
+}
+
+.home-slider {
+    height: 50%;
 }
 
 .logo {
@@ -277,11 +301,18 @@ li.active:hover, a:hover {
   background-color: rgba(0,0,0,0) !important;
 }
 
+.carousel-inner, .carousel-inner .item, .carousel-inner .active {
+  height: 100%;
+}
+
 .carousel-inner .item img {
-  display: block;
-  max-height: 300px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  height: 100%;
+}
+
+.content-home .container-fluid {
+  height: 50%;
+  overflow: hidden;
 }
 
 .breadcrumbs {
@@ -292,10 +323,6 @@ li.active:hover, a:hover {
 
 .modal-content {
   padding: 15px;
-}
-
-.carousel-inner .item img {
-  height: 300px;
 }
 
 .carousel-caption {
@@ -324,6 +351,9 @@ li.active:hover, a:hover {
   margin-right: 10.417%;/* 200px; */
 }
 
+.content-home .col-md-10 {
+  height: 100%;
+} 
 .content-display-box {
   max-width: 100%;
   border-right: 1px solid black;

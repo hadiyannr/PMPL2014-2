@@ -30,6 +30,7 @@
         <header>		
             <div class="header-nav">
                 <div class="container">
+                    <div class="nav-wrapper">
                         <div class="navbar-header">
                              <a href="<?php echo Yii::app()->request->baseUrl; ?>">
                                 <img class="logo" src="<?php echo Yii::app()->request->baseUrl; ?>/images/logo.png" alt="">
@@ -77,7 +78,7 @@
                                     </li>      
                                     <li>
                                         <a href="#SignUp" data-toggle="modal" style="color: #ecf0f1">Daftar</a>
-                                    </li>        			
+                                    </li>                   
                                 <?php } ?>
                                 <?php if (!Yii::app()->user->isGuest) { ?>
                                     <li class="<?php echo (in_array($controllerName, array("profil")))?"active":""?>">
@@ -85,16 +86,19 @@
                                     </li>      
                                     <li>
                                         <?php echo CHtml::link("Logout", array('/site/logout'),array('style'=>"color: #ecf0f1")); ?>
-                                    </li>        			
+                                    </li>                   
                                 <?php } ?>
-                            </ul> 		      
+                            </ul>             
                             <!--login and register modal, call component-->
                             <?php $this->widget('UserLogin',array('visible'=>Yii::app()->user->isGuest)); ?>
 
                             <?php $this->widget('UserRegister',array('visible'=>Yii::app()->user->isGuest)); ?>
                             <!-- end of modal -->
     
-                        </nav>	                    
+                        </nav>  
+
+                    </div>
+                                            
                 </div>
             </div>
         </header>
