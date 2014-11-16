@@ -343,9 +343,29 @@ li.active:hover, a:hover {
   padding: 15px;
 }
 
-@media (min-width: 0px) and (max-width: 772px) {
+@media (min-width: 0px) and (max-width: 639px) {
+  .content-home {
+    height: 800px;
+  }
    .home-slider {
     height: 30%;
+  }
+
+  .carousel-caption > h1 {
+    color: white;
+    text-align: left;
+    font-size: 100%;
+    margin-left: 10.417%;/* 200px; */
+    margin-right: 10.417%;/* 200px; */
+    margin-top: 0;
+  }
+
+  .carousel-caption > p {
+    color: white;
+    text-align: left;
+    font-size: 80%;
+    margin-left: 10.417%;/* 200px; */
+    margin-right: 10.417%;/* 200px; */
   }
 
   footer {
@@ -353,21 +373,24 @@ li.active:hover, a:hover {
   }
 
   .content-home .container-fluid {
-    height: 650px;
+    height: 489px;
     background-color: white;
   }
 
   .content-home .col-md-10 {
-    height: 570px;
+    height: 400px;
   } 
 
   .content-home .col-md-3 {
     clear: both;
-    height: 25%;
+    height: 150px;
     width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
     border-bottom: 1px solid grey;
+  }
+  .content-home .col-md-3:nth-child(3) {
+      display:none;
   }
 
   .content-display-box {
@@ -392,7 +415,6 @@ li.active:hover, a:hover {
   }
 
   .content-display figure figcaption span {
-    padding-top: 10px;
     max-width: 50%;
     font-family: LatoLatin;
     font-size: 125%;
@@ -404,17 +426,16 @@ li.active:hover, a:hover {
     margin-left: 90px;
     font-size: 87.5%;
     text-align: justify;
-    padding-left: 100px;
+    padding-left: 20px;
+    max-height: 40px;
+    overflow: hidden;
   }
 
   .content-display a {
     color: black;
     float: right;
-    font-size: 75%;
-  }
-
-  .remove-left-padding {
-    padding-left: 0;
+    font-size: 60%;
+    position: relative;
   }
 
   .home-more p {
@@ -422,7 +443,7 @@ li.active:hover, a:hover {
   }
 
   .home-more a {
-    font-size: 200%;
+    font-size: 100%;
     background-color: #fedc00;
     color: black;
   }
@@ -434,7 +455,7 @@ li.active:hover, a:hover {
 }
 
 /* layout implementation : mid */
-@media (min-width:772px) and (max-width: 992px) {
+@media (min-width:639px) and (max-width: 992px) {
   .home-slider {
     height: 30%;
   }

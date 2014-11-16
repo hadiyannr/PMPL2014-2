@@ -12,21 +12,21 @@
             <img alt="" src="<?php echo Yii::app()->request->baseUrl; ?>/images/slider/Perpusat.jpg">
             <div class="carousel-caption">
                     <h1>UI Bebas Uang Mangkal WOAKWOAK</h1>
-                    <p>Khusus untuk Reguler melalui SIMAK, SBMPTN dan SNMPTN tahun 2014. Bebas Uang <br>Pangkal dan dapat mengajukan skema Biaya Operasional Pendidikan (BOP) berkeadilan </p>
+                    <p>Khusus untuk Reguler melalui SIMAK, SBMPTN dan SNMPTN tahun 2014. Bebas Uang Pangkal dan dapat mengajukan skema Biaya Operasional Pendidikan (BOP) berkeadilan </p>
             </div>
         </div>
         <div class="item">
             <img alt="" src="<?php echo Yii::app()->request->baseUrl; ?>/images/slider/01.jpg">
             <div class="carousel-caption">
                     <h1>UI Bebas Uang Pangkal</h1>
-                    <p>Khusus untuk Reguler melalui SIMAK, SBMPTN dan SNMPTN tahun 2014. Bebas Uang <br>Pangkal dan dapat mengajukan skema Biaya Operasional Pendidikan (BOP) berkeadilan </p>
+                    <p>Khusus untuk Reguler melalui SIMAK, SBMPTN dan SNMPTN tahun 2014. Bebas Uang Pangkal dan dapat mengajukan skema Biaya Operasional Pendidikan (BOP) berkeadilan </p>
             </div>
         </div>
         <div class="item">
             <img alt="" src="<?php echo Yii::app()->request->baseUrl; ?>/images/slider/rektorat.jpg">
             <div class="carousel-caption">
                     <h1>UI Bebas Uang Pangkal</h1>
-                    <p>Khusus untuk Reguler melalui SIMAK, SBMPTN dan SNMPTN tahun 2014. Bebas Uang <br>Pangkal dan dapat mengajukan skema Biaya Operasional Pendidikan (BOP) berkeadilan </p>
+                    <p>Khusus untuk Reguler melalui SIMAK, SBMPTN dan SNMPTN tahun 2014. Bebas Uang Pangkal dan dapat mengajukan skema Biaya Operasional Pendidikan (BOP) berkeadilan </p>
             </div>
         </div>
     </div>
@@ -41,7 +41,7 @@
                     <figure class="content-display">
                         <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/park-chan-hee.png" alt="">
                         <figcaption>
-                            <span>Tips masuk UI oleh mahasiswi cantik bangat banget banget banget</span>
+                            <span>Tips masuk UI oleh mahasiswi cantik </span>
                         </figcaption>
                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, delectus, accusantium aliquam neque atque eos quam aperiam dolorum alias. Quidem ullam minus atque eos neque repudiandae, adipisci labore nobis corrupti.</p>
                          <a class="btn bg-bright-yellow" href="">MORE</a>
@@ -55,7 +55,7 @@
                     <figure class="content-display">
                         <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/park-chan-hee.png" alt="">
                         <figcaption>
-                            <span>Tips masuk UI oleh mahasiswi cantik bangat banget banget banget</span>
+                            <span>Tips masuk UI oleh mahasiswi cantik </span>
                         </figcaption>
                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut accusantium odit nihil veritatis maxime, ad ducimus consectetur, placeat, expedita, ea rem! Rerum doloremque facere magni eum beatae error doloribus, nisi!</p>
                          <a class="btn bg-bright-yellow" href="">MORE</a>
@@ -69,7 +69,7 @@
                     <figure class="content-display">
                         <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/park-chan-hee.png" alt="">
                         <figcaption>
-                            <span>Tips masuk UI oleh mahasiswi cantik bangat banget banget banget</span>
+                            <span>Tips masuk UI oleh mahasiswi cantik </span>
                         </figcaption>
                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia praesentium reprehenderit eius quaerat debitis laboriosam tenetur voluptate quia laborum ab nobis, dolor, voluptas maxime hic facere laudantium earum minus natus.</p>
                          <a class="btn bg-bright-yellow" href="">MORE</a>
@@ -83,7 +83,7 @@
                     <figure class="content-display">
                         <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/park-chan-hee.png" alt="">
                         <figcaption>
-                            <span>Tips masuk UI oleh mahasiswi cantik bangat banget banget banget</span>
+                            <span>Tips masuk UI oleh mahasiswi cantik </span>
                         </figcaption>
                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem placeat aspernatur sequi, deserunt voluptate nulla, optio voluptatem quisquam cumque nostrum. Laborum ut enim magnam itaque, ea mollitia, error quasi quas.</p>
                          <a class="btn bg-bright-yellow" href="">MORE</a>
