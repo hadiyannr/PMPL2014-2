@@ -83,6 +83,9 @@ input, .form-control {
   color:white;
   background-color: black;  
 }
+.btn-primary:hover {
+  background-color: #3276b1 !important;
+}
 
 .btn-danger {
   color:white;
@@ -696,4 +699,25 @@ ul.dropdown-menu {
 ul.yiiPager .selected a {
   background: #fedc00 !important;
   color: black !important;
+}
+ul.yiiPager a:link, ul.yiiPager a:visited {
+  border: solid 1px black !important;
+  font-weight: bold !important;
+  color: black !important;
+}
+.portlet-decoration {
+  background: black !important;
+  border-left: none !important;
+}
+.portlet-title {
+  color: white !important;
+}
+.portlet-content {
+  background: rgb(230,230,230) !important;
+}
+.operations li a {
+  color: black !important;
+}
+.operations li a:hover {
+  color: gray !important;
 }
