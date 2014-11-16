@@ -1,4 +1,4 @@
-<div class="carousel slide" id="carousel-748657" style="max-width: 100%">
+<div class="carousel slide home-slider" id="carousel-748657">
     <ol class="carousel-indicators">
         <li class="active" data-slide-to="0" data-target="#carousel-748657">
         </li>
@@ -9,21 +9,21 @@
     </ol>
     <div class="carousel-inner">
         <div class="item active" >
-            <img alt="" src="<?php echo Yii::app()->request->baseUrl; ?>/images/slider/Perpusat.jpg" style="width: 100%; height:1000px">
+            <img alt="" src="<?php echo Yii::app()->request->baseUrl; ?>/images/slider/Perpusat.jpg">
             <div class="carousel-caption">
                     <h1>UI Bebas Uang Mangkal WOAKWOAK</h1>
                     <p>Khusus untuk Reguler melalui SIMAK, SBMPTN dan SNMPTN tahun 2014. Bebas Uang <br>Pangkal dan dapat mengajukan skema Biaya Operasional Pendidikan (BOP) berkeadilan </p>
             </div>
         </div>
         <div class="item">
-            <img alt="" src="<?php echo Yii::app()->request->baseUrl; ?>/images/slider/01.jpg" style="width: 100%; height:1000px">
+            <img alt="" src="<?php echo Yii::app()->request->baseUrl; ?>/images/slider/01.jpg">
             <div class="carousel-caption">
                     <h1>UI Bebas Uang Pangkal</h1>
                     <p>Khusus untuk Reguler melalui SIMAK, SBMPTN dan SNMPTN tahun 2014. Bebas Uang <br>Pangkal dan dapat mengajukan skema Biaya Operasional Pendidikan (BOP) berkeadilan </p>
             </div>
         </div>
         <div class="item">
-            <img alt="" src="<?php echo Yii::app()->request->baseUrl; ?>/images/slider/rektorat.jpg" style="width: 100%; height:1000px">
+            <img alt="" src="<?php echo Yii::app()->request->baseUrl; ?>/images/slider/rektorat.jpg">
             <div class="carousel-caption">
                     <h1>UI Bebas Uang Pangkal</h1>
                     <p>Khusus untuk Reguler melalui SIMAK, SBMPTN dan SNMPTN tahun 2014. Bebas Uang <br>Pangkal dan dapat mengajukan skema Biaya Operasional Pendidikan (BOP) berkeadilan </p>
