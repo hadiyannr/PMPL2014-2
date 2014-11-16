@@ -282,8 +282,8 @@ nav span {
 }
 
 .navbar-default .navbar-nav > .active > a {
-   background-color: #fedc00;
-  border-bottom: 5px solid black;
+ background-color: #fedc00;
+ border-bottom: 5px solid black;
 }
 
 li.active:hover, a:hover {
@@ -297,7 +297,7 @@ li.active:hover, a:hover {
 }
 
 .content-home {
-    height: 100%;
+  height: 100%;
 }
 
 .remove-left-padding {
@@ -340,8 +340,8 @@ li.active:hover, a:hover {
 }
 
 .modal-content {
-    padding: 15px;
-  }
+  padding: 15px;
+}
 
 @media (min-width: 0px) and (max-width: 772px) {
    .home-slider {
@@ -558,7 +558,7 @@ li.active:hover, a:hover {
   .content-display figure img {
     height: 66%;
     width: 100%; /* 182px; */
-     /* 121px; */
+    /* 121px; */
   }
 
   .content-display figure figcaption {
@@ -642,9 +642,9 @@ li.active:hover, a:hover {
   }
 
   footer .col1-maps {
-      float: left;
-      margin: 1.321% ;
-      width: 13.315%;
+    float: left;
+    margin: 1.321% ;
+    width: 13.315%;
   }
 
   footer .col2-maps {
@@ -704,9 +704,9 @@ input[type="submit"] {
 }
 
 .post .header .content {
-    min-height: 100px !important;
-    padding-top:30px !important;
-    padding-bottom: 30px !important; 
+  min-height: 100px !important;
+  padding-top:30px !important;
+  padding-bottom: 30px !important; 
 }
 
 .profile-view h3 {
@@ -774,4 +774,24 @@ ul.dropdown-menu {
   background-color: red;
   box-shadow: none !important;
   border-radius: 0;
+}
+
+/* end of implementation : konten */
+
+/* layout implementation : admin */
+.grid-view table.items th {
+  background: black !important;
+}
+.grid-view table.items tr.odd {
+  background: white !important;
+}
+.grid-view table.items tr.even {
+  background: rgb(230,230,230) !important;
+}
+.grid-view table.items tr:hover {
+  background: #FFED75 !important;
+}
+ul.yiiPager .selected a {
+  background: #fedc00 !important;
+  color: black !important;
 }

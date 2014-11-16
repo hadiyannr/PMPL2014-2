@@ -56,47 +56,8 @@ class PengerjaanTryoutController extends Controller
             $tryoutModel = Tryout::model()->findByPk($idTryout);
             $criteria = new CDbCriteria();
             $criteria->order = "nomor ASC,isHasJawaban ASC";
-            $questionList = Soal::model()->findAllByAttributes(array('idtryout' => $idTryout),$criteria);
-            $answerSheet = PengerjaanTryout::model()->findByAttributes(array('idPengguna'=>Yii::app()->user->id,'idTryout'=>$tryoutModel->id));
-            $answerList = array();
-            //init jawaban dari db(kalo ada)
-            foreach($questionList as $question){
-                $answerModel = Jawaban::model()->findByAttributes(array('idsoal'=>$question->id));
-                if($answerModel == null){
-                    $answerList[$question->nomor] = new Jawaban;
-                    $answerList[$question->nomor]->idsoal = $question->id;
-                    $answerList[$question->nomor]->idpengerjaan = $answerSheet->id;
-                    $answerList[$question->nomor]->isiJawaban = null;
-                }else{
-                    $answerList[$question->nomor] = $answerModel;
-                }            
-            }
-
-            if(isset($_POST['jawaban'])){            
-                foreach($questionList as $question){
-                    if(isset($_POST['jawaban'][$question->nomor])){
-                        $answerList[$question->nomor]->isiJawaban = $_POST['jawaban'][$question->nomor];
-                        $answerList[$question->nomor]->save();
-                    }
-                    else{
-                        if(Jawaban::model()->findAllByAttributes(array('idsoal'=>$question->id)) != null){
-                            $answerList[$question->nomor]->delete();
-                        }                    
-                    }                
-                }
-                $answerSheet->hitungNilai();
-                $answerSheet->save();
-            }
-            
-            if($tryoutModel->status() < 0 || isset($_POST['Submit'])){
-                $answerSheet->isSubmitted = 1;
-                $answerSheet->save();
-                $this->redirect(array('postExam','id'=>$answerSheet->id));
-            }
-            
-            
-            
-            $this->render('exam',array('questionList'=>$questionList, 'tryoutModel'=>$tryoutModel,'answerList'=>$answerList));
+            $questionList = Soal::model()->findAllByAttributes(array('idtryout' => $idTryout),$criteria);                                  
+            $this->render('preview',array('questionList'=>$questionList, 'tryoutModel'=>$tryoutModel));
         }
         public function actionPostExam($id){
             $answerSheetModel = PengerjaanTryout::model()->findByPk($id);
