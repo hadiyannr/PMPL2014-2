@@ -63,6 +63,7 @@
                             <li>
                                 <a href="#Login" data-toggle="modal" style="color: #ecf0f1">Login</a>
                             </li>
+<<<<<<< HEAD
                             <?php } ?>
                             <?php if (!Yii::app()->user->isGuest) { ?>
                                 <li>
@@ -75,6 +76,41 @@
                         </nav>
 
                     </div>
+=======
+                        <?php if (!Yii::app()->user->isGuest) { ?>
+                            <li>
+                                <?php echo CHtml::link("Logout", array('/site/logout'),array('style'=>"color: #ecf0f1")); ?>
+                            </li>
+                        <?php } ?>
+                    </ul>
+
+                    <?php $this->widget('UserLogin',array('visible'=>Yii::app()->user->isGuest)); ?>
+                </nav>
+
+            </div>
+        </div>
+    </header>
+
+    <div class="container content">
+        <?php if(isset($this->breadcrumbs)):?>
+            <?php $this->widget('zii.widgets.CBreadcrumbs', array(
+			'links'=>$this->breadcrumbs,
+		)); ?><!-- breadcrumbs -->
+        <?php endif?>
+
+        <?php echo $content; ?>
+
+        <div class="clear"></div>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 social">
+                    <a href="#"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/ico-facebook.png" alt="FB"><span>FACEBOOK</span></a>
+                    <a href="#"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/ico-twitter.png" alt="Twitter"><span>TWITTER</span></a>
+>>>>>>> 5c3845e7ee64b1e506ebf98b5f070f27ac0891cb
                 </div>
             </header>
 
