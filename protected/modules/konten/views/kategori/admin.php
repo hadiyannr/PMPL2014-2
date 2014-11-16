@@ -28,7 +28,7 @@ $('.search-form form').submit(function(){
 <h1>Manajemen Kategori</h1>
 
 
-<?php echo CHtml::link('Pencarian Lanjutan','#',array('class'=>'search-button')); ?>
+<?php echo CHtml::link('Pencarian Lanjutan','#',array('class'=>'btn btn-primary')); ?>
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(
 	'kategoriModel'=>$kategoriModel,
