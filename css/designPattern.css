@@ -721,3 +721,8 @@ ul.yiiPager a:link, ul.yiiPager a:visited {
 .operations li a:hover {
   color: gray !important;
 }
+#tryout-form input[type="submit"] {
+  padding: 0.80%;
+  padding-left: 13px;
+  padding-right: 13px;
+}
