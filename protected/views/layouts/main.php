@@ -35,7 +35,9 @@
 
 
                 <div class="navbar-header">
-                    <?php echo CHtml::link("Admin SiapMasukUI.com", array('/admin/index'),array('class'=>'navbar-brand')); ?>
+                    <a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/admin/index">
+                    <img class="logo-admin" src="<?php echo Yii::app()->request->baseUrl; ?>/images/logo-admin.png" alt="">
+                    </a> 
                 </div>
 
                 <?php $controllerName = $this->getId();?>

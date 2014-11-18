@@ -261,6 +261,10 @@ header .header-nav, header .header-nav .container {
   height: 30px;
   margin: 10px;
 }
+.logo-admin {
+  height: 38px;
+  margin: 5px;
+}
 
 .icon {
   height: 10px;
@@ -812,12 +816,17 @@ ul.dropdown-menu {
 }
 .grid-view table.items tr.odd {
   background: white !important;
+  height: 30px !important;
 }
 .grid-view table.items tr.even {
   background: rgb(230,230,230) !important;
+  height: 30px !important;
 }
 .grid-view table.items tr:hover {
   background: #FFED75 !important;
+}
+.grid-view .pager {
+  margin-top: 20px !important;
 }
 ul.yiiPager .selected a {
   background: #fedc00 !important;
@@ -888,5 +897,10 @@ table.detail-view tr:hover {
   text-align: center;
 }
 .grid-view .button-column {
-  width: 70px !important;
+  width: 100px !important;
+}
+.grid-view .button-column .view,
+.grid-view .button-column .update,
+.grid-view .button-column .delete {
+  padding: 5px;
 }
