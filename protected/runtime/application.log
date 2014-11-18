@@ -8474,3 +8474,33 @@ REQUEST_URI=/PMPL2014-2/index.php/konten/adminKonten/create
 HTTP_REFERER=http://localhost/PMPL2014-2/index.php/konten/adminKonten/index
 >>>>>>> 971ba498d9a73bb08906a8a67c210fa377170bcb
 ---
+2014/11/18 08:25:33 [error] [exception.CException] exception 'CException' with message 'Property "Konten.imagepath" is not defined.' in C:\xampp\htdocs\yiiframework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\db\ar\CActiveRecord.php(145): CComponent->__get('imagepath')
+#1 C:\xampp\htdocs\PMPL2014-2\protected\modules\konten\views\adminKonten\_form.php(51): CActiveRecord->__get('imagepath')
+#2 C:\xampp\htdocs\yiiframework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\yiiframework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yiiframework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\PMPL2014-2\protected\modules\konten\views\adminKonten\create.php(17): CController->renderPartial('_form', Array)
+#6 C:\xampp\htdocs\yiiframework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\yiiframework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yiiframework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yiiframework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#10 C:\xampp\htdocs\PMPL2014-2\protected\modules\konten\controllers\AdminKontenController.php(101): CController->render('create', Array)
+#11 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): AdminKontenController->actionCreate()
+#12 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\yiiframework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 C:\xampp\htdocs\yiiframework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yiiframework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\yiiframework\web\CController.php(291): CFilterChain->run()
+#19 C:\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('create')
+#21 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/adminKon...')
+#22 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/adminKonten/create
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/konten/adminKonten/index
+---
