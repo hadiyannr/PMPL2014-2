@@ -462,6 +462,12 @@ li.active:hover, a:hover {
     margin-top: 40px;
     background-color: #fedc00;
   }
+  .float-foto {
+    float: none !important;
+  }
+  .profil-box {
+    padding: 20px 20px !important;
+  }
 }
 
 /* layout implementation : mid */
@@ -551,6 +557,12 @@ li.active:hover, a:hover {
   .content-home .col-md-2 {
     margin-top: 40px;
     background-color: #fedc00;
+  }
+  .float-foto {
+    float: none !important;
+  }
+  .profil-box {
+    padding: 20px 20px !important;
   }
 }
 
@@ -684,6 +696,12 @@ li.active:hover, a:hover {
     margin-left: 2.64%;
     width: 79.33%;
     height: 100%;
+  }
+  .float-foto {
+    float: none !important;
+  }
+  .profil-box {
+    padding: 20px 50px !important;
   }
 } 
 
@@ -903,4 +921,53 @@ table.detail-view tr:hover {
 .grid-view .button-column .update,
 .grid-view .button-column .delete {
   padding: 5px;
+}
+
+/* end of implementation : admin */
+
+/* layout implementation : profil */
+.form-jenis {
+  margin-top: 10px;
+}
+.form-profil input,
+.form-profil select {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+}
+.btn-ubah-profil .btn-primary,
+.btn-ubah-profil .btn-danger {
+  padding: 7px 20px !important;
+  border: 1px black !important;
+}
+.profil-box {
+  background-color: rgb(244,244,244);
+  padding: 20px 70px;
+  margin-bottom: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.float-foto {
+  float: right;
+}
+.float-btn-profil {
+  float: right;
+}
+.btn-profil {
+  margin-bottom: 5px;
+}
+.btn-profil .btn-primary {
+  width: 150px;
+}
+.nama {
+  background-color: #fedc00;
+  padding: 4px 10px;
+  margin-top: 3px;
 }

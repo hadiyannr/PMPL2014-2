@@ -8750,3 +8750,15 @@ Stack trace:
 REQUEST_URI=/PMPL2014-2/index.php/konten/adminKonten/delete/id/26
 HTTP_REFERER=http://localhost/PMPL2014-2/index.php/konten/adminKonten/index
 ---
+2014/11/18 11:06:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "konten/site/logout".' in C:\xampp\htdocs\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/site/log...')
+#1 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/site/logout
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/konten/adminKonten/index
+---
+2014/11/18 13:57:06 [warning] [application] Failed to set unsafe attribute "image" of "Profil".
+in C:\xampp\htdocs\PMPL2014-2\protected\controllers\ProfilController.php (34)
+in C:\xampp\htdocs\PMPL2014-2\index.php (13)
