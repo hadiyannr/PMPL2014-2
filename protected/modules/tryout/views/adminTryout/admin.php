@@ -19,6 +19,7 @@ $this->menu=array(
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'tryout-grid',
 	'dataProvider'=>$tryoutModel->search(),
+    'ajaxUpdate'=>false,
 	'columns'=>array(
 		'id',
                 'nama',

@@ -38,8 +38,9 @@ $('.search-form form').submit(function(){
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'kategori-grid',
-	'dataProvider'=>$kategoriModel->search(),	
-	'columns'=>array(
+	'dataProvider'=>$kategoriModel->search(),
+	'ajaxUpdate'=>false,
+    'columns'=>array(
 		'id',
 		'nama',
 		array(
