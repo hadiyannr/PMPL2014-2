@@ -5,7 +5,7 @@
 class KontenController extends Controller
 {
     public $layout ='//layouts/site';
-    private $pageSize = 9;
+    private $pageSize = 8;
 	public function actionIndex($id)
 	{
         $criteria = new CDbCriteria();
@@ -32,6 +32,21 @@ class KontenController extends Controller
         $categoryModel = Kategori::model()->findByPk($idcategory);
         $contentModelList = Konten::model()->findAll($criteria);
         $this->render('contentList',array('contentModelList'=>$contentModelList,'pages' => $pages,'title'=>$categoryModel->nama));
+
+//        $criteria=new CDbCriteria;
+//        $criteria->compare('idcategory',$idcategory);
+//        $criteria->compare('isPublished',1);
+//
+//        $categoryModel = Kategori::model()->findByPk($idcategory);
+//        $konten = Konten::model()->findAll($criteria); //returns AR objects
+//        $count = count($konten);
+//
+//        $dataProvider= new CArrayDataProvider($konten, array(
+//            'pagination'=>array('pageSize'=>$this->pageSize),
+//        ));
+//
+//        $contentModelList = $dataProvider->getData();
+//        $this->render('contentList',array('contentModelList'=>$contentModelList,'pages' => $dataProvider->pagination,'title'=>$categoryModel->nama));
     }
         
     public function actionSearch($keyword){
