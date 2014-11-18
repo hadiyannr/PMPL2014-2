@@ -155,8 +155,8 @@
                 </div>
             </div>
         </header>
-
-        <div class="content-home">
+        
+        <div class="content-home <?php if ($_SESSION['home'] == false): ?><?php echo "nothome"?><?php endif ?> ">
              <div class="container">
                 <div class="pull-left">
                     <?php if(isset($this->breadcrumbs)):?>
