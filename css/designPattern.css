@@ -290,6 +290,7 @@ header .header-nav, header .header-nav .container {
   background-color: #fedc00;
   border-radius: 5px;
   border: 2px solid black;
+  float: right;
 }
 
 .responsive-nav #dLabel hr{
@@ -537,11 +538,12 @@ nav li.active:hover, a:hover {
 }
 
 @media (min-width:639px) and (max-width: 768px) {
-  .navbar-default {
+   .navbar-default {
     display: none;
   }
 
-   .responsive-nav {
+
+  .responsive-nav {
      display: inline;
   }
 
