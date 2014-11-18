@@ -159,7 +159,7 @@ $this->breadcrumbs = array(
                     <td>
                         <form method="post">
                             <input type="hidden" name="Statistic[id]" value="<?php echo $tryout->id;?>">
-                            <input type="submit" class="btn btn-primary" value="Lihat">
+                            <input type="submit" class="btn btn-primary btn-statistic" value="Lihat">
                         </form>
                     </td>
                 </tr>
@@ -169,6 +169,6 @@ $this->breadcrumbs = array(
 </div>
 <?php if(!Yii::app()->user->isGuest):?>
 <div style="margin-top:200px;">
-    <?php echo CHtml::link('Riwayat Tryout',array('pengerjaanTryout/history'),array('class'=>'btn btn-success'));?>
+    <?php echo CHtml::link('Riwayat Tryout',array('pengerjaanTryout/history'),array('class'=>'btn-primary'));?>
 </div>
 <?php endif;?>
