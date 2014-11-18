@@ -297,7 +297,7 @@ li.active:hover, a:hover {
 }
 
 .breadcrumbs {
-  margin-top: 50px;
+  margin-top: 15px;
   margin-left: -15px;
   padding-left: 17px !important;
 }
@@ -822,10 +822,30 @@ ul.dropdown-menu {
 ul.yiiPager .selected a {
   background: #fedc00 !important;
   color: black !important;
+  border-radius: 0 !important;
 }
 ul.yiiPager a:link, ul.yiiPager a:visited {
   border: solid 1px black !important;
   font-weight: bold !important;
+  color: black !important;
+  border-radius: 0 !important;
+  padding: 5px 8px !important;
+}
+.grid-view .pager .next a {
+  margin-left: 3px;
+  background-color: black !important;
+  color: white !important;
+}
+.grid-view .pager .next a:hover {
+  background-color: white !important;
+  color: black !important;
+}
+.grid-view .pager .previous a {
+  background-color: black !important;
+  color: white !important;
+}
+.grid-view .pager .previous a:hover {
+  background-color: white !important;
   color: black !important;
 }
 .portlet-decoration {
@@ -866,4 +886,7 @@ table.detail-view tr:hover {
 }
 .admin-index {
   text-align: center;
+}
+.grid-view .button-column {
+  width: 70px !important;
 }
