@@ -43,7 +43,7 @@
                               <ul class="dropdown-menu responsive-dropdown" role="menu" aria-labelledby="dLabel">
                                      <li class="dropdown">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #ecf0f1">Konten <b class="caret"></b></a>
-                                        <ul class="dropdown-menu">
+                                        <ul>
                                             <?php
                                             $kategoris = Kategori::model()->findAll();
                                             foreach ($kategoris as $kategori): ?>

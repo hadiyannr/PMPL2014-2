@@ -76,7 +76,7 @@ $this->breadcrumbs=array(
                             <span>Tips masuk UI oleh mahasiswi cantik bangat banget banget banget</span>
                         </figcaption>
                         <p>Lorem ipsum dolor sit amet, nobis quasi mollitia ex adipisci esse tenetur earum dolores reprehenderit laborum molestiae rem labore, iusto velit distinctio!</p>
-                        <a class="btn bg-bright-yellow" href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/konten/konten/index/id/37">MORE</a>
+                        <a class="btn bg-bright-yellow btn-more-display" href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/konten/konten/index/id/37">MORE</a>
                     </figure>
                 </div>
             </div>
@@ -90,7 +90,7 @@ $this->breadcrumbs=array(
                             <span>Tips masuk UI oleh mahasiswi cantik bangat banget banget banget</span>
                         </figcaption>
                         <p>Lorem ipsum dolor sit amet, nobis quasi mollitia ex adipisci esse tenetur earum dolores reprehenderit laborum molestiae rem labore, iusto velit distinctio!</p>
-                        <a class="btn bg-bright-yellow" href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/konten/konten/index/id/37">MORE</a>
+                        <a class="btn bg-bright-yellow btn-more-display" href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/konten/konten/index/id/37">MORE</a>
                     </figure>
                 </div>
             </div>
@@ -104,7 +104,7 @@ $this->breadcrumbs=array(
                             <span>Tips masuk UI oleh mahasiswi cantik bangat banget banget banget</span>
                         </figcaption>
                         <p>Lorem ipsum dolor sit amet, nobis quasi mollitia ex adipisci esse tenetur earum dolores reprehenderit laborum molestiae rem labore, iusto velit distinctio!</p>
-                        <a class="btn bg-bright-yellow" href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/konten/konten/index/id/37">MORE</a>
+                        <a class="btn bg-bright-yellow btn-more-display" href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/konten/konten/index/id/37">MORE</a>
                     </figure>
                 </div>
             </div>
@@ -118,7 +118,7 @@ $this->breadcrumbs=array(
                             <span>Tips masuk UI oleh mahasiswi cantik bangat banget banget banget</span>
                         </figcaption>
                         <p>Lorem ipsum dolor sit amet, nobis quasi mollitia ex adipisci esse tenetur earum dolores reprehenderit laborum molestiae rem labore, iusto velit distinctio!</p>
-                        <a class="btn bg-bright-yellow" href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/konten/konten/index/id/37">MORE</a>
+                        <a class="btn bg-bright-yellow btn-more-display" href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/konten/konten/index/id/37">MORE</a>
                     </figure>
                 </div>
             </div>
@@ -134,7 +134,7 @@ $this->breadcrumbs=array(
                             <span>Tips masuk UI oleh mahasiswi cantik bangat banget banget banget</span>
                         </figcaption>
                         <p>Lorem ipsum dolor sit amet, nobis quasi mollitia ex adipisci esse tenetur earum dolores reprehenderit laborum molestiae rem labore, iusto velit distinctio!</p>
-                        <a class="btn bg-bright-yellow" href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/konten/konten/index/id/37">MORE</a>
+                        <a class="btn bg-bright-yellow btn-more-display" href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/konten/konten/index/id/37">MORE</a>
                     </figure>
                 </div>
             </div>
@@ -148,7 +148,7 @@ $this->breadcrumbs=array(
                             <span>Tips masuk UI oleh mahasiswi cantik bangat banget banget banget</span>
                         </figcaption>
                         <p>Lorem ipsum dolor sit amet, nobis quasi mollitia ex adipisci esse tenetur earum dolores reprehenderit laborum molestiae rem labore, iusto velit distinctio!</p>
-                        <a class="btn bg-bright-yellow" href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/konten/konten/index/id/37">MORE</a>
+                        <a class="btn bg-bright-yellow btn-more-display" href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/konten/konten/index/id/37">MORE</a>
                     </figure>
                 </div>
             </div>
@@ -162,7 +162,7 @@ $this->breadcrumbs=array(
                             <span>Tips masuk UI oleh mahasiswi cantik bangat banget banget banget</span>
                         </figcaption>
                         <p>Lorem ipsum dolor sit amet, nobis quasi mollitia ex adipisci esse tenetur earum dolores reprehenderit laborum molestiae rem labore, iusto velit distinctio!</p>
-                        <a class="btn bg-bright-yellow" href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/konten/konten/index/id/37">MORE</a>
+                        <a class="btn bg-bright-yellow btn-more-display" href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/konten/konten/index/id/37">MORE</a>
                     </figure>
                 </div>
             </div>
@@ -176,7 +176,7 @@ $this->breadcrumbs=array(
                             <span>Tips masuk UI oleh mahasiswi cantik bangat banget banget banget</span>
                         </figcaption>
                         <p>Lorem ipsum dolor sit amet, nobis quasi mollitia ex adipisci esse tenetur earum dolores reprehenderit laborum molestiae rem labore, iusto velit distinctio!</p>
-                        <a class="btn bg-bright-yellow" href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/konten/konten/index/id/37">MORE</a>
+                        <a class="btn bg-bright-yellow btn-more-display" href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/konten/konten/index/id/37">MORE</a>
                     </figure>
                 </div>
             </div>

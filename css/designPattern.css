@@ -235,6 +235,19 @@ tr:nth-child(even) {
   background-color: #b4161c;
 }
 
+.btn-more:hover {
+  color:white;
+  background-color: black;
+}
+.btn-more-display:hover {
+  color: white;
+  background-color: black !important;
+}
+
+.home-more li.active:hover, .home-more a:hover {
+  background-color: black !important;
+}
+
 /* implementation */
 
 /* navigation */
@@ -325,7 +338,7 @@ nav span {
  border-bottom: 5px solid black;
 }
 
-li.active:hover, a:hover {
+nav li.active:hover, a:hover {
   background-color: rgba(0,0,0,0) !important;
 }
 
