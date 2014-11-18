@@ -67,9 +67,12 @@
                                  <p>
                                  <?php
                                      $prev = strip_tags($randKonten->isi);
-                                     echo substr($prev, 0, 100);
+                                     echo substr($prev, 0, 200)."...";
                                  ?></p>
-                                 <a class="btn bg-bright-yellow" href="">MORE</a>
+<!--                                 <a class="btn bg-bright-yellow" href="">MORE</a>-->
+                                <?php
+                                    echo CHtml::link('MORE',array('/konten/konten/index', 'id'=>$randKonten->id),array('class'=>'btn bg-bright-yellow'));
+                                ?>
                             </figure>
                         </div>
                     </div>
@@ -78,7 +81,12 @@
 
     </div>
     <div class="col-md-2 home-more">
-        <p><a class="btn bg-black ft-bright-yellow" href="">MORE</a></p>
+<!--        <p><a class="btn bg-black ft-bright-yellow" href="">MORE</a></p>-->
+        <p>
+            <?php
+                echo CHtml::link('MORE',array('/konten/konten/kategori', 'idcategory'=>3),array('class'=>'btn bg-black ft-bright-yellow'));
+            ?>
+        </p>
     </div>
 </div>
 
