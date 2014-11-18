@@ -350,8 +350,17 @@ nav li.active:hover, a:hover {
 }
 
 .content-home {
-  height: 100%;
+  min-height: 100%;
 }
+
+@media (max-height: 890px) {
+  .content-home {
+    height: initial !important;
+  }
+    
+}
+
+
 
 .remove-left-padding {
   padding-left: 0;
