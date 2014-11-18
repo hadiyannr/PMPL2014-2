@@ -82,6 +82,7 @@ input, .form-control {
 .btn-primary {
   color:white;
   background-color: black;  
+  padding: 10px;
 }
 .btn-primary:hover {
   background-color: #3276b1 !important;
@@ -92,7 +93,15 @@ input, .form-control {
   background-color: #e01e25;  
 }
 
+.btn-statistic {
+  padding: 5px !important;
+  font-size: 90%;
+}
 /* Table */
+
+td {
+  vertical-align: middle !important;
+}
 
 .table  th {
  background-color: #000000;
@@ -373,9 +382,21 @@ li.active:hover, a:hover {
   padding: 15px;
 }
 
+.grid-view td img[alt="On"] {
+  content: url("view.png");
+}
+
+.newthread img {
+  content: url("view.png");
+}
+
 
 
 @media (min-width: 0px) and (max-width: 639px) {
+  .navbar-default {
+    display: none;
+  }
+
 
   .responsive-nav {
      display: inline;
@@ -503,6 +524,10 @@ li.active:hover, a:hover {
 }
 
 @media (min-width:639px) and (max-width: 768px) {
+  .navbar-default {
+    display: none;
+  }
+
    .responsive-nav {
      display: inline;
   }
@@ -772,7 +797,6 @@ input[type="submit"] {
   background-color: black;
   color: white;
   border: 0;
-  padding: 1%;
 }
 
 .list-view div.preheader, .list-view div.post div.header {

@@ -36,7 +36,7 @@
                                 <img class="logo" src="<?php echo Yii::app()->request->baseUrl; ?>/images/logo.png" alt="">
                             </a>        
                             <div class="dropdown responsive-nav">
-                              <a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+                              <a id="dLabel" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
                                 <hr><hr><hr>
                               </a>
                                 <?php $controllerName = $this->getId();?>
