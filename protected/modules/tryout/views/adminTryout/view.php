@@ -35,7 +35,6 @@ $this->menu=array(
     
 ?>
 </br>
-<?php echo CHtml::link('Daftar Soal',array('adminSoal/index/','idtryout'=>$tryoutModel->id));?>
-</br>
-<?php echo CHtml::link(' Preview Tryout',array('pengerjaanTryout/preview/','id'=>$tryoutModel->id));?>
+<?php echo CHtml::link('Daftar Soal',array('adminSoal/index/','idtryout'=>$tryoutModel->id), array('class'=>'btn btn-primary'));?>
+<?php echo CHtml::link(' Preview Tryout',array('pengerjaanTryout/preview/','id'=>$tryoutModel->id), array('class'=>'btn btn-danger btn-preview-tryout'));?>
 

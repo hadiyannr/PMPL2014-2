@@ -4,5 +4,5 @@
 $this->pageTitle=Yii::app()->name;
 ?>
 
-<h1>Halaman Admin <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
+<h1 class="admin-index">Halaman Admin <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
 

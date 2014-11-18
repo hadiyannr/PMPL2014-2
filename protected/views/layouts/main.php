@@ -75,7 +75,7 @@
                 </div>
             </header>
 
-            <div class="container content">
+            <div class="container content admin-content">
                 <?php if(isset($this->breadcrumbs)):?>
                     <?php $this->widget('zii.widgets.CBreadcrumbs', array(
                        'links'=>$this->breadcrumbs,

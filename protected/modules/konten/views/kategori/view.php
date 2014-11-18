@@ -16,7 +16,7 @@ $this->menu=array(
 ?>
 
 <h1>View Kategori #<?php echo $kategoriModel->id; ?></h1>
-
+<br>
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$kategoriModel,
 	'attributes'=>array(

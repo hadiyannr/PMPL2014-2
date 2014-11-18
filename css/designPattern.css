@@ -91,6 +91,9 @@ input, .form-control {
   color:white;
   background-color: #e01e25;  
 }
+.btn-danger:hover {
+  background-color: #d2322d !important;
+}
 
 /* Table */
 
@@ -350,7 +353,7 @@ li.active:hover, a:hover {
   .content-home {
     height: 800px;
   }
-   .home-slider {
+  .home-slider {
     height: 30%;
   }
 
@@ -393,7 +396,7 @@ li.active:hover, a:hover {
     border-bottom: 1px solid grey;
   }
   .content-home .col-md-3:nth-child(3) {
-      display:none;
+    display:none;
   }
 
   .content-display-box {
@@ -845,4 +848,22 @@ ul.yiiPager a:link, ul.yiiPager a:visited {
   padding: 0.80%;
   padding-left: 13px;
   padding-right: 13px;
+}
+table.detail-view tr.odd {
+  background: rgb(230,230,230) !important;
+}
+table.detail-view tr.even {
+  background: white !important;
+}
+table.detail-view tr:hover {
+  background: #FFED75 !important;
+}
+.btn-preview-tryout {
+  margin-left: 10px;
+}
+.admin-content {
+  min-height: 100%;
+}
+.admin-index {
+  text-align: center;
 }
