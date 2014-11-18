@@ -468,6 +468,9 @@ li.active:hover, a:hover {
   .profil-box {
     padding: 20px 20px !important;
   }
+  .float-btn-profil {
+    float: none !important;
+  }
 }
 
 /* layout implementation : mid */
@@ -563,6 +566,9 @@ li.active:hover, a:hover {
   }
   .profil-box {
     padding: 20px 20px !important;
+  }
+  .float-btn-profil {
+    float: none !important;
   }
 }
 
