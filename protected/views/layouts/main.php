@@ -64,7 +64,7 @@
                             <?php } ?>
                             <?php if (!Yii::app()->user->isGuest) { ?>
                                 <li>
-                                    <?php echo CHtml::link("Logout", array('site/logout'),array('style'=>"color: #ecf0f1")); ?>
+                                    <?php echo CHtml::link("Logout", array('/site/logout'),array('style'=>"color: #ecf0f1")); ?>
                                 </li>
                                 <?php } ?>
                             </ul>
