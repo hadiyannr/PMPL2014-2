@@ -21,8 +21,6 @@ echo '<br>';
 
 
             </div>
-
-<<<<<<< HEAD
             <div class="col-sm-6">         
                 <h3 class="nama"><?php echo $profilModel->nama;?></h3>        
                 <div>
@@ -43,11 +41,6 @@ echo '<br>';
                 </div>
             </div>
         </div>    
-=======
-        <?php if(Yii::app()->user->id == $profilModel->idPengguna)echo CHtml::link('Ubah Profil',array('update'),array('class'=>'btn btn-primary'));?>
-        <?php if(Yii::app()->user->id == $profilModel->idPengguna)echo CHtml::link('Riwayat Tryout',array('/tryout/pengerjaanTryout/history'),array('class'=>'btn btn-success'));?>
-        <?php if(Yii::app()->user->id == $profilModel->idPengguna)echo CHtml::link('Ubah Password',array('ubahPassword'),array('class'=>'btn btn-primary'));?>
->>>>>>> origin/master
 
         <div class="col-md-6">         
             <div class="float-btn-profil">

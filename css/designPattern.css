@@ -811,9 +811,6 @@ nav li.active:hover, a:hover {
     width: 79.33%;
     height: 100%;
   }
-  .float-foto {
-    float: none !important;
-  }
   .profil-box {
     padding: 20px 50px !important;
   }
@@ -1032,6 +1029,12 @@ table.detail-view tr:hover {
 .grid-view .button-column .update,
 .grid-view .button-column .delete {
   padding: 5px;
+}
+#konten-form .buttons .btn-primary {
+  padding: 7px 10px;
+}
+.admin-content #content .btn-primary {
+  padding: 7px 10px !important;
 }
 
 /* end of implementation : admin */
