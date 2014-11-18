@@ -18,7 +18,8 @@
                     <div class="form-group">    
                         <span >Remember Me </span>                    
                         <input type="checkbox" name="LoginForm[rememberMe]">
-                    </div>				
+                    </div>
+                    <?php $this->widget('ext.hoauth.widgets.HOAuth'); ?>
 					<!-- Untuk lupa password -->
 					<p> <?php echo CHtml::link('Lupa password?',array('/site/Forget'),array('style'=>'color:#6fc5a4 !important;')) ?> </p>
                     <button type="submit" class="btn btn-primary">Login</button>					
