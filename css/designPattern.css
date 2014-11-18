@@ -91,9 +91,6 @@ input, .form-control {
   color:white;
   background-color: #e01e25;  
 }
-.btn-danger:hover {
-  background-color: #d2322d !important;
-}
 
 /* Table */
 
@@ -257,6 +254,33 @@ header .header-nav, header .header-nav .container {
   height:100%;
 }
 
+.responsive-nav {
+  display: inline;
+  float:right;
+  display: none;
+}
+
+.responsive-nav #dLabel {
+  margin-top:8px;
+  display: block;
+  width: 50px;
+  height: 35px;
+  background-color: #fedc00;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+
+.responsive-nav #dLabel hr{
+    color: black;
+    background-color: black;
+    height: 3px;
+    border: 0;
+    margin: 7px;
+    margin-top: 5px;
+    margin-bottom: 6px;
+}
+
+
 .logo {
   height: 30px;
   margin: 10px;
@@ -349,11 +373,29 @@ li.active:hover, a:hover {
   padding: 15px;
 }
 
+
+
 @media (min-width: 0px) and (max-width: 639px) {
+
+  .responsive-nav {
+     display: inline;
+  }
+
+  .responsive-dropdown {
+    right: 0;
+    left: inherit;
+    background-color:white;
+    border: 0;
+  }
+
+  .responsive-dropdown li {
+    border-bottom: 1px solid orange;
+  }
+
   .content-home {
     height: 800px;
   }
-  .home-slider {
+   .home-slider {
     height: 30%;
   }
 
@@ -396,7 +438,7 @@ li.active:hover, a:hover {
     border-bottom: 1px solid grey;
   }
   .content-home .col-md-3:nth-child(3) {
-    display:none;
+      display:none;
   }
 
   .content-display-box {
@@ -460,6 +502,23 @@ li.active:hover, a:hover {
   }
 }
 
+@media (min-width:639px) and (max-width: 768px) {
+   .responsive-nav {
+     display: inline;
+  }
+
+  .responsive-dropdown {
+    right: 0;
+    left: inherit;
+    background-color:white;
+    border: 0;
+  }
+
+  .responsive-dropdown li {
+    border-bottom: 1px solid orange;
+  }
+
+}
 /* layout implementation : mid */
 @media (min-width:639px) and (max-width: 992px) {
   .home-slider {
@@ -684,7 +743,6 @@ li.active:hover, a:hover {
 } 
 
 
-
 /*
 @media (min-height: 768px) and (max-width: 1680px){
   .home-slider {
@@ -799,7 +857,6 @@ li.dropdown.open {
 }
 
 ul.dropdown-menu {
-  background-color: red;
   box-shadow: none !important;
   border-radius: 0;
 }
