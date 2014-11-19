@@ -34,9 +34,62 @@
                         <div class="navbar-header">
                              <a href="<?php echo Yii::app()->request->baseUrl; ?>">
                                 <img class="logo" src="<?php echo Yii::app()->request->baseUrl; ?>/images/logo.png" alt="">
-                            </a>                      
+                            </a>        
+                            <div class="dropdown responsive-nav">
+                              <a id="dLabel" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+                                <hr><hr><hr>
+                              </a>
+                                <?php $controllerName = $this->getId();?>
+                              <ul class="dropdown-menu responsive-dropdown" role="menu" aria-labelledby="dLabel">
+                                     <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #ecf0f1">Konten <b class="caret"></b></a>
+                                        <ul>
+                                            <?php
+                                            $kategoris = Kategori::model()->findAll();
+                                            foreach ($kategoris as $kategori): ?>
+                                                <li> <?php echo CHtml::link($kategori->nama, array('/konten/konten/kategori','idcategory'=>$kategori->id),array('style'=>"color: #ecf0f1"));?></li>
+                                            <?php endforeach;?>
+                                        </ul>
+                                    </li>
+                                    <li class="<?php echo (in_array($controllerName, array("tryout","pengerjaanTryout")))?"active":""?>">
+                                        <a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/tryout/tryout/index">
+                                            <img class="icon" src="<?php echo Yii::app()->request->baseUrl; ?>/images/iconTO.png" alt="">
+                                            <span>Tryout</span>
+                                        </a>
+                                    </li>
+                                     <li class="<?php echo (in_array($controllerName, array("forum","Thread","User","Post")))?"active":""?>">
+                                        <a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/forum">
+                                            <img class="icon" src="<?php echo Yii::app()->request->baseUrl; ?>/images/forum.png" alt="">
+                                            <span>Forum</span>
+                                        </a>
+                                    </li>
+
+                                    <?php if(Yii::app()->user->isAdmin()):?>
+                                    <li>
+                                        <?php echo CHtml::link("Admin", array('/admin/index'),array('style'=>"color: #ecf0f1")); ?>
+                                    </li>
+                                    <?php endif;?>
+
+                                    <?php if (Yii::app()->user->isGuest) { ?>
+                                        <li>
+                                            <a href="#Login" data-toggle="modal" style="color: #ecf0f1">Login</a>
+                                        </li>      
+                                        <li>
+                                            <a href="#SignUp" data-toggle="modal" style="color: #ecf0f1">Daftar</a>
+                                        </li>                   
+                                    <?php } ?>
+                                    <?php if (!Yii::app()->user->isGuest) { ?>
+                                        <li class="<?php echo (in_array($controllerName, array("profil")))?"active":""?>">
+                                            <?php echo CHtml::link("Profil", array('/profil/index'),array('style'=>"color: #ecf0f1")); ?>
+                                        </li>      
+                                        <li>
+                                            <?php echo CHtml::link("Logout", array('/site/logout'),array('style'=>"color: #ecf0f1")); ?>
+                                        </li>                   
+                                    <?php } ?>
+
+                              </ul>
+                            </div>
                         </div>
-                        <?php $controllerName = $this->getId();?>
                         <nav role="navigation" class="navbar-default">
                             <ul class="nav navbar-nav">                                
                                 <li class="dropdown">
@@ -102,8 +155,8 @@
                 </div>
             </div>
         </header>
-
-        <div class="content-home">
+        
+        <div class="content-home <?php if ($_SESSION['home'] == false): ?><?php echo "nothome"?><?php endif ?> ">
              <div class="container">
                 <div class="pull-left">
                     <?php if(isset($this->breadcrumbs)):?>

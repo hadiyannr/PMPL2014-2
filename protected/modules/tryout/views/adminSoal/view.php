@@ -18,7 +18,7 @@ $this->menu=array(
 ?>
 
 <h1>Soal No.<?php echo $questionModel->nomor; ?> "<?php echo Tryout::model()->findByPk($questionModel->idtryout)->nama;?>"</h1>
-
+<br>
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$questionModel,
 	'attributes'=>array(				

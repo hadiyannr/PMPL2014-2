@@ -21,6 +21,7 @@ $this->menu=array(
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'soal-grid',
         'dataProvider'=>$questionModel->search(),
+    'ajaxUpdate'=>false,
 	'columns'=>array(		
                 'nomor',
 		'pertanyaan',                

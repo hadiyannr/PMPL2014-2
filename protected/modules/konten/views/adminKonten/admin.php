@@ -19,7 +19,8 @@ $this->menu=array(
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'konten-grid',
-	'dataProvider'=>new CActiveDataProvider(Konten::model()),	
+	'dataProvider'=>new CActiveDataProvider(Konten::model()),
+    'ajaxUpdate'=>false,
 	'columns'=>array(
 		'id',
 		'kategori.nama',                

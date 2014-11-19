@@ -9,16 +9,19 @@
                 <form role="form" method="post">
                     <div class="form-group">
                         <label>Username</label>
+                        <br>
                         <input type="text" name="LoginForm[username]" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label>Password</label>
+                        <br>
                         <input type="password" name="LoginForm[password]" class="form-control"  required>
                     </div>					  			 					  
                     <div class="form-group">    
                         <span >Remember Me </span>                    
                         <input type="checkbox" name="LoginForm[rememberMe]">
-                    </div>				
+                    </div>
+                    <!--?php $this->widget('ext.hoauth.widgets.HOAuth'); ?-->
 					<!-- Untuk lupa password -->
 					<p> <?php echo CHtml::link('Lupa password?',array('/site/Forget'),array('style'=>'color:#6fc5a4 !important;')) ?> </p>
                     <button type="submit" class="btn btn-primary">Login</button>					
