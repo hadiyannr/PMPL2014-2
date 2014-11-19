@@ -60,7 +60,7 @@ class ProfilController extends Controller {
             
             if(!$profilModel->hasErrors() && $profilModel->save()) {
                 if($uploading){
-                    $profilModel->image->saveAs(Yii::app()->basePath.'/../images/profilPic/'.$profilModel->fotoUrl);
+                    $profilModel->image->saveAs(Yii::app()->basePath.'/../images/ProfilPic/'.$profilModel->fotoUrl);
                 }
                 $this->redirect(array('index'));
             }

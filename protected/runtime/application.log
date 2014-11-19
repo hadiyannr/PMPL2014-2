@@ -9443,3 +9443,15 @@ Stack trace:
 REQUEST_URI=/PMPL2014-2/index.php/profil/update
 in C:\xampp\htdocs\PMPL2014-2\protected\controllers\ProfilController.php (63)
 in C:\xampp\htdocs\PMPL2014-2\index.php (13)
+2014/11/19 10:07:48 [warning] [application] Failed to set unsafe attribute "image" of "Profil".
+in C:\xampp\htdocs\PMPL2014-2\protected\controllers\ProfilController.php (34)
+in C:\xampp\htdocs\PMPL2014-2\index.php (13)
+2014/11/19 10:10:38 [warning] [application] Failed to set unsafe attribute "image" of "Profil".
+in C:\xampp\htdocs\PMPL2014-2\protected\controllers\ProfilController.php (34)
+in C:\xampp\htdocs\PMPL2014-2\index.php (13)
+2014/11/19 10:12:49 [warning] [application] Failed to set unsafe attribute "image" of "Profil".
+in C:\xampp\htdocs\PMPL2014-2\protected\controllers\ProfilController.php (34)
+in C:\xampp\htdocs\PMPL2014-2\index.php (13)
+2014/11/19 10:13:41 [warning] [application] Failed to set unsafe attribute "image" of "Profil".
+in C:\xampp\htdocs\PMPL2014-2\protected\controllers\ProfilController.php (34)
+in C:\xampp\htdocs\PMPL2014-2\index.php (13)
