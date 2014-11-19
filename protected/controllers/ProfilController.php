@@ -14,7 +14,9 @@ class ProfilController extends Controller {
     
     public function actionView($id) {
         $profilModel = Profil::model()->findByPk($id);
-        
+        if($profilModel==null){
+            $this->render('emptyProfil');
+        }
         $this->render('index', array('profilModel' => $profilModel));
     }
 
