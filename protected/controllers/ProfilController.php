@@ -13,7 +13,7 @@ class ProfilController extends Controller {
     }
     
     public function actionView($id) {
-        $profilModel = Profil::model()->findByPk($id);
+        $profilModel = Profil::model()->findByAttributes(array('idPengguna'=>$id));
         if($profilModel==null){
             $this->render('emptyProfil');
         }

@@ -19,7 +19,9 @@
                 <?php foreach ($answerSheetList as $answerSheet): ?>
                 <tr>                    
                     <td><?php echo $no++; ?></td>
-                    <td><?php echo $answerSheet->idPengguna0->username; ?></td>
+                    <?php $modelprofil = Profil::model()->findByAttributes(array('idPengguna'=>$answerSheet->idPengguna))?>
+                    <?php $linkprofil = CHtml::link($answerSheet->idPengguna0->username ,array('/profil/view/','id'=>$modelprofil->idPengguna)); ?>
+                    <td><?php echo $linkprofil; ?></td>
                     <td><?php echo $answerSheet->nilai; ?></td>
                 </tr>                
                 <?php endforeach;?>
