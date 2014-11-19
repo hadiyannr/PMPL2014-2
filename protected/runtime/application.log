@@ -9427,3 +9427,19 @@ Stack trace:
 REQUEST_URI=/siapmasukui/index.php/profil/update
 in C:\xampp\htdocs\siapmasukui\protected\controllers\ProfilController.php (63)
 in C:\xampp\htdocs\siapmasukui\index.php (13)
+2014/11/19 10:02:51 [warning] [application] Failed to set unsafe attribute "image" of "Profil".
+in C:\xampp\htdocs\PMPL2014-2\protected\controllers\ProfilController.php (34)
+in C:\xampp\htdocs\PMPL2014-2\index.php (13)
+2014/11/19 10:02:51 [error] [php] move_uploaded_file(C:\xampp\htdocs\PMPL2014-2\protected/../images/profilPic/26.jpeg): failed to open stream: No such file or directory (C:\xampp\htdocs\yiiframework\web\CUploadedFile.php:198)
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): ProfilController->actionUpdate()
+#1 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\yiiframework\web\CController.php(286): ProfilController->runAction()
+#3 C:\xampp\htdocs\yiiframework\web\CController.php(265): ProfilController->runActionWithFilters()
+#4 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): ProfilController->run()
+#5 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\PMPL2014-2\index.php(13): CWebApplication->run()
+REQUEST_URI=/PMPL2014-2/index.php/profil/update
+in C:\xampp\htdocs\PMPL2014-2\protected\controllers\ProfilController.php (63)
+in C:\xampp\htdocs\PMPL2014-2\index.php (13)
