@@ -2,24 +2,45 @@
 
 class TryOutTest extends CDbTestCase
 {
+	public $fixtures= array(
+		'tryout'=> 'Tryout',
+		'pengerjaantryout'=> 'Pengerjaantryout',
+		'pengguna'=>'Pengguna'
+	);
+
 	//Positive Test Case
 	public function testIsRegisteredTestUserRegistered(){
-		$model = new Tryout();
-		$model->id = 500;
+		$model = new Tryout ;
+		$tryoutTest = $this->tryout;
+		$this->assertEquals(
+			$this->tryout,
+			$tryoutTest
+		);
+		$model->id = 500 ;
 		$this->assertEquals(
 			500,
 			$model->id
 		);
-		$pengguna = new Pengguna();
-		$pengguna->id = 1000;
+		$pengguna = new Pengguna ;
+		$penggunaTest = $this->pengguna;
+		$this->assertEquals(
+			$this->pengguna,
+			$penggunaTest
+		);
+		$pengguna->id = 1000 ;
 		$this->assertEquals(
 			1000,
 			$pengguna->id
 		);
-		$pengerjaanTryout = new Pengerjaantryout();
+		$pengerjaanTryout = new Pengerjaantryout ;
+		$pengerjaanTest = $this->pengerjaantryout;
+		$this->assertEquals(
+			$this->pengerjaantryout,
+			$pengerjaanTest
+		);
 		$pengerjaanTryout->id = 10000;
-		$pengerjaanTryout->idPengguna = $pengguna->id;
-		$pengerjaanTryout->idTryout = $model->id;
+		$pengerjaanTryout->idPengguna = $pengguna->id ;
+		$pengerjaanTryout->idTryout = $model->id ;
 		$this->assertEquals(
 			10000,
 			$pengerjaanTryout->id
@@ -40,14 +61,14 @@ class TryOutTest extends CDbTestCase
 
 	//Negative Test Case
 	public function testIsRegisteredTestUserNotRegistered(){
-		$model = new Tryout();
-		$model->id = 500;
-		$pengguna = new pengguna();
-		$pengguna->id = 1000;
-		$PengerjaanTryout = new Pengerjaantryout();
-		$PengerjaanTryout->id = 10000;
-		$PengerjaanTryout->idPengguna = 1001;
-		$PengerjaanTryout->idTryout = $model->id;
+		$model = new Tryout ;
+		$model->id = 500 ;
+		$pengguna = new Pengguna ;
+		$pengguna->id = 1000 ;
+		$PengerjaanTryout = new Pengerjaantryout ;
+		$PengerjaanTryout->id = 10000 ;
+		$PengerjaanTryout->idPengguna = 1001 ;
+		$PengerjaanTryout->idTryout = $model->id ;
 		$this->assertEquals(
 			false,
 			$model->isRegistered($pengguna->id)

@@ -2,9 +2,9 @@
 
 class PengerjaanTryoutTest extends CDbTestCase
 {
-	// public function setUp($pengguna, $tryout, $jawaban){
-	// 	//Create Pengguna & Jawaban for testing purpose
-	// }
+	public function setUp($pengguna, $tryout, $jawaban){
+		//Create Pengguna & Jawaban for testing purpose
+	}
 
 	public function hitungNilaiSetJawabanNull(){
 
