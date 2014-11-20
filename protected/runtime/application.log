@@ -10353,3 +10353,33 @@ REQUEST_URI=/PMPL2014-2/index.php/profil/28
 in C:\xampp\htdocs\PMPL2014-2\protected\views\profil\index.php (15)
 in C:\xampp\htdocs\PMPL2014-2\protected\controllers\ProfilController.php (20)
 in C:\xampp\htdocs\PMPL2014-2\index.php (13)
+2014/11/20 11:04:12 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'siapmasukui.user_oauth' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `user_oauth`.
+in C:\xampp\htdocs\PMPL2014-2\protected\extensions\hoauth\models\UserOAuth.php (309)
+in C:\xampp\htdocs\PMPL2014-2\protected\extensions\hoauth\models\UserOAuth.php (50)
+in C:\xampp\htdocs\PMPL2014-2\protected\extensions\hoauth\HOAuthAction.php (160)
+2014/11/20 11:04:12 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'siapmasukui.user_oauth' doesn't exist. The SQL statement executed was: 			ALTER TABLE `user_oauth` CHANGE `name` `provider` VARCHAR( 45 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL ,
+			CHANGE `value` `identifier` VARCHAR( 64 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL
+			.
+in C:\xampp\htdocs\PMPL2014-2\protected\extensions\hoauth\models\UserOAuth.php (339)
+in C:\xampp\htdocs\PMPL2014-2\protected\extensions\hoauth\models\UserOAuth.php (50)
+in C:\xampp\htdocs\PMPL2014-2\protected\extensions\hoauth\HOAuthAction.php (160)
+2014/11/20 11:22:17 [error] [php] Undefined variable: activationCode (C:\xampp\htdocs\PMPL2014-2\protected\components\UserRegister.php:37)
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CBaseController.php(173): UserRegister->run()
+#1 C:\xampp\htdocs\PMPL2014-2\protected\views\layouts\site.php(148): SiteController->widget()
+#2 C:\xampp\htdocs\yiiframework\web\CBaseController.php(126): require()
+#3 C:\xampp\htdocs\yiiframework\web\CBaseController.php(95): SiteController->renderInternal()
+#4 C:\xampp\htdocs\yiiframework\web\CController.php(784): SiteController->renderFile()
+#5 C:\xampp\htdocs\PMPL2014-2\protected\controllers\SiteController.php(25): SiteController->render()
+#6 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#7 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\xampp\htdocs\yiiframework\web\CController.php(286): SiteController->runAction()
+#9 C:\xampp\htdocs\yiiframework\web\CController.php(265): SiteController->runActionWithFilters()
+#10 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): SiteController->run()
+#11 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\PMPL2014-2\index.php(13): CWebApplication->run()
+REQUEST_URI=/PMPL2014-2/
+in C:\xampp\htdocs\PMPL2014-2\protected\components\UserRegister.php (37)
+in C:\xampp\htdocs\PMPL2014-2\protected\components\UserRegister.php (19)
+in C:\xampp\htdocs\PMPL2014-2\protected\components\Portlet.php (22)
