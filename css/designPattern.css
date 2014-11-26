@@ -361,7 +361,12 @@ nav li.active:hover, a:hover {
   .nothome {
     height: initial !important;
   }
-    
+}
+
+@media(min-height:890px ) {
+  .content-home {
+    height: auto;
+  }
 }
 
 
@@ -420,7 +425,9 @@ nav li.active:hover, a:hover {
 	padding-bottom: 10pt;
 }
 
-
+.pull-left {
+  float: none !important;
+}
 
 @media (min-width: 0px) and (max-width: 639px) {
   .navbar-default {
