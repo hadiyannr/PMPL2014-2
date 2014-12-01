@@ -16,7 +16,7 @@
         <div class="item active" >
             <img alt="" src="<?php echo Yii::app()->request->baseUrl; ?>/images/slider/Perpusat.jpg">
             <div class="carousel-caption">
-                    <h1>UI Bebas Uang Pangkal</h1>
+                    <h1>UI Bebas Uang Mangkal WOAKWOAK</h1>
                     <p>Khusus untuk Reguler melalui SIMAK, SBMPTN dan SNMPTN tahun 2014. Bebas Uang Pangkal dan dapat mengajukan skema Biaya Operasional Pendidikan (BOP) berkeadilan </p>
             </div>
         </div>
