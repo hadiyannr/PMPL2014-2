@@ -18,11 +18,11 @@ $this->breadcrumbs=array(
                 <?php echo $contentModel->isi;?>
             </div>
         </div>
-        <div class="navigasi-konten">
+        <!--div class="navigasi-konten">
             <a class="link-navigasi-konten pull-left" href="#">Judul Sebelumnya</a>
             <a class="link-navigasi-konten pull-right" href="#">Judul Selanjutnya</a>
             <div class="clearfix"></div>
-        </div>
+        </div-->
     </div>
 
     <!-- <div class="pull-right">

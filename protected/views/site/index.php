@@ -16,7 +16,7 @@
         <div class="item active" >
             <img alt="" src="<?php echo Yii::app()->request->baseUrl; ?>/images/slider/Perpusat.jpg">
             <div class="carousel-caption">
-                    <h1>UI Bebas Uang Mangkal WOAKWOAK</h1>
+                    <h1>UI Bebas Uang Pangkal</h1>
                     <p>Khusus untuk Reguler melalui SIMAK, SBMPTN dan SNMPTN tahun 2014. Bebas Uang Pangkal dan dapat mengajukan skema Biaya Operasional Pendidikan (BOP) berkeadilan </p>
             </div>
         </div>
@@ -70,6 +70,7 @@
                                      echo substr($prev, 0, 200)."...";
                                  ?></p>
 <!--                                 <a class="btn bg-bright-yellow" href="">MORE</a>-->
+                                
                                 <?php
                                     echo CHtml::link('MORE',array('/konten/konten/index', 'id'=>$randKonten->id),array('class'=>'btn bg-bright-yellow btn-more-display'));
                                 ?>
