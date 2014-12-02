@@ -31,52 +31,30 @@
         
          public function sendEmail($pengguna){    
              
-            $to = $pengguna->email;
-            $toname = $pengguna->username;
-            $code = crypt(Yii::app()->params['adminPassword'], $pengguna->username.$pengguna->email);
-            $link = Yii::app()->params['site'].'/siapmasukui/index.php/site/activation?username='.$pengguna->username.'&code='.$code.'';
-            
-            $message = new YiiMailMessage();
-            $message->setTo(array($to=>$toname));
-            $message->setFrom(array(Yii::app()->params['adminEmail']=>'Admin SiapMasukUI.com'));
-            $message->setSubject('[SiapMasukUI.com] Verifikasi Pendaftaran');
-            $message->setBody(
-                '<div style="text-align:left">'
+            $activationCode = crypt(Yii::app()->params['adminPassword'], $pengguna->username.$pengguna->email);
+            $link = Yii::app()->params['site'].'/siapmasukui/index.php/site/activation?username='.$pengguna->username.'&code='.$activationCode.'';
+            Yii::import('application.extensions.phpmailer.JPhpMailer');
+            $mail = new JPhpMailer();
+            $mail->IsSMTP();
+            $mail->Host = 'smtp.gmail.com';
+            $mail->Port = 587;
+            $mail->SMTPAuth = true;        
+            $mail->SMTPSecure = 'tls';
+            $mail->Username = Yii::app()->params['adminEmail'];
+            $mail->Password = Yii::app()->params['adminPassword'];
+            $mail->CharSet="utf-8";
+            $mail->SetFrom(Yii::app()->params['adminEmail'], 'Admin SiapMasukUI.com');
+            $mail->Subject = "[SiapMasukUI.com] Verifikasi Pendaftaran";        
+            $mail->MsgHTML('<div style="text-align:left">'
                     . '<h1>SiapMasukUI.com</h1><br>'
                     . '<p>Selamat datang '.$pengguna->username.',</p> '
                     . '<p>Terimakasih sudah mendaftar di SiapMasukUI.com.</p> '
                     . '<p>Ikuti tautan di bawah ini untuk melengkapi pendaftaran</p> '
                     . '<p><a href="'.$link.'">klik untuk aktivasi akun</a></p>'
                     . '<br><p>Hormat kami,</p> <p>Admin <a href="'.Yii::app()->params['site'].'">'.Yii::app()->params['site'].'</a></p> '
-                    . '</div>'
-            );
-            $numsent = Yii::app()->mail->send($message);
-            
-            
-//            $activationCode = crypt(Yii::app()->params['adminPassword'], $pengguna->username.$pengguna->email);
-//            $link = Yii::app()->params['site'].'/siapmasukui/index.php/site/activation?username='.$pengguna->username.'&code='.$activationCode.'';
-//            Yii::import('application.extensions.phpmailer.JPhpMailer');
-//            $mail = new JPhpMailer();
-//            $mail->IsSMTP();
-//            $mail->Host = 'smtp.gmail.com';
-//            $mail->Port = 587;
-//            $mail->SMTPAuth = true;        
-//            $mail->SMTPSecure = 'tls';
-//            $mail->Username = Yii::app()->params['adminEmail'];
-//            $mail->Password = Yii::app()->params['adminPassword'];
-//            $mail->CharSet="utf-8";
-//            $mail->SetFrom(Yii::app()->params['adminEmail'], 'Admin SiapMasukUI.com');
-//            $mail->Subject = "[SiapMasukUI.com] Verifikasi Pendaftaran";        
-//            $mail->MsgHTML('<div style="text-align:left">'
-//                    . '<h1>SiapMasukUI.com</h1><br>'
-//                    . '<p>Selamat datang '.$pengguna->username.',</p> '
-//                    . '<p>Terimakasih sudah mendaftar di SiapMasukUI.com.</p> '
-//                    . '<p>Ikuti tautan di bawah ini untuk melengkapi pendaftaran</p> '
-//                    . '<p><a href="'.$link.'">klik untuk aktivasi akun</a></p>'
-//                    . '<br><p>Hormat kami,</p> <p>Admin <a href="'.Yii::app()->params['site'].'">'.Yii::app()->params['site'].'</a></p> '
-//                    . '</div>');
-//            $mail->AddAddress($pengguna->email, $pengguna->username);
-//            return $mail->Send();
+                    . '</div>');
+            $mail->AddAddress($pengguna->email, $pengguna->username);
+            return $mail->Send();
         }
         
     }
