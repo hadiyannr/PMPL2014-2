@@ -15,12 +15,12 @@ $this->menu=array(
 );
 ?>
 
-<h1>Lihat Tryout #<?php echo $tryoutModel->id; ?></h1>
+<h1>Lihat Tryout</h1>
 </br>
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$tryoutModel,
 	'attributes'=>array(
-		'id',
+//		'id',
         'nama',
         'tanggal',
 		'waktuMulai',
