@@ -55,8 +55,8 @@ $this->breadcrumbs=array(
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h2 class="judul-konten pull-left"><?php echo $title;?></h2>
-            <div class="col-md-3 pull-right">
+            <h2 class="judul-konten pull-left force-margin-0"><?php echo $title;?></h2>
+            <div class="col-md-3 pull-right search-bar-content">
                 <form class="navbar-form cari-berita" role="search" method="post">
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="Cari berita" name="keyword" id="srch-term" size="14">
@@ -75,7 +75,7 @@ $this->breadcrumbs=array(
         <?php if($counter%4==0):?>
             <div class="row">
         <?php endif;?>
-        <div class="col-md-3">
+        <div class="col-md-3 overflow-auto">
             <div class="content-display-box">
                 <div class="content-display">
                     <figure class="content-display">
@@ -89,7 +89,7 @@ $this->breadcrumbs=array(
                             echo substr($prev, 0, 200)."...";
                             ?></p>
                         <?php
-                        echo CHtml::link('MORE',array('/konten/konten/index', 'id'=>$konten->id),array('class'=>'btn bg-bright-yellow'));
+                        echo CHtml::link('MORE',array('/konten/konten/index', 'id'=>$konten->id),array('class'=>'btn bg-bright-yellow btn-more-display'));
                         ?>
                     </figure>
                 </div>

@@ -70,6 +70,7 @@
                                      echo substr($prev, 0, 200)."...";
                                  ?></p>
 <!--                                 <a class="btn bg-bright-yellow" href="">MORE</a>-->
+                                
                                 <?php
                                     echo CHtml::link('MORE',array('/konten/konten/index', 'id'=>$randKonten->id),array('class'=>'btn bg-bright-yellow btn-more-display'));
                                 ?>
