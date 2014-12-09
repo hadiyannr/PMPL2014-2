@@ -74,15 +74,18 @@ class TestController extends Controller{
     public function actionTestSosmed()
 	{
 		$serviceName = Yii::app()->request->getQuery('service');
+                $data = "mulai";
 		if (isset($serviceName)) {
+                    $data = 'masuk';
 			/** @var $eauth EAuthServiceBase */
 			$eauth = Yii::app()->eauth->getIdentity($serviceName);
 			$eauth->redirectUrl = Yii::app()->user->returnUrl;
-			$eauth->cancelUrl = $this->createAbsoluteUrl('site/index');
+			$eauth->cancelUrl = $this->createAbsoluteUrl('testsosmed');
 
 			try {
 				if ($eauth->authenticate()) {
 					$identity = new EAuthUserIdentity($eauth);
+                                        $data = 'masuk';
 
 //					var_dump($eauth->getIsAuthenticated(), $eauth->getAttributes());
 
@@ -98,15 +101,17 @@ class TestController extends Controller{
 
 						// redirect and close the popup window if needed
 						$eauth->redirect();
+//                                                $this->redirect(array('testsosmed'));
 					}
 					else {
 						// close popup window and redirect to cancelUrl
+                                                $data = 'gagal';
 						$eauth->cancel();
 					}
 				}
 
 				// Something went wrong, redirect back to login page
-				$this->redirect(array('testsosmed'));
+				$this->redirect(array('site/index'));
 			}
 			catch (EAuthException $e) {
 				// save authentication error to session
@@ -117,6 +122,6 @@ class TestController extends Controller{
 			}
 		}
 		// display the login form
-		$this->render('test');
+		$this->render('test', array('data'=>$data));
 	}
 }
