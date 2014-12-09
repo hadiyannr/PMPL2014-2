@@ -78,7 +78,7 @@ class TestController extends Controller{
 			/** @var $eauth EAuthServiceBase */
 			$eauth = Yii::app()->eauth->getIdentity($serviceName);
 			$eauth->redirectUrl = Yii::app()->user->returnUrl;
-			$eauth->cancelUrl = $this->createAbsoluteUrl('site/login');
+			$eauth->cancelUrl = $this->createAbsoluteUrl('site/index');
 
 			try {
 				if ($eauth->authenticate()) {
@@ -88,6 +88,7 @@ class TestController extends Controller{
 
 					// successful authentication
 					if ($identity->authenticate()) {
+//                                            $emailUser = $identity->email;
 						Yii::app()->user->login($identity);
 						//var_dump($identity->id, $identity->name, Yii::app()->user->id);exit;
 
@@ -105,7 +106,7 @@ class TestController extends Controller{
 				}
 
 				// Something went wrong, redirect back to login page
-				$this->redirect(array('site/testsosmed'));
+				$this->redirect(array('testsosmed'));
 			}
 			catch (EAuthException $e) {
 				// save authentication error to session
