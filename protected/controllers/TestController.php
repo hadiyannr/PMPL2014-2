@@ -76,7 +76,7 @@ class TestController extends Controller{
 		$serviceName = Yii::app()->request->getQuery('service');
                 $data = "mulai";
 		if (isset($serviceName)) {
-                    $data = 'masuk';
+//                    $data = $serviceName;
 			/** @var $eauth EAuthServiceBase */
 			$eauth = Yii::app()->eauth->getIdentity($serviceName);
 			$eauth->redirectUrl = Yii::app()->user->returnUrl;
@@ -85,7 +85,9 @@ class TestController extends Controller{
 			try {
 				if ($eauth->authenticate()) {
 					$identity = new EAuthUserIdentity($eauth);
-                                        $data = 'masuk';
+                                        $data = Yii::app()->user->name;
+//                                        $data = Yii::app()->user->returnUrl;
+//                                        $data = oAuthConsumer.GetUserInfo("https://www.googleapis.com/userinfo/email", consumerKey, consumerSecret, token, tokenSecret);
 
 //					var_dump($eauth->getIsAuthenticated(), $eauth->getAttributes());
 
@@ -100,8 +102,8 @@ class TestController extends Controller{
 						$session['eauth_profile'] = $eauth->attributes;
 
 						// redirect and close the popup window if needed
-						$eauth->redirect();
-//                                                $this->redirect(array('testsosmed'));
+						//$eauth->redirect();
+                                                $this->render('test', array('data'=>$data));
 					}
 					else {
 						// close popup window and redirect to cancelUrl

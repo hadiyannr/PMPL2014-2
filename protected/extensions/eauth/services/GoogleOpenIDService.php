@@ -25,7 +25,7 @@ class GoogleOpenIDService extends EOpenIDService {
 	protected $requiredAttributes = array(
 		'name' => array('firstname', 'namePerson/first'),
 		//'lastname' => array('lastname', 'namePerson/last'),
-		//'email' => array('email', 'contact/email'),
+		'email' => array('email', 'contact/email'),
 		//'language' => array('language', 'pref/language'),
 	);
 
