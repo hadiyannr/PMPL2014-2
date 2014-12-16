@@ -13,7 +13,7 @@ $this->breadcrumbs=array(
             <div class="isi-konten">
                 <h1 class="judul-isi-konten"><?php echo $contentModel->judul;?></h1>
                 <?php if(Yii::app()->user->isAdmin()){
-                    echo '('.CHtml::link('edit',array('adminKonten/update','id'=>$contentModel->id)).")";
+                    echo '('.CHtml::link('edit',array('adminContent/update','id'=>$contentModel->id)).")";
                 }?>
                 <?php echo $contentModel->isi;?>
             </div>

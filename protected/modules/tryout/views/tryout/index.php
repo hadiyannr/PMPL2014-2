@@ -1,7 +1,7 @@
 <?php
 /* @var $this TryoutController */
 /* @var $tryoutModelList Tryouts */
-/* @var $answerSheet PengerjaanTryout */
+/* @var $answerSheet AnswerSheet */
 /* @var $tryout Tryout */
 
 $this->breadcrumbs = array(
@@ -49,7 +49,7 @@ $this->breadcrumbs = array(
                     </td>
                     <td>
                         <?php
-                            $answerSheet = Pengerjaantryout::model()->findByAttributes(array('idTryout'=>$tryout->id));
+                            $answerSheet = AnswerSheet::model()->findByAttributes(array('idTryout'=>$tryout->id));
                         ?>
 
                         <?php if($answerSheet->isSubmitted == 1):?>
@@ -169,6 +169,6 @@ $this->breadcrumbs = array(
 </div>
 <?php if(!Yii::app()->user->isGuest):?>
 <div style="margin-top:200px;">
-    <?php echo CHtml::link('Riwayat Tryout',array('pengerjaanTryout/history'),array('class'=>'btn-primary'));?>
+    <?php echo CHtml::link('Riwayat Tryout',array('answerSheet/history'),array('class'=>'btn-primary'));?>
 </div>
 <?php endif;?>

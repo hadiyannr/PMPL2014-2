@@ -11,7 +11,7 @@
      
         protected function renderContent()
         {
-            $model=new DaftarForm;
+            $model=new RegisterForm;
             if(isset($_POST['DaftarForm']))
             {            
                 $model->attributes=$_POST['DaftarForm'];            

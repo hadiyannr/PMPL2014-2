@@ -16,7 +16,7 @@ class TestController extends Controller{
     public $layout='//layouts/site';
     
     public function actionIndex(){
-        $model = Pengguna::model()->findAll();
+        $model = User::model()->findAll();
         $inivar = 'aaaa';
         $this->render("index",array('model'=>$model,'x'=>$inivar));
     }

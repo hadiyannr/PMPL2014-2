@@ -20,7 +20,7 @@ class EWebUser extends CWebUser {
     protected function loadUser($user = null) {
         if ($this->_model === null) {
             if ($user !== null) {
-                $this->_model = Pengguna::model()->findByPk($user); 
+                $this->_model = User::model()->findByPk($user);
             }
         }
         return $this->_model;

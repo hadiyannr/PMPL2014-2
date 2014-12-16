@@ -21,7 +21,7 @@ class TryOutTest extends CDbTestCase
 			500,
 			$model->id
 		);
-		$pengguna = new Pengguna ;
+		$pengguna = new User ;
 		$penggunaTest = $this->pengguna;
 		$this->assertEquals(
 			$this->pengguna,
@@ -32,7 +32,7 @@ class TryOutTest extends CDbTestCase
 			1000,
 			$pengguna->id
 		);
-		$pengerjaanTryout = new Pengerjaantryout ;
+		$pengerjaanTryout = new AnswerSheet ;
 		$pengerjaanTest = $this->pengerjaantryout;
 		$this->assertEquals(
 			$this->pengerjaantryout,
@@ -63,9 +63,9 @@ class TryOutTest extends CDbTestCase
 	public function testIsRegisteredTestUserNotRegistered(){
 		$model = new Tryout ;
 		$model->id = 500 ;
-		$pengguna = new Pengguna ;
+		$pengguna = new User ;
 		$pengguna->id = 1000 ;
-		$PengerjaanTryout = new Pengerjaantryout ;
+		$PengerjaanTryout = new AnswerSheet ;
 		$PengerjaanTryout->id = 10000 ;
 		$PengerjaanTryout->idPengguna = 1001 ;
 		$PengerjaanTryout->idTryout = $model->id ;

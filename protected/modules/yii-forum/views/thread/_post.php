@@ -4,7 +4,7 @@ $isAdmin = !Yii::app()->user->isGuest && Yii::app()->user->isAdmin;
 ?>
 <div class="post">
     <div class="header">
-        <?php echo Yii::app()->controller->module->format_date($data->created, 'long'); ?> by <?php echo CHtml::link(CHtml::encode($data->author->name), array('/profil/view/','id'=>$data->author->siteid)); ?>
+        <?php echo Yii::app()->controller->module->format_date($data->created, 'long'); ?> by <?php echo CHtml::link(CHtml::encode($data->author->name), array('/profile/view/','id'=>$data->author->siteid)); ?>
         <?php if($data->editor) echo ' (Modified: '. Yii::app()->controller->module->format_date($data->updated, 'long') .' by '. CHtml::link(CHtml::encode($data->editor->name), $data->editor->url) .')'; ?>
         <?php
             if($isAdmin)

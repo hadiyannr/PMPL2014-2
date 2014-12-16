@@ -1,6 +1,6 @@
 <?php
 /* @var $this SoalController */
-/* @var $data Soal */
+/* @var $data Question */
 ?>
 
 <div class="view">	

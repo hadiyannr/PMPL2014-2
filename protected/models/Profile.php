@@ -1,29 +1,30 @@
 <?php
 
 /**
- * This is the model class for table "tryout".
+ * This is the model class for table "profil".
  *
- * The followings are the available columns in table 'tryout':
+ * The followings are the available columns in table 'profil':
  * @property integer $id
- * @property string $waktuMulai
- * @property integer $durasi
- * @property string $tanggal
  * @property string $nama
- * @property integer $idAdmin
+ * @property string $fotoUrl
+ * @property integer $jenisKelamin
+ * @property integer $idPengguna
+ * @property string $tanggalLahir
+ * @property string $targetJurusan
+ * @property string $asalSma
  *
  * The followings are the available model relations:
- * @property AnswerSheet[] $pengerjaantryouts
- * @property Question[] $soals
- * @property User $idAdmin0
+ * @property User $idPengguna0
  */
-class Tryout extends CActiveRecord
+class Profile extends CActiveRecord
 {
+        public $image;
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'tryout';
+		return 'profil';
 	}
 
 	/**
@@ -34,12 +35,16 @@ class Tryout extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('waktuMulai, durasi, tanggal, nama', 'required'),
-			array('durasi,idAdmin', 'numerical', 'integerOnly'=>true,'min'=>'1'),
-			array('nama', 'length', 'max'=>75),
+			array('jenisKelamin, idPengguna', 'numerical', 'integerOnly'=>true),
+                        array('idPengguna, nama','required'),
+			array('nama', 'length', 'max'=>100),
+			array('fotoUrl, asalSma', 'length', 'max'=>255),
+			array('targetJurusan', 'length', 'max'=>200),
+			array('tanggalLahir', 'safe'),                   
+                    
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, waktuMulai, durasi, tanggal, nama,idAdmin', 'safe', 'on'=>'search'),
+			array('id, nama, fotoUrl, jenisKelamin, idPengguna, tanggalLahir, targetJurusan, asalSma', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -51,9 +56,7 @@ class Tryout extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'pengerjaantryouts' => array(self::HAS_MANY, 'AnswerSheet', 'idTryout'),
-			'soals' => array(self::HAS_MANY, 'Question', 'idTryout'),
-            'idAdmin0' => array(self::BELONGS_TO, 'User', 'idAdmin'),
+			'idPengguna0' => array(self::BELONGS_TO, 'Pengguna', 'idPengguna'),
 		);
 	}
 
@@ -64,10 +67,13 @@ class Tryout extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'waktuMulai' => 'Waktu Mulai',
-			'durasi' => 'Durasi(menit)',
-			'tanggal' => 'Tanggal',
 			'nama' => 'Nama',
+			'fotoUrl' => 'Foto Url',
+			'jenisKelamin' => 'Jenis Kelamin',
+			'idPengguna' => 'Id Pengguna',
+			'tanggalLahir' => 'Tanggal Lahir',
+			'targetJurusan' => 'Target Jurusan',
+			'asalSma' => 'Asal Sma',
 		);
 	}
 
@@ -90,11 +96,13 @@ class Tryout extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('waktuMulai',$this->waktuMulai,true);
-		$criteria->compare('durasi',$this->durasi);
-		$criteria->compare('tanggal',$this->tanggal,true);
 		$criteria->compare('nama',$this->nama,true);
-                $criteria->compare('idAdmin',$this->idAdmin);
+		$criteria->compare('fotoUrl',$this->fotoUrl,true);
+		$criteria->compare('jenisKelamin',$this->jenisKelamin);
+		$criteria->compare('idPengguna',$this->idPengguna);
+		$criteria->compare('tanggalLahir',$this->tanggalLahir,true);
+		$criteria->compare('targetJurusan',$this->targetJurusan,true);
+		$criteria->compare('asalSma',$this->asalSma,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -105,34 +113,14 @@ class Tryout extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Tryout the static model class
+	 * @return Profile the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
-	}       
-        public function status(){   
-            $waktuMulai = $this->tanggal ." " . $this->waktuMulai;
-            $waktuSelesai = date('Y-m-d H:i:s',  strtotime("+{$this->durasi} minutes",  strtotime($waktuMulai)));
-            $now = date('Y-m-d H:i:s');
-            if($now < $waktuMulai){
-                return 1;
-            }elseif($now > $waktuSelesai){
-                return -1;
-            }else{
-                return 0;
-            }
-        }
+	}
         
-        
-        public function isRegistered($id){
-            $model = AnswerSheet::model()->findByAttributes(array('idPengguna'=>$id,'idTryout'=>$this->id));
-            return $model != null;
-        }
-
-        
-        public function getWaktuSelesai(){
-            $waktuMulai = $this->tanggal ." " . $this->waktuMulai;
-            return date(strtotime("+{$this->durasi} minutes",  strtotime($waktuMulai)));
+        public function getGender(){
+            return ($this->jenisKelamin==0)?"Perempuan":"Laki - Laki";
         }
 }

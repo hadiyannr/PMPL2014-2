@@ -11,7 +11,7 @@ class UserIdentity extends CUserIdentity
     
     public function authenticate()
     {
-        $record=Pengguna::model()->findByAttributes(array('username'=>$this->username));
+        $record=User::model()->findByAttributes(array('username'=>$this->username));
         if($record===null){
             $this->errorCode=self::ERROR_USERNAME_INVALID; 
             Yii::app()->user->setFlash('message', "username belum terdaftar");
@@ -32,7 +32,7 @@ class UserIdentity extends CUserIdentity
         return !$this->errorCode;
     }
     function isAdmin($id) {
-        $user = Pengguna::model()->findByPk($id);
+        $user = User::model()->findByPk($id);
         if ($user === null)
             return 0;
         else {

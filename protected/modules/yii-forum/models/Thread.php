@@ -182,7 +182,7 @@ class Thread extends CActiveRecord
 
         $subjlink = CHtml::link(CHtml::encode($this->subject), $this->url);
         //$authorlink = CHtml::link(CHtml::encode($firstpost->author->name), $firstpost->author->url);
-        $authorlink = CHtml::link(CHtml::encode($firstpost->author->name) ,array('/profil/view/','id'=>$firstpost->author->siteid));
+        $authorlink = CHtml::link(CHtml::encode($firstpost->author->name) ,array('/profile/view/','id'=>$firstpost->author->siteid));
 
         return '<div class="name">'. $subjlink .'</div>'.
                 '<div class="level2">by '. $authorlink .'</div>';
@@ -196,7 +196,7 @@ class Thread extends CActiveRecord
         $author = $lastpost->author;
 
         //$authorlink = CHtml::link(CHtml::encode($author->name), $author->url);
-        $authorlink = CHtml::link($author->name ,array('/profil/view/','id'=>$author->siteid));
+        $authorlink = CHtml::link($author->name ,array('/profile/view/','id'=>$author->siteid));
 
         return '<div class="level2">'. Yii::app()->controller->module->format_date($lastpost->created) .'</div>'.
                 '<div class="level3">by '. $authorlink .'</div>';

@@ -27,7 +27,7 @@ class TryoutController extends Controller {
         if(isset($_POST['Register'])){
             $this->register($_POST['Register']['id']);
         }elseif(isset($_POST['Perform'])){
-            CController::forward('pengerjaanTryout/perform');
+            CController::forward('answerSheet/perform');
         }elseif(isset($_POST['Statistic'])){
             $this->redirect(array('statistic','id'=>$_POST['Statistic']['id']));
         }
@@ -42,19 +42,19 @@ class TryoutController extends Controller {
         $criteria->compare('isSubmitted',1);
 
         //pagination code
-        $count = PengerjaanTryout::model()->count($criteria);
+        $count = AnswerSheet::model()->count($criteria);
         $pages=new CPagination($count);
         $pages->pageSize=$this->statisticPageSize;
         $pages->applyLimit($criteria);
 
-        $answerSheetList = PengerjaanTryout::model()->findAll($criteria);
+        $answerSheetList = AnswerSheet::model()->findAll($criteria);
         
         $tryoutModel = Tryout::model()->findByPk($id);
         
         $criteria = new CDbCriteria;
         $criteria->select = array("MAX(nilai) as max","MIN(nilai) as min","AVG(nilai) as avg");
         $criteria->compare('idTryout',$id);
-        $tryoutStatistic =PengerjaanTryout::model()->find($criteria);
+        $tryoutStatistic =AnswerSheet::model()->find($criteria);
 
         $this->render('statistic',array('answerSheetList'=>$answerSheetList,'tryoutModel'=>$tryoutModel,'tryoutStatistic'=>$tryoutStatistic, 'pages'=>$pages));
     }
@@ -63,7 +63,7 @@ class TryoutController extends Controller {
         if(Yii::app()->user->isGuest){
             Yii::app()->user->setFlash('message',"Login untuk mendaftar");    
         }else{
-            $answerSheetModel = new PengerjaanTryout;
+            $answerSheetModel = new AnswerSheet;
             $answerSheetModel->idTryout = $id;
             $answerSheetModel->idPengguna = Yii::app()->user->id;
             $answerSheetModel->save();

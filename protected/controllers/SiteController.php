@@ -49,7 +49,7 @@ class SiteController extends Controller
 	}
         
     public function actionActivation($username, $code){           
-        $penggunaModel = Pengguna::model()->findByAttributes(array('username'=>$username));
+        $penggunaModel = User::model()->findByAttributes(array('username'=>$username));
         $correctCode = crypt(Yii::app()->params['adminPassword'], $penggunaModel->username.$penggunaModel->email);
         if(strcmp($code, $correctCode) == 0){                
             $penggunaModel->isActive = 1;                                
@@ -65,7 +65,7 @@ class SiteController extends Controller
     public function actionForget()
     {
         if(isset($_POST['submit'])){
-            $penggunaModel = Pengguna::model()->findByAttributes(array("username"=>$_POST['username']));
+            $penggunaModel = User::model()->findByAttributes(array("username"=>$_POST['username']));
             if($penggunaModel == null || $penggunaModel->email != $_POST['email']){
                 Yii::app()->user->setFlash('message',"username atau email tidak cocok");
                 $this->refresh();
@@ -106,7 +106,7 @@ class SiteController extends Controller
         }
 
     public function actionConfirmForgetPassword($username, $code){
-        $penggunaModel = Pengguna::model()->findByAttributes(array('username'=>$username));
+        $penggunaModel = User::model()->findByAttributes(array('username'=>$username));
         if(isset($_POST['submit'])){
             if($_POST['password'] != $_POST['confirmpassword']){
                 Yii::app()->user->setFlash('message',"Konfirmasi password salah");

@@ -44,8 +44,8 @@
                 <nav role="navigation" class="navbar-default">
                     <ul class="nav navbar-nav">
                         <?php if(Yii::app()->user->isAdmin()):?>
-                            <li class="<?php echo (in_array($controllerName, array("adminKonten")))?"active":""?>">
-                                <?php echo CHtml::link("Konten", array('/konten/adminKonten/index'),array('style'=>"color: #ecf0f1")); ?>
+                            <li class="<?php echo (in_array($controllerName, array("adminContent")))?"active":""?>">
+                                <?php echo CHtml::link("Konten", array('/konten/adminContent/index'),array('style'=>"color: #ecf0f1")); ?>
                             </li>
                             <li class="<?php echo (in_array($controllerName, array("adminTryout")))?"active":""?>">
                                 <?php echo CHtml::link("Tryout", array('/tryout/adminTryout/index'),array('style'=>"color: #ecf0f1")); ?>

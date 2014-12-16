@@ -3,22 +3,22 @@
 class ProfilTest extends CDbTestCase
 {
 	public function testProfilJenisKelamin(){
-		$model=new Profil();
+		$model=new Profile();
 		$expectedGender="Laki - Laki";
 		$model->jenisKelamin=1;
 		$this->assertEquals(
 			$expectedGender,
-			$model->getJenisKelamin()
+			$model->getGender()
 		); 
 	}
 
 	public function testProfilJenisKelaminNotTrue(){
-		$model=new Profil();
+		$model=new Profile();
 		$expectedGender="Laki - Laki";
 		$model->jenisKelamin=0;
 		$this->assertNotEquals(
 			$expectedGender,
-			$model->getJenisKelamin()
+			$model->getGender()
 		); 
 	}
 }

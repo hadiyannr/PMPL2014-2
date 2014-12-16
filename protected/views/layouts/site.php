@@ -51,7 +51,7 @@
                                             <?php endforeach;?>
                                         </ul>
                                     </li>
-                                    <li class="<?php echo (in_array($controllerName, array("tryout","pengerjaanTryout")))?"active":""?>">
+                                    <li class="<?php echo (in_array($controllerName, array("tryout","answerSheet")))?"active":""?>">
                                         <a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/tryout/tryout/index">
                                             <img class="icon" src="<?php echo Yii::app()->request->baseUrl; ?>/images/iconTO.png" alt="">
                                             <span>Tryout</span>
@@ -80,7 +80,7 @@
                                     <?php } ?>
                                     <?php if (!Yii::app()->user->isGuest) { ?>
                                         <li class="<?php echo (in_array($controllerName, array("profil")))?"active":""?>">
-                                            <?php echo CHtml::link("Profil", array('/profil/index'),array('style'=>"color: #ecf0f1")); ?>
+                                            <?php echo CHtml::link("Profil", array('/profile/index'),array('style'=>"color: #ecf0f1")); ?>
                                         </li>      
                                         <li>
                                             <?php echo CHtml::link("Logout", array('/site/logout'),array('style'=>"color: #ecf0f1")); ?>
@@ -102,7 +102,7 @@
                                         <?php endforeach;?>
                                     </ul>
                                 </li>
-                                <li class="<?php echo (in_array($controllerName, array("tryout","pengerjaanTryout")))?"active":""?>">
+                                <li class="<?php echo (in_array($controllerName, array("tryout","answerSheet")))?"active":""?>">
                                     <a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/tryout/tryout/index">
                                         <img class="icon" src="<?php echo Yii::app()->request->baseUrl; ?>/images/iconTO.png" alt="">
                                         <span>Tryout</span>
@@ -135,7 +135,7 @@
                                 <?php } ?>
                                 <?php if (!Yii::app()->user->isGuest) { ?>
                                     <li class="<?php echo (in_array($controllerName, array("profil")))?"active":""?>">
-                                        <?php echo CHtml::link("Profil", array('/profil/index'),array('style'=>"color: #ecf0f1")); ?>
+                                        <?php echo CHtml::link("Profil", array('/profile/index'),array('style'=>"color: #ecf0f1")); ?>
                                     </li>      
                                     <li>
                                         <?php echo CHtml::link("Logout", array('/site/logout'),array('style'=>"color: #ecf0f1")); ?>

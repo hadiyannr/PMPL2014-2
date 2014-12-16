@@ -13,7 +13,7 @@
  * @property integer $idAdmin
  *
  * The followings are the available model relations:
- * @property Pengguna $idAdmin0
+ * @property User $idAdmin0
  * @property Kategori $idcategory0
  */
 class Konten extends CActiveRecord
@@ -53,7 +53,7 @@ class Konten extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-                        'idAdmin0' => array(self::BELONGS_TO, 'Pengguna', 'idAdmin'),
+                        'idAdmin0' => array(self::BELONGS_TO, 'User', 'idAdmin'),
 			'kategori' => array(self::BELONGS_TO, 'Kategori', 'idcategory'),                        
 		);
 	}
