@@ -2,8 +2,8 @@
 /* @var $this AnswerSheetController */
 /* @var $answerSheetModel AnswerSheet */
 /* @var $answerSheetDetail */
-/* @var $questionList Soals */
-/* @var $answerList Jawabans */
+/* @var $questionList Question[] */
+/* @var $answerList Answer[] */
 
 ?>
 

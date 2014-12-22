@@ -18,6 +18,11 @@
  */
 class Tryout extends CActiveRecord
 {
+    public $FUTURE = 1;
+    public $AVAILABLE = 0;
+    public $PAST = -1;
+
+
 	/**
 	 * @return string the associated database table name
 	 */
@@ -112,18 +117,25 @@ class Tryout extends CActiveRecord
 		return parent::model($className);
 	}       
         public function status(){   
-            $waktuMulai = $this->tanggal ." " . $this->waktuMulai;
-            $waktuSelesai = date('Y-m-d H:i:s',  strtotime("+{$this->durasi} minutes",  strtotime($waktuMulai)));
+            $startTime = $this->getStartTime();
+            $finishTime = $this->getFinishTime($startTime);
             $now = date('Y-m-d H:i:s');
-            if($now < $waktuMulai){
-                return 1;
-            }elseif($now > $waktuSelesai){
-                return -1;
+            if($now < $startTime){
+                return $this->FUTURE;
+            }elseif($now > $finishTime){
+                return $this->PAST;
             }else{
-                return 0;
+                return $this->AVAILABLE;
             }
         }
-        
+
+        public function getStartTime(){
+            return $this->tanggal ." " . $this->waktuMulai;
+        }
+
+        public function getFinishTime($startTime){
+            return date('Y-m-d H:i:s',  strtotime("+{$this->durasi} minutes",  strtotime($startTime)));
+        }
         
         public function isRegistered($id){
             $model = AnswerSheet::model()->findByAttributes(array('idPengguna'=>$id,'idTryout'=>$this->id));
@@ -131,8 +143,33 @@ class Tryout extends CActiveRecord
         }
 
         
-        public function getWaktuSelesai(){
-            $waktuMulai = $this->tanggal ." " . $this->waktuMulai;
-            return date(strtotime("+{$this->durasi} minutes",  strtotime($waktuMulai)));
+        public function getDetailedFinishTime(){
+            return date(strtotime("+{$this->durasi} minutes",  strtotime($this->getStartTime())));
+        }
+
+
+        public static function getSeparatedTryout($tryoutModelList){
+            $pastTryout = array();
+            $myTryout = array();
+            $futureTO = array();
+            foreach($tryoutModelList as $tryout){
+                if($tryout->status() < 0){
+                    $futureTO[] = $tryout;
+                }else if($tryout->isRegistered(Yii::app()->user->id)){
+                    $myTryout[] = $tryout;
+                }else{
+                    $pastTryout[] = $tryout;
+                }
+            }
+            $tryoutModelList = array($myTryout,$pastTryout,$futureTO);
+            return $tryoutModelList;
+        }
+
+        public static function getTryoutDone($userId){
+            $criteria = new CDbCriteria();
+            $criteria->join = 'JOIN pengerjaantryout p ON t.id = p.idTryout';
+            $criteria->compare('idPengguna', $userId);
+            $tryoutModelList = Tryout::model()->findAll($criteria);
+            return $tryoutModelList;
         }
 }

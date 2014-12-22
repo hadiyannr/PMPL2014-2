@@ -111,33 +111,39 @@ class AnswerSheet extends CActiveRecord
 	{
 		return parent::model($className);
 	}
-        
-        public function hitungNilai(){
-            $nilai = 0;
-            foreach($this->jawabans as $jawaban){
-                if($jawaban->idsoal0->opsis[$jawaban->isiJawaban]->isJawaban == 1){
-                    $nilai+=3; 
+
+
+    public function getSortedAnswerSheetsByMark($idTryout){
+        $criteria = new CDbCriteria;
+        $criteria->order = 'nilai DESC';
+        $criteria->compare('idTryout',$idTryout);
+        $model = AnswerSheet::model()->findAll($criteria);
+        return $model;
+    }
+
+    public function getRank($listOfAnswerSheet){
+        $rank = 1;
+        for($i = 0; $i < sizeof($listOfAnswerSheet);$i++){
+            if($listOfAnswerSheet[$i]->idPengguna == $this->idPengguna){
+                $rank = $i+1;
+            }
+        }
+        return $rank;
+    }
+
+        public function countingMark(){
+            $mark = 0;
+            foreach($this->jawabans as $answer){
+                if($answer->idsoal0->opsis[$answer->isiJawaban]->isJawaban == 1){
+                    $mark+=3;
                 }else{
-                    $nilai--;
+                    $mark--;
                 }
             }            
-            $this->nilai = $nilai;
+            $this->nilai = $mark;
         }
-        
-        public function getDetail($idTryout){            
-            //Cari ranking
-            $criteria = new CDbCriteria;
-            $criteria->order = 'nilai DESC';        
-            $criteria->compare('idTryout',$idTryout);
-            $model = AnswerSheet::model()->findAll($criteria);
-            $rank = 1;
-            for($i = 0; $i < sizeof($model);$i++){
-                if($model[$i]->idPengguna == $this->idPengguna){
-                    $rank = $i+1;
-                }
-            }
-            
-            //cari detail
+
+        public function countTrueFalse($idTryout){
             $true = 0;
             $false = 0;
             foreach($this->jawabans as $answer){
@@ -148,12 +154,75 @@ class AnswerSheet extends CActiveRecord
                 }
             }
             $empty = sizeof(Question::model()->findAllByAttributes(array('idtryout'=>$idTryout)))  - ($true + $false);
+            return array($true,$false,$empty);
+        }
+
+
+        public function getDetail($idTryout){
+            $model = $this->getSortedAnswerSheetsByMark($idTryout);
+            $rank = $this->getRank($model);
+            $detailedTrueFalse = $this->countTrueFalse($idTryout);
             
             return array(
                 'rank' =>$rank,
-                'benar' =>$true,
-                'salah' =>$false,
-                'kosong' =>$empty,
+                'benar' =>$detailedTrueFalse[0],
+                'salah' =>$detailedTrueFalse[1],
+                'kosong' =>$detailedTrueFalse[2],
             );
         }
+
+    public static function getTryoutsStatisticSetting($id,$pageSize){
+        $criteria = AnswerSheet::getDescendingSubmittedTryoutCriteria($id);
+        $count = AnswerSheet::countBasedOfCriteria($criteria);
+        $pages=AnswerSheet::getPaginationSetting($count,$pageSize,$criteria);
+        $answerSheetList = AnswerSheet::model()->findAll($criteria);
+        $tryoutStatistic = AnswerSheet::getStatistic($id);
+    }
+
+    public static function getPaginationSetting($count,$pageSize,$criteria){
+        $pages=new CPagination($count);
+        $pages->pageSize=$pageSize;
+        $pages->applyLimit($criteria);
+        return $pages;
+    }
+
+    public static function getDescendingSubmittedTryoutCriteria($id){
+        $criteria = new CDbCriteria;
+        $criteria->order = 'nilai DESC';
+        $criteria->compare('idTryout',$id);
+        $criteria->compare('isSubmitted',1);
+        return $criteria;
+    }
+    public static function getStatistic($id){
+        $criteria = new CDbCriteria;
+        $criteria->select = array("MAX(nilai) as max","MIN(nilai) as min","AVG(nilai) as avg");
+        $criteria->compare('idTryout',$id);
+        $tryoutStatistic =AnswerSheet::model()->find($criteria);
+        return $tryoutStatistic;
+    }
+    public static function countBasedOfCriteria($criteria){
+        $count = AnswerSheet::model()->count($criteria);
+        return $count;
+    }
+    public static function getAnswerSheet($userId,$idTryout){
+        return AnswerSheet::model()->findByAttributes(array('idPengguna'=>$userId,'idTryout'=>$idTryout));
+    }
+
+    public function checkingAnswer($userAnswerList,$questionList,$correctAnswerList){
+        foreach($questionList as $question){
+            if(isset($userAnswerList[$question->nomor])){
+                $correctAnswerList[$question->nomor]->isiJawaban = $userAnswerList[$question->nomor];
+                $correctAnswerList[$question->nomor]->save();
+            }
+            else{
+                if(Answer::model()->findAllByAttributes(array('idsoal'=>$question->id)) != null){
+                    $correctAnswerList[$question->nomor]->delete();
+                }
+            }
+        }
+        $this->countingMark();
+        $this->save();
+    }
+
 }
+

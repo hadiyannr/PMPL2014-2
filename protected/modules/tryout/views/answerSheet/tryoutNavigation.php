@@ -40,8 +40,8 @@
     </div>
 </div>
 <?php
-    $waktuSelesai = $tryoutModel->getWaktuSelesai();
-    $waktuSelesai *= 1000;
+    $detailedFinishedTime = $tryoutModel->getDetailedFinishTime();
+    $detailedFinishedTime *= 1000;
     
 ?>
 <script>            
@@ -56,7 +56,7 @@
     timer = setInterval(function () {
         var today = new Date();   
         var finish = new Date();
-        finish.setTime(<?php echo $waktuSelesai;?>);
+        finish.setTime(<?php echo $detailedFinishedTime;?>);
         var remaining = new Date(finish - today);        
         var h = remaining.getHours() - 7;
         var m = remaining.getMinutes();
@@ -70,7 +70,7 @@
     
     submit = setInterval(function () {
         var finish = new Date();
-        finish.setTime(<?php echo $waktuSelesai;?>);
+        finish.setTime(<?php echo $detailedFinishedTime;?>);
         var now = new Date();   
         if(finish <= now){
             clearInterval(timer);

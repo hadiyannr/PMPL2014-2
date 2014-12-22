@@ -56,42 +56,17 @@ class AdminQuestionController extends Controller {
         $questionModel = new Question;
         $questionModel->setAttribute('idtryout', $idtryout);
         $optionModelList = array(new Option, new Option, new Option, new Option, new Option);
-
         if (isset($_POST['Soal'])) {
-            $questionModel->attributes = $_POST['Soal'];
-            $transaction = Yii::app()->db->beginTransaction();
-            try {
-                if ($questionModel->validate() && $questionModel->save()){
-                    for ($i = 0; $i < 5; $i++) {
-                        $optionModelList[$i]->attributes = $_POST['Opsi'][$i];
-                        $optionModelList[$i]->idsoal = $questionModel->id;
-
-                        if($_POST['Opsi']['jawaban'] == $i){
-                            $optionModelList[$i]->isJawaban = 1;
-                        }else{
-                            $optionModelList[$i]->isJawaban = 0;
-                        }
-
-                        if(!($optionModelList[$i]->validate() && $optionModelList[$i]->save())){
-                            throw new Exception("Opsi rollback");
-                        }
-                    }
-                }else{
-                    throw new Exception("Soal rollback");
-                }
-                $transaction->commit();
+            if(Question::saveQuestion($questionModel,$_POST['Soal'],$_POST['Opsi'],$optionModelList)){
                 $this->redirect(array('view', 'id' => $questionModel->id));
-            } catch (Exception $e) {
-                $transaction->rollBack();
             }
         }
 
-        $this->render('update', array(
+        $this->render('create', array(
             'questionModel' => $questionModel,
             'optionModelList'=>$optionModelList,
         ));
     }
-
     public function actionCreateStory($idtryout){
         $questionModel = new Question;
         $questionModel->setAttribute('idtryout', $idtryout);
@@ -133,36 +108,13 @@ class AdminQuestionController extends Controller {
         foreach($questionModel->opsis as $option){
             $optionModelList[] = $option;
         }
-        if (isset($_POST['Soal'])) {
-            $questionModel->attributes = $_POST['Soal'];
-            $transaction = Yii::app()->db->beginTransaction();
-            try {
-                if ($questionModel->validate() && $questionModel->save()){
-                    for ($i = 0; $i < 5; $i++) {
-                        $optionModelList[$i]->attributes = $_POST['Opsi'][$i];
-                        $optionModelList[$i]->idsoal = $questionModel->id;
-
-                        if($_POST['Opsi']['jawaban'] == $i){
-                            $optionModelList[$i]->isJawaban = 1;
-                        }else{
-                            $optionModelList[$i]->isJawaban = 0;
-                        }
-
-                        if(!($optionModelList[$i]->validate() && $optionModelList[$i]->save())){
-                            throw new Exception("Opsi rollback");
-                        }
-                    }
-                }else{
-                    throw new Exception("Soal rollback");
-                }
-                $transaction->commit();
+        if (isset($_POST['Question'])) {
+            if(Question::saveQuestion($questionModel,$_POST['Question'],$_POST['Option'],$optionModelList)){
                 $this->redirect(array('view', 'id' => $questionModel->id));
-            } catch (Exception $e) {
-                $transaction->rollBack();
             }
         }
 
-        $this->render('create', array(
+        $this->render('update', array(
             'questionModel' => $questionModel,
             'optionModelList'=>$optionModelList,
         ));

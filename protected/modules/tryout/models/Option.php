@@ -108,5 +108,5 @@ class Option extends CActiveRecord
         
         public function getOption($no){
             return chr($no + 97).".".'<span class="soalTryout">'.$this->pernyataan.'</span>';
-        }                
+        }
 }

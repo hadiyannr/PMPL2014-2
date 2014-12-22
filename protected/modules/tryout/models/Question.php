@@ -38,7 +38,7 @@ class Question extends CActiveRecord
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, idtryout, pertanyaan, nomor, isHasJawaban', 'safe', 'on'=>'search'),
-                    
+
                          array('idtryout+nomor+isHasJawaban', 'application.extensions.uniqueMultiColumnValidator'),
 		);
 	}
@@ -115,12 +115,51 @@ class Question extends CActiveRecord
 //        }
         
         public function getHtmlAdminOption(){
-            $opsi = $this->opsis;
-            $htmlopsi = '';
-            foreach($opsi as $o){
-                $htmlopsi .= $o->pernyataan.'<br>';
+            $options = $this->opsis;
+            $htmlOption = '';
+            foreach($options as $option){
+                $htmlOption .= $option->pernyataan.'<br>';
             }
-            return $htmlopsi;
+            return $htmlOption;
         }
-        
+
+    public static function getQuestion($idTryout){
+        $criteria = new CDbCriteria();
+        $criteria->order = "nomor ASC,isHasJawaban ASC";
+        $questionList = Question::model()->findAllByAttributes(array('idtryout' => $idTryout),$criteria);
+        return $questionList;
+    }
+
+    public static function saveQuestion($questionModel,$questions,$options,$optionModelList){
+        $questionModel->attributes = $questions;
+        $transaction = Yii::app()->db->beginTransaction();
+        try {
+            if ($questionModel->validate() && $questionModel->save()){
+                for ($i = 0; $i < 5; $i++) {
+                    Question::saveOptions($optionModelList,$options,$questionModel);
+                }
+            }else{
+                throw new Exception("Soal rollback");
+            }
+            $transaction->commit();
+            return true;
+        } catch (Exception $e) {
+            $transaction->rollBack();
+            return false;
+        }
+    }
+
+    public static function saveOptions($optionModelList,$options,$questionModel){
+        $optionModelList[$i]->attributes = $options[$i];
+        $optionModelList[$i]->idsoal = $questionModel->id;
+        if($options['jawaban'] == $i){
+            $optionModelList[$i]->isJawaban = 1;
+        }else{
+            $optionModelList[$i]->isJawaban = 0;
+        }
+
+        if(!($optionModelList[$i]->validate() && $optionModelList[$i]->save())){
+            throw new Exception("Opsi rollback");
+        }
+    }
 }

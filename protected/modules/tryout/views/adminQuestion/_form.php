@@ -52,7 +52,7 @@
 		<?php 
                 $check = '';
                 if($optionModelList[$i]->isJawaban == 1){$check = ' checked';};
-                $radio ='&nbsp;'.'<input '.'type="radio" '.'name="Opsi[jawaban]" '.'value="'.$i.'"'.' required '.$check.'>';
+                $radio ='&nbsp;'.'<input '.'type="radio" '.'name="Option[jawaban]" '.'value="'.$i.'"'.' required '.$check.'>';
                 echo $form->labelEx($optionModelList[$i],'opsi ke '.($i + 1).$radio); ?>
 
                 <?php

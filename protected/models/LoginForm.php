@@ -39,7 +39,13 @@ class LoginForm extends CFormModel
 			'rememberMe'=>'Remember me next time',
 		);
 	}
-
+    public function getDuration($isset_rememberMe){
+        if($isset_rememberMe){
+            return 3600*24*30;
+        }else{
+            return 0;
+        }
+    }
 	/**
 	 * Authenticates the password.
 	 * This is the 'authenticate' validator as declared in rules().
@@ -68,7 +74,7 @@ class LoginForm extends CFormModel
                 
 		if($this->_identity->errorCode===UserIdentity::ERROR_NONE)
 		{
-			$duration=$this->rememberMe ? 3600*24*30 : 0; // 30 days
+			$duration=$this->getDuration($this->rememberMe);
 			Yii::app()->user->login($this->_identity,$duration);
 			return true;
 		}

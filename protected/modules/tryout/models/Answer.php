@@ -104,4 +104,22 @@ class Answer extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+
+    public static function getAnswerList($questionList,$answerSheetId){
+        $answerList = array();
+        //init jawaban dari db(kalo ada)
+        foreach($questionList as $question){
+            $answerModel = Answer::model()->findByAttributes(array('idsoal'=>$question->id));
+            if($answerModel == null){
+                $answerList[$question->nomor] = new Answer;
+                $answerList[$question->nomor]->idsoal = $question->id;
+                $answerList[$question->nomor]->idpengerjaan = $answerSheetId;
+                $answerList[$question->nomor]->isiJawaban = null;
+            }else{
+                $answerList[$question->nomor] = $answerModel;
+            }
+        }
+        return $answerList;
+    }
 }

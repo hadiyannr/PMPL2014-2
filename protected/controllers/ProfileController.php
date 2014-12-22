@@ -5,19 +5,19 @@ class ProfileController extends Controller {
     public $layout = '//layouts/site';
 
     public function actionIndex() {
-        $profilModel = $this->loadModel();
-        if ($profilModel == null) {
+        $profileModel = $this->loadModel();
+        if ($profileModel == null) {
             $this->redirect(array('update'));
         }
-        $this->render('index', array('profilModel' => $profilModel));
+        $this->render('index', array('profilModel' => $profileModel));
     }
     
     public function actionView($id) {
-        $profilModel = Profile::model()->findByAttributes(array('idPengguna'=>$id));
-        if($profilModel==null){
+        $profileModel = Profile::model()->findByAttributes(array('idPengguna'=>$id));
+        if($profileModel==null){
             $this->render('emptyProfil');
         }
-        $this->render('index', array('profilModel' => $profilModel));
+        $this->render('index', array('profilModel' => $profileModel));
     }
 
     /**
@@ -26,55 +26,55 @@ class ProfileController extends Controller {
      * @param integer $id the ID of the model to be updated
      */
     public function actionUpdate() {       
-        $profilModel = $this->loadModel();
-        if($profilModel==null){
-            $profilModel = new Profile;
-            $profilModel->tanggalLahir= '1996-01-01';            
+        $profileModel = $this->loadModel();
+        if($profileModel==null){
+            $profileModel = new Profile;
+            $profileModel->tanggalLahir= '1996-01-01';
         }
         
         if(isset($_POST['Profil'])){
-            $profilModel->attributes = $_POST['Profil'];
-            $profilModel->idPengguna = Yii::app()->user->id;
-            $profilModel->image=CUploadedFile::getInstance($profilModel,'image');
-            $uploading = $profilModel->image != null;            
+            $profileModel->attributes = $_POST['Profil'];
+            $profileModel->idPengguna = Yii::app()->user->id;
+            $profileModel->image=CUploadedFile::getInstance($profileModel,'image');
+            $uploading = $profileModel->image != null;
             if($uploading){
-                $filetype = explode("/", $profilModel->image->getType())[1];
-                $profilModel->fotoUrl= Yii::app()->user->id . '.' .$filetype; 
+                $file_type = explode("/", $profileModel->image->getType())[1];
+                $profileModel->fotoUrl= Yii::app()->user->id . '.' .$file_type;
                 
                 
                 $imageValidation = true;
                 $message= '';                
                                 
-                if($filetype != 'jpeg' && $filetype != 'png'&& $filetype != 'jpg'){
+                if($file_type != 'jpeg' && $file_type != 'png'&& $file_type != 'jpg'){
                     $imageValidation = false;
                     $message = 'Tipe file salah, harus .jpg atau .png';
                 }
                 
-                if($profilModel->image->getSize() > 20000000){
+                if($profileModel->image->getSize() > 20000000){
                     $imageValidation = false;
                     $message = 'Ukuran harus kurang dari 20MB';
                 }
 
                 if(!$imageValidation){                                          
-                    $profilModel->addError('image', $message);                    
+                    $profileModel->addError('image', $message);
                 }
             }           
             
-            if(!$profilModel->hasErrors() && $profilModel->save()) {
+            if(!$profileModel->hasErrors() && $profileModel->save()) {
                 if($uploading){
-                    $profilModel->image->saveAs(Yii::app()->basePath.'/../images/ProfilPic/'.$profilModel->fotoUrl);
+                    $profileModel->image->saveAs(Yii::app()->basePath.'/../images/ProfilPic/'.$profileModel->fotoUrl);
                 }
                 $this->redirect(array('index'));
             }
         }                
-        $this->render('update',array('profilModel'=>$profilModel));
+        $this->render('update',array('profilModel'=>$profileModel));
     }
 
     public function actionChangePassword()
     {
         if(isset($_POST['submit'])){
-            $penggunaModel = User::model()->findByPk(Yii::app()->user->id);
-            if($penggunaModel->password!=md5($_POST['OldPassword'])){
+            $userModel = User::model()->findByPk(Yii::app()->user->id);
+            if($userModel->password!=md5($_POST['OldPassword'])){
                 Yii::app()->user->setFlash('message',"Password lama salah");
                 $this->refresh();
             }
@@ -83,8 +83,8 @@ class ProfileController extends Controller {
                 $this->refresh();
             }
             else{
-                $penggunaModel->password = md5($_POST['password']);
-                $penggunaModel->save();
+                $userModel->password = md5($_POST['password']);
+                $userModel->save();
                 Yii::app()->user->setFlash('message',"Penggantian password berhasil");
                 $this->redirect(array("index"));                
             }
