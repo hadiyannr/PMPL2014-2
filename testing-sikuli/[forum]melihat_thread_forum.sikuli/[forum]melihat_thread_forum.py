@@ -1,0 +1,5 @@
+click("1419483712901.png")
+click("1419483894716.png")
+click("1419483911163.png")
+click("1419483924555.png")
+assert exists("1419483940889.png")

@@ -19,7 +19,7 @@ class KontenController extends Controller
     }
 
 	        
-    public function actionKategori($idcategory){
+    public function actionViewByCategory($idcategory){
         $criteria=new CDbCriteria;
         $criteria->compare('idcategory',$idcategory);
         $criteria->compare('isPublished',1);
@@ -29,7 +29,7 @@ class KontenController extends Controller
         $pages->pageSize=$this->pageSize;
         $pages->applyLimit($criteria);
 
-        $categoryModel = Kategori::model()->findByPk($idcategory);
+        $categoryModel = KategoriKonten::model()->findByPk($idcategory);
         $contentModelList = Konten::model()->findAll($criteria);
         $this->render('contentList',array('contentModelList'=>$contentModelList,'pages' => $pages,'title'=>$categoryModel->nama));
 
@@ -49,7 +49,7 @@ class KontenController extends Controller
 //        $this->render('contentList',array('contentModelList'=>$contentModelList,'pages' => $dataProvider->pagination,'title'=>$categoryModel->nama));
     }
         
-    public function actionSearch($keyword){
+    public function actionSearchKonten($keyword){
         $criteria=new CDbCriteria;
         $criteria->compare('isi',$keyword,true,"OR");
         $criteria->compare('judul',$keyword,true,"OR");

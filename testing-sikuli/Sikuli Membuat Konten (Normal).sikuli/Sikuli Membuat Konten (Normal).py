@@ -21,6 +21,6 @@ try:
     click("1399993360505.png")
 except FindFailed:
     click("1417034028664.png")
-    
+assert exists("1419481719524.png")
 
 

@@ -27,6 +27,7 @@
         </nav>
     <?php endif;?>
 
+<<<<<<< HEAD
     <header>		
         <div class="header-nav">
             <div class="container user-container">
@@ -63,6 +64,44 @@
                         <span>Forum</span>
                     </a>
                 </li>
+=======
+        <header>		
+            <div class="header-nav">
+                <div class="container">
+                    <div class="nav-wrapper">
+                        <div class="navbar-header">
+                             <a href="<?php echo Yii::app()->request->baseUrl; ?>">
+                                <img class="logo" src="<?php echo Yii::app()->request->baseUrl; ?>/images/logo.png" alt="">
+                            </a>        
+                            <div class="dropdown responsive-nav">
+                              <a id="dLabel" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+                                <hr><hr><hr>
+                              </a>
+                                <?php $controllerName = $this->getId();?>
+                              <ul class="dropdown-menu responsive-dropdown" role="menu" aria-labelledby="dLabel">
+                                     <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #ecf0f1">Konten <b class="caret"></b></a>
+                                        <ul>
+                                            <?php
+                                            $kategoris = KategoriKonten::model()->findAll();
+                                            foreach ($kategoris as $kategori): ?>
+                                                <li> <?php echo CHtml::link($kategori->nama, array('/konten/konten/viewbycategory','idcategory'=>$kategori->id),array('style'=>"color: #ecf0f1"));?></li>
+                                            <?php endforeach;?>
+                                        </ul>
+                                    </li>
+                                    <li class="<?php echo (in_array($controllerName, array("tryout","answerSheet")))?"active":""?>">
+                                        <a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/tryout/tryout/index">
+                                            <img class="icon" src="<?php echo Yii::app()->request->baseUrl; ?>/images/iconTO.png" alt="">
+                                            <span>Uji Coba Kemampuan</span>
+                                        </a>
+                                    </li>
+                                     <li class="<?php echo (in_array($controllerName, array("forum","Thread","User","Post")))?"active":""?>">
+                                        <a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/forum">
+                                            <img class="icon" src="<?php echo Yii::app()->request->baseUrl; ?>/images/forum.png" alt="">
+                                            <span>Forum</span>
+                                        </a>
+                                    </li>
+>>>>>>> origin/master
 
                 <?php if(Yii::app()->user->isAdmin()):?>
                     <li>
@@ -87,6 +126,7 @@
                         </li>                   
                         <?php } ?>
 
+<<<<<<< HEAD
                     </ul>
                 </div>
             </div>
@@ -108,6 +148,29 @@
                         <span>Uji Coba Kemampuan</span>
                     </a>
                 </li>
+=======
+                              </ul>
+                            </div>
+                        </div>
+                        <nav role="navigation" class="navbar-default">
+                            <ul class="nav navbar-nav">                                
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #ecf0f1">Konten <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <?php
+                                        $kategoris = KategoriKonten::model()->findAll();
+                                        foreach ($kategoris as $kategori): ?>
+                                            <li> <?php echo CHtml::link($kategori->nama, array('/konten/konten/viewbycategory','idcategory'=>$kategori->id),array('style'=>"color: #ecf0f1"));?></li>
+                                        <?php endforeach;?>
+                                    </ul>
+                                </li>
+                                <li class="<?php echo (in_array($controllerName, array("tryout","answerSheet")))?"active":""?>">
+                                    <a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/tryout/tryout/index">
+                                        <img class="icon" src="<?php echo Yii::app()->request->baseUrl; ?>/images/iconTO.png" alt="">
+                                        <span>Uji Coba Kemampuan</span>
+                                    </a>
+                                </li>
+>>>>>>> origin/master
 
                 <li class="<?php echo (in_array($controllerName, array("forum","Thread","User","Post")))?"active":""?>">
                     <a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/forum">
@@ -122,8 +185,33 @@
                     </li>
                 <?php endif;?>
 
+<<<<<<< HEAD
             </ul> 
             <ul class="nav navbar-nav navbar-right">
+=======
+                            </ul> 
+                            <ul class="nav navbar-nav navbar-right">
+                                
+                                <?php if (Yii::app()->user->isGuest) { ?>
+                                    <li>
+                                        <a href="#Login" data-toggle="modal" style="color: #ecf0f1">Masuk</a>
+                                    </li>      
+                                    <li>
+                                        <a href="#SignUp" data-toggle="modal" style="color: #ecf0f1">Daftar</a>
+                                    </li>                   
+                                <?php } ?>
+                                <?php if (!Yii::app()->user->isGuest) { ?>
+                                    <li class="<?php echo (in_array($controllerName, array("profil")))?"active":""?>">
+                                        <?php echo CHtml::link("Profil", array('/profile/index'),array('style'=>"color: #ecf0f1")); ?>
+                                    </li>      
+                                    <li>
+                                        <?php echo CHtml::link("Keluar", array('/site/logout'),array('style'=>"color: #ecf0f1")); ?>
+                                    </li>                   
+                                <?php } ?>
+                            </ul>             
+                            <!--login and register modal, call component-->
+                            <?php $this->widget('UserLogin',array('visible'=>Yii::app()->user->isGuest)); ?>
+>>>>>>> origin/master
 
                 <?php if (Yii::app()->user->isGuest) { ?>
                     <li>

@@ -7,4 +7,4 @@ time.sleep(3)
 click("1400042018355.png")
 type("tes tambah kata-kata")
 click("1400042603446.png")
-
+assert exists("1419482625403.png")

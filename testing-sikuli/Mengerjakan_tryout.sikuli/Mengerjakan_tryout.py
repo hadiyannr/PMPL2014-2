@@ -13,7 +13,6 @@ r2.click(Pattern("1400019614392.png").targetOffset(-7,1))
 find("1400019672305.png")
 hover("1400019710174.png")
 click("1400019685391.png")
-wait("1400021407351.png",10)
-hover("1400021425172.png")
+assert exists("1400021407351.png")
 
 

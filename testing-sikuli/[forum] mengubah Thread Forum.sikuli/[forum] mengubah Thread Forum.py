@@ -1,0 +1,8 @@
+click("1419483712901.png")
+wait(3)
+click("1419486376375.png")
+wait(3)
+click("1419486404144.png")
+type("A")
+click("1419486427132.png")
+assert exists("1419486510864.png")

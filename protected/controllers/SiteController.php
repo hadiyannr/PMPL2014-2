@@ -48,7 +48,7 @@ class SiteController extends Controller
 		$this->redirect(array('index'));
 	}
         
-    public function actionActivation($username, $code){           
+    public function actionActivationAccount($username, $code){           
         $penggunaModel = User::model()->findByAttributes(array('username'=>$username));
         $correctCode = crypt(Yii::app()->params['adminPassword'], $penggunaModel->username.$penggunaModel->email);
         if(strcmp($code, $correctCode) == 0){                
@@ -62,14 +62,14 @@ class SiteController extends Controller
         }
     }
 
-    public function actionForget()
+    public function actionForgetPassword()
     {
         if(isset($_POST['submit'])){
             $penggunaModel = User::model()->findByAttributes(array("username"=>$_POST['username']));
             if($penggunaModel == null || $penggunaModel->email != $_POST['email']){
                 Yii::app()->user->setFlash('message',"username atau email tidak cocok");
                 $this->refresh();
-            }elseif(!$this->sendEmail($penggunaModel)){
+            }elseif(!$this->sendEmailActivation($penggunaModel)){
                 Yii::app()->user->setFlash('message',"Email tidak terkirim, silahkan coba lagi");
             }else{
                 Yii::app()->user->setFlash('message',"Silahkan cek email untuk melanjutkan proses penggantian password");
@@ -79,7 +79,7 @@ class SiteController extends Controller
         $this->render('forgetPasswordForm');
     }
 
-    public function sendEmail($pengguna){
+    public function sendEmailActivation($pengguna){
             $activationCode = crypt(Yii::app()->params['adminPassword'], $pengguna->username.$pengguna->email);
             $link = Yii::app()->params['site'].'/siapmasukui/index.php/site/confirmForgetPassword?username='.$pengguna->username.'&code='.$activationCode.'';
             Yii::import('application.extensions.phpmailer.JPhpMailer');
