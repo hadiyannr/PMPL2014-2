@@ -1,0 +1,416 @@
+/*  Color : bg stands for background color, ft stands for font color  */
+
+.bg-bright-yellow { background-color: #fedc00; }
+.ft-bright-yellow { color: #fedc00; }
+.bg-golden-yellow { background-color: #e1c433; }
+.ft-golden-yellow { color: #e1c433; }
+.bg-bright-red { background-color: #e01e25; }
+.ft-bright-red { color: #e01e25; }
+.bg-turqoise { background-color: #6fc5a4; }
+.ft-turqoise { color: #6fc5a4; }
+.bg-black { background-color: #000000; }
+.ft-black { color: #000000; }
+.bg-grey { background-color: #efefef; }
+.ft-grey { color: #efefef; }
+.bg-white { background-color: #ffffff; }
+.ft-white { color: #ffffff;}
+
+/* Layout */
+
+/* Typography : patterns */
+
+/* Webfont: LatoLatin-Regular */
+@font-face {
+  font-family: 'LatoLatin';
+  src: url('fonts/LatoLatin-Regular.eot'); /* IE9 Compat Modes */
+  src: url('fonts/LatoLatin-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('fonts/LatoLatin-Regular.woff') format('woff'), /* Modern Browsers */
+  url('fonts/LatoLatin-Regular.ttf') format('truetype'); 
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+
+/* Typography : implementation */
+
+.font-latolatin {font-family: LatoLatin;}
+.font-latolatinb {font-family: LatoLatin; font-weight: bold;}
+.font-latolatinl {font-family: LatoLatin; font-weight: lighter;}
+
+p {
+  font-family: LatoLatin;
+}
+
+nav > ul > li > a {
+  font-family: LatoLatin; font-weight: bold;
+  font-size: 100%;
+}
+
+.modal-title {
+  font-family: LatoLatin; font-weight: bold;
+}
+
+
+/* Form */
+
+input, .form-control {
+  border-radius: 0;
+  -webkit-border-radius: 0; 
+  -moz-border-radius: 0;
+}
+
+.form-group > label {
+  text-align: left;
+  float: left;
+}
+
+.form-group > label[type="checkbox"] {
+  margin-left: 0 !important;
+  background-color: red;
+}
+
+/* Button */
+.btn {
+  font-family: LatoLatin;
+  border-radius: 0;
+  -webkit-border-radius: 0; 
+  -moz-border-radius: 0;
+}
+
+.btn-primary {
+  color:white;
+  background-color: black;  
+  padding: 10px;
+}
+.btn-primary:hover {
+  background-color: #3276b1 !important;
+}
+
+.btn-danger {
+  color:white;
+  background-color: #e01e25;  
+}
+
+.btn-statistic {
+  padding: 5px !important;
+  font-size: 90%;
+}
+/* Table */
+
+td {
+  vertical-align: middle !important;
+}
+
+.table  th {
+ background-color: #000000;
+ color: white;
+}
+
+tr:nth-child(even) {
+  background: rgb(230,230,230);
+}
+
+.table tr:hover {
+  background-color: #FFED75;
+}
+
+/* Pagination */
+
+.pagination {
+  border-radius: 0;
+  margin-right: 15px;
+}
+.pagination > li > a,
+.pagination > li > span {
+  font-family: LatoLatin;
+  color: #e1c433;
+  margin-left: 4px;
+  border-color: black;
+}
+.pagination > li:first-child > a,
+.pagination > li:first-child > span {
+  border-color: black;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  background-color: black;
+  color: #fedc00 !important;
+}
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
+  border-color: black;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  background-color: black;
+  color: #fedc00 !important;
+}
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+  color: black !important;
+  background-color: #dddddd;
+  border-color: black;
+}
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  background-color: #fedc00;
+  border-color: black;
+}
+.pagination > .disabled > span,
+.pagination > .disabled > span:hover,
+.pagination > .disabled > span:focus,
+.pagination > .disabled > a,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > a:focus {
+  color: #fedc00 !important;
+  background-color: black;
+  border-color: black;
+}
+
+/* Notification */
+
+.success-notification {
+  background-color: #6fc5a4;
+}
+.error-notification {
+  background-color: #e01e25;
+}
+.notification-message {
+  color: #ffffff;
+  padding: 10px;
+  font-weight: bold;
+}
+
+/* Confirmation */
+
+.modal-dialog {
+  width: 300px;
+}
+.modal-content {
+  border-radius: 0;
+}
+.modal-header {
+  text-align: center;
+  border-bottom: 3px solid #fedc00;
+}
+.modal-title {
+  margin-left: 12px;
+  font-size: 24px;
+}
+.modal-body {
+  text-align: center;
+  padding: 10px;
+}
+.modal-footer {
+  text-align: center;
+  border-top: none;
+  padding: 10px;
+}
+.btn-modal-ok {
+  color: #ffffff;
+  border-radius: 0;
+  background-color: #6fc5a4;
+  border-color: #6fc5a4;
+  padding: 10px 52px;
+}
+.btn-modal-ok:hover {
+  color: #ffffff;
+  background-color: #56aa8a;
+}
+.btn-modal-cancel {
+  color: #ffffff;
+  border-radius: 0;
+  background-color: #e01e25;
+  border-color: #e01e25;
+  padding: 10px 40px;
+}
+.btn-modal-cancel:hover {
+  color: #ffffff;
+  background-color: #b4161c;
+}
+
+.btn-more:hover {
+  color:white;
+  background-color: black;
+}
+.btn-more-display:hover {
+  color: white;
+  background-color: black !important;
+}
+
+.home-more li.active:hover, .home-more a:hover {
+  background-color: black !important;
+}
+
+/* implementation */
+
+/* navigation */
+.header-nav {
+  background-color: #fedc00;
+  /* box-shadow: 0px 10px 25px grey; */
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* layout */
+
+/* general */
+
+html, body {
+  height: 100%;
+}
+
+header {
+  height: 54px; /* 7.286166842661035%; */
+  margin-bottom: 0;
+  width: 100%;
+}
+
+header .header-nav, header .header-nav .container {
+  height:100%;
+}
+
+.responsive-nav {
+  display: inline;
+  float:right;
+  display: none;
+}
+
+.responsive-nav #dLabel {
+  margin-top:8px;
+  display: block;
+  width: 50px;
+  height: 35px;
+  background-color: #fedc00;
+  border-radius: 5px;
+  border: 2px solid black;
+  float: right;
+}
+
+.responsive-nav #dLabel hr{
+    color: black;
+    background-color: black;
+    height: 3px;
+    border: 0;
+    margin: 7px;
+    margin-top: 5px;
+    margin-bottom: 6px;
+}
+
+
+.logo {
+  height: 30px;
+  margin: 10px;
+}
+.logo-admin {
+  height: 38px;
+  margin: 5px;
+}
+
+.icon {
+  height: 10px;
+  margin-right: 3px;
+}
+
+.nav-link {
+  float: left;
+}
+
+.navbar-default {
+  margin: 0; padding: 0;
+}
+
+.navbar-nav {
+  margin-left: 10px;
+}
+
+nav a, .navbar-header a {
+  color: black !important;
+}
+
+nav span {
+  font-size: 100%;
+}
+
+.navbar-default .navbar-nav > .active > a {
+ background-color: #fedc00;
+ border-bottom: 5px solid black;
+}
+
+nav li.active:hover, a:hover {
+  background-color: rgba(0,0,0,0) !important;
+}
+
+.breadcrumbs {
+  margin-top: 15px;
+  margin-left: -15px;
+  padding-left: 17px !important;
+}
+
+.content-home {
+  height: 100%;
+}
+
+@media (max-height: 890px) {
+  .nothome {
+    height: initial !important;
+  }
+    
+}
+
+
+
+.remove-left-padding {
+  padding-left: 0;
+}
+
+.carousel-inner, .carousel-inner .item, .carousel-inner .active {
+  height: 100%;
+}
+
+.carousel-inner .item img {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-caption {
+  width: 100%;
+  height: 150px;
+  background-color:rgba(0,0,0,0.5);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.carousel-caption > h1 {
+  color: white;
+  text-align: left;
+  font-size: 200%;
+  margin-left: 10.417%;/* 200px; */
+  margin-right: 10.417%;/* 200px; */
+  margin-top: 0;
+}
+
+.carousel-caption > p {
+  color: white;
+  text-align: left;
+  font-size: 100%;
+  margin-left: 10.417%;/* 200px; */
+  margin-right: 10.417%;/* 200px; */
+}
+
+.modal-content {
+  padding: 15px;
+}
+
+.grid-view td img[alt="On"] {
+  content: url("view.png");
+}
+
+.newthread img {
+  content: url("view.png");
+}
