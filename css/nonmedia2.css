@@ -175,6 +175,7 @@ table.detail-view tr:hover {
 }
 .admin-content {
   min-height: 100%;
+  min-width: 580px;
 }
 .admin-index {
   text-align: center;
@@ -193,7 +194,10 @@ table.detail-view tr:hover {
 .admin-content #content .btn-primary {
   padding: 7px 10px !important;
 }
-
+.dropdown-menu {
+  width: 100%;
+  background-color: #fedc00 !important;
+}
 /* end of implementation : admin */
 
 /* layout implementation : profil */
