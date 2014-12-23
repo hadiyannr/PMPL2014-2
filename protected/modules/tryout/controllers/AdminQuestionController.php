@@ -53,44 +53,19 @@ class AdminQuestionController extends Controller {
      * If creation is successful, the browser will be redirected to the 'view' page.
      */
     public function actionCreate($idtryout) {
+        $tryoutModel = Tryout::model()->findByPk($idtryout);
         $questionModel = new Question;
         $questionModel->setAttribute('idtryout', $idtryout);
         $optionModelList = array(new Option, new Option, new Option, new Option, new Option);
-        if (isset($_POST['Soal'])) {
-            if(Question::saveQuestion($questionModel,$_POST['Soal'],$_POST['Opsi'],$optionModelList)){
+        if (isset($_POST['Question'])) {
+            if(Question::saveQuestion($questionModel,$_POST['Question'],$_POST['Option'],$optionModelList)){
                 $this->redirect(array('view', 'id' => $questionModel->id));
             }
         }
-
+        $questionModel->nomor = $tryoutModel->getLastNumber() + 1;
         $this->render('create', array(
             'questionModel' => $questionModel,
             'optionModelList'=>$optionModelList,
-        ));
-    }
-    public function actionCreateStory($idtryout){
-        $questionModel = new Question;
-        $questionModel->setAttribute('idtryout', $idtryout);
-        $questionModel->setAttribute('isHasJawaban', 0);
-        if(isset($_POST['Soal'])){
-            $questionModel->attributes = $_POST['Soal'];
-
-            if($questionModel->validate() && $questionModel->save())
-            $this->redirect(array('view', 'id' => $questionModel->id));
-        }
-        $this->render('createStory', array(
-            'questionModel' => $questionModel,
-        ));
-    }
-    public function actionUpdateStory($id){
-        $questionModel = $this->loadModel($id);
-        if(isset($_POST['Soal'])){
-            $questionModel->attributes = $_POST['Soal'];
-
-            if($questionModel->validate() && $questionModel->save())
-                $this->redirect(array('view', 'id' => $questionModel->id));
-        }
-        $this->render('updateStory', array(
-            'questionModel' => $questionModel,
         ));
     }
 
@@ -119,6 +94,34 @@ class AdminQuestionController extends Controller {
             'optionModelList'=>$optionModelList,
         ));
     }
+
+    public function actionCreateStory($idtryout){
+        $questionModel = new Question;
+        $questionModel->setAttribute('idtryout', $idtryout);
+        $questionModel->setAttribute('isHasJawaban', 0);
+        if(isset($_POST['Soal'])){
+            $questionModel->attributes = $_POST['Soal'];
+
+            if($questionModel->validate() && $questionModel->save())
+            $this->redirect(array('view', 'id' => $questionModel->id));
+        }
+        $this->render('createStory', array(
+            'questionModel' => $questionModel,
+        ));
+    }
+    public function actionUpdateStory($id){
+        $questionModel = $this->loadModel($id);
+        if(isset($_POST['Soal'])){
+            $questionModel->attributes = $_POST['Soal'];
+
+            if($questionModel->validate() && $questionModel->save())
+                $this->redirect(array('view', 'id' => $questionModel->id));
+        }
+        $this->render('updateStory', array(
+            'questionModel' => $questionModel,
+        ));
+    }
+
 
     /**
      * Deletes a particular model.
