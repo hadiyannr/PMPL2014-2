@@ -72,7 +72,7 @@ $this->breadcrumbs = array(
                 <i>
                     <?php
                         if(Yii::app()->user->isGuest){
-                            echo 'Silahkan masuk untuk melihat daftar Hasil Uji Coba Anda';
+                            echo 'Silahkan login untuk melihat daftar Hasil Uji Coba Anda';
                         }else{
                             echo 'Tidak ada daftar di MyTryout. Silahkan daftar pada menu Ujian Tersedia.';
                         }

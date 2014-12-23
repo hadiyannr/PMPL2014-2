@@ -122,7 +122,6 @@ $this->breadcrumbs=array(
                     'nextPageLabel' => 'Selanjutnya',
                     'prevPageLabel' => 'Sebelumnya',
                     'firstPageLabel' => 'Awal',
-                    'lastPageLabel' => 'Akhir',
                     'selectedPageCssClass' => 'active',
                     //'hiddenPageCssClass' => 'disabled',
                     'htmlOptions' => array(

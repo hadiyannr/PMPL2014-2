@@ -72,7 +72,7 @@
 <!--                                 <a class="btn bg-bright-yellow" href="">MORE</a>-->
                                 
                                 <?php
-                                    echo CHtml::link('MORE',array('/konten/konten/index', 'id'=>$randKonten->id),array('class'=>'btn bg-bright-yellow btn-more-display'));
+                                    echo CHtml::link('Selengkapnya',array('/konten/konten/index', 'id'=>$randKonten->id),array('class'=>'btn bg-bright-yellow btn-more-display'));
                                 ?>
                             </figure>
                         </div>
@@ -85,7 +85,7 @@
 <!--        <p><a class="btn bg-black ft-bright-yellow" href="">MORE</a></p>-->
         <p>
             <?php
-                echo CHtml::link('MORE',array('/konten/konten/kategori', 'idcategory'=>3),array('class'=>'btn bg-black ft-bright-yellow btn-more'));
+                echo CHtml::link('Berita Lainnya',array('/konten/konten/kategori', 'idcategory'=>3),array('class'=>'btn bg-black ft-bright-yellow btn-more'));
             ?>
         </p>
     </div>
