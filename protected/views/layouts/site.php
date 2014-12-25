@@ -45,7 +45,7 @@
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #ecf0f1">Konten <b class="caret"></b></a>
                                         <ul>
                                             <?php
-                                            $kategoris = Kategori::model()->findAll();
+                                            $kategoris = KategoriKonten::model()->findAll();
                                             foreach ($kategoris as $kategori): ?>
                                                 <li> <?php echo CHtml::link($kategori->nama, array('/konten/konten/kategori','idcategory'=>$kategori->id),array('style'=>"color: #ecf0f1"));?></li>
                                             <?php endforeach;?>
@@ -96,7 +96,7 @@
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #ecf0f1">Konten <b class="caret"></b></a>
                                     <ul class="dropdown-menu">
                                         <?php
-                                        $kategoris = Kategori::model()->findAll();
+                                        $kategoris = KategoriKonten::model()->findAll();
                                         foreach ($kategoris as $kategori): ?>
                                             <li> <?php echo CHtml::link($kategori->nama, array('/konten/konten/kategori','idcategory'=>$kategori->id),array('style'=>"color: #ecf0f1"));?></li>
                                         <?php endforeach;?>

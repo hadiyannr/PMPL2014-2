@@ -10,7 +10,7 @@
  * The followings are the available model relations:
  * @property Konten $konten
  */
-class Kategori extends CActiveRecord {
+class KategoriKonten extends CActiveRecord {
 
     /**
      * @return string the associated database table name
@@ -84,14 +84,14 @@ class Kategori extends CActiveRecord {
      * Returns the static model of the specified AR class.
      * Please note that you should have this exact method in all your CActiveRecord descendants!
      * @param string $className active record class name.
-     * @return Kategori the static model class
+     * @return KategoriKonten the static model class
      */
     public static function model($className = __CLASS__) {
         return parent::model($className);
     }
 
     public function getOptionList() {
-        return CHtml::listData(Kategori::model()->findAll(), 'id', 'nama');
+        return CHtml::listData(KategoriKonten::model()->findAll(), 'id', 'nama');
     }
 
 }
