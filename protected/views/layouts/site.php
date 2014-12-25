@@ -203,8 +203,8 @@
                 </div>
             </div>
         </footer>
-        
-        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+<!--        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>-->
         <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/gmaps.js"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/jquery-1.11.0.min.js"></script>

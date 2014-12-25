@@ -141,10 +141,10 @@
                 </div>
             </footer>
 
-            <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<!--            <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>-->
             <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+            <script src="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/jquery-1.11.0.min.js"></script>x
             <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/gmaps.js"></script>
-            <script src="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/jquery-1.11.0.min.js"></script>
             <script src="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/bootstrap.min.js"></script>
             <script src="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/main.js"></script>
             <script>
@@ -160,3 +160,34 @@
 
                     zoom: function() {
                         $('#zoom').elevateZoom({
+                            zoomWindowWidth: 300,
+                            zoomWindowHeight: 300,
+                            easing:true
+                        });
+                    },
+
+                    map: function() {
+                        var mark = new GMaps({
+                            div:"#map",
+                            lat: -6.368074,
+                            lng: 106.829559
+
+                        })
+                        mark.addMarker({
+                            lat: -6.368074,
+                            lng: 106.829559,
+                            title: 'Universitas Indonesia',
+                            click: function(e) {
+                                alert('You clicked in this marker');
+                            }
+                        });
+                    },
+                };
+
+                $(function (){
+                    Site.init();
+                });
+
+            </script>
+</body>
+</html>

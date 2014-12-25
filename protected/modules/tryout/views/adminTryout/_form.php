@@ -41,7 +41,6 @@
                 ?>
 		<?php echo $form->error($tryoutModel,'tanggal'); ?>
 	</div>
-        
 	<div class="row">
 		<?php echo $form->labelEx($tryoutModel,'waktuMulai'); ?>
 		<?php 
