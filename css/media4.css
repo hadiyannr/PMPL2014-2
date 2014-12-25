@@ -1,0 +1,5 @@
+@media(min-width: 992px) and (max-width: 1366px) {
+  .content-display p {
+    min-height: 120px;
+  }
+}

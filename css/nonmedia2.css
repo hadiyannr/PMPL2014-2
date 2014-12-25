@@ -1,0 +1,244 @@
+input[type="submit"] {
+  border-radius: 0;
+  background-color: black;
+  color: white;
+  border: 0;
+}
+
+.list-view div.preheader, .list-view div.post div.header {
+  background: none !important;
+  background-color: black !important;
+}
+
+.post .header {
+  color: white;
+}
+
+.post a{
+  color: white;
+  text-decoration: underline;
+}
+
+.post .header .content {
+  min-height: 100px !important;
+  padding-top:30px !important;
+  padding-bottom: 30px !important; 
+}
+
+.profile-view h3 {
+  margin-top: 0;
+  text-indent: 10px;
+  border-left: 5px solid #6fc5a4;
+}
+
+#ytProfil_jenisKelamin {
+  position: absolute;
+}
+
+.notif-error {
+  background-color: #e01e25;
+  color:white;
+  font-size: 125%;
+  padding:10px;
+  text-align: center;
+  font-family: "LatoLatin";
+}
+
+/* layout implementation : konten */
+
+.judul-konten {
+  margin-left: -15px;
+  font-weight: bold;
+}
+.cari-berita {
+  margin-right: -15px;
+}
+.isi-konten {
+  margin-top: 30px;
+  padding: 5px 50px;
+  background-color: #efefef;
+  max-width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+.judul-isi-konten {
+  margin-bottom: 30px;
+}
+.navigasi-konten {
+  max-width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 70px;
+}
+.link-navigasi-konten {
+  background-color: #fedc00;
+  padding: 7px 20px;
+  font-size: 15px;
+  color: black;
+}
+.link-navigasi-konten:hover {
+  text-decoration: none;
+  color: gray;
+}
+
+li.dropdown.open {
+  background-color: white;
+}
+
+ul.dropdown-menu {
+  box-shadow: none !important;
+  border-radius: 0;
+}
+
+/* end of implementation : konten */
+
+/* layout implementation : admin */
+.grid-view table.items th {
+  background: black !important;
+}
+.grid-view table.items tr.odd {
+  background: white !important;
+  height: 30px !important;
+}
+.grid-view table.items tr.even {
+  background: rgb(230,230,230) !important;
+  height: 30px !important;
+}
+.grid-view table.items tr:hover {
+  background: #FFED75 !important;
+}
+.grid-view .pager {
+  margin-top: 20px !important;
+}
+ul.yiiPager .selected a {
+  background: #fedc00 !important;
+  color: black !important;
+  border-radius: 0 !important;
+}
+ul.yiiPager a:link, ul.yiiPager a:visited {
+  border: solid 1px black !important;
+  font-weight: bold !important;
+  color: black !important;
+  border-radius: 0 !important;
+  padding: 5px 8px !important;
+}
+.grid-view .pager .next a {
+  margin-left: 3px;
+  background-color: black !important;
+  color: white !important;
+}
+.grid-view .pager .next a:hover {
+  background-color: white !important;
+  color: black !important;
+}
+.grid-view .pager .previous a {
+  background-color: black !important;
+  color: white !important;
+}
+.grid-view .pager .previous a:hover {
+  background-color: white !important;
+  color: black !important;
+}
+.portlet-decoration {
+  background: black !important;
+  border-left: none !important;
+}
+.portlet-title {
+  color: white !important;
+}
+.portlet-content {
+  background: rgb(230,230,230) !important;
+}
+.operations li a {
+  color: black !important;
+}
+.operations li a:hover {
+  color: gray !important;
+}
+#tryout-form input[type="submit"] {
+  padding: 0.80%;
+  padding-left: 13px;
+  padding-right: 13px;
+}
+table.detail-view tr.odd {
+  background: rgb(230,230,230) !important;
+}
+table.detail-view tr.even {
+  background: white !important;
+}
+table.detail-view tr:hover {
+  background: #FFED75 !important;
+}
+.btn-preview-tryout {
+  margin-left: 10px;
+}
+.admin-content {
+  min-height: 100%;
+}
+.admin-index {
+  text-align: center;
+}
+.grid-view .button-column {
+  width: 100px !important;
+}
+.grid-view .button-column .view,
+.grid-view .button-column .update,
+.grid-view .button-column .delete {
+  padding: 5px;
+}
+#konten-form .buttons .btn-primary {
+  padding: 7px 10px;
+}
+.admin-content #content .btn-primary {
+  padding: 7px 10px !important;
+}
+
+/* end of implementation : admin */
+
+/* layout implementation : profil */
+.form-jenis {
+  margin-top: 10px;
+}
+.form-profil input,
+.form-profil select {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+}
+.btn-ubah-profil .btn-primary,
+.btn-ubah-profil .btn-danger {
+  padding: 7px 20px !important;
+  border: 1px black !important;
+}
+.profil-box {
+  background-color: rgb(244,244,244);
+  padding: 20px 70px;
+  margin-bottom: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.float-foto {
+  float: right;
+}
+.float-btn-profil {
+  float: right;
+}
+.btn-profil {
+  margin-bottom: 5px;
+}
+.btn-profil .btn-primary {
+  width: 150px;
+}
+.nama {
+  background-color: #fedc00;
+  padding: 4px 10px;
+  margin-top: 3px;
+}

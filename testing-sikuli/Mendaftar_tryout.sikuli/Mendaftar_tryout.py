@@ -6,6 +6,5 @@ click("1400017919302.png")
 wait("1400017936591.png",5)
 r = Region(Region(103,272,1147,95))
 r.click("1400018020836.png")
-wait("1400018437704.png",5)
-find("1400018437704.png")
+assert exists("1400018437704.png",5)
 

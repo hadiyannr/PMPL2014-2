@@ -1,0 +1,5 @@
+click("1419483712901.png")
+wait(3)
+r = Region(Region(106,575,1139,72))
+r.click("1419487063345.png")
+click("1419487087257.png")

@@ -9,7 +9,6 @@ click("1397320268705.png")
 chromeImg = exists("1416965847267.png")
 if chromeImg:
     click("1416965871806.png")
-wait("1416965571310.png")
-hover("1416965571310.png")
+assert exists("1416965571310.png")
 
 

@@ -1,0 +1,22 @@
+@media (min-width:639px) and (max-width: 768px) {
+   .navbar-default {
+    display: none;
+  }
+
+
+  .responsive-nav {
+     display: inline;
+  }
+
+  .responsive-dropdown {
+    right: 0;
+    left: inherit;
+    background-color:white;
+    border: 0;
+  }
+
+  .responsive-dropdown li {
+    border-bottom: 1px solid orange;
+  }
+
+}

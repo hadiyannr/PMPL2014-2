@@ -5,19 +5,25 @@ class ProfileController extends Controller {
     public $layout = '//layouts/site';
 
     public function actionIndex() {
-        $profileModel = $this->loadModel();
+        $profileModel = $this->loadProfileModel();
         if ($profileModel == null) {
             $this->redirect(array('update'));
         }
         $this->render('index', array('profilModel' => $profileModel));
     }
     
-    public function actionView($id) {
-        $profileModel = Profile::model()->findByAttributes(array('idPengguna'=>$id));
-        if($profileModel==null){
+    public function actionViewByID($id) {
+        echo is_numeric($id).' '.$id;die();
+        if(is_numeric($id)){
+            $profileModel = Profile::model()->findByAttributes(array('idPengguna'=>$id));
+            if($profileModel==null){
+                $this->render('emptyProfil');
+            }
+            $this->render('index', array('profilModel' => $profileModel));
+        }
+        else{
             $this->render('emptyProfil');
         }
-        $this->render('index', array('profilModel' => $profileModel));
     }
 
     /**
@@ -26,7 +32,7 @@ class ProfileController extends Controller {
      * @param integer $id the ID of the model to be updated
      */
     public function actionUpdate() {       
-        $profileModel = $this->loadModel();
+        $profileModel = $this->loadProfileModel();
         if($profileModel==null){
             $profileModel = new Profile;
             $profileModel->tanggalLahir= '1996-01-01';
@@ -61,11 +67,14 @@ class ProfileController extends Controller {
             }           
             
             if(!$profileModel->hasErrors() && $profileModel->save()) {
-                if($uploading){
-                    $profileModel->image->saveAs(Yii::app()->basePath.'/../images/ProfilPic/'.$profileModel->fotoUrl);
-                }
+//                if($uploading){
+//                    $profileModel->image->saveAs(Yii::app()->basePath.'/../images/ProfilPic/'.$profileModel->fotoUrl);
+//                }
                 $this->redirect(array('index'));
             }
+//            else{
+//                $this->redirect(array('test/testsosmed'));
+//            }
         }                
         $this->render('update',array('profilModel'=>$profileModel));
     }
@@ -92,7 +101,11 @@ class ProfileController extends Controller {
         $this->render('changePasswordForm');
     }
     
-    public function loadModel(){
+    public function loadProfileModel(){
         return Profile::model()->findByAttributes(array('idPengguna' => Yii::app()->user->id));
+    }
+    
+    public function loadModelSosmed(){
+        return UserOAuth::model()->findByAttributes(array('user_id' => Yii::app()->user->id));
     }
 }

@@ -2015,3 +2015,714 @@ Stack trace:
 REQUEST_URI=/PMPL2014-2/index.php/test/oauth?provider=Google
 HTTP_REFERER=http://localhost/PMPL2014-2/index.php/test/testsosmed
 ---
+<<<<<<< HEAD
+2014/12/25 09:40:00 [error] [exception.CException] exception 'CException' with message 'Property "EWebUser.isAdmin" is not defined.' in C:\xampp\htdocs\yiiframework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\auth\CWebUser.php(146): CComponent->__get('isAdmin')
+#1 C:\xampp\htdocs\PMPL2014-2\protected\modules\yii-forum\views\forum\index.php(6): CWebUser->__get('isAdmin')
+#2 C:\xampp\htdocs\yiiframework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\yiiframework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yiiframework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yiiframework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#6 C:\xampp\htdocs\PMPL2014-2\protected\modules\yii-forum\controllers\ForumController.php(57): CController->render('index', Array)
+#7 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): ForumController->actionIndex()
+#8 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yiiframework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\htdocs\yiiframework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\yiiframework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yiiframework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('')
+#17 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('forum')
+#18 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/PMPL2014-2/index.php/forum
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/tryout/tryout/index
+---
+2014/12/25 09:51:16 [error] [exception.CException] exception 'CException' with message 'Property "EWebUser.isAdmin" is not defined.' in C:\xampp\htdocs\yiiframework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\auth\CWebUser.php(146): CComponent->__get('isAdmin')
+#1 C:\xampp\htdocs\PMPL2014-2\protected\modules\yii-forum\views\forum\index.php(6): CWebUser->__get('isAdmin')
+#2 C:\xampp\htdocs\yiiframework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\yiiframework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yiiframework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yiiframework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#6 C:\xampp\htdocs\PMPL2014-2\protected\modules\yii-forum\controllers\ForumController.php(57): CController->render('index', Array)
+#7 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): ForumController->actionIndex()
+#8 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yiiframework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\htdocs\yiiframework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\yiiframework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yiiframework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('')
+#17 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('forum')
+#18 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/PMPL2014-2/index.php/forum
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/tryout/tryout/index
+---
+2014/12/25 09:57:15 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\PMPL2014-2\protected\views\profile\index.php:15)
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CController.php(869): ProfileController->renderFile()
+#1 C:\xampp\htdocs\yiiframework\web\CController.php(782): ProfileController->renderPartial()
+#2 C:\xampp\htdocs\PMPL2014-2\protected\controllers\ProfileController.php(20): ProfileController->render()
+#3 unknown(0): ProfileController->actionView()
+#4 C:\xampp\htdocs\yiiframework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\yiiframework\web\CController.php(286): ProfileController->runAction()
+#8 C:\xampp\htdocs\yiiframework\web\CController.php(265): ProfileController->runActionWithFilters()
+#9 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): ProfileController->run()
+#10 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\PMPL2014-2\index.php(13): CWebApplication->run()
+REQUEST_URI=/PMPL2014-2/index.php/profile/28
+in C:\xampp\htdocs\PMPL2014-2\protected\views\profile\index.php (15)
+in C:\xampp\htdocs\PMPL2014-2\protected\controllers\ProfileController.php (20)
+in C:\xampp\htdocs\PMPL2014-2\index.php (13)
+2014/12/25 10:15:06 [error] [exception.CException] exception 'CException' with message 'Property "EWebUser.isAdmin" is not defined.' in C:\xampp\htdocs\yiiframework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\auth\CWebUser.php(146): CComponent->__get('isAdmin')
+#1 C:\xampp\htdocs\PMPL2014-2\protected\modules\yii-forum\views\forum\index.php(6): CWebUser->__get('isAdmin')
+#2 C:\xampp\htdocs\yiiframework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\yiiframework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yiiframework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yiiframework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#6 C:\xampp\htdocs\PMPL2014-2\protected\modules\yii-forum\controllers\ForumController.php(57): CController->render('index', Array)
+#7 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): ForumController->actionIndex()
+#8 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yiiframework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\htdocs\yiiframework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\yiiframework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yiiframework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('')
+#17 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('forum')
+#18 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/PMPL2014-2/index.php/forum
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/tryout/tryout/statistic/id/25
+---
+2014/12/25 10:19:45 [error] [exception.CException] exception 'CException' with message 'Property "EWebUser.isAdmin" is not defined.' in C:\xampp\htdocs\yiiframework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\auth\CWebUser.php(146): CComponent->__get('isAdmin')
+#1 C:\xampp\htdocs\PMPL2014-2\protected\modules\yii-forum\views\forum\index.php(6): CWebUser->__get('isAdmin')
+#2 C:\xampp\htdocs\yiiframework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\yiiframework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yiiframework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yiiframework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#6 C:\xampp\htdocs\PMPL2014-2\protected\modules\yii-forum\controllers\ForumController.php(57): CController->render('index', Array)
+#7 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): ForumController->actionIndex()
+#8 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yiiframework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\htdocs\yiiframework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\yiiframework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yiiframework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('')
+#17 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('forum')
+#18 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/PMPL2014-2/index.php/forum
+---
+2014/12/25 10:19:53 [error] [exception.CException] exception 'CException' with message 'Property "EWebUser.isAdmin" is not defined.' in C:\xampp\htdocs\yiiframework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\auth\CWebUser.php(146): CComponent->__get('isAdmin')
+#1 C:\xampp\htdocs\PMPL2014-2\protected\modules\yii-forum\views\forum\index.php(6): CWebUser->__get('isAdmin')
+#2 C:\xampp\htdocs\yiiframework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\yiiframework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yiiframework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yiiframework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#6 C:\xampp\htdocs\PMPL2014-2\protected\modules\yii-forum\controllers\ForumController.php(57): CController->render('index', Array)
+#7 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): ForumController->actionIndex()
+#8 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yiiframework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\htdocs\yiiframework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\yiiframework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\xampp\htdocs\yiiframework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yiiframework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('')
+#17 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('forum')
+#18 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/PMPL2014-2/index.php/forum
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/profile/update
+---
+2014/12/25 10:27:18 [error] [php] Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\yiiframework\web\CController.php:793) (C:\xampp\htdocs\yiiframework\web\CHttpRequest.php:803)
+Stack trace:
+#0 C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php(125): TestController->redirect()
+#1 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): TestController->actionTestSosmed()
+#2 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\yiiframework\web\CController.php(286): TestController->runAction()
+#4 C:\xampp\htdocs\yiiframework\web\CController.php(265): TestController->runActionWithFilters()
+#5 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): TestController->run()
+#6 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\PMPL2014-2\index.php(13): CWebApplication->run()
+REQUEST_URI=/PMPL2014-2/index.php/test/testsosmed?service=google&redirect_uri=http://localhost/PMPL2014-2/index.php/test/testsosmed?service%3Dgoogle&js&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2014-12-25T03%3A27%3A18ZOsxJ06GLkIMmFA&openid.return_to=http%3A%2F%2Flocalhost%2FPMPL2014-2%2Findex.php%2Ftest%2Ftestsosmed%3Fservice%3Dgoogle%26redirect_uri%3Dhttp%3A%2F%2Flocalhost%2FPMPL2014-2%2Findex.php%2Ftest%2Ftestsosmed%3Fservice%253Dgoogle%26js&openid.assoc_handle=1.AMlYA9UnNlmY6hL3I7og7XylBTcHSENAMK0zjb-nA-keTogqKlECsD2hhmyJ_M6P&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.email%2Cext1.value.email&openid.sig=KwGEL7Jq0KtOV4NHEx8pP2U8mFI%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlBoRaIOOG75-dcJOP0yT8oGi6iiT2hvAA&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlBoRaIOOG75-dcJOP0yT8oGi6iiT2hvAA&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Irma&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=irmaapriliawulandari%40gmail.com
+in C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php (125)
+in C:\xampp\htdocs\PMPL2014-2\index.php (13)
+2014/12/25 10:43:47 [error] [php] Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\yiiframework\web\CController.php:793) (C:\xampp\htdocs\yiiframework\web\CHttpRequest.php:803)
+Stack trace:
+#0 C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php(121): TestController->redirect()
+#1 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): TestController->actionTestSosmed()
+#2 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\yiiframework\web\CController.php(286): TestController->runAction()
+#4 C:\xampp\htdocs\yiiframework\web\CController.php(265): TestController->runActionWithFilters()
+#5 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): TestController->run()
+#6 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\PMPL2014-2\index.php(13): CWebApplication->run()
+REQUEST_URI=/PMPL2014-2/index.php/test/testsosmed?service=google&redirect_uri=http://localhost/PMPL2014-2/index.php/test/testsosmed?service%3Dgoogle&js&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2014-12-25T03%3A43%3A46ZoKj17jRwo7MwZw&openid.return_to=http%3A%2F%2Flocalhost%2FPMPL2014-2%2Findex.php%2Ftest%2Ftestsosmed%3Fservice%3Dgoogle%26redirect_uri%3Dhttp%3A%2F%2Flocalhost%2FPMPL2014-2%2Findex.php%2Ftest%2Ftestsosmed%3Fservice%253Dgoogle%26js&openid.assoc_handle=1.AMlYA9VfVLswUAL6PcqGIioiNXO2n03UGTEoLnArBXmFYyoWnVE2VdyaMzf1Q2o5&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.email%2Cext1.value.email&openid.sig=69DriqZkA57sEiokNaDrXXxHxQQ%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlBoRaIOOG75-dcJOP0yT8oGi6iiT2hvAA&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlBoRaIOOG75-dcJOP0yT8oGi6iiT2hvAA&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Irma&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=irmaapriliawulandari%40gmail.com
+in C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php (121)
+in C:\xampp\htdocs\PMPL2014-2\index.php (13)
+2014/12/25 10:45:24 [error] [exception.CException] exception 'CException' with message 'Property "UserOauth.provider" is not defined.' in C:\xampp\htdocs\yiiframework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\db\ar\CActiveRecord.php(145): CComponent->__get('provider')
+#1 C:\xampp\htdocs\yiiframework\validators\CRequiredValidator.php(58): CActiveRecord->__get('provider')
+#2 C:\xampp\htdocs\yiiframework\validators\CValidator.php(213): CRequiredValidator->validateAttribute(Object(UserOauth), 'provider')
+#3 C:\xampp\htdocs\yiiframework\base\CModel.php(159): CValidator->validate(Object(UserOauth), NULL)
+#4 C:\xampp\htdocs\yiiframework\db\ar\CActiveRecord.php(805): CModel->validate(NULL)
+#5 C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php(106): CActiveRecord->save()
+#6 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): TestController->actionTestSosmed()
+#7 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yiiframework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('testsosmed')
+#11 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('test/testsosmed')
+#12 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/PMPL2014-2/index.php/test/testsosmed?service=google&redirect_uri=http://localhost/PMPL2014-2/index.php/test/testsosmed?service%3Dgoogle&js&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2014-12-25T03%3A45%3A23Z4S5j-xddgpKQyQ&openid.return_to=http%3A%2F%2Flocalhost%2FPMPL2014-2%2Findex.php%2Ftest%2Ftestsosmed%3Fservice%3Dgoogle%26redirect_uri%3Dhttp%3A%2F%2Flocalhost%2FPMPL2014-2%2Findex.php%2Ftest%2Ftestsosmed%3Fservice%253Dgoogle%26js&openid.assoc_handle=1.AMlYA9UT0R4gu0DZ5SsqnBt3Ejuxsh7KzWzBUJdifYpso4Rl9hj5pAF5yvH6DdWT&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.email%2Cext1.value.email&openid.sig=nW8EuA7FGKsMR0XR2fE6FTV8zgk%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlBoRaIOOG75-dcJOP0yT8oGi6iiT2hvAA&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlBoRaIOOG75-dcJOP0yT8oGi6iiT2hvAA&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Irma&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=irmaapriliawulandari%40gmail.com
+---
+2014/12/25 10:47:03 [error] [php] Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\yiiframework\web\CController.php:793) (C:\xampp\htdocs\yiiframework\web\CHttpRequest.php:803)
+Stack trace:
+#0 C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php(121): TestController->redirect()
+#1 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): TestController->actionTestSosmed()
+#2 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\yiiframework\web\CController.php(286): TestController->runAction()
+#4 C:\xampp\htdocs\yiiframework\web\CController.php(265): TestController->runActionWithFilters()
+#5 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): TestController->run()
+#6 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\PMPL2014-2\index.php(13): CWebApplication->run()
+REQUEST_URI=/PMPL2014-2/index.php/test/testsosmed?service=google&redirect_uri=http://localhost/PMPL2014-2/index.php/test/testsosmed?service%3Dgoogle&js&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2014-12-25T03%3A47%3A02ZINjB3vP2yWJ8yw&openid.return_to=http%3A%2F%2Flocalhost%2FPMPL2014-2%2Findex.php%2Ftest%2Ftestsosmed%3Fservice%3Dgoogle%26redirect_uri%3Dhttp%3A%2F%2Flocalhost%2FPMPL2014-2%2Findex.php%2Ftest%2Ftestsosmed%3Fservice%253Dgoogle%26js&openid.assoc_handle=1.AMlYA9VI8zkBlAKozummZUQpY176ehBNcoC-O16_uIWgwf9L4RXidP6NTdkBdc0q&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.email%2Cext1.value.email&openid.sig=OyowN5p4wicYUoD1nfoG0Ni0ooU%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlBoRaIOOG75-dcJOP0yT8oGi6iiT2hvAA&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlBoRaIOOG75-dcJOP0yT8oGi6iiT2hvAA&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Irma&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=irmaapriliawulandari%40gmail.com
+in C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php (121)
+in C:\xampp\htdocs\PMPL2014-2\index.php (13)
+2014/12/25 10:48:20 [error] [php] Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\yiiframework\web\CController.php:793) (C:\xampp\htdocs\yiiframework\web\CHttpRequest.php:803)
+Stack trace:
+#0 C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php(121): TestController->redirect()
+#1 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): TestController->actionTestSosmed()
+#2 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\yiiframework\web\CController.php(286): TestController->runAction()
+#4 C:\xampp\htdocs\yiiframework\web\CController.php(265): TestController->runActionWithFilters()
+#5 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): TestController->run()
+#6 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\PMPL2014-2\index.php(13): CWebApplication->run()
+REQUEST_URI=/PMPL2014-2/index.php/test/testsosmed?service=google&redirect_uri=http://localhost/PMPL2014-2/index.php/test/testsosmed?service%3Dgoogle&js&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2014-12-25T03%3A48%3A19Zjor3mKbCLXpnWQ&openid.return_to=http%3A%2F%2Flocalhost%2FPMPL2014-2%2Findex.php%2Ftest%2Ftestsosmed%3Fservice%3Dgoogle%26redirect_uri%3Dhttp%3A%2F%2Flocalhost%2FPMPL2014-2%2Findex.php%2Ftest%2Ftestsosmed%3Fservice%253Dgoogle%26js&openid.assoc_handle=1.AMlYA9W31NxmT6kFxDKxu1rsTsZY74uO0RRaC9lLL2D7mC_FDkrC-R9IruvEFFnB&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.email%2Cext1.value.email&openid.sig=8N8mRvAcXm2w7hXwhg8FJZT0AxM%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlBoRaIOOG75-dcJOP0yT8oGi6iiT2hvAA&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlBoRaIOOG75-dcJOP0yT8oGi6iiT2hvAA&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Irma&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=irmaapriliawulandari%40gmail.com
+in C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php (121)
+in C:\xampp\htdocs\PMPL2014-2\index.php (13)
+2014/12/25 10:50:52 [error] [php] Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\yiiframework\web\CController.php:793) (C:\xampp\htdocs\yiiframework\web\CHttpRequest.php:803)
+Stack trace:
+#0 C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php(121): TestController->redirect()
+#1 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): TestController->actionTestSosmed()
+#2 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\yiiframework\web\CController.php(286): TestController->runAction()
+#4 C:\xampp\htdocs\yiiframework\web\CController.php(265): TestController->runActionWithFilters()
+#5 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): TestController->run()
+#6 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\PMPL2014-2\index.php(13): CWebApplication->run()
+REQUEST_URI=/PMPL2014-2/index.php/test/testsosmed?service=google&redirect_uri=http://localhost/PMPL2014-2/index.php/test/testsosmed?service%3Dgoogle&js&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2014-12-25T03%3A50%3A51ZSZFdtFgMlOJPFg&openid.return_to=http%3A%2F%2Flocalhost%2FPMPL2014-2%2Findex.php%2Ftest%2Ftestsosmed%3Fservice%3Dgoogle%26redirect_uri%3Dhttp%3A%2F%2Flocalhost%2FPMPL2014-2%2Findex.php%2Ftest%2Ftestsosmed%3Fservice%253Dgoogle%26js&openid.assoc_handle=1.AMlYA9Ud12g29y3G9pXXHCXGPqJ34jO1lWLOootTynV786Ui2UpCWDnHLG2yyZT1&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.email%2Cext1.value.email&openid.sig=pqp3Ek5REnwiLBXZ%2FYPJLh8tt9s%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlBoRaIOOG75-dcJOP0yT8oGi6iiT2hvAA&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlBoRaIOOG75-dcJOP0yT8oGi6iiT2hvAA&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Irma&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=irmaapriliawulandari%40gmail.com
+in C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php (121)
+in C:\xampp\htdocs\PMPL2014-2\index.php (13)
+2014/12/25 10:51:41 [error] [php] Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\yiiframework\web\CController.php:793) (C:\xampp\htdocs\yiiframework\web\CHttpRequest.php:803)
+Stack trace:
+#0 C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php(121): TestController->redirect()
+#1 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): TestController->actionTestSosmed()
+#2 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\yiiframework\web\CController.php(286): TestController->runAction()
+#4 C:\xampp\htdocs\yiiframework\web\CController.php(265): TestController->runActionWithFilters()
+#5 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): TestController->run()
+#6 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\PMPL2014-2\index.php(13): CWebApplication->run()
+REQUEST_URI=/PMPL2014-2/index.php/test/testsosmed?service=google&redirect_uri=http://localhost/PMPL2014-2/index.php/test/testsosmed?service%3Dgoogle&js&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2014-12-25T03%3A51%3A41ZcXkNahPHHqYpPg&openid.return_to=http%3A%2F%2Flocalhost%2FPMPL2014-2%2Findex.php%2Ftest%2Ftestsosmed%3Fservice%3Dgoogle%26redirect_uri%3Dhttp%3A%2F%2Flocalhost%2FPMPL2014-2%2Findex.php%2Ftest%2Ftestsosmed%3Fservice%253Dgoogle%26js&openid.assoc_handle=1.AMlYA9XTc9f0nruiJruH-_ryP3HbdI2duXPH0vFUo9lPhqdQAQCEAyRe-MOeNajy&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.email%2Cext1.value.email&openid.sig=If%2BZE4vm4MdJOMtE8G3DC7gobmg%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlBoRaIOOG75-dcJOP0yT8oGi6iiT2hvAA&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlBoRaIOOG75-dcJOP0yT8oGi6iiT2hvAA&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Irma&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=irmaapriliawulandari%40gmail.com
+in C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php (121)
+in C:\xampp\htdocs\PMPL2014-2\index.php (13)
+2014/12/25 10:53:27 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\PMPL2014-2\protected\views\profile\index.php:15)
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CController.php(869): ProfileController->renderFile()
+#1 C:\xampp\htdocs\yiiframework\web\CController.php(782): ProfileController->renderPartial()
+#2 C:\xampp\htdocs\PMPL2014-2\protected\controllers\ProfileController.php(20): ProfileController->render()
+#3 unknown(0): ProfileController->actionView()
+#4 C:\xampp\htdocs\yiiframework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\yiiframework\web\CController.php(286): ProfileController->runAction()
+#8 C:\xampp\htdocs\yiiframework\web\CController.php(265): ProfileController->runActionWithFilters()
+#9 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): ProfileController->run()
+#10 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\PMPL2014-2\index.php(13): CWebApplication->run()
+REQUEST_URI=/PMPL2014-2/index.php/profile/28
+in C:\xampp\htdocs\PMPL2014-2\protected\views\profile\index.php (15)
+in C:\xampp\htdocs\PMPL2014-2\protected\controllers\ProfileController.php (20)
+in C:\xampp\htdocs\PMPL2014-2\index.php (13)
+2014/12/25 11:00:52 [error] [php] Undefined variable: profileModel (C:\xampp\htdocs\PMPL2014-2\protected\controllers\ProfileController.php:23)
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\yiiframework\web\CController.php(286): ProfileController->runAction()
+#3 C:\xampp\htdocs\yiiframework\web\CController.php(265): ProfileController->runActionWithFilters()
+#4 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): ProfileController->run()
+#5 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\PMPL2014-2\index.php(13): CWebApplication->run()
+REQUEST_URI=/PMPL2014-2/index.php/profile/28
+in C:\xampp\htdocs\PMPL2014-2\protected\controllers\ProfileController.php (23)
+in C:\xampp\htdocs\PMPL2014-2\index.php (13)
+2014/12/25 11:05:54 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\PMPL2014-2\protected\views\profile\index.php:15)
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CController.php(869): ProfileController->renderFile()
+#1 C:\xampp\htdocs\yiiframework\web\CController.php(782): ProfileController->renderPartial()
+#2 C:\xampp\htdocs\PMPL2014-2\protected\controllers\ProfileController.php(21): ProfileController->render()
+#3 unknown(0): ProfileController->actionView()
+#4 C:\xampp\htdocs\yiiframework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\yiiframework\web\CController.php(286): ProfileController->runAction()
+#8 C:\xampp\htdocs\yiiframework\web\CController.php(265): ProfileController->runActionWithFilters()
+#9 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): ProfileController->run()
+#10 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\PMPL2014-2\index.php(13): CWebApplication->run()
+REQUEST_URI=/PMPL2014-2/index.php/profile/28
+in C:\xampp\htdocs\PMPL2014-2\protected\views\profile\index.php (15)
+in C:\xampp\htdocs\PMPL2014-2\protected\controllers\ProfileController.php (21)
+in C:\xampp\htdocs\PMPL2014-2\index.php (13)
+2014/12/25 11:07:13 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\PMPL2014-2\protected\views\profile\index.php:15)
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CController.php(869): ProfileController->renderFile()
+#1 C:\xampp\htdocs\yiiframework\web\CController.php(782): ProfileController->renderPartial()
+#2 C:\xampp\htdocs\PMPL2014-2\protected\controllers\ProfileController.php(21): ProfileController->render()
+#3 unknown(0): ProfileController->actionView()
+#4 C:\xampp\htdocs\yiiframework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\yiiframework\web\CController.php(286): ProfileController->runAction()
+#8 C:\xampp\htdocs\yiiframework\web\CController.php(265): ProfileController->runActionWithFilters()
+#9 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): ProfileController->run()
+#10 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\PMPL2014-2\index.php(13): CWebApplication->run()
+REQUEST_URI=/PMPL2014-2/index.php/profile/28
+in C:\xampp\htdocs\PMPL2014-2\protected\views\profile\index.php (15)
+in C:\xampp\htdocs\PMPL2014-2\protected\controllers\ProfileController.php (21)
+in C:\xampp\htdocs\PMPL2014-2\index.php (13)
+2014/12/25 11:17:21 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'https://www.google.com/accounts/o8/id?id=AItOawlBoRaIOOG75-dcJOP' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `user_oauth` (`user_id`) VALUES (:yp0).
+in C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php (106)
+in C:\xampp\htdocs\PMPL2014-2\index.php (13)
+2014/12/25 11:17:21 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'https://www.google.com/accounts/o8/id?id=AItOawlBoRaIOOG75-dcJOP' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `user_oauth` (`user_id`) VALUES (:yp0)' in C:\xampp\htdocs\yiiframework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\yiiframework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php(106): CActiveRecord->save()
+#3 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): TestController->actionTestSosmed()
+#4 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yiiframework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('testsosmed')
+#8 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('test/testsosmed')
+#9 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/PMPL2014-2/index.php/test/testsosmed?service=google&redirect_uri=http://localhost/PMPL2014-2/index.php/test/testsosmed?service%3Dgoogle&js&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2014-12-25T04%3A17%3A20Zv2RJLm5EysZtlQ&openid.return_to=http%3A%2F%2Flocalhost%2FPMPL2014-2%2Findex.php%2Ftest%2Ftestsosmed%3Fservice%3Dgoogle%26redirect_uri%3Dhttp%3A%2F%2Flocalhost%2FPMPL2014-2%2Findex.php%2Ftest%2Ftestsosmed%3Fservice%253Dgoogle%26js&openid.assoc_handle=1.AMlYA9UVlNkBa2S30dlw_6_Qes6sDKRFKa_GKEMRaCNdNZMQ03Lz1y78ExkisEfi&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.email%2Cext1.value.email&openid.sig=JdKdNYmVnZiuu4rVwmnXd2A%2BR%2Fw%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlBoRaIOOG75-dcJOP0yT8oGi6iiT2hvAA&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlBoRaIOOG75-dcJOP0yT8oGi6iiT2hvAA&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Irma&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=irmaapriliawulandari%40gmail.com
+---
+2014/12/25 11:33:27 [error] [exception.CDbException] exception 'CDbException' with message 'Table "user_oauth" does not have a column named "site_id".' in C:\xampp\htdocs\yiiframework\db\schema\CDbCommandBuilder.php:694
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\db\ar\CActiveRecord.php(1518): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, '', Array, '`t`.')
+#1 C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php(104): CActiveRecord->findByAttributes(Array)
+#2 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): TestController->actionTestSosmed()
+#3 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yiiframework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('testsosmed')
+#7 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('test/testsosmed')
+#8 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/PMPL2014-2/index.php/test/testsosmed?service=google&redirect_uri=http://localhost/PMPL2014-2/index.php/test/testsosmed?service%3Dgoogle&js&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2014-12-25T04%3A33%3A26Zull0jJJP-1UIUQ&openid.return_to=http%3A%2F%2Flocalhost%2FPMPL2014-2%2Findex.php%2Ftest%2Ftestsosmed%3Fservice%3Dgoogle%26redirect_uri%3Dhttp%3A%2F%2Flocalhost%2FPMPL2014-2%2Findex.php%2Ftest%2Ftestsosmed%3Fservice%253Dgoogle%26js&openid.assoc_handle=1.AMlYA9WyIotZ2M8Pyrzpn0mczD4I0GlmwG8__FDJt2qZKE86HNeIsdqFAVvoG6Bg&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.email%2Cext1.value.email&openid.sig=HXpfyCoUIwyc5j0LFwtqM1JnPD4%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlBoRaIOOG75-dcJOP0yT8oGi6iiT2hvAA&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlBoRaIOOG75-dcJOP0yT8oGi6iiT2hvAA&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Irma&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=irmaapriliawulandari%40gmail.com
+---
+2014/12/25 11:34:00 [error] [php] Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\yiiframework\web\CController.php:793) (C:\xampp\htdocs\yiiframework\web\CHttpRequest.php:803)
+Stack trace:
+#0 C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php(124): TestController->redirect()
+#1 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): TestController->actionTestSosmed()
+#2 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\yiiframework\web\CController.php(286): TestController->runAction()
+#4 C:\xampp\htdocs\yiiframework\web\CController.php(265): TestController->runActionWithFilters()
+#5 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): TestController->run()
+#6 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\PMPL2014-2\index.php(13): CWebApplication->run()
+REQUEST_URI=/PMPL2014-2/index.php/test/testsosmed?service=google&redirect_uri=http://localhost/PMPL2014-2/index.php/test/testsosmed?service%3Dgoogle&js&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2014-12-25T04%3A33%3A59ZngLlOw9BINYL1g&openid.return_to=http%3A%2F%2Flocalhost%2FPMPL2014-2%2Findex.php%2Ftest%2Ftestsosmed%3Fservice%3Dgoogle%26redirect_uri%3Dhttp%3A%2F%2Flocalhost%2FPMPL2014-2%2Findex.php%2Ftest%2Ftestsosmed%3Fservice%253Dgoogle%26js&openid.assoc_handle=1.AMlYA9XsSzC_GZoKXQo1UEX-nxUJSTwUwn_lI3kbMoNdgbBPl0Q9QKyJa6_d5GzY&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.email%2Cext1.value.email&openid.sig=WFXFCsVEhAYVHLMvXVHe4X%2Bd3d8%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlBoRaIOOG75-dcJOP0yT8oGi6iiT2hvAA&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlBoRaIOOG75-dcJOP0yT8oGi6iiT2hvAA&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Irma&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=irmaapriliawulandari%40gmail.com
+in C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php (124)
+in C:\xampp\htdocs\PMPL2014-2\index.php (13)
+2014/12/25 11:34:33 [error] [php] Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\yiiframework\web\CController.php:793) (C:\xampp\htdocs\yiiframework\web\CHttpRequest.php:803)
+Stack trace:
+#0 C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php(124): TestController->redirect()
+#1 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): TestController->actionTestSosmed()
+#2 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\yiiframework\web\CController.php(286): TestController->runAction()
+#4 C:\xampp\htdocs\yiiframework\web\CController.php(265): TestController->runActionWithFilters()
+#5 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): TestController->run()
+#6 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\PMPL2014-2\index.php(13): CWebApplication->run()
+REQUEST_URI=/PMPL2014-2/index.php/test/testsosmed?service=google&redirect_uri=http://localhost/PMPL2014-2/index.php/test/testsosmed?service%3Dgoogle&js&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2014-12-25T04%3A34%3A33ZMU5RlORWSE0Cqw&openid.return_to=http%3A%2F%2Flocalhost%2FPMPL2014-2%2Findex.php%2Ftest%2Ftestsosmed%3Fservice%3Dgoogle%26redirect_uri%3Dhttp%3A%2F%2Flocalhost%2FPMPL2014-2%2Findex.php%2Ftest%2Ftestsosmed%3Fservice%253Dgoogle%26js&openid.assoc_handle=1.AMlYA9Wz42VBS1Rxpp4Y67dkJNr17E5RIq5daBO3i36JpeUHwZnnjbYzxFcpWDzW&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.email%2Cext1.value.email&openid.sig=k2bLvoYZEyzTe0x0H2AGr5ttsAQ%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlBoRaIOOG75-dcJOP0yT8oGi6iiT2hvAA&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlBoRaIOOG75-dcJOP0yT8oGi6iiT2hvAA&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Irma&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=irmaapriliawulandari%40gmail.com
+in C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php (124)
+in C:\xampp\htdocs\PMPL2014-2\index.php (13)
+2014/12/25 11:36:28 [error] [php] Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\yiiframework\web\CController.php:793) (C:\xampp\htdocs\yiiframework\web\CHttpRequest.php:803)
+Stack trace:
+#0 C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php(124): TestController->redirect()
+#1 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): TestController->actionTestSosmed()
+#2 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\yiiframework\web\CController.php(286): TestController->runAction()
+#4 C:\xampp\htdocs\yiiframework\web\CController.php(265): TestController->runActionWithFilters()
+#5 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): TestController->run()
+#6 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\PMPL2014-2\index.php(13): CWebApplication->run()
+REQUEST_URI=/PMPL2014-2/index.php/test/testsosmed?service=google&redirect_uri=http://localhost/PMPL2014-2/index.php/test/testsosmed?service%3Dgoogle&js&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2014-12-25T04%3A36%3A28ZrPIFb5AhKSq3ZA&openid.return_to=http%3A%2F%2Flocalhost%2FPMPL2014-2%2Findex.php%2Ftest%2Ftestsosmed%3Fservice%3Dgoogle%26redirect_uri%3Dhttp%3A%2F%2Flocalhost%2FPMPL2014-2%2Findex.php%2Ftest%2Ftestsosmed%3Fservice%253Dgoogle%26js&openid.assoc_handle=1.AMlYA9V60DP82hl2d6yR2lGQ5CyXGQ30asqOzU-9M1bDY081xgNfr3xrQ90fkbI7&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.email%2Cext1.value.email&openid.sig=3A6zmLOX5%2FWr0zjrK3IT1Nh3xBI%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlBoRaIOOG75-dcJOP0yT8oGi6iiT2hvAA&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlBoRaIOOG75-dcJOP0yT8oGi6iiT2hvAA&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Irma&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=irmaapriliawulandari%40gmail.com
+in C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php (124)
+in C:\xampp\htdocs\PMPL2014-2\index.php (13)
+2014/12/25 11:39:35 [error] [php] Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\yiiframework\web\CController.php:793) (C:\xampp\htdocs\yiiframework\web\CHttpRequest.php:803)
+Stack trace:
+#0 C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php(124): TestController->redirect()
+#1 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): TestController->actionTestSosmed()
+#2 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\yiiframework\web\CController.php(286): TestController->runAction()
+#4 C:\xampp\htdocs\yiiframework\web\CController.php(265): TestController->runActionWithFilters()
+#5 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): TestController->run()
+#6 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\PMPL2014-2\index.php(13): CWebApplication->run()
+REQUEST_URI=/PMPL2014-2/index.php/test/testsosmed?service=google&redirect_uri=http://localhost/PMPL2014-2/index.php/test/testsosmed?service%3Dgoogle&js&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2014-12-25T04%3A39%3A35Zm84MWewPvlC7tg&openid.return_to=http%3A%2F%2Flocalhost%2FPMPL2014-2%2Findex.php%2Ftest%2Ftestsosmed%3Fservice%3Dgoogle%26redirect_uri%3Dhttp%3A%2F%2Flocalhost%2FPMPL2014-2%2Findex.php%2Ftest%2Ftestsosmed%3Fservice%253Dgoogle%26js&openid.assoc_handle=1.AMlYA9X3vHbA9z7eKMERvgZw1inOpZaq-piskdgehFUyb7UqQniJVku1Uv-OIZpo&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.email%2Cext1.value.email&openid.sig=DR%2BCJgwnMAWl%2BzTL7CUle8mfGXs%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlBoRaIOOG75-dcJOP0yT8oGi6iiT2hvAA&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlBoRaIOOG75-dcJOP0yT8oGi6iiT2hvAA&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Irma&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=irmaapriliawulandari%40gmail.com
+in C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php (124)
+in C:\xampp\htdocs\PMPL2014-2\index.php (13)
+2014/12/25 11:39:59 [error] [php] Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\yiiframework\web\CController.php:793) (C:\xampp\htdocs\yiiframework\web\CHttpRequest.php:803)
+Stack trace:
+#0 C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php(124): TestController->redirect()
+#1 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): TestController->actionTestSosmed()
+#2 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\yiiframework\web\CController.php(286): TestController->runAction()
+#4 C:\xampp\htdocs\yiiframework\web\CController.php(265): TestController->runActionWithFilters()
+#5 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): TestController->run()
+#6 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\PMPL2014-2\index.php(13): CWebApplication->run()
+REQUEST_URI=/PMPL2014-2/index.php/test/testsosmed?service=google&redirect_uri=http://localhost/PMPL2014-2/index.php/test/testsosmed?service%3Dgoogle&js&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2014-12-25T04%3A40%3A00ZIGHthZyfjOjVqw&openid.return_to=http%3A%2F%2Flocalhost%2FPMPL2014-2%2Findex.php%2Ftest%2Ftestsosmed%3Fservice%3Dgoogle%26redirect_uri%3Dhttp%3A%2F%2Flocalhost%2FPMPL2014-2%2Findex.php%2Ftest%2Ftestsosmed%3Fservice%253Dgoogle%26js&openid.assoc_handle=1.AMlYA9XxQf5MMLFnvni8kaghdD-Hm7UYXFHIQUE6HwjkmCuEwdGdB_8VMNkxRPfD&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.email%2Cext1.value.email&openid.sig=2Sg9D%2BhjtMJPMFxKDMyTYFBIYkw%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlBoRaIOOG75-dcJOP0yT8oGi6iiT2hvAA&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlBoRaIOOG75-dcJOP0yT8oGi6iiT2hvAA&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Irma&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=irmaapriliawulandari%40gmail.com
+in C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php (124)
+in C:\xampp\htdocs\PMPL2014-2\index.php (13)
+2014/12/25 11:46:45 [error] [php] Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\yiiframework\web\CController.php:793) (C:\xampp\htdocs\yiiframework\web\CHttpRequest.php:803)
+Stack trace:
+#0 C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php(124): TestController->redirect()
+#1 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): TestController->actionTestSosmed()
+#2 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\yiiframework\web\CController.php(286): TestController->runAction()
+#4 C:\xampp\htdocs\yiiframework\web\CController.php(265): TestController->runActionWithFilters()
+#5 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): TestController->run()
+#6 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\PMPL2014-2\index.php(13): CWebApplication->run()
+REQUEST_URI=/PMPL2014-2/index.php/test/testsosmed?service=google&redirect_uri=http://localhost/PMPL2014-2/index.php/test/testsosmed?service%3Dgoogle&js&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2014-12-25T04%3A46%3A46Z4ABcykxAbNGAAg&openid.return_to=http%3A%2F%2Flocalhost%2FPMPL2014-2%2Findex.php%2Ftest%2Ftestsosmed%3Fservice%3Dgoogle%26redirect_uri%3Dhttp%3A%2F%2Flocalhost%2FPMPL2014-2%2Findex.php%2Ftest%2Ftestsosmed%3Fservice%253Dgoogle%26js&openid.assoc_handle=1.AMlYA9UJTFKm3zmanjoMoF3vfoe6rWDI1bU7hSKAsvir0EwdJUzNxUT2hO6RHAj8&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.email%2Cext1.value.email&openid.sig=GG7OZsni3uGE8K4j2FImNVgWbYc%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlBoRaIOOG75-dcJOP0yT8oGi6iiT2hvAA&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlBoRaIOOG75-dcJOP0yT8oGi6iiT2hvAA&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Irma&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=irmaapriliawulandari%40gmail.com
+in C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php (124)
+in C:\xampp\htdocs\PMPL2014-2\index.php (13)
+=======
+2014/12/23 12:51:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "konten/adminKonten/index".' in C:\xampp\htdocs\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/adminKon...')
+#1 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/adminKonten/index
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/admin/index
+---
+2014/12/23 12:51:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "konten/adminKonten/index".' in C:\xampp\htdocs\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/adminKon...')
+#1 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/adminKonten/index
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/admin/index
+---
+2014/12/23 12:51:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "konten/adminKonten/index".' in C:\xampp\htdocs\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/adminKon...')
+#1 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/adminKonten/index
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/admin/index
+---
+2014/12/23 12:51:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "konten/adminKonten/index".' in C:\xampp\htdocs\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/adminKon...')
+#1 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/adminKonten/index
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/admin/index
+---
+2014/12/23 12:52:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "konten/adminKonten/index".' in C:\xampp\htdocs\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/adminKon...')
+#1 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/adminKonten/index
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/admin/index
+---
+2014/12/23 12:52:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "konten/adminKonten/index".' in C:\xampp\htdocs\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/adminKon...')
+#1 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/adminKonten/index
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/admin/index
+---
+2014/12/23 12:52:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "konten/adminKonten/index".' in C:\xampp\htdocs\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/adminKon...')
+#1 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/adminKonten/index
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/tryout/adminTryout/index
+---
+2014/12/23 13:14:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "konten/adminKonten/index".' in C:\xampp\htdocs\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/adminKon...')
+#1 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/adminKonten/index
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/admin/index
+---
+2014/12/23 13:15:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "konten/adminKonten/index".' in C:\xampp\htdocs\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/adminKon...')
+#1 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/adminKonten/index
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/tryout/adminTryout/index
+---
+2014/12/23 13:29:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "konten/adminKonten/index".' in C:\xampp\htdocs\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/adminKon...')
+#1 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/adminKonten/index
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/admin/index
+---
+>>>>>>> 43cd24fabefb69ad6af31454dc65aba11111752c
+2014/12/25 12:59:43 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\yiiframework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yiiframework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('kategori')
+#4 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/konten/k...')
+#5 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/konten/kategori/8
+---
+2014/12/25 13:51:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "kategori".' in C:\xampp\htdocs\yiiframework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CController.php(270): CController->missingAction('kategori')
+#1 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('kategori')
+#2 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/konten/k...')
+#3 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/konten/kategori/idcategory/8
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/konten/konten/kategori/idcategory/4
+---
+2014/12/25 13:56:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "kategori".' in C:\xampp\htdocs\yiiframework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CController.php(270): CController->missingAction('kategori')
+#1 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('kategori')
+#2 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/konten/k...')
+#3 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/konten/kategori/idcategory/8
+---
+2014/12/25 13:56:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "kategori".' in C:\xampp\htdocs\yiiframework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CController.php(270): CController->missingAction('kategori')
+#1 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('kategori')
+#2 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/konten/k...')
+#3 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/konten/kategori/idcategory/4
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/konten/konten/kategori/idcategory/3
+---
+2014/12/25 13:56:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "kategori".' in C:\xampp\htdocs\yiiframework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CController.php(270): CController->missingAction('kategori')
+#1 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('kategori')
+#2 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/konten/k...')
+#3 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/konten/kategori/idcategory/3
+---
+2014/12/25 13:56:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "kategori".' in C:\xampp\htdocs\yiiframework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CController.php(270): CController->missingAction('kategori')
+#1 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('kategori')
+#2 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/konten/k...')
+#3 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/konten/kategori/idcategory/3
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/test/testsosmed
+---
+2014/12/25 13:57:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "kategori".' in C:\xampp\htdocs\yiiframework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CController.php(270): CController->missingAction('kategori')
+#1 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('kategori')
+#2 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/konten/k...')
+#3 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/konten/kategori/idcategory/3
+---
+2014/12/25 13:58:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "kategori".' in C:\xampp\htdocs\yiiframework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CController.php(270): CController->missingAction('kategori')
+#1 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('kategori')
+#2 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/konten/k...')
+#3 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/konten/kategori/idcategory/3
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/test/testsosmed
+---
+2014/12/25 13:59:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "viewbykategori".' in C:\xampp\htdocs\yiiframework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CController.php(270): CController->missingAction('viewbykategori')
+#1 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('viewbykategori')
+#2 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/konten/v...')
+#3 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/konten/viewbykategori/idcategory/3
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/test/testsosmed
+---
+2014/12/25 13:59:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "viewByKategoti".' in C:\xampp\htdocs\yiiframework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CController.php(270): CController->missingAction('viewByKategoti')
+#1 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('viewByKategoti')
+#2 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/konten/v...')
+#3 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/konten/viewByKategoti/idcategory/3
+---
+2014/12/25 14:00:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "viewByKategori".' in C:\xampp\htdocs\yiiframework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CController.php(270): CController->missingAction('viewByKategori')
+#1 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('viewByKategori')
+#2 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/konten/v...')
+#3 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/konten/viewByKategori/idcategory/3
+---
+2014/12/25 14:01:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "viewbykategori".' in C:\xampp\htdocs\yiiframework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CController.php(270): CController->missingAction('viewbykategori')
+#1 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('viewbykategori')
+#2 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/konten/v...')
+#3 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/konten/viewbykategori/idcategory/8
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/test/testsosmed
+---
+2014/12/25 14:03:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "viewbykategori".' in C:\xampp\htdocs\yiiframework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CController.php(270): CController->missingAction('viewbykategori')
+#1 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('viewbykategori')
+#2 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/konten/v...')
+#3 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/konten/viewbykategori/idcategory/8
+---
+2014/12/25 14:03:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "viewbykategori".' in C:\xampp\htdocs\yiiframework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CController.php(270): CController->missingAction('viewbykategori')
+#1 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('viewbykategori')
+#2 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/konten/v...')
+#3 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/konten/viewbykategori/idcategory/3
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/test/testsosmed
+---
+2014/12/25 14:04:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "viewykategori".' in C:\xampp\htdocs\yiiframework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CController.php(270): CController->missingAction('viewykategori')
+#1 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('viewykategori')
+#2 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/konten/v...')
+#3 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/konten/viewykategori/idcategory/3
+---
+2014/12/25 14:04:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "viewByKategori".' in C:\xampp\htdocs\yiiframework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CController.php(270): CController->missingAction('viewByKategori')
+#1 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('viewByKategori')
+#2 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/konten/v...')
+#3 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/konten/viewByKategori/idcategory/3
+---
+2014/12/25 14:06:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "viewByKategory".' in C:\xampp\htdocs\yiiframework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CController.php(270): CController->missingAction('viewByKategory')
+#1 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('viewByKategory')
+#2 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/konten/v...')
+#3 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/konten/viewByKategory/idcategory/3
+---

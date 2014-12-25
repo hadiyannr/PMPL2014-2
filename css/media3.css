@@ -1,0 +1,99 @@
+/* layout implementation : mid */
+@media (min-width:639px) and (max-width: 992px) {
+  .home-slider {
+    height: 30%;
+  }
+
+  footer {
+    display: none;
+  }
+
+  .content-home .container-fluid {
+    height: 650px;
+    background-color: white;
+    padding-right: 0;
+  }
+
+  .content-home .col-md-10 {
+    height: 570px;
+  } 
+
+  .content-home .col-md-3 {
+    clear: both;
+    height: 25%;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid grey;
+  }
+
+  .content-display-box {
+    max-width: 100%;
+  }
+
+  .content-display figure {
+    max-width: 100%;
+    height: 100%;
+  }
+
+  .content-display figure img {
+    float: left;
+    height: 117px;
+    width: 175px;
+  }
+
+  .content-display figure figcaption {
+    display:inline;
+    color: black;
+    margin-left: 20px;
+  }
+
+  .content-display figure figcaption span {
+    padding-top: 10px;
+    font-family: LatoLatin;
+    font-size: 125%;
+    display: inline-block;
+  }
+
+  .content-display p {
+    margin-top: 10px;
+    margin-left: 90px;
+    font-size: 87.5%;
+    text-align: justify;
+    padding-left: 100px;
+  }
+
+  .content-display a {
+    color: black;
+    float: right;
+    font-size: 75%;
+  }
+
+  .remove-left-padding {
+    padding-left: 0;
+  }
+
+  .home-more p {
+    text-align: center;
+  }
+
+  .home-more a {
+    font-size: 200%;
+    background-color: #fedc00;
+    color: black;
+  }
+
+  .content-home .col-md-2 {
+    margin-top: 40px;
+    background-color: #fedc00;
+  }
+  .float-foto {
+    float: none !important;
+  }
+  .profil-box {
+    padding: 20px 20px !important;
+  }
+  .float-btn-profil {
+    float: none !important;
+  }
+}

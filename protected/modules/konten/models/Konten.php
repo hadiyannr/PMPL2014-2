@@ -14,7 +14,7 @@
  *
  * The followings are the available model relations:
  * @property User $idAdmin0
- * @property Kategori $idcategory0
+ * @property KategoriKonten $idcategory0
  */
 class Konten extends CActiveRecord
 {

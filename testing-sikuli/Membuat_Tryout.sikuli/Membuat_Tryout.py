@@ -41,4 +41,4 @@ try:
 except FindFailed:
     find("1399892608813.png")
     click("1399892608813.png")
-wait(Pattern("1399891153266.png").similar(0.16))
+assert exists(Pattern("1399891153266.png").similar(0.16))

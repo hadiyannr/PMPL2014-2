@@ -31,25 +31,25 @@ class AdminController extends Controller
 	 */
 	public function actionLogin()
 	{
-		$loginModel=new LoginForm;
+		$loginFormModel = new LoginForm;
 
 		// if it is ajax validation request
 		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
 		{
-			echo CActiveForm::validate($loginModel);
+			echo CActiveForm::validate($loginFormModel);
 			Yii::app()->end();
 		}
 
 		// collect user input data
 		if(isset($_POST['LoginForm']))
 		{
-			$loginModel->attributes=$_POST['LoginForm'];
+			$loginFormModel->attributes=$_POST['LoginForm'];
 			// validate user input and redirect to the previous page if valid
-			if($loginModel->validate() && $loginModel->login())
+			if($loginFormModel->validate() && $loginFormModel->login())
 				$this->redirect('index');
 		}
 		// display the login form
-		$this->render('login',array('loginModel'=>$loginModel));
+		$this->render('login',array('loginModel'=>$loginFormModel));
 	}
 
 	/**
