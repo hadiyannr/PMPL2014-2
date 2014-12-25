@@ -423,6 +423,10 @@ nav li.active:hover, a:hover {
   content: url("view.png");
 }
 
+.overflow-auto {
+  overflow: auto;
+}
+
 .zocial {
   font-family: "LatoLatin" !important;
   font-weight: lighter !important;
