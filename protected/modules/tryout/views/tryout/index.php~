@@ -1,18 +1,18 @@
 <?php
 /* @var $this TryoutController */
 /* @var $tryoutModelList Tryouts */
-/* @var $answerSheet AnswerSheet */
+/* @var $answerSheet PengerjaanTryout */
 /* @var $tryout Tryout */
 
 $this->breadcrumbs = array(
-    'Uji Coba Kemampuan',
+    'Tryout',
 );
 ?>
 <div class="text-center title"><h2>Simulasi Masuk Universitas Indonesia</h2></div>
 <ul class="nav nav-tabs">    
-        <li class="active"><a href="#present" data-toggle="tab">Hasil Kemampuan Saya</a></li>
-        <li><a href="#future" data-toggle="tab">Uji Coba yang Tersedia</a></li>
-        <li><a href="#past" data-toggle="tab">Statistik Uji Coba</a></li>      
+        <li class="active"><a href="#present" data-toggle="tab">MyTryout</a></li>
+        <li><a href="#future" data-toggle="tab">Ujian Tersedia</a></li>
+        <li><a href="#past" data-toggle="tab">Statistik Tryout</a></li>      
 </ul>
 
 <div class="tab-content">
@@ -49,7 +49,7 @@ $this->breadcrumbs = array(
                     </td>
                     <td>
                         <?php
-                            $answerSheet = AnswerSheet::model()->findByAttributes(array('idTryout'=>$tryout->id));
+                            $answerSheet = Pengerjaantryout::model()->findByAttributes(array('idTryout'=>$tryout->id));
                         ?>
 
                         <?php if($answerSheet->isSubmitted == 1):?>
@@ -72,9 +72,9 @@ $this->breadcrumbs = array(
                 <i>
                     <?php
                         if(Yii::app()->user->isGuest){
-                            echo 'Silahkan masuk untuk melihat daftar Hasil Uji Coba Anda';
+                            echo 'Silahkan login untuk melihat daftar MyTryout';
                         }else{
-                            echo 'Tidak ada daftar uji coba yang pernah Anda ikuti. Silahkan daftar pada menu Ujian Tersedia.';
+                            echo 'Tidak ada daftar di MyTryout. Silahkan daftar pada menu Ujian Tersedia.';
                         }
                     ?>
                 </i>
@@ -168,7 +168,7 @@ $this->breadcrumbs = array(
     </div>  
 </div>
 <?php if(!Yii::app()->user->isGuest):?>
-<div style="margin-top:200px; margin-bottom:100px">
-    <?php echo CHtml::link('Riwayat Tryout',array('answerSheet/history'),array('class'=>'btn-primary'));?>
+<div style="margin-top:200px;">
+    <?php echo CHtml::link('Riwayat Tryout',array('pengerjaanTryout/history'),array('class'=>'btn-primary'));?>
 </div>
 <?php endif;?>

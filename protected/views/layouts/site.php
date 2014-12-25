@@ -5,8 +5,13 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
     <head>
         <meta charset="UTF-8">
+<<<<<<< HEAD
+        <title><?php echo CHtml::encode($this->pageTitle); ?></title>   
+        <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/bootstrap.min.css">  
+=======
         <title><?php echo CHtml::encode($this->pageTitle); ?></title>	
         <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/bootstrap.min.css">	
+>>>>>>> origin/master
         <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/main.css">
 
 
@@ -18,7 +23,11 @@
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     </head>
+<<<<<<< HEAD
+    <body>  
+=======
     <body>	
+>>>>>>> origin/master
         <?php if(Yii::app()->user->hasFlash('message')):?>
         <nav class="user-nav notif-error">
             <div class="container">
@@ -27,9 +36,13 @@
         </nav>
         <?php endif;?>
 
+<<<<<<< HEAD
+        <header>        
+=======
         <header>		
+>>>>>>> origin/master
             <div class="header-nav">
-                <div class="container">
+                <div class="container user-container">
                     <div class="nav-wrapper">
                         <div class="navbar-header">
                              <a href="<?php echo Yii::app()->request->baseUrl; ?>">
@@ -47,7 +60,7 @@
                                             <?php
                                             $kategoris = KategoriKonten::model()->findAll();
                                             foreach ($kategoris as $kategori): ?>
-                                                <li> <?php echo CHtml::link($kategori->nama, array('/konten/konten/viewbycategory','idcategory'=>$kategori->id),array('style'=>"color: #ecf0f1"));?></li>
+                                                <li> <?php echo CHtml::link($kategori->nama, array('/konten/konten/kategori','idcategory'=>$kategori->id),array('style'=>"color: #ecf0f1"));?></li>
                                             <?php endforeach;?>
                                         </ul>
                                     </li>
@@ -63,6 +76,7 @@
                                             <span>Forum</span>
                                         </a>
                                     </li>
+<<<<<<< HEAD
 
                                     <?php if(Yii::app()->user->isAdmin()):?>
                                     <li>
@@ -70,6 +84,15 @@
                                     </li>
                                     <?php endif;?>
 
+=======
+
+                                    <?php if(Yii::app()->user->isAdmin()):?>
+                                    <li>
+                                        <?php echo CHtml::link("Admin", array('/admin/index'),array('style'=>"color: #ecf0f1")); ?>
+                                    </li>
+                                    <?php endif;?>
+
+>>>>>>> origin/master
                                     <?php if (Yii::app()->user->isGuest) { ?>
                                         <li>
                                             <a href="#Login" data-toggle="modal" style="color: #ecf0f1">Login</a>
@@ -98,7 +121,7 @@
                                         <?php
                                         $kategoris = KategoriKonten::model()->findAll();
                                         foreach ($kategoris as $kategori): ?>
-                                            <li> <?php echo CHtml::link($kategori->nama, array('/konten/konten/viewbycategory','idcategory'=>$kategori->id),array('style'=>"color: #ecf0f1"));?></li>
+                                            <li> <?php echo CHtml::link($kategori->nama, array('/konten/konten/kategori','idcategory'=>$kategori->id),array('style'=>"color: #ecf0f1"));?></li>
                                         <?php endforeach;?>
                                     </ul>
                                 </li>
@@ -138,9 +161,21 @@
                                         <?php echo CHtml::link("Profil", array('/profile/index'),array('style'=>"color: #ecf0f1")); ?>
                                     </li>      
                                     <li>
-                                        <?php echo CHtml::link("Keluar", array('/site/logout'),array('style'=>"color: #ecf0f1")); ?>
+                                        <?php echo CHtml::link("Logout", array('/site/logout'),array('style'=>"color: #ecf0f1")); ?>
                                     </li>                   
                                 <?php } ?>
+<<<<<<< HEAD
+                            </ul>            
+    
+                        </nav>  
+
+                    </div>
+                                                    <!--login and register modal, call component-->
+                            <?php $this->widget('UserLogin',array('visible'=>Yii::app()->user->isGuest)); ?>
+
+                            <?php $this->widget('UserRegister',array('visible'=>Yii::app()->user->isGuest)); ?>
+                            <!-- end of modal -->
+=======
                             </ul>             
                             <!--login and register modal, call component-->
                             <?php $this->widget('UserLogin',array('visible'=>Yii::app()->user->isGuest)); ?>
@@ -152,6 +187,7 @@
 
                     </div>
                                             
+>>>>>>> origin/master
                 </div>
             </div>
         </header>
@@ -253,4 +289,8 @@
 
         </script>
     </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> origin/master

@@ -1,3 +1,4 @@
+
 <?php
 /* @var $this TryoutController */
 /* @var $tryoutModelList Tryouts */
@@ -6,8 +7,11 @@
 
 $this->breadcrumbs = array(
     'Uji Coba Kemampuan',
-);
+    );
+echo '<br>';
 ?>
+
+
 <div class="text-center title"><h2>Simulasi Masuk Universitas Indonesia</h2></div>
 <ul class="nav nav-tabs">    
         <li class="active"><a href="#present" data-toggle="tab">Hasil Kemampuan Saya</a></li>

@@ -3,7 +3,7 @@
 /* @var $contentModel Konten */
 
 $this->breadcrumbs=array(
-    $contentModel->kategori->nama => array('kategori','idcategory'=>$contentModel->idcategory),
+    $contentModel->kategorikonten->nama => array('kategori','idcategory'=>$contentModel->idcategory),
     $contentModel->judul,
     );
     ?>
