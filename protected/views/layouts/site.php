@@ -156,7 +156,7 @@
         
         <div class="content-home <?php if ($_SESSION['home'] == false): ?><?php echo "nothome"?><?php endif ?> ">
              <div class="container">
-                <div class="pull-left">
+                <div>
                     <?php if(isset($this->breadcrumbs)):?>
                         <?php $this->widget('zii.widgets.CBreadcrumbs', array(
                         'links'=>$this->breadcrumbs,
