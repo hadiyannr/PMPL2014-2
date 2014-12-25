@@ -1,0 +1,7 @@
+find("Konten.png")
+click("Konten.png")
+click(Pattern("Berita.png").targetOffset(-70,1))
+wait("HomeDaftarKo.png")
+find("SIMAKadalahs.png")
+click(Pattern("SIMAKadalahs.png").targetOffset(102,41))
+assert exists("SimakUI2014-1.png")
