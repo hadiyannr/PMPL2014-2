@@ -1,0 +1,8 @@
+find("Login-1.png")
+click("Login-1.png")
+wait("LoginUsernam.png")
+click(Pattern("Jsername.png").targetOffset(-92,11))
+type("testing")
+type(Key.TAB)
+type("testing")
+click("1419479212490.png")
