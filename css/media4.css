@@ -2,4 +2,7 @@
   .content-display p {
     min-height: 120px;
   }
+  #sidebar {
+    padding: 20px 20px 20px 20px;
+  }
 }

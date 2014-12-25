@@ -38,6 +38,7 @@ $('.search-form form').submit(function(){
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'kategori-grid',
+	'summaryText' => 'Menampilkan {start} - {end} dari {count} daftar kategori ',
 	'dataProvider'=>$kategoriModel->search(),
 	'ajaxUpdate'=>false,
     'columns'=>array(

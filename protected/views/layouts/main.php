@@ -35,7 +35,7 @@
                     </a>
                     <?php $controllerName = $this->getId();?>
                     <ul class="dropdown-menu responsive-dropdown" role="menu" aria-labelledby="dLabel">
-                     <?php if(Yii::app()->user->isAdmin()):?>
+                       <?php if(Yii::app()->user->isAdmin()):?>
                         <li class="<?php echo (in_array($controllerName, array("adminKonten")))?"active":""?>">
                             <?php echo CHtml::link("Konten", array('/konten/adminKonten/index'),array('style'=>"color: #ecf0f1")); ?>
                         </li>
@@ -94,27 +94,28 @@
                                 <?php } ?>
                             </ul>
 
-                            <?php $this->widget('UserLogin',array('visible'=>Yii::app()->user->isGuest)); ?>
                         </nav>
                     </div>
+                    <?php $this->widget('UserLogin',array('visible'=>Yii::app()->user->isGuest)); ?>
+
                 </div>
             </header>
 
             <div class="container content admin-content">
                 <?php if(isset($this->breadcrumbs)):?>
                     <?php $this->widget('zii.widgets.CBreadcrumbs', array(
-                     'links'=>$this->breadcrumbs,
-                     )); ?><!-- breadcrumbs -->
-                 <?php endif?>
+                       'links'=>$this->breadcrumbs,
+                       )); ?><!-- breadcrumbs -->
+                   <?php endif?>
 
-                 <?php echo $content; ?>
+                   <?php echo $content; ?>
 
-                 <div class="clear"></div>
-             </div>
+                   <div class="clear"></div>
+               </div>
 
 
 
-             <footer>
+               <footer>
                 <div class="container-fluid">
                     <div class="col-md-3">
                         <p><span class="ft-golden-yellow">SiapMasukUI.com</span> adalah website yang bertujuan mempersiapkan siswa SMA untuk lebih matang dalam menghadapi ujian saringan masuk UI. SiapMasukUi.com memberkan variasi soal TO beserta simulasi dan jawaban TO. Pengguna juga dapat melihat hasil statistik test mereka pada halaman profile pengguna.</p>

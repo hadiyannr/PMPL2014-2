@@ -96,4 +96,7 @@
   .float-btn-profil {
     float: none !important;
   }
+  #sidebar {
+    padding: 20px 20px 20px 20px;
+  }
 }
