@@ -1,0 +1,11 @@
+find("1400043249677.png")
+click("1400043254042.png")
+time.sleep(3)
+find("1400043311786.png")
+click("1400043317571.png")
+time.sleep(3)
+click(Pattern("1400043502067.png").similar(0.77))
+type(Key.BACKSPACE)
+find("1400043412549.png")
+click("1400043416963.png")
+

@@ -1,0 +1,7 @@
+find("1400036354494.png")
+click("1400036358722.png")
+time.sleep(3)
+find("1400036373247.png")
+click("1400036377893.png")
+time.sleep(4)
+click(Pattern("1400036392801.png").similar(0.49))
