@@ -1,0 +1,10 @@
+click(Pattern("1400032783069.png").similar(0.90))
+wait(Pattern("1400032844130.png").similar(0.60))
+click("1400032944114.png")
+type("hanifnaufal")
+click("1400032975923.png")
+type("dingdong57")
+click("1397320268705.png")
+click(Pattern("1400033759600.png").similar(0.88))
+wait(Pattern("1400032783069.png").similar(0.90),10)
+

@@ -1,0 +1,5 @@
+click(Pattern("1400048170944.png").similar(0.84))
+wait(Pattern("1397355043734.png").similar(0.77))
+wheel("1400048599441.png",WHEEL_DOWN,3)
+wait("1400049451580.png")
+click("1400049451580.png")
