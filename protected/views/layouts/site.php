@@ -138,7 +138,7 @@
                                         <?php echo CHtml::link("Profil", array('/profile/index'),array('style'=>"color: #ecf0f1")); ?>
                                     </li>      
                                     <li>
-                                        <?php echo CHtml::link("Logout", array('/site/logout'),array('style'=>"color: #ecf0f1")); ?>
+                                        <?php echo CHtml::link("Keluar", array('/site/logout'),array('style'=>"color: #ecf0f1")); ?>
                                     </li>                   
                                 <?php } ?>
                             </ul>             

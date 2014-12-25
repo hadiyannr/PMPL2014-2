@@ -20,7 +20,7 @@ $this->menu=array(
 	'id'=>'tryout-grid',
 	'dataProvider'=>$tryoutModel->search(),
     'ajaxUpdate'=>false,
-    'summaryText' => 'Menampilkan {start} - {end} dari {count} daftar uji coba ',
+    'summaryText' => 'Menampilkan {start} - {end} dari {count} uji coba ',
 	'columns'=>array(
 		'id',
                 'nama',
