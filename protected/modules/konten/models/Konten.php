@@ -54,7 +54,7 @@ class Konten extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
                         'idAdmin0' => array(self::BELONGS_TO, 'User', 'idAdmin'),
-			'kategori' => array(self::BELONGS_TO, 'Kategori', 'idcategory'),                        
+			'kategorikonten' => array(self::BELONGS_TO, 'KategoriKonten', 'idcategory'),                        
 		);
 	}
 

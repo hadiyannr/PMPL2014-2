@@ -21,7 +21,7 @@ class ThreadController extends ForumBaseController
         return array(
             // ALL users
             array('allow',
-                'actions' => array('view'),
+                'actions' => array('viewbyid'),
                 'users' => array('*'),
             ),
             // authenticated users
@@ -42,7 +42,7 @@ class ThreadController extends ForumBaseController
         );
     }
 
-    public function actionView($id)
+    public function actionViewByID($id)
     {
         $thread = Thread::model()->findByPk($id);
         if(null == $thread)
