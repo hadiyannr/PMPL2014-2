@@ -59,7 +59,7 @@ class PostController extends ForumBaseController
             throw new CHttpException(404, 'The requested page does not exist.');
 
         $post->delete();
-        $this->redirect(array('thread/view','id'=>$post->thread_id));
+        $this->redirect(array('thread/viewbyid','id'=>$post->thread_id));
     }
 
     /**

@@ -40,7 +40,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($questionModel,'nomor'); ?>
-		<?php echo $form->textField($questionModel,'nomor',array('required'=>'required')); ?>
+		<?php echo $form->textField($questionModel,'nomor',array('readOnly'=>   true)); ?>
     		<?php echo $form->error($questionModel,'nomor'); ?>
 	</div>
         <?php
