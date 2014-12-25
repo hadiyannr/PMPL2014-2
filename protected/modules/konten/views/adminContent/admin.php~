@@ -33,7 +33,7 @@ $this->menu=array(
             
                 array(
                         'name' => 'idAdmin0.username',
-                        'header' =>'Terakhir di edit oleh',                        
+                        'header' =>'Terakhir di edit oleh',
                         'value' => $contentModel->idAdmin0['username'],
                 ),
 		array(

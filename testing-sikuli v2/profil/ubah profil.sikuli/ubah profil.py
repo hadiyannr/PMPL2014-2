@@ -1,0 +1,21 @@
+nama = "farizikhwantri"
+password = "1234"
+find("1419491781156.png")
+click("1419491713948.png")
+wait(Pattern("1419491400121.png").targetOffset(-88,4),10)
+click(Pattern("1419491400121.png").targetOffset(-88,4))
+type(nama)
+type(Key.TAB)
+type(password)
+click("1419491478912.png")
+click("1419491602631.png")
+assert exists("1419491825168.png")
+click("1419491839813.png")
+testNama = "Tester Was Here"
+click(Pattern("1419492066740.png").targetOffset(-195,14))
+wait(3)
+type("a",KEY_CTRL)
+type(Key.DELETE)
+type(testNama)
+click("1419492215513.png")
+assert exists("1419492190563.png")

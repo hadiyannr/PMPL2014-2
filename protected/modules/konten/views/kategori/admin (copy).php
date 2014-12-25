@@ -1,6 +1,6 @@
 <?php
 /* @var $this KategoriController */
-/* @var $model KategoriKonten */
+/* @var $model Kategori */
 
 $this->breadcrumbs=array(
 	'Kategori',
