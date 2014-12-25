@@ -8,12 +8,12 @@
             <div class="modal-body">
                 <form role="form" method="post">			          
                     <div class="form-group">
-                        <label data-toggle="tooltip" data-placement="top" title="Please use your real name">Username</label>
+                        <label data-toggle="tooltip" data-placement="top" title="Please use your real name">Nama pengguna</label>
                         <br>
                         <input name="DaftarForm[username]" type="text" class="form-control" placeholder="No Space, min 5 characters" pattern="^[a-zA-Z0-9]{5,}$" required>
                     </div>
                     <div class="form-group">
-                        <label >Email address</label>
+                        <label >Alamat e-mail</label>
 								<br>
                         <input name="DaftarForm[email]" type="email" class="form-control" placeholder="" required>
                     </div>
@@ -23,7 +23,7 @@
                         <input name="DaftarForm[password]" type="password" class="form-control" placeholder="No Space, 5-32 characters" pattern="^[a-zA-Z0-9]*{5,32}$" required>
                     </div>				
                     <div class="form-group">
-                        <label>Confirm Password</label>
+                        <label>Konfirmasi password</label>
                         <br>
                         <input name="DaftarForm[confirmPassword]" type="password" class="form-control" placeholder="" required>
                     </div>					  			 	  			 					  

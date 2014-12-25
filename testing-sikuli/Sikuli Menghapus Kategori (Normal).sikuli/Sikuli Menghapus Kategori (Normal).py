@@ -1,0 +1,6 @@
+find("1400030149542.png")
+click("1400030155994.png")
+time.sleep(3)
+r = Region(Region(133,423,892,42))
+r.click("1419482197206.png")
+click("1419482137270.png")

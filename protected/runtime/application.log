@@ -2015,6 +2015,7 @@ Stack trace:
 REQUEST_URI=/PMPL2014-2/index.php/test/oauth?provider=Google
 HTTP_REFERER=http://localhost/PMPL2014-2/index.php/test/testsosmed
 ---
+<<<<<<< HEAD
 2014/12/25 09:40:00 [error] [exception.CException] exception 'CException' with message 'Property "EWebUser.isAdmin" is not defined.' in C:\xampp\htdocs\yiiframework\base\CComponent.php:130
 Stack trace:
 #0 C:\xampp\htdocs\yiiframework\web\auth\CWebUser.php(146): CComponent->__get('isAdmin')
@@ -2454,3 +2455,95 @@ Stack trace:
 REQUEST_URI=/PMPL2014-2/index.php/test/testsosmed?service=google&redirect_uri=http://localhost/PMPL2014-2/index.php/test/testsosmed?service%3Dgoogle&js&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2014-12-25T04%3A46%3A46Z4ABcykxAbNGAAg&openid.return_to=http%3A%2F%2Flocalhost%2FPMPL2014-2%2Findex.php%2Ftest%2Ftestsosmed%3Fservice%3Dgoogle%26redirect_uri%3Dhttp%3A%2F%2Flocalhost%2FPMPL2014-2%2Findex.php%2Ftest%2Ftestsosmed%3Fservice%253Dgoogle%26js&openid.assoc_handle=1.AMlYA9UJTFKm3zmanjoMoF3vfoe6rWDI1bU7hSKAsvir0EwdJUzNxUT2hO6RHAj8&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.email%2Cext1.value.email&openid.sig=GG7OZsni3uGE8K4j2FImNVgWbYc%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlBoRaIOOG75-dcJOP0yT8oGi6iiT2hvAA&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlBoRaIOOG75-dcJOP0yT8oGi6iiT2hvAA&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Irma&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=irmaapriliawulandari%40gmail.com
 in C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php (124)
 in C:\xampp\htdocs\PMPL2014-2\index.php (13)
+=======
+2014/12/23 12:51:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "konten/adminKonten/index".' in C:\xampp\htdocs\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/adminKon...')
+#1 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/adminKonten/index
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/admin/index
+---
+2014/12/23 12:51:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "konten/adminKonten/index".' in C:\xampp\htdocs\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/adminKon...')
+#1 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/adminKonten/index
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/admin/index
+---
+2014/12/23 12:51:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "konten/adminKonten/index".' in C:\xampp\htdocs\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/adminKon...')
+#1 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/adminKonten/index
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/admin/index
+---
+2014/12/23 12:51:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "konten/adminKonten/index".' in C:\xampp\htdocs\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/adminKon...')
+#1 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/adminKonten/index
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/admin/index
+---
+2014/12/23 12:52:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "konten/adminKonten/index".' in C:\xampp\htdocs\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/adminKon...')
+#1 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/adminKonten/index
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/admin/index
+---
+2014/12/23 12:52:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "konten/adminKonten/index".' in C:\xampp\htdocs\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/adminKon...')
+#1 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/adminKonten/index
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/admin/index
+---
+2014/12/23 12:52:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "konten/adminKonten/index".' in C:\xampp\htdocs\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/adminKon...')
+#1 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/adminKonten/index
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/tryout/adminTryout/index
+---
+2014/12/23 13:14:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "konten/adminKonten/index".' in C:\xampp\htdocs\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/adminKon...')
+#1 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/adminKonten/index
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/admin/index
+---
+2014/12/23 13:15:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "konten/adminKonten/index".' in C:\xampp\htdocs\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/adminKon...')
+#1 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/adminKonten/index
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/tryout/adminTryout/index
+---
+2014/12/23 13:29:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "konten/adminKonten/index".' in C:\xampp\htdocs\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/adminKon...')
+#1 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/adminKonten/index
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/admin/index
+---
+>>>>>>> 43cd24fabefb69ad6af31454dc65aba11111752c

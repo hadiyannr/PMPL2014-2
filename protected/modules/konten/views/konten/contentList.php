@@ -1,4 +1,4 @@
-<?php
+	<?php
 /* @var $this KontenController */
 /* @var $contentModelList Kontens */
 /* @var $title String */
@@ -89,7 +89,7 @@ $this->breadcrumbs=array(
                             echo substr($prev, 0, 200)."...";
                             ?></p>
                         <?php
-                        echo CHtml::link('MORE',array('/konten/konten/index', 'id'=>$konten->id),array('class'=>'btn bg-bright-yellow btn-more-display'));
+                        echo CHtml::link('Selengkapnya',array('/konten/konten/index', 'id'=>$konten->id),array('class'=>'btn bg-bright-yellow btn-more-display'));
                         ?>
                     </figure>
                 </div>
@@ -119,8 +119,10 @@ $this->breadcrumbs=array(
                 <?php $this->widget('CLinkPager', array(
                     'pages' => $pages,
                     'header' => '',
-                    'nextPageLabel' => 'Next',
-                    'prevPageLabel' => 'Prev',
+                    'nextPageLabel' => 'Selanjutnya',
+                    'prevPageLabel' => 'Sebelumnya',
+                    'firstPageLabel' => 'Awal',
+                    'lastPageLabel' => 'Akhir',
                     'selectedPageCssClass' => 'active',
                     //'hiddenPageCssClass' => 'disabled',
                     'htmlOptions' => array(

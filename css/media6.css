@@ -1,0 +1,135 @@
+@media (min-width:992px) {
+  .content-home {
+    height: 100%;
+  }
+
+  .home-slider {
+    height: 50%;
+  }
+
+  .content-home .container-fluid {
+    height: 50%;
+    overflow: hidden;
+  }
+
+  
+  .content-home .col-md-10 {
+    height: 100%;
+  } 
+  .content-display-box {
+    max-width: 100%;
+    border-right: 1px solid black;
+    position: relative;
+  }
+
+  .content-display figure {
+    max-width: 100%;
+    margin:6.7% 0;
+    overflow: hidden;
+    position: relative;
+    right: 15px;
+  }
+
+  .content-display figure img {
+    height: 66%;
+    width: 100%; /* 182px; */
+    /* 121px; */
+  }
+
+  .content-display figure figcaption {
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    position: relative;
+    bottom: 50px;
+    height: 50px;
+    overflow: hidden;
+  }
+
+  .content-display figure figcaption span {
+    font-family: LatoLatin;
+    font-size: 100%;
+    margin:5%;
+    display: inline-block;
+  }
+
+  .content-display p {
+    font-size: 87.5%;
+    position: relative;
+    bottom: 40px;
+    text-align: justify;
+  }
+
+  .content-display a {
+    color: black;
+    float: right;
+    position: relative;
+    bottom: 60px;
+    font-size: 75%;
+  }
+
+  .home-more p {
+    text-align: center;
+    margin-top: 65%;
+    margin-left:10%;
+  }
+
+  .home-more a {
+    font-size: 200%;
+    margin-left: 6.36%; /*20px;*/
+  }
+
+  footer {
+    margin: 0;
+    padding:0;
+    color: white;
+    background-color: black;
+  }
+
+  footer .container-fluid {
+    padding-top:25px;
+    padding-bottom: 25px;
+  }
+
+  footer p, footer span {
+    color: #afafaf;
+    text-align: left;
+    text-align: justify;
+    line-height: 110%;
+  }
+
+  .footer-mid p {
+    text-align: center;
+  } 
+
+  footer .col-md-7 {
+    background-color: #fedc00;
+  }
+  footer .col-maps {
+    height: 190px;
+  }
+
+  footer .col1-maps h5 {
+    color: black;
+  }
+
+  footer .col1-maps img {
+    height: 75px;
+  }
+
+  footer .col1-maps {
+    float: left;
+    margin: 1.321% ;
+    width: 13.315%;
+  }
+
+  footer .col2-maps {
+    float: left;
+    margin: 1.321%  1.321%;
+    margin-left: 2.64%;
+    width: 79.33%;
+    height: 100%;
+  }
+  .profil-box {
+    padding: 20px 50px !important;
+  }
+} 

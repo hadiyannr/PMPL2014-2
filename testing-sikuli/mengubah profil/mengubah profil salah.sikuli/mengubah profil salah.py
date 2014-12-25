@@ -1,0 +1,8 @@
+click(Pattern("1400048170944.png").similar(0.84))
+wait(Pattern("1397355043734.png").similar(0.77))
+click(Pattern("1397355043734.png").similar(0.77))
+type("a",KeyModifier.CTRL)
+type(Key.DELETE)
+wheel("1400048599441.png",WHEEL_DOWN,3)
+click("1400051125710.png")
+assert exists("1419480571570.png")

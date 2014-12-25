@@ -1,0 +1,18 @@
+find("1400018263527.png")
+click("1400018263527.png")
+wait("1400018306822.png",10)
+find("1400018540577.png")
+click("1400018540577.png")
+wait("1400018540577.png",5)
+r = Region(Region(102,279,1149,85))
+r.click("1400018620385.png")
+wait(Pattern("1400019387910.png").similar(0.15),20)
+r2 = Region(Region(112,226,1032,242))
+r2.find(Pattern("1400019578349.png").similar(0.53))
+r2.click(Pattern("1400019614392.png").targetOffset(-7,1))
+find("1400019672305.png")
+hover("1400019710174.png")
+click("1400019685391.png")
+assert exists("1400021407351.png")
+
+

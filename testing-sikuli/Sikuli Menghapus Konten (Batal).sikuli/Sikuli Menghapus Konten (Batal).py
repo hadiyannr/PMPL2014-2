@@ -1,0 +1,7 @@
+find("1400036241630.png")
+click("1400036245493.png")
+time.sleep(5)
+find("1400036289702.png")
+click("1400036295448.png")
+time.sleep(2)
+click("1400036329826.png")

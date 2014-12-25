@@ -5,14 +5,14 @@
 /* @var $tryout Tryout */
 
 $this->breadcrumbs = array(
-    'Tryout',
+    'Uji Coba Kemampuan',
 );
 ?>
 <div class="text-center title"><h2>Simulasi Masuk Universitas Indonesia</h2></div>
 <ul class="nav nav-tabs">    
-        <li class="active"><a href="#present" data-toggle="tab">MyTryout</a></li>
-        <li><a href="#future" data-toggle="tab">Ujian Tersedia</a></li>
-        <li><a href="#past" data-toggle="tab">Statistik Tryout</a></li>      
+        <li class="active"><a href="#present" data-toggle="tab">Hasil Kemampuan Saya</a></li>
+        <li><a href="#future" data-toggle="tab">Uji Coba yang Tersedia</a></li>
+        <li><a href="#past" data-toggle="tab">Statistik Uji Coba</a></li>      
 </ul>
 
 <div class="tab-content">
@@ -72,7 +72,7 @@ $this->breadcrumbs = array(
                 <i>
                     <?php
                         if(Yii::app()->user->isGuest){
-                            echo 'Silahkan login untuk melihat daftar MyTryout';
+                            echo 'Silahkan masuk untuk melihat daftar Hasil Uji Coba Anda';
                         }else{
                             echo 'Tidak ada daftar di MyTryout. Silahkan daftar pada menu Ujian Tersedia.';
                         }
