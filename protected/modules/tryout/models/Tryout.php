@@ -172,4 +172,14 @@ class Tryout extends CActiveRecord
             $tryoutModelList = Tryout::model()->findAll($criteria);
             return $tryoutModelList;
         }
+
+    public function getLastNumber(){
+        $max= -1;
+        foreach($this->soals as $question){
+            if($question->nomor > $max){
+                $max = $question->nomor;
+            }
+        }
+        return $max;
+    }
 }

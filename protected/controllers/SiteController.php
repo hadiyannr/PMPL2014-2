@@ -139,7 +139,7 @@ class SiteController extends Controller
                 'class'=>'ext.hoauth.HOAuthAction',
                 // Yii alias for your user's model, or simply class name, when it already on yii's import path
                 // default value of this property is: User
-                'model' => 'Pengguna',
+                'model' => 'User',
                 // map model attributes to attributes of user's social profile
                 // model attribute => profile attribute
                 // the list of avaible attributes is below

@@ -247,7 +247,7 @@ class Forum extends CActiveRecord
         $threadlink = CHtml::link(CHtml::encode($thread->subject), $thread->url);
 //        $authorlink = CHtml::link(CHtml::encode($author->name), $author->url);
         
-        $authorlink = CHtml::link($author->name ,array('/profile/view/','id'=>$author->siteid));
+        $authorlink = CHtml::link($author->name ,array('/profile/viewbyid/','id'=>$author->siteid));
         
         return '<div class="name">'. $threadlink .'</div>'.
                 '<div class="level2">'. Yii::app()->controller->module->format_date($lastpost->created) .'</div>'.
