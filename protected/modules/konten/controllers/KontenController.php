@@ -19,7 +19,7 @@ class KontenController extends Controller
     }
 
 	        
-    public function actionViewByKategory($idcategory){
+    public function actionViewByCategory($idcategory){
         $criteria=new CDbCriteria;
         $criteria->compare('idcategory',$idcategory);
         $criteria->compare('isPublished',1);
