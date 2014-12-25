@@ -13,11 +13,17 @@ class ProfileController extends Controller {
     }
     
     public function actionView($id) {
-        $profileModel = Profile::model()->findByAttributes(array('idPengguna'=>$id));
-        if($profileModel==null){
+        echo is_numeric($id).' '.$id;die();
+        if(is_numeric($id)){
+            $profileModel = Profile::model()->findByAttributes(array('idPengguna'=>$id));
+            if($profileModel==null){
+                $this->render('emptyProfil');
+            }
+            $this->render('index', array('profilModel' => $profileModel));
+        }
+        else{
             $this->render('emptyProfil');
         }
-        $this->render('index', array('profilModel' => $profileModel));
     }
 
     /**
@@ -61,11 +67,14 @@ class ProfileController extends Controller {
             }           
             
             if(!$profileModel->hasErrors() && $profileModel->save()) {
-                if($uploading){
-                    $profileModel->image->saveAs(Yii::app()->basePath.'/../images/ProfilPic/'.$profileModel->fotoUrl);
-                }
+//                if($uploading){
+//                    $profileModel->image->saveAs(Yii::app()->basePath.'/../images/ProfilPic/'.$profileModel->fotoUrl);
+//                }
                 $this->redirect(array('index'));
             }
+//            else{
+//                $this->redirect(array('test/testsosmed'));
+//            }
         }                
         $this->render('update',array('profilModel'=>$profileModel));
     }
@@ -94,5 +103,9 @@ class ProfileController extends Controller {
     
     public function loadModel(){
         return Profile::model()->findByAttributes(array('idPengguna' => Yii::app()->user->id));
+    }
+    
+    public function loadModelSosmed(){
+        return UserOAuth::model()->findByAttributes(array('user_id' => Yii::app()->user->id));
     }
 }

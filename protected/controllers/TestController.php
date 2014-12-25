@@ -85,7 +85,7 @@ class TestController extends Controller{
 			try {
 				if ($eauth->authenticate()) {
 					$identity = new EAuthUserIdentity($eauth);
-                                        $data = Yii::app()->user->name;
+                                        $data = Yii::app()->user->id;
 //                                        $data = Yii::app()->user->returnUrl;
 //                                        $data = oAuthConsumer.GetUserInfo("https://www.googleapis.com/userinfo/email", consumerKey, consumerSecret, token, tokenSecret);
 
@@ -101,6 +101,14 @@ class TestController extends Controller{
 						$session = Yii::app()->session;
 						$session['eauth_profile'] = $eauth->attributes;
 
+//                                                $model = UserOauth::model()->findByAttributes(array('user_id' => Yii::app()->user->id));
+//                                                if($model == null){
+//                                                    $model = new UserOauth;
+//                                                    $model->user_id = Yii::app()->user->id;
+//                                                    $model->save();
+//                                                }
+                                                
+//                                                Yii::app()->user = $model;
 						// redirect and close the popup window if needed
 						$eauth->redirect();
 //                                                $this->render('test', array('data'=>$data));
@@ -126,4 +134,8 @@ class TestController extends Controller{
 		// display the login form
 		$this->render('test', array('data'=>$data));
 	}
+        
+        public function loadModel(){
+            return Profile::model()->findByAttributes(array('idPengguna' => Yii::app()->user->id));
+        }
 }
