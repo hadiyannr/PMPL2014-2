@@ -1,0 +1,119 @@
+
+<html>
+   <head>
+      <style type="text/css">
+         .sikuli-code {
+            font-size: 20px;
+            font-family: "Osaka-mono", Monospace;
+            line-height: 1.5em;
+            display:table-cell;
+            white-space: pre-wrap;       /* css-3 */
+            white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* Internet Explorer 5.5+ */
+            width: 99%;   /* remove horizontal scroll-bar when viewing in IE7 */
+         }
+         .sikuli-code img {
+            vertical-align: middle;
+            margin: 2px;
+            border: 1px solid #ccc;
+            padding: 2px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-box-shadow: 1px 1px 1px gray;
+            -webkit-box-shadow: 1px 1px 2px gray;
+         }
+         .kw {
+            color: blue;
+         }
+         .skw {
+            color: rgb(63, 127, 127);
+         }
+
+         .str {
+            color: rgb(128, 0, 0);
+         }
+
+         .dig {
+            color: rgb(128, 64, 0);
+         }
+
+         .cmt {
+            color: rgb(200, 0, 200);
+         }
+
+         h2 {
+            display: inline;
+            font-weight: normal;
+         }
+
+         .info {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            display: none;
+         }
+
+         a {
+            color: #9D2900;
+         }
+
+         body {
+            font-family: "Trebuchet MS", Arial, Sans-Serif;
+         }
+
+      </style>
+   </head>
+<body>
+<div class="info">
+<h2>Membuat_Tryout.sikuli\Membuat_Tryout.sikuli</h2> <a href="Membuat_Tryout.sikuli\Membuat_Tryout.zip">(Download this script)</a>
+</div>
+<pre class="sikuli-code">
+<span class="skw">find</span>(Pattern(<img src="1399888111137.png" />).similar(<span class="dig">0.58</span>))
+<span class="skw">click</span>(Pattern(<img src="1399887961809.png" />).similar(<span class="dig">0.58</span>))
+<span class="skw">wait</span>(Pattern(<img src="1399886076156.png" />).similar(<span class="dig">0.50</span>),<span class="dig">40</span>)
+<span class="skw">click</span>(<img src="1399881547309.png" />)
+<span class="skw">wait</span>(Pattern(<img src="1399886504978.png" />).similar(<span class="dig">0.44</span>),<span class="dig">40</span>)
+<span class="skw">find</span>(Pattern(<img src="1399886504978.png" />).similar(<span class="dig">0.44</span>))
+<span class="skw">click</span>(Pattern(<img src="1399886514181.png" />).similar(<span class="dig">0.44</span>).targetOffset(-<span class="dig">32</span>,<span class="dig">7</span>))
+<span class="skw">type</span>(<span class="str">"Sikuli Test 2"</span>)
+<span class="skw">find</span>(Pattern(<img src="1399886588467.png" />).similar(<span class="dig">0.44</span>))
+<span class="skw">click</span>(Pattern(<img src="1399886223694.png" />).similar(<span class="dig">0.43</span>))
+<span class="skw">wait</span>(Pattern(<img src="1399886320263.png" />).similar(<span class="dig">0.24</span>))
+<span class="skw">find</span>(Pattern(<img src="1399886625821.png" />).similar(<span class="dig">0.27</span>))
+<span class="kw">try</span>:
+        <span class="skw">click</span>(<img src="1399889771388.png" />)
+        <span class="kw">pass</span> <span class="cmt"># it is there</span>
+<span class="kw">except</span> FindFailed:
+        <span class="skw">click</span>(<img src="1399890885227.png" />)
+
+waitVanish(Pattern(<img src="1399886625821.png" />).similar(<span class="dig">0.27</span>))
+<span class="kw">try</span>:
+    <span class="skw">click</span>(Pattern(<img src="1399889869786.png" />).similar(<span class="dig">0.56</span>))
+<span class="kw">except</span> FindFailed:
+        <span class="skw">click</span>(Pattern(<img src="1399892116913.png" />).similar(<span class="dig">0.57</span>))
+<span class="skw">wait</span>(Pattern(<img src="1399886705795.png" />).similar(<span class="dig">0.24</span>))
+<span class="skw">dragDrop</span>(Pattern(<img src="1399887294022.png" />).similar(<span class="dig">0.52</span>),Pattern(<img src="1399887308337.png" />).similar(<span class="dig">0.53</span>) )
+<span class="kw">try</span>:
+    <span class="skw">click</span>(<img src="1399890290623.png" />)
+<span class="kw">except</span> FindFailed:
+        <span class="skw">click</span>(<img src="1399892222235.png" />)
+waitVanish(Pattern(<img src="1399886705795.png" />).similar(<span class="dig">0.24</span>))
+<span class="kw">try</span>:
+    <span class="skw">click</span>(Pattern(<img src="1399886791129.png" />).similar(<span class="dig">0.41</span>).targetOffset(<span class="dig">0</span>,<span class="dig">9</span>))
+    <span class="skw">type</span>(<span class="str">"119"</span>)
+<span class="kw">except</span> FindFailed:
+    <span class="skw">find</span>(<img src="1399893390544.png" />)
+    <span class="skw">click</span>(Pattern(<img src="1399893406214.png" />).similar(<span class="dig">0.53</span>))
+    <span class="skw">type</span>(<span class="str">"119"</span>)
+<span class="kw">try</span>:
+    <span class="skw">find</span>(<img src="1399890547068.png" />)
+    <span class="skw">click</span>(<img src="1399890547068.png" />)
+<span class="kw">except</span> FindFailed:
+    <span class="skw">find</span>(<img src="1399892608813.png" />)
+    <span class="skw">click</span>(<img src="1399892608813.png" />)
+<span class="kw">assert</span> exists(Pattern(<img src="1399891153266.png" />).similar(<span class="dig">0.16</span>))
+</pre>
+</body>
+</html>
