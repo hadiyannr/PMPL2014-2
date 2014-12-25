@@ -102,8 +102,8 @@ class TestController extends Controller{
 						$session['eauth_profile'] = $eauth->attributes;
 
 						// redirect and close the popup window if needed
-						//$eauth->redirect();
-                                                $this->render('test', array('data'=>$data));
+						$eauth->redirect();
+//                                                $this->render('test', array('data'=>$data));
 					}
 					else {
 						// close popup window and redirect to cancelUrl

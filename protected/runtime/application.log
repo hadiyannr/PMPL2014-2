@@ -1857,3 +1857,161 @@ REQUEST_URI=/siapmasukui/index.php/tryout/adminQuestion/update/id/32
 in /opt/lampp/htdocs/siapmasukui/protected/modules/tryout/models/Question.php (141)
 in /opt/lampp/htdocs/siapmasukui/protected/modules/tryout/controllers/AdminQuestionController.php (194)
 in /opt/lampp/htdocs/siapmasukui/index.php (13)
+2014/12/25 08:44:05 [error] [php] Undefined index: home (C:\xampp\htdocs\PMPL2014-2\protected\views\layouts\site.php:159)
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CController.php(784): TestController->renderFile()
+#1 C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php(127): TestController->render()
+#2 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): TestController->actionTestSosmed()
+#3 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\yiiframework\web\CController.php(286): TestController->runAction()
+#5 C:\xampp\htdocs\yiiframework\web\CController.php(265): TestController->runActionWithFilters()
+#6 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): TestController->run()
+#7 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\PMPL2014-2\index.php(13): CWebApplication->run()
+REQUEST_URI=/PMPL2014-2/index.php/test/testsosmed
+in C:\xampp\htdocs\PMPL2014-2\protected\views\layouts\site.php (159)
+in C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php (127)
+in C:\xampp\htdocs\PMPL2014-2\index.php (13)
+2014/12/25 08:46:53 [error] [php] Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\yiiframework\web\CController.php:793) (C:\xampp\htdocs\yiiframework\web\CHttpRequest.php:803)
+Stack trace:
+#0 C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php(116): TestController->redirect()
+#1 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): TestController->actionTestSosmed()
+#2 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\yiiframework\web\CController.php(286): TestController->runAction()
+#4 C:\xampp\htdocs\yiiframework\web\CController.php(265): TestController->runActionWithFilters()
+#5 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): TestController->run()
+#6 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\PMPL2014-2\index.php(13): CWebApplication->run()
+REQUEST_URI=/PMPL2014-2/index.php/test/testsosmed?service=google&redirect_uri=http://localhost/PMPL2014-2/index.php/test/testsosmed?service%3Dgoogle&js&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2014-12-25T01%3A46%3A51ZUUHTlGEFDh3Dyg&openid.return_to=http%3A%2F%2Flocalhost%2FPMPL2014-2%2Findex.php%2Ftest%2Ftestsosmed%3Fservice%3Dgoogle%26redirect_uri%3Dhttp%3A%2F%2Flocalhost%2FPMPL2014-2%2Findex.php%2Ftest%2Ftestsosmed%3Fservice%253Dgoogle%26js&openid.assoc_handle=1.AMlYA9VVNDwlEIw7LbKkwBOiJ3SJDrHP6zCwQY21aMXzHeYrD0zamsVO9f5kAmXD&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.email%2Cext1.value.email&openid.sig=cCSfVgFplHq18YuCBl%2F%2Fhs1UtoQ%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlBoRaIOOG75-dcJOP0yT8oGi6iiT2hvAA&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlBoRaIOOG75-dcJOP0yT8oGi6iiT2hvAA&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Irma&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=irmaapriliawulandari%40gmail.com
+in C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php (116)
+in C:\xampp\htdocs\PMPL2014-2\index.php (13)
+2014/12/25 09:01:36 [error] [exception.CException] exception 'CException' with message 'Property "GoogleOpenIDService.client_id" is not defined.' in C:\xampp\htdocs\yiiframework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\PMPL2014-2\protected\extensions\eauth\EAuthServiceBase.php(125): CComponent->__set('client_id', '64990874110-c25...')
+#1 C:\xampp\htdocs\PMPL2014-2\protected\extensions\eauth\EOpenIDService.php(54): EAuthServiceBase->init(Object(EAuth), Array)
+#2 C:\xampp\htdocs\PMPL2014-2\protected\extensions\eauth\EAuth.php(136): EOpenIDService->init(Object(EAuth), Array)
+#3 C:\xampp\htdocs\PMPL2014-2\protected\extensions\eauth\EAuth.php(72): EAuth->getIdentity('google')
+#4 C:\xampp\htdocs\PMPL2014-2\protected\extensions\eauth\EAuthWidget.php(63): EAuth->getServices()
+#5 C:\xampp\htdocs\yiiframework\web\CBaseController.php(147): EAuthWidget->init()
+#6 C:\xampp\htdocs\yiiframework\web\CBaseController.php(172): CBaseController->createWidget('ext.eauth.EAuth...', Array)
+#7 C:\xampp\htdocs\PMPL2014-2\protected\views\test\test.php(4): CBaseController->widget('ext.eauth.EAuth...')
+#8 C:\xampp\htdocs\yiiframework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#9 C:\xampp\htdocs\yiiframework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#10 C:\xampp\htdocs\yiiframework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#11 C:\xampp\htdocs\yiiframework\web\CController.php(782): CController->renderPartial('test', Array, true)
+#12 C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php(127): CController->render('test', Array)
+#13 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): TestController->actionTestSosmed()
+#14 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\xampp\htdocs\yiiframework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#16 C:\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('testsosmed')
+#18 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('test/testsosmed')
+#19 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/PMPL2014-2/index.php/test/testsosmed
+---
+2014/12/25 09:06:41 [error] [exception.CException] exception 'CException' with message 'Property "GoogleOpenIDService.keys" is not defined.' in C:\xampp\htdocs\yiiframework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\PMPL2014-2\protected\extensions\eauth\EAuthServiceBase.php(125): CComponent->__set('keys', Array)
+#1 C:\xampp\htdocs\PMPL2014-2\protected\extensions\eauth\EOpenIDService.php(54): EAuthServiceBase->init(Object(EAuth), Array)
+#2 C:\xampp\htdocs\PMPL2014-2\protected\extensions\eauth\EAuth.php(136): EOpenIDService->init(Object(EAuth), Array)
+#3 C:\xampp\htdocs\PMPL2014-2\protected\extensions\eauth\EAuth.php(72): EAuth->getIdentity('google')
+#4 C:\xampp\htdocs\PMPL2014-2\protected\extensions\eauth\EAuthWidget.php(63): EAuth->getServices()
+#5 C:\xampp\htdocs\yiiframework\web\CBaseController.php(147): EAuthWidget->init()
+#6 C:\xampp\htdocs\yiiframework\web\CBaseController.php(172): CBaseController->createWidget('ext.eauth.EAuth...', Array)
+#7 C:\xampp\htdocs\PMPL2014-2\protected\views\test\test.php(4): CBaseController->widget('ext.eauth.EAuth...')
+#8 C:\xampp\htdocs\yiiframework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#9 C:\xampp\htdocs\yiiframework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#10 C:\xampp\htdocs\yiiframework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#11 C:\xampp\htdocs\yiiframework\web\CController.php(782): CController->renderPartial('test', Array, true)
+#12 C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php(127): CController->render('test', Array)
+#13 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): TestController->actionTestSosmed()
+#14 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\xampp\htdocs\yiiframework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#16 C:\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('testsosmed')
+#18 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('test/testsosmed')
+#19 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/PMPL2014-2/index.php/test/testsosmed
+---
+2014/12/25 09:09:13 [error] [exception.CException] exception 'CException' with message 'Property "GoogleOpenIDService.client_id" is not defined.' in C:\xampp\htdocs\yiiframework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\PMPL2014-2\protected\extensions\eauth\EAuthServiceBase.php(125): CComponent->__set('client_id', '64990874110-c25...')
+#1 C:\xampp\htdocs\PMPL2014-2\protected\extensions\eauth\EOpenIDService.php(54): EAuthServiceBase->init(Object(EAuth), Array)
+#2 C:\xampp\htdocs\PMPL2014-2\protected\extensions\eauth\EAuth.php(136): EOpenIDService->init(Object(EAuth), Array)
+#3 C:\xampp\htdocs\PMPL2014-2\protected\extensions\eauth\EAuth.php(72): EAuth->getIdentity('google')
+#4 C:\xampp\htdocs\PMPL2014-2\protected\extensions\eauth\EAuthWidget.php(63): EAuth->getServices()
+#5 C:\xampp\htdocs\yiiframework\web\CBaseController.php(147): EAuthWidget->init()
+#6 C:\xampp\htdocs\yiiframework\web\CBaseController.php(172): CBaseController->createWidget('ext.eauth.EAuth...', Array)
+#7 C:\xampp\htdocs\PMPL2014-2\protected\views\test\test.php(4): CBaseController->widget('ext.eauth.EAuth...')
+#8 C:\xampp\htdocs\yiiframework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#9 C:\xampp\htdocs\yiiframework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#10 C:\xampp\htdocs\yiiframework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#11 C:\xampp\htdocs\yiiframework\web\CController.php(782): CController->renderPartial('test', Array, true)
+#12 C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php(127): CController->render('test', Array)
+#13 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): TestController->actionTestSosmed()
+#14 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\xampp\htdocs\yiiframework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#16 C:\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('testsosmed')
+#18 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('test/testsosmed')
+#19 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/PMPL2014-2/index.php/test/testsosmed
+---
+2014/12/25 09:11:10 [error] [php] Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\yiiframework\web\CController.php:793) (C:\xampp\htdocs\yiiframework\web\CHttpRequest.php:803)
+Stack trace:
+#0 C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php(116): TestController->redirect()
+#1 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): TestController->actionTestSosmed()
+#2 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\yiiframework\web\CController.php(286): TestController->runAction()
+#4 C:\xampp\htdocs\yiiframework\web\CController.php(265): TestController->runActionWithFilters()
+#5 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): TestController->run()
+#6 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\PMPL2014-2\index.php(13): CWebApplication->run()
+REQUEST_URI=/PMPL2014-2/index.php/test/testsosmed?service=google&redirect_uri=http://localhost/PMPL2014-2/index.php/test/testsosmed?service%3Dgoogle&js&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2014-12-25T02%3A11%3A09ZMX5Ru651v4DFow&openid.return_to=http%3A%2F%2Flocalhost%2FPMPL2014-2%2Findex.php%2Ftest%2Ftestsosmed%3Fservice%3Dgoogle%26redirect_uri%3Dhttp%3A%2F%2Flocalhost%2FPMPL2014-2%2Findex.php%2Ftest%2Ftestsosmed%3Fservice%253Dgoogle%26js&openid.assoc_handle=1.AMlYA9VRt9e31bCiqkRb5yp6XZd63_hWih-5Z5XVH182G3qVEenftMS8FWGh2uBC&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.email%2Cext1.value.email&openid.sig=4hjtUfCe5XfL7%2F3AAI71opR9REk%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlBoRaIOOG75-dcJOP0yT8oGi6iiT2hvAA&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlBoRaIOOG75-dcJOP0yT8oGi6iiT2hvAA&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Irma&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=irmaapriliawulandari%40gmail.com
+in C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php (116)
+in C:\xampp\htdocs\PMPL2014-2\index.php (13)
+2014/12/25 09:12:26 [error] [php] Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\yiiframework\web\CController.php:793) (C:\xampp\htdocs\yiiframework\web\CHttpRequest.php:803)
+Stack trace:
+#0 C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php(116): TestController->redirect()
+#1 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): TestController->actionTestSosmed()
+#2 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\yiiframework\web\CController.php(286): TestController->runAction()
+#4 C:\xampp\htdocs\yiiframework\web\CController.php(265): TestController->runActionWithFilters()
+#5 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): TestController->run()
+#6 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\PMPL2014-2\index.php(13): CWebApplication->run()
+REQUEST_URI=/PMPL2014-2/index.php/test/testsosmed?service=google&redirect_uri=http://localhost/PMPL2014-2/index.php/test/testsosmed?service%3Dgoogle&js&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2014-12-25T02%3A12%3A25ZPn0CaLMlo6icxg&openid.return_to=http%3A%2F%2Flocalhost%2FPMPL2014-2%2Findex.php%2Ftest%2Ftestsosmed%3Fservice%3Dgoogle%26redirect_uri%3Dhttp%3A%2F%2Flocalhost%2FPMPL2014-2%2Findex.php%2Ftest%2Ftestsosmed%3Fservice%253Dgoogle%26js&openid.assoc_handle=1.AMlYA9WlQL9nD05FlYnmSbUWBrBjpj1MRqru-9Nk0HluFPIkpMWkSBFh_HeCEiuD&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.firstname%2Cext1.value.firstname%2Cext1.type.email%2Cext1.value.email&openid.sig=uUjy5sP3Cg3qar27ywloKzkHWhw%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlBoRaIOOG75-dcJOP0yT8oGi6iiT2hvAA&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawlBoRaIOOG75-dcJOP0yT8oGi6iiT2hvAA&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.firstname=Irma&openid.ext1.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.email=irmaapriliawulandari%40gmail.com
+in C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php (116)
+in C:\xampp\htdocs\PMPL2014-2\index.php (13)
+2014/12/25 09:17:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "oauth".' in C:\xampp\htdocs\yiiframework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CController.php(270): CController->missingAction('oauth')
+#1 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('oauth')
+#2 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('test/oauth')
+#3 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PMPL2014-2/index.php/test/oauth?provider=Google
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/test/testsosmed
+---
+2014/12/25 09:18:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "oauth".' in C:\xampp\htdocs\yiiframework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CController.php(270): CController->missingAction('oauth')
+#1 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('oauth')
+#2 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('test/oauth')
+#3 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PMPL2014-2/index.php/test/oauth?provider=Google
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/test/testsosmed
+---
