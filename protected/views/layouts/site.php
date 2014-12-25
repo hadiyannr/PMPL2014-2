@@ -45,7 +45,7 @@
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #ecf0f1">Konten <b class="caret"></b></a>
                                         <ul>
                                             <?php
-                                            $kategoris = KategoriKonten::model()->findAll();
+                                            $kategoris = Kategori::model()->findAll();
                                             foreach ($kategoris as $kategori): ?>
                                                 <li> <?php echo CHtml::link($kategori->nama, array('/konten/konten/kategori','idcategory'=>$kategori->id),array('style'=>"color: #ecf0f1"));?></li>
                                             <?php endforeach;?>
