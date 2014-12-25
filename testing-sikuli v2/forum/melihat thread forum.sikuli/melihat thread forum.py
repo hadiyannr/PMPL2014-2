@@ -1,0 +1,6 @@
+find("ggForum.png")
+click("ggForum.png")
+click(Pattern("KemampuanDas.png").targetOffset(-145,-14))
+click(Pattern("Bahasalnggri.png").targetOffset(-59,-6))
+click(Pattern("LALALA.png").targetOffset(-18,-8))
+assert exists("Bahasalnggri-1.png")
