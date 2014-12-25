@@ -38,7 +38,7 @@ $gridColumns = array(
         'htmlOptions' => array('style' => 'width:65px; text-align:center;'),
     ),
     array(
-        'name' => 'last post',
+        'name' => 'Post Terakhir',
         'headerHtmlOptions' => array('style' => 'text-align:center;'),
         'type' => 'html',
         'value' => '$data->renderLastpostCell()',

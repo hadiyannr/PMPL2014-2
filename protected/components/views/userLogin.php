@@ -3,12 +3,12 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">Login</h4>
+                <h4 class="modal-title" id="myModalLabel">Masuk</h4>
             </div>
             <div class="modal-body">     
                 <form role="form" method="post">
                     <div class="form-group">
-                        <label>Username</label>
+                        <label>Nama pengguna</label>
                         <br>
                         <input type="text" name="LoginForm[username]" class="form-control" required>
                     </div>
@@ -18,12 +18,12 @@
                         <input type="password" name="LoginForm[password]" class="form-control"  required>
                     </div>					  			 					  
                     <div class="form-group">    
-                        <span >Remember Me </span>                    
+                        <span >Ingatkan saya</span>                    
                         <input type="checkbox" name="LoginForm[rememberMe]">
                     </div>
 					<!-- Untuk lupa password -->
 					<p> <?php echo CHtml::link('Lupa password?',array('/site/Forget'),array('style'=>'color:#6fc5a4 !important;')) ?> </p>
-                    <button type="submit" class="btn btn-primary">Login</button>					
+                    <button type="submit" class="btn btn-primary">Masuk</button>					
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Batal</button>
                     <br><br><br>
                     <?php $this->widget('ext.hoauth.widgets.HOAuth'); ?>
