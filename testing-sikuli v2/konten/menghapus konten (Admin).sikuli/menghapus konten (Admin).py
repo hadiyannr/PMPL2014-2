@@ -1,0 +1,8 @@
+find("1419495124326.png")
+click("1419495124326.png")
+imageToReg = find("1419495900209.png")
+r = Region(imageToReg)
+r.click("1419496661691.png")
+#click("1419496695143.png")
+click("1419496742403.png")
+not exists("1419496886494.png")
