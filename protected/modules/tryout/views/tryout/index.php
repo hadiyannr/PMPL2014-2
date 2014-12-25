@@ -74,7 +74,7 @@ $this->breadcrumbs = array(
                         if(Yii::app()->user->isGuest){
                             echo 'Silahkan masuk untuk melihat daftar Hasil Uji Coba Anda';
                         }else{
-                            echo 'Tidak ada daftar di MyTryout. Silahkan daftar pada menu Ujian Tersedia.';
+                            echo 'Tidak ada daftar uji coba yang pernah Anda ikuti. Silahkan daftar pada menu Ujian Tersedia.';
                         }
                     ?>
                 </i>
@@ -168,7 +168,7 @@ $this->breadcrumbs = array(
     </div>  
 </div>
 <?php if(!Yii::app()->user->isGuest):?>
-<div style="margin-top:200px;">
+<div style="margin-top:200px; margin-bottom:50px">
     <?php echo CHtml::link('Riwayat Tryout',array('answerSheet/history'),array('class'=>'btn-primary'));?>
 </div>
 <?php endif;?>
