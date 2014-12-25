@@ -8,7 +8,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Daftar Uji Coba', 'url'=>array('index')),	
+	array('label'=>'Daftar Tryout', 'url'=>array('index')),	
 );
 ?>
 
