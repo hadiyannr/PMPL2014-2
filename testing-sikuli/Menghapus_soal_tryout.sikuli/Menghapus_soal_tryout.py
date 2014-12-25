@@ -29,4 +29,4 @@ except FindFailed:
     reg.find("1400015177040.png")
     reg.click("1400015177040.png")
 find("1400015235880.png")
-click("1399897020963.png")
+click(Pattern("1399897020963.png").similar(0.60))

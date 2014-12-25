@@ -8,4 +8,4 @@ click("1400043998682.png")
 type("tambah teks")
 find("1400043856038.png")
 click("1400043861818.png")
-
+assert exists("1419483098735.png")

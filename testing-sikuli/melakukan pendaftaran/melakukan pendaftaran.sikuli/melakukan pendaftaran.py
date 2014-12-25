@@ -1,4 +1,4 @@
-click(Pattern("1400033891651.png").exact())
+click(Pattern("1400033891651.png").similar(0.89))
 wait("1400033931718.png")
 click("1400033978469.png")
 type("testerganteng")
