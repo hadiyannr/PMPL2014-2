@@ -194,7 +194,7 @@ table.detail-view tr:hover {
 .admin-content #content .btn-primary {
   padding: 7px 10px !important;
 }
-.dropdown-menu {
+.responsive-dropdown {
   width: 100%;
   background-color: #fedc00 !important;
 }

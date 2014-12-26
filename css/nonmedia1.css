@@ -366,7 +366,11 @@ nav li.active:hover, a:hover {
 
 }
 
-
+@media(min-height:890px ) {
+  .content-home {
+    height: auto;
+  }
+}
 
 .remove-left-padding {
   padding-left: 0;
@@ -417,6 +421,10 @@ nav li.active:hover, a:hover {
 
 .newthread img {
   content: url("view.png");
+}
+
+.overflow-auto {
+  overflow: auto;
 }
 
 .zocial {
