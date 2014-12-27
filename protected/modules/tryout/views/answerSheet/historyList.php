@@ -1,12 +1,13 @@
+
 <?php
-
-/* @var $this AnswerSheetController */
-/* @var $tryoutModelList Tryouts */
-/* @var $tryout Tryouts */
-
-
+$this->breadcrumbs = array(
+    'Uji Coba Kemampuan'=>array("index"),
+    'Riwayat Uji Coba',
+    );
+echo '<br>';
 ?>
-<h2 class="text-center">Riwayat Tryout</h2>
+
+<h2 class="text-center">Riwayat Uji Coba</h2>
 <br><br>
 <?php if (sizeof($tryoutModelList)): ?>
         <table class="table">
