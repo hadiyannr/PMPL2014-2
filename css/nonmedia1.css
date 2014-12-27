@@ -449,8 +449,15 @@ nav li.active:hover, a:hover {
 .newthread img {
   content: url("view.png");
 }
+
 .newthread .btn-primary {
   margin-bottom: 10px;
+}
+
+.post .footer .btn-primary {
+  text-decoration: none;
+  margin-right: -5px;
+  font-size: 12px;
 }
 
 #post-form .buttons input[type="submit"]{

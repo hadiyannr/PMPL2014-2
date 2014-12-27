@@ -38,7 +38,7 @@ $isAdmin = !Yii::app()->user->isGuest && Yii::app()->user->isAdmin;
     </div>
     <?php if($isAdmin || Yii::app()->user->id == $data->author_id): ?>
         <div class="footer">
-            <?php echo CHtml::link(CHtml::image(Yii::app()->controller->module->registerImage("postbit_edit.gif")), array('/forum/post/update', 'id'=>$data->id)); ?>
+            <?php echo CHtml::link('Edit Post', array('/forum/post/update', 'id'=>$data->id), array('class'=>'btn btn-primary')); ?>
         </div>
     <?php endif; ?>
 </div>
