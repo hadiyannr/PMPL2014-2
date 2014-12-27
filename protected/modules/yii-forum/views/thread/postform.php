@@ -32,7 +32,7 @@
 
         <div class="row">
             <?php echo $form->labelEx($model,'content'); ?>
-            <?php echo $form->textArea($model,'content', array('rows'=>10, 'cols'=>70)); ?>
+            <?php echo $form->textArea($model,'content', array('rows'=>10, 'cols'=>60)); ?>
             <?php echo $form->error($model,'content'); ?>
             <p class="hint">
                 Hint: You can use <?php echo CHtml::link('markdown', 'http://daringfireball.net/projects/markdown/syntax'); ?> syntax!

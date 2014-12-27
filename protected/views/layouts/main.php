@@ -22,7 +22,7 @@
 <body>
     <header>
         <div class="header-nav">
-            <div class="container">
+            <div class="container admin-container">
 
 
                 <div class="navbar-header">

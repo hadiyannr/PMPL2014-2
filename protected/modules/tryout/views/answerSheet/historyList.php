@@ -16,7 +16,7 @@ echo '<br>';
                 <th>Nama</th>       
                 <th>Tanggal</th>
                 <th>Waktu Mulai</th>
-                <th>Durasi</th>
+                <th>Durasi (menit)</th>
                 <th>Lihat</th>
             </tr>
             <?php
