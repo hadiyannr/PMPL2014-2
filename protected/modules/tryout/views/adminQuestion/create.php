@@ -16,4 +16,4 @@ $this->menu=array(
 
 <h1>Buat Soal</h1>
 
-<?php $this->renderPartial('_form', array('questionModel'=>$questionModel,'optionModelList'=>$optionModelList)); ?>
+<?php $this->renderPartial('_form', array('questionModel'=>$questionModel,'optionModelList'=>$optionModelList), false, true); ?>

@@ -20,6 +20,9 @@ class KontenController extends Controller
 
 	        
     public function actionViewByCategory($idcategory){
+        if(isset($_GET["search"])){
+            $this->redirect(array('searchKonten','keyword'=>$_GET['keyword']));
+        }
         $criteria=new CDbCriteria;
         $criteria->compare('idcategory',$idcategory);
         $criteria->compare('isPublished',1);

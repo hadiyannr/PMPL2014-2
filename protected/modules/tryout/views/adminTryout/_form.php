@@ -68,9 +68,9 @@
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($tryoutModel->isNewRecord ? 'Buat' : 'Simpan', array('class'=>'btn btn-primary')); ?>
-                <?php echo CHtml::Button('Batal',array(
-                          'submit'=>$this->createUrl('index'),
-                          'class'=>'btn btn-danger')); ?>                
+        <?php echo CHtml::link('Batal',array(
+                'index'),
+            array('class'=>'btn btn-danger')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

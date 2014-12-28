@@ -85,10 +85,11 @@ class AdminContentController extends Controller
                 if(!$imageValidation){
                     $contentModel->addError('image', $message);
                 }
+            }else{
+                $contentModel->imagepath = Yii::app()->request->baseUrl.'/images/park-chan-hee.png';
             }
 
 			if(!$contentModel->hasErrors() && $contentModel->save()){
-            //if(!$contentModel->hasErrors()){
                 if($uploading){
                     $contentModel->image->saveAs(Yii::app()->basePath.'/../images/ContentPic/'.$contentModel->imagepath);
                 }

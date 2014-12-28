@@ -17,4 +17,4 @@ $this->menu=array(
 
 <h1>Ubah Konten <?php echo $contentModel->id; ?></h1>
 
-<?php $this->renderPartial('_form', array('contentModel'=>$contentModel)); ?>
+<?php $this->renderPartial('_form', array('contentModel'=>$contentModel), false, true); ?>

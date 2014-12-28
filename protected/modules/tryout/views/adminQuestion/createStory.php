@@ -21,4 +21,4 @@ $this->menu=array(
 
     <h1>Buat Soal</h1>
 
-<?php $this->renderPartial('_formStory', array('questionModel'=>$questionModel)); ?>
+<?php $this->renderPartial('_formStory', array('questionModel'=>$questionModel), false, true); ?>

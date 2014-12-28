@@ -78,8 +78,9 @@
         
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($questionModel->isNewRecord ? 'Buat' : 'Simpan'); ?>
-                <?php echo CHtml::Button('Batal',array(
-                          'submit'=>$this->createUrl('adminQuestion/index',array('idtryout'=>$questionModel->idtryout)))); ?>
+        <?php echo CHtml::link('Batal',array(
+                'index','idtryout'=>$questionModel->idtryout),
+            array('class'=>'btn btn-danger')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

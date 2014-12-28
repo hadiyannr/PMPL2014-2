@@ -57,10 +57,14 @@ $this->breadcrumbs=array(
         <div class="col-md-12">
             <h2 class="judul-konten pull-left force-margin-0"><?php echo $title;?></h2>
             <div class="col-md-3 pull-right search-bar-content">
-                <form class="navbar-form cari-berita" role="search" method="post">
+                <form class="navbar-form cari-berita" role="search" method="get">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Cari berita" name="keyword" id="srch-term" size="14">
+                        <input type="text" class="form-control" placeholder="Cari" name="keyword" id="srch-term" size="14">
+                        <input type="hidden" name="search"/>
                         <div class="input-group-btn">
+<!--                            --><?php
+//                                echo CHtml::htmlButton('<span class="glyphicon glyphicon-search"></span>', array('class' => 'btn btn-default'));
+//                            ?>
                             <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
                         </div>
                     </div>
