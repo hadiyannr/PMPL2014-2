@@ -3309,3 +3309,115 @@ Stack trace:
 REQUEST_URI=/PMPL2014-2/index.php/konten/adminKonten/index
 HTTP_REFERER=http://localhost/PMPL2014-2/index.php/admin/index
 ---
+2014/12/28 10:43:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "konten/adminKonten/index".' in C:\xampp\htdocs\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/adminKon...')
+#1 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/adminKonten/index
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/konten/kategori/index
+---
+2014/12/28 10:46:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "konten/adminKonten".' in C:\xampp\htdocs\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/adminKon...')
+#1 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/adminKonten/
+---
+2014/12/28 10:46:50 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\yiiframework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yiiframework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('')
+#4 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten')
+#5 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/
+---
+2014/12/28 10:47:26 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\yiiframework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yiiframework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('index')
+#4 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/konten/i...')
+#5 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/konten/index
+---
+2014/12/28 10:51:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "konten/adminKonten/index".' in C:\xampp\htdocs\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/adminKon...')
+#1 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/adminKonten/index
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/tryout/adminTryout/index
+---
+2014/12/28 10:54:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in C:\xampp\htdocs\yiiframework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CController.php(270): CController->missingAction('view')
+#1 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('view')
+#2 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/kategori...')
+#3 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/kategori/view/id/3
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/konten/kategori/index
+---
+2014/12/28 10:58:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in C:\xampp\htdocs\yiiframework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CController.php(270): CController->missingAction('view')
+#1 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('view')
+#2 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/kategori...')
+#3 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/kategori/view/id/3
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/konten/kategori/index
+---
+2014/12/28 10:58:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "viewbycategory".' in C:\xampp\htdocs\yiiframework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CController.php(270): CController->missingAction('viewbycategory')
+#1 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('viewbycategory')
+#2 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/kategori...')
+#3 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/kategori/viewbycategory/id/3
+---
+2014/12/28 10:58:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "viewbycategory".' in C:\xampp\htdocs\yiiframework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CController.php(270): CController->missingAction('viewbycategory')
+#1 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('viewbycategory')
+#2 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/kategori...')
+#3 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/kategori/viewbycategory/id/3
+---
+2014/12/28 10:58:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "viewbycategory".' in C:\xampp\htdocs\yiiframework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CController.php(270): CController->missingAction('viewbycategory')
+#1 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('viewbycategory')
+#2 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/kategori...')
+#3 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/kategori/viewbycategory/id/3
+---
+2014/12/28 10:59:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in C:\xampp\htdocs\yiiframework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CController.php(270): CController->missingAction('view')
+#1 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('view')
+#2 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/kategori...')
+#3 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/kategori/view/id/3
+---

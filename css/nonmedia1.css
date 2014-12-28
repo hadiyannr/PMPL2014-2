@@ -476,6 +476,10 @@ padding: 10px;
   padding: 7px;
 }
 
+#konten-form .btn-danger {
+  padding: 7px;
+}
+
 #soal-form textarea {
   height: 100px !important;
 }
