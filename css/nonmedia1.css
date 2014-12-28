@@ -464,8 +464,20 @@ nav li.active:hover, a:hover {
   padding: 10px
 }
 
+.form .buttons input[type="button"] {
+padding: 10px;
+}
+
 .form .buttons input[type="submit"]{
   padding: 10px
+}
+
+#tryout-form .btn-danger {
+  padding: 7px;
+}
+
+#soal-form textarea {
+  height: 100px !important;
 }
 
 .overflow-auto {

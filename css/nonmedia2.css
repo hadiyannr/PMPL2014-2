@@ -5,6 +5,13 @@ input[type="submit"] {
   border: 0;
 }
 
+input[type="button"] {
+  border-radius: 0;
+  background-color: #e01e25;
+  color: white;
+  border: 0;
+}
+
 .list-view div.preheader, .list-view div.post div.header {
   background: none !important;
   background-color: black !important;
