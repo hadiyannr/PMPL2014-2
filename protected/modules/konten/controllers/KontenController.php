@@ -32,7 +32,7 @@ class KontenController extends Controller
         $pages->pageSize=$this->pageSize;
         $pages->applyLimit($criteria);
 
-        $categoryModel = KategoriKonten::model()->findByPk($idcategory);
+        $categoryModel = ContentCategory::model()->findByPk($idcategory);
         $contentModelList = Konten::model()->findAll($criteria);
         $this->render('contentList',array('contentModelList'=>$contentModelList,'pages' => $pages,'title'=>$categoryModel->nama));
 
@@ -57,9 +57,9 @@ class KontenController extends Controller
         $criteria->compare('isi',$keyword,true,"OR");
         $criteria->compare('judul',$keyword,true,"OR");
         $criteria->compare('isPublished','1');
+        
         $count=Konten::model()->count($criteria);
-
-
+        
         $pages=new CPagination($count);
         $pages->pageSize=$this->pageSize;
         $pages->applyLimit($criteria);

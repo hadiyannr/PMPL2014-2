@@ -5,7 +5,7 @@ class KontenKategori extends Portlet
  
     protected function renderContent()
     {        
-        $model = KategoriKonten::model()->findAll();
+        $model = ContentCategory::model()->findAll();
         $this->render('kontenKategori',array('model'=>$model));
     }
 }

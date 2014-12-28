@@ -15,7 +15,7 @@ echo '<br>';
                 if($profilModel->fotoUrl == null){                
                     echo Yii::app()->request->baseUrl.'/images/photo.png';
                 }else{
-                    echo Yii::app()->request->baseUrl.'/images/profilPic/'.$profilModel->fotoUrl;
+                    echo Yii::app()->request->baseUrl.'/images/ProfilPic/'.$profilModel->fotoUrl;
                 }
                 ?>" alt="" class="img-responsive" />
 

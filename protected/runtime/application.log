@@ -3421,3 +3421,102 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/PMPL2014-2/index.php/konten/kategori/view/id/3
 ---
+2014/12/28 14:55:20 [error] [php] Undefined index: home (C:\xampp\htdocs\PMPL2014-2\protected\views\layouts\site.php:157)
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CController.php(784): TestController->renderFile()
+#1 C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php(135): TestController->render()
+#2 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): TestController->actionTestSosmed()
+#3 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\yiiframework\web\CController.php(286): TestController->runAction()
+#5 C:\xampp\htdocs\yiiframework\web\CController.php(265): TestController->runActionWithFilters()
+#6 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): TestController->run()
+#7 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\PMPL2014-2\index.php(13): CWebApplication->run()
+REQUEST_URI=/PMPL2014-2/index.php/test/testsosmed
+in C:\xampp\htdocs\PMPL2014-2\protected\views\layouts\site.php (157)
+in C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php (135)
+in C:\xampp\htdocs\PMPL2014-2\index.php (13)
+2014/12/28 15:09:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincontent".' in C:\xampp\htdocs\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('admincontent')
+#1 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PMPL2014-2/index.php/admincontent
+---
+2014/12/28 15:09:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincontent/index".' in C:\xampp\htdocs\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('admincontent/in...')
+#1 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PMPL2014-2/index.php/admincontent/index
+---
+2014/12/28 15:10:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincontent/create".' in C:\xampp\htdocs\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('admincontent/cr...')
+#1 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PMPL2014-2/index.php/admincontent/create
+---
+2014/12/28 15:17:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "kategori".' in C:\xampp\htdocs\yiiframework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CController.php(270): CController->missingAction('kategori')
+#1 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('kategori')
+#2 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/konten/k...')
+#3 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/konten/kategori/idcategory/4
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/konten/adminContent/view/id/26
+---
+2014/12/28 15:19:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "kategori".' in C:\xampp\htdocs\yiiframework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CController.php(270): CController->missingAction('kategori')
+#1 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('kategori')
+#2 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('konten/konten/k...')
+#3 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/PMPL2014-2/index.php/konten/konten/kategori/idcategory/4
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/konten/adminContent/view/id/26
+---
+2014/12/28 15:25:34 [warning] [application] Failed to set unsafe attribute "image" of "Konten".
+in C:\xampp\htdocs\PMPL2014-2\protected\modules\konten\controllers\AdminContentController.php (119)
+in C:\xampp\htdocs\PMPL2014-2\index.php (13)
+2014/12/28 15:28:28 [warning] [application] Failed to set unsafe attribute "image" of "Konten".
+in C:\xampp\htdocs\PMPL2014-2\protected\modules\konten\controllers\AdminContentController.php (119)
+in C:\xampp\htdocs\PMPL2014-2\index.php (13)
+2014/12/28 15:48:43 [warning] [application] Failed to set unsafe attribute "image" of "Konten".
+in C:\xampp\htdocs\PMPL2014-2\protected\modules\konten\controllers\AdminContentController.php (119)
+in C:\xampp\htdocs\PMPL2014-2\index.php (13)
+2014/12/28 15:49:20 [warning] [application] Failed to set unsafe attribute "image" of "Konten".
+in C:\xampp\htdocs\PMPL2014-2\protected\modules\konten\controllers\AdminContentController.php (119)
+in C:\xampp\htdocs\PMPL2014-2\index.php (13)
+2014/12/28 15:51:08 [warning] [application] Failed to set unsafe attribute "image" of "Konten".
+in C:\xampp\htdocs\PMPL2014-2\protected\modules\konten\controllers\AdminContentController.php (119)
+in C:\xampp\htdocs\PMPL2014-2\index.php (13)
+2014/12/28 15:52:06 [warning] [application] Failed to set unsafe attribute "image" of "Konten".
+in C:\xampp\htdocs\PMPL2014-2\protected\modules\konten\controllers\AdminContentController.php (119)
+in C:\xampp\htdocs\PMPL2014-2\index.php (13)
+2014/12/28 16:05:48 [error] [php] include(ContentCategory.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yiiframework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\PMPL2014-2\protected\views\layouts\site.php(48): spl_autoload_call()
+#1 C:\xampp\htdocs\yiiframework\web\CBaseController.php(126): require()
+#2 C:\xampp\htdocs\yiiframework\web\CBaseController.php(95): SiteController->renderInternal()
+#3 C:\xampp\htdocs\yiiframework\web\CController.php(784): SiteController->renderFile()
+#4 C:\xampp\htdocs\PMPL2014-2\protected\controllers\SiteController.php(25): SiteController->render()
+#5 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#6 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\yiiframework\web\CController.php(286): SiteController->runAction()
+#8 C:\xampp\htdocs\yiiframework\web\CController.php(265): SiteController->runActionWithFilters()
+#9 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): SiteController->run()
+#10 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\PMPL2014-2\index.php(13): CWebApplication->run()
+REQUEST_URI=/PMPL2014-2/
+in C:\xampp\htdocs\PMPL2014-2\protected\views\layouts\site.php (48)
+in C:\xampp\htdocs\PMPL2014-2\protected\controllers\SiteController.php (25)
+in C:\xampp\htdocs\PMPL2014-2\index.php (13)

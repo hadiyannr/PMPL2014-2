@@ -66,14 +66,11 @@ class ProfileController extends Controller {
             }           
             
             if(!$profileModel->hasErrors() && $profileModel->save()) {
-//                if($uploading){
-//                    $profileModel->image->saveAs(Yii::app()->basePath.'/../images/ProfilPic/'.$profileModel->fotoUrl);
-//                }
+                if($uploading){
+                    $profileModel->image->saveAs(Yii::app()->basePath.'/../images/ProfilPic/'.$profileModel->fotoUrl);
+                }
                 $this->redirect(array('index'));
             }
-//            else{
-//                $this->redirect(array('test/testsosmed'));
-//            }
         }                
         $this->render('update',array('profilModel'=>$profileModel));
     }

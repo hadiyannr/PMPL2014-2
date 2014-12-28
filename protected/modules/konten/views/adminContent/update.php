@@ -4,7 +4,7 @@
 
 $this->breadcrumbs=array(
 	'Konten'=>array('index'),
-	$contentModel->id=>array('view','id'=>$contentModel->id),
+	$contentModel->judul=>array('view','id'=>$contentModel->id),
 	'Ubah',
 );
 
@@ -15,6 +15,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Ubah Konten <?php echo $contentModel->id; ?></h1>
+<h1>Ubah Konten <?php echo $contentModel->judul; ?></h1>
 
 <?php $this->renderPartial('_form', array('contentModel'=>$contentModel), false, true); ?>

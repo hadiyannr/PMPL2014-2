@@ -26,7 +26,7 @@
     </div>
 	<div class="row">
 		<?php echo $form->labelEx($contentModel,'idcategory'); ?>
-		<?php echo $form->dropDownList($contentModel,'idcategory',  KategoriKonten::model()->getOptionList()); ?>
+		<?php echo $form->dropDownList($contentModel,'idcategory',  ContentCategory::model()->getOptionList()); ?>
 		<?php echo $form->error($contentModel,'idcategory'); ?>
 	</div>
 
