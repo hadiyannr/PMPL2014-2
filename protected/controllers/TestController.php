@@ -133,7 +133,7 @@ class TestController extends Controller{
 				Yii::app()->user->setFlash('error', 'EAuthException: '.$e->getMessage());
 
 				// close popup window and redirect to cancelUrl
-				$eauth->redirect($eauth->getCancelUrl());
+				$eauth->redirect(array('site/forgetpassword'));
 			}
 		}
 		// display the login form
