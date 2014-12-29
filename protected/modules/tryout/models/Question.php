@@ -136,7 +136,7 @@ class Question extends CActiveRecord
         try {
             if ($questionModel->validate() && $questionModel->save()){
                 for ($i = 0; $i < 5; $i++) {
-                    Question::saveOptions($optionModelList,$options,$questionModel);
+                    Question::saveOptions($optionModelList,$options,$questionModel, $i);
                 }
             }else{
                 throw new Exception("Soal rollback");
@@ -149,7 +149,7 @@ class Question extends CActiveRecord
         }
     }
 
-    public static function saveOptions($optionModelList,$options,$questionModel){
+    public static function saveOptions($optionModelList,$options,$questionModel, $i){
         $optionModelList[$i]->attributes = $options[$i];
         $optionModelList[$i]->idsoal = $questionModel->id;
         if($options['jawaban'] == $i){

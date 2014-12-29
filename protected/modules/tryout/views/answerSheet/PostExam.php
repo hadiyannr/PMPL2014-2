@@ -1,7 +1,7 @@
 <?php
     /* @var $this AnswerSheetController */
     /* @var $answerSheetModel AnswerSheet */
-    /* @var $question Question */t
+    /* @var $question Question */
     /* @var $answerSheetDetail Question */
 
 ?>
