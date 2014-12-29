@@ -30,7 +30,7 @@
                     <button type="submit" class="btn btn-primary">Daftar</button>					
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Batal</button>
                     <br><br><br>
-                    <?php $this->widget('ext.hoauth.widgets.HOAuth'); ?>
+                    <?php // $this->widget('ext.hoauth.widgets.HOAuth'); ?>
                 </form>
             </div>			      
         </div>
