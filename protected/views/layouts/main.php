@@ -40,14 +40,14 @@
                             <?php echo CHtml::link("Konten", array('/konten/adminContent/index'),array('style'=>"color: #ecf0f1")); ?>
                         </li>
                         <li class="<?php echo (in_array($controllerName, array("adminTryout")))?"active":""?>">
-                            <?php echo CHtml::link("Tryout", array('/tryout/adminTryout/index'),array('style'=>"color: #ecf0f1")); ?>
+                            <?php echo CHtml::link("Uji Coba Kemampuan", array('/tryout/adminTryout/index'),array('style'=>"color: #ecf0f1")); ?>
                         </li>
                         <li class="<?php echo (in_array($controllerName, array("kategori")))?"active":""?>">
                             <?php echo CHtml::link("Kategori", array('/konten/viewbycategory/index'),array('style'=>"color: #ecf0f1")); ?>
                         </li>
                     <?php endif;?>
                     <li>
-                        <?php echo CHtml::link("Web Home", array('/site/index'),array('style'=>"color: #ecf0f1")); ?>
+                        <?php echo CHtml::link("Pratinjau", array('/site/index'),array('style'=>"color: #ecf0f1")); ?>
                     </li>
                     <?php if (Yii::app()->user->isGuest) { ?>
                         <li>
@@ -56,7 +56,7 @@
                         <?php } ?>
                         <?php if (!Yii::app()->user->isGuest) { ?>
                             <li>
-                                <?php echo CHtml::link("Logout", array('/site/logout'),array('style'=>"color: #ecf0f1")); ?>
+                                <?php echo CHtml::link("Keluar", array('/site/logout'),array('style'=>"color: #ecf0f1")); ?>
                             </li>
                             <?php } ?>
                         </ul>
@@ -71,14 +71,14 @@
                                 <?php echo CHtml::link("Konten", array('/konten/adminContent/index'),array('style'=>"color: #ecf0f1")); ?>
                             </li>
                             <li class="<?php echo (in_array($controllerName, array("adminTryout")))?"active":""?>">
-                                <?php echo CHtml::link("Tryout", array('/tryout/adminTryout/index'),array('style'=>"color: #ecf0f1")); ?>
+                                <?php echo CHtml::link("Uji Coba Kemampuan", array('/tryout/adminTryout/index'),array('style'=>"color: #ecf0f1")); ?>
                             </li>
                             <li class="<?php echo (in_array($controllerName, array("kategori")))?"active":""?>">
                                 <?php echo CHtml::link("Kategori", array('/konten/viewbycategory/index'),array('style'=>"color: #ecf0f1")); ?>
                             </li>
                         <?php endif;?>
                         <li>
-                            <?php echo CHtml::link("Web Home", array('/site/index'),array('style'=>"color: #ecf0f1")); ?>
+                            <?php echo CHtml::link("Pratinjau", array('/site/index'),array('style'=>"color: #ecf0f1")); ?>
                         </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
@@ -89,7 +89,7 @@
                             <?php } ?>
                             <?php if (!Yii::app()->user->isGuest) { ?>
                                 <li>
-                                    <?php echo CHtml::link("Logout", array('/site/logout'),array('style'=>"color: #ecf0f1")); ?>
+                                    <?php echo CHtml::link("Keluar", array('/site/logout'),array('style'=>"color: #ecf0f1")); ?>
                                 </li>
                                 <?php } ?>
                             </ul>

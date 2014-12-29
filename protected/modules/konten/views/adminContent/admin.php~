@@ -19,6 +19,7 @@ $this->menu=array(
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'konten-grid',
+	'summaryText' => 'Menampilkan {start} - {end} dari {count} daftar kategori ',
 	'dataProvider'=>new CActiveDataProvider(Konten::model()),
     'ajaxUpdate'=>false,
 	'columns'=>array(
@@ -33,7 +34,7 @@ $this->menu=array(
             
                 array(
                         'name' => 'idAdmin0.username',
-                        'header' =>'Terakhir di edit oleh',
+                        'header' =>'Terakhir di edit oleh',                        
                         'value' => $contentModel->idAdmin0['username'],
                 ),
 		array(

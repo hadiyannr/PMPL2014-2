@@ -85,7 +85,9 @@
 <!--        <p><a class="btn bg-black ft-bright-yellow" href="">MORE</a></p>-->
         <p>
             <?php
+            
                 echo CHtml::link('Berita Lainnya',array('/konten/konten/viewbycategory', 'idcategory'=>3),array('class'=>'btn bg-black ft-bright-yellow btn-more'));
+				            
             ?>
         </p>
     </div>
