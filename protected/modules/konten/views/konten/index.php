@@ -3,11 +3,7 @@
 /* @var $contentModel Konten */
 
 $this->breadcrumbs=array(
-<<<<<<< HEAD
-    $contentModel->Kategorikonten->nama => array('kategori','idcategory'=>$contentModel->idcategory),
-=======
     $contentModel->ContentCategory->nama => array('viewbycategory','idcategory'=>$contentModel->idcategory),
->>>>>>> 408173bfb1fdddd8441de5f2d5d091ff0e177e2a
     $contentModel->judul,
     );
     ?>

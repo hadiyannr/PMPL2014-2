@@ -74,53 +74,25 @@ class TestController extends Controller{
     public function actionTestSosmed()
 	{
 		$serviceName = Yii::app()->request->getQuery('service');
-                $data = "mulai";
 		if (isset($serviceName)) {
-//                    $data = $serviceName;
 			/** @var $eauth EAuthServiceBase */
 			$eauth = Yii::app()->eauth->getIdentity($serviceName);
-//                        if($serviceName == 'facebook'){
-//                            $this->redirect(array('test/testsosmed'));
-//                        }
 			$eauth->redirectUrl = Yii::app()->user->returnUrl;
-			$eauth->cancelUrl = array('site/forgetpassword');
+			$eauth->cancelUrl = array('test/testsosmed');
 
 			try {
 				if ($eauth->authenticate()) {
 					$identity = new EAuthUserIdentity($eauth);
-                                        $data = Yii::app()->user->id;
-//                                        $data = Yii::app()->user->returnUrl;
-//                                        $data = oAuthConsumer.GetUserInfo("https://www.googleapis.com/userinfo/email", consumerKey, consumerSecret, token, tokenSecret);
-
-//					var_dump($eauth->getIsAuthenticated(), $eauth->getAttributes());
-
-					// successful authentication
-                                        echo $eauth->getServices();die();
 					if ($identity->authenticate()) {
-//                                            $emailUser = $identity->email;
 						Yii::app()->user->login($identity);
-//                                                Yii::app()->user->email='sds@ada.com';
-						//var_dump($identity->id, $identity->name, Yii::app()->user->id);exit;
-
-						// Save the attributes to display it in layouts/main.php
+//                                              // Save the attributes to display it in layouts/main.php
 						$session = Yii::app()->session;
 						$session['eauth_profile'] = $eauth->attributes;
 
-//                                                $model = UserOauth::model()->findByAttributes(array('user_id' => Yii::app()->user->id));
-//                                                if($model == null){
-//                                                    $model = new UserOauth;
-//                                                    $model->user_id = Yii::app()->user->id;
-//                                                    $model->save();
-//                                                }
-                                                
-//                                                Yii::app()->user = $model;
-						// redirect and close the popup window if needed
 						$eauth->redirect();
-//                                                $this->render('test', array('data'=>$data));
 					}
 					else {
 						// close popup window and redirect to cancelUrl
-                                                $data = 'gagal';
 						$eauth->cancel();
 					}
 				}
@@ -133,11 +105,11 @@ class TestController extends Controller{
 				Yii::app()->user->setFlash('error', 'EAuthException: '.$e->getMessage());
 
 				// close popup window and redirect to cancelUrl
-				$eauth->redirect(array('site/forgetpassword'));
+				$eauth->redirect($eauth->getCancelUrl());
 			}
 		}
 		// display the login form
-		$this->render('test', array('data'=>$data));
+		$this->render('test');
 	}
         
         public function loadModel(){

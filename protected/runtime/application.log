@@ -4156,3 +4156,67 @@ Stack trace:
 REQUEST_URI=/PMPL2014-2/index.php/konten/viewbycategory/index
 HTTP_REFERER=http://localhost/PMPL2014-2/index.php/admin/index
 ---
+2014/12/29 11:28:18 [error] [php] Undefined variable: data (C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php:112)
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CController.php(286): TestController->runAction()
+#1 C:\xampp\htdocs\yiiframework\web\CController.php(265): TestController->runActionWithFilters()
+#2 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): TestController->run()
+#3 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\PMPL2014-2\index.php(13): CWebApplication->run()
+REQUEST_URI=/PMPL2014-2/index.php/test/testsosmed
+in C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php (112)
+in C:\xampp\htdocs\PMPL2014-2\index.php (13)
+2014/12/29 11:30:33 [error] [exception.EAuthException] exception 'EAuthException' with message 'SSL certificate problem: unable to get local issuer certificate' in C:\xampp\htdocs\PMPL2014-2\protected\extensions\eauth\EAuthServiceBase.php:269
+Stack trace:
+#0 C:\xampp\htdocs\PMPL2014-2\protected\extensions\eauth\services\FacebookOAuthService.php(64): EAuthServiceBase->makeRequest('https://graph.f...', Array, false)
+#1 C:\xampp\htdocs\PMPL2014-2\protected\extensions\eauth\EOAuth2Service.php(96): FacebookOAuthService->getAccessToken('AQAu1_-6rUrSP_p...')
+#2 C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php(83): EOAuth2Service->authenticate()
+#3 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): TestController->actionTestSosmed()
+#4 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yiiframework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('testsosmed')
+#8 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('test/testsosmed')
+#9 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/PMPL2014-2/index.php/test/testsosmed?service=facebook&code=AQAu1_-6rUrSP_pY4YzgHAhAbWgYkXEwP5ukSMo7Qp4k1APw2zCfTTKQEuqwa1Txg2v5ZmxMId2NzdHxOEZi8Qq9C8nzpcEd3DHxkcgj08LhhYwIyck7Plmtp4z17GJZa22BXRmmEdT89xUX1TXTMB6k3QBlyNkvs_8P6MHIWYwlueqjTX8dVgLVbhB4R4IPULHwQ0qCtsusT-V5dZTDF4aZ0xXAeY48ssbrElMwEYw9a0dDmQgyWYLO7gHfvSVVRnjFQD0nGtDzZZy4_Ae-DDvgunn7ebKZsEudpSqpRjC5oh6Dgbi815C3RaMbhrz1GmUjWfNS1HJupasbkzS4WjKY
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/test/testsosmed
+---
+2014/12/29 11:32:05 [error] [php] Undefined index: home (C:\xampp\htdocs\PMPL2014-2\protected\views\layouts\site.php:157)
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\web\CController.php(784): TestController->renderFile()
+#1 C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php(112): TestController->render()
+#2 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): TestController->actionTestSosmed()
+#3 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\yiiframework\web\CController.php(286): TestController->runAction()
+#5 C:\xampp\htdocs\yiiframework\web\CController.php(265): TestController->runActionWithFilters()
+#6 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): TestController->run()
+#7 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\PMPL2014-2\index.php(13): CWebApplication->run()
+REQUEST_URI=/PMPL2014-2/index.php/test/testsosmed
+in C:\xampp\htdocs\PMPL2014-2\protected\views\layouts\site.php (157)
+in C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php (112)
+in C:\xampp\htdocs\PMPL2014-2\index.php (13)
+2014/12/29 11:39:57 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'Unable to complete the request because the user was not authenticated.' in C:\xampp\htdocs\PMPL2014-2\protected\extensions\eauth\EOAuth2Service.php:204
+Stack trace:
+#0 C:\xampp\htdocs\PMPL2014-2\protected\extensions\eauth\services\FacebookOAuthService.php(35): EOAuth2Service->makeSignedRequest('https://graph.f...')
+#1 C:\xampp\htdocs\PMPL2014-2\protected\extensions\eauth\EAuthServiceBase.php(456): FacebookOAuthService->fetchAttributes()
+#2 C:\xampp\htdocs\PMPL2014-2\protected\extensions\eauth\EAuthServiceBase.php(513): EAuthServiceBase->_fetchAttributes()
+#3 C:\xampp\htdocs\PMPL2014-2\protected\extensions\eauth\EAuthServiceBase.php(82): EAuthServiceBase->hasAttribute('isAuthenticated')
+#4 C:\xampp\htdocs\PMPL2014-2\protected\extensions\eauth\EAuthUserIdentity.php(50): EAuthServiceBase->__get('isAuthenticated')
+#5 C:\xampp\htdocs\PMPL2014-2\protected\controllers\TestController.php(86): EAuthUserIdentity->authenticate()
+#6 C:\xampp\htdocs\yiiframework\web\actions\CInlineAction.php(49): TestController->actionTestSosmed()
+#7 C:\xampp\htdocs\yiiframework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yiiframework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(282): CController->run('testsosmed')
+#11 C:\xampp\htdocs\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('test/testsosmed')
+#12 C:\xampp\htdocs\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\PMPL2014-2\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/PMPL2014-2/index.php/test/testsosmed?service=facebook&redirect_uri=http%3A%2F%2Flocalhost%2FPMPL2014-2%2Findex.php%2Ftest%2Ftestsosmed%3Fservice%3Dfacebook&js
+HTTP_REFERER=http://localhost/PMPL2014-2/index.php/test/testsosmed
+---
