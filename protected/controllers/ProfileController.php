@@ -13,7 +13,6 @@ class ProfileController extends Controller {
     }
     
     public function actionViewByID($id) {
-//        echo $id;die();
         if(is_numeric($id)){
             $profileModel = Profile::model()->findByAttributes(array('idPengguna'=>$id));
             if($profileModel==null){
