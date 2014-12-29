@@ -2,7 +2,7 @@
 
 <?php    
     foreach ($model as $kategori) {
-        echo '<li>',CHtml::link($kategori->nama, array('konten/kategori','idcategory'=>$kategori->id)),"</li>";       
+        echo '<li>',CHtml::link($kategori->nama, array('konten/viewbycategory','idcategory'=>$kategori->id)),"</li>";       
     }
     
     
