@@ -30,7 +30,7 @@ class ProfileController extends Controller {
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id the ID of the model to be updated
      */
-    public function actionUpdate() {       
+    public function actionUpdate() {
         $profileModel = $this->loadProfileModel();
         if($profileModel==null){
             $profileModel = new Profile;

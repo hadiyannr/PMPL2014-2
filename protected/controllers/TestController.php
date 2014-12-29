@@ -79,8 +79,11 @@ class TestController extends Controller{
 //                    $data = $serviceName;
 			/** @var $eauth EAuthServiceBase */
 			$eauth = Yii::app()->eauth->getIdentity($serviceName);
+//                        if($serviceName == 'facebook'){
+//                            $this->redirect(array('test/testsosmed'));
+//                        }
 			$eauth->redirectUrl = Yii::app()->user->returnUrl;
-			$eauth->cancelUrl = $this->createAbsoluteUrl('testsosmed');
+			$eauth->cancelUrl = array('site/forgetpassword');
 
 			try {
 				if ($eauth->authenticate()) {
@@ -92,9 +95,11 @@ class TestController extends Controller{
 //					var_dump($eauth->getIsAuthenticated(), $eauth->getAttributes());
 
 					// successful authentication
+                                        echo $eauth->getServices();die();
 					if ($identity->authenticate()) {
 //                                            $emailUser = $identity->email;
 						Yii::app()->user->login($identity);
+//                                                Yii::app()->user->email='sds@ada.com';
 						//var_dump($identity->id, $identity->name, Yii::app()->user->id);exit;
 
 						// Save the attributes to display it in layouts/main.php
@@ -121,7 +126,7 @@ class TestController extends Controller{
 				}
 
 				// Something went wrong, redirect back to login page
-				$this->redirect(array('site/index'));
+				$this->redirect(array('test/testsosmed'));
 			}
 			catch (EAuthException $e) {
 				// save authentication error to session
