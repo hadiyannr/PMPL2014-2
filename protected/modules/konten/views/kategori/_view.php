@@ -1,6 +1,6 @@
 <?php
 /* @var $this KategoriController */
-/* @var $data KategoriKonten */
+/* @var $data ContentCategory */
 ?>
 
 <div class="view">

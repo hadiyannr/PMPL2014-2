@@ -45,7 +45,7 @@
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #ecf0f1">Konten <b class="caret"></b></a>
                                         <ul>
                                             <?php
-                                            $kategoris = KategoriKonten::model()->findAll();
+                                            $kategoris = ContentCategory::model()->findAll();
                                             foreach ($kategoris as $kategori): ?>
                                                 <li> <?php echo CHtml::link($kategori->nama, array('/konten/konten/viewbycategory','idcategory'=>$kategori->id),array('style'=>"color: #ecf0f1"));?></li>
                                             <?php endforeach;?>
@@ -95,7 +95,7 @@
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #ecf0f1">Konten <b class="caret"></b></a>
                                     <ul class="dropdown-menu">
                                         <?php
-                                        $kategoris = KategoriKonten::model()->findAll();
+                                        $kategoris = ContentCategory::model()->findAll();
                                         foreach ($kategoris as $kategori): ?>
                                             <li> <?php echo CHtml::link($kategori->nama, array('/konten/konten/viewbycategory','idcategory'=>$kategori->id),array('style'=>"color: #ecf0f1"));?></li>
                                         <?php endforeach;?>
@@ -156,7 +156,7 @@
         
         <div class="content-home <?php if ($_SESSION['home'] == false): ?><?php echo "nothome"?><?php endif ?> ">
              <div class="container">
-                <div class="pull-left">
+                <div>
                     <?php if(isset($this->breadcrumbs)):?>
                         <?php $this->widget('zii.widgets.CBreadcrumbs', array(
                         'links'=>$this->breadcrumbs,
@@ -201,8 +201,8 @@
                 </div>
             </div>
         </footer>
-        
-        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+<!--        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>-->
         <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/gmaps.js"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/jquery-1.11.0.min.js"></script>

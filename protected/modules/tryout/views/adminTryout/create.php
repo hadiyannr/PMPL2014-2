@@ -14,4 +14,4 @@ $this->menu=array(
 
 <h1>Buat Uji Coba Kemampuan</h1>
 
-<?php $this->renderPartial('_form', array('tryoutModel'=>$tryoutModel)); ?>
+<?php $this->renderPartial('_form', array('tryoutModel'=>$tryoutModel),false,true); ?>

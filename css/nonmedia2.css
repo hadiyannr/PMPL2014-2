@@ -5,6 +5,13 @@ input[type="submit"] {
   border: 0;
 }
 
+input[type="button"] {
+  border-radius: 0;
+  background-color: #e01e25;
+  color: white;
+  border: 0;
+}
+
 .list-view div.preheader, .list-view div.post div.header {
   background: none !important;
   background-color: black !important;
@@ -172,6 +179,16 @@ table.detail-view tr:hover {
 }
 .btn-preview-tryout {
   margin-left: 10px;
+}
+.btn-tryout {
+  color:white;
+  background-color: black;  
+  padding: 10px;
+}
+.btn-tryout:hover {
+  color: white;
+  text-decoration: none;
+  background-color: #3276b1 !important;
 }
 .admin-content {
   min-height: 100%;

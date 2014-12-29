@@ -173,6 +173,6 @@ echo '<br>';
 </div>
 <?php if(!Yii::app()->user->isGuest):?>
 <div style="margin-top:200px; margin-bottom:50px">
-    <?php echo CHtml::link('Riwayat Tryout',array('answerSheet/history'),array('class'=>'btn-primary'));?>
+    <?php echo CHtml::link('Riwayat Uji Coba',array('answerSheet/history'),array('class'=>'btn-tryout'));?>
 </div>
 <?php endif;?>

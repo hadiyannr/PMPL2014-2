@@ -26,7 +26,7 @@
     </div>
 	<div class="row">
 		<?php echo $form->labelEx($contentModel,'idcategory'); ?>
-		<?php echo $form->dropDownList($contentModel,'idcategory',  KategoriKonten::model()->getOptionList()); ?>
+		<?php echo $form->dropDownList($contentModel,'idcategory',  ContentCategory::model()->getOptionList()); ?>
 		<?php echo $form->error($contentModel,'idcategory'); ?>
 	</div>
 
@@ -49,7 +49,7 @@
         <label>Foto</label>
         <img id="photo" src="<?php
         if($contentModel->imagepath == null){
-            echo Yii::app()->request->baseUrl.'/images/photo.png';
+            echo Yii::app()->request->baseUrl.'/images/park-chan-hee.png';
         }else{
             echo Yii::app()->request->baseUrl.'/images/ContentPic/'.$contentModel->imagepath;
         }
@@ -68,9 +68,9 @@
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($contentModel->isNewRecord ? 'Buat' : 'Simpan', array('class'=>'btn btn-primary')); ?>
-                <?php echo CHtml::Button('Batal',array(
-                          'submit'=>$this->createUrl('index'),
-                          'class'=>'btn btn-danger')); ?>                
+                <?php echo CHtml::link('Batal',array(
+                          'index'),
+                          array('class'=>'btn btn-danger')); ?>
 	</div>        
 <?php $this->endWidget(); ?>
 

@@ -14,7 +14,7 @@
  *
  * The followings are the available model relations:
  * @property User $idAdmin0
- * @property KategoriKonten $idcategory0
+ * @property ContentCategory $idcategory0
  */
 class Konten extends CActiveRecord
 {
@@ -54,7 +54,7 @@ class Konten extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
                         'idAdmin0' => array(self::BELONGS_TO, 'User', 'idAdmin'),
-			'kategorikonten' => array(self::BELONGS_TO, 'KategoriKonten', 'idcategory'),                        
+			'ContentCategory' => array(self::BELONGS_TO, 'ContentCategory', 'idcategory'),                        
 		);
 	}
 
@@ -68,9 +68,9 @@ class Konten extends CActiveRecord
 			'idcategory' => 'Kategori',
 			'isi' => 'Isi',
 			'judul' => 'Judul',
-            'imagepath' => 'Lokasi Gambar',
+                        'imagepath' => 'Lokasi Gambar',
 			'isPublished' => 'Status Publikasi',
-            'idAdmin' => 'Editor',
+                        'idAdmin' => 'Editor',
 		);
 	}
 
@@ -80,7 +80,7 @@ class Konten extends CActiveRecord
 		$criteria=new CDbCriteria;		                
 		$criteria->compare('isi',$keyword,true,"OR");
 		$criteria->compare('judul',$keyword,true,"OR");
-        $criteria->compare('isPublished','1');
+                $criteria->compare('isPublished','1');
 
 		return Konten::model()->findAll($criteria);
 	}

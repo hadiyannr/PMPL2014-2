@@ -22,7 +22,7 @@
 <body>
     <header>
         <div class="header-nav">
-            <div class="container">
+            <div class="container admin-container">
 
 
                 <div class="navbar-header">
@@ -37,13 +37,13 @@
                     <ul class="dropdown-menu responsive-dropdown" role="menu" aria-labelledby="dLabel">
                        <?php if(Yii::app()->user->isAdmin()):?>
                         <li class="<?php echo (in_array($controllerName, array("adminKonten")))?"active":""?>">
-                            <?php echo CHtml::link("Konten", array('/konten/adminKonten/index'),array('style'=>"color: #ecf0f1")); ?>
+                            <?php echo CHtml::link("Konten", array('/konten/adminContent/index'),array('style'=>"color: #ecf0f1")); ?>
                         </li>
                         <li class="<?php echo (in_array($controllerName, array("adminTryout")))?"active":""?>">
                             <?php echo CHtml::link("Tryout", array('/tryout/adminTryout/index'),array('style'=>"color: #ecf0f1")); ?>
                         </li>
                         <li class="<?php echo (in_array($controllerName, array("kategori")))?"active":""?>">
-                            <?php echo CHtml::link("Kategori", array('/konten/kategori/index'),array('style'=>"color: #ecf0f1")); ?>
+                            <?php echo CHtml::link("Kategori", array('/konten/viewbycategory/index'),array('style'=>"color: #ecf0f1")); ?>
                         </li>
                     <?php endif;?>
                     <li>
@@ -68,13 +68,13 @@
                     <ul class="nav navbar-nav">
                         <?php if(Yii::app()->user->isAdmin()):?>
                             <li class="<?php echo (in_array($controllerName, array("adminKonten")))?"active":""?>">
-                                <?php echo CHtml::link("Konten", array('/konten/adminKonten/index'),array('style'=>"color: #ecf0f1")); ?>
+                                <?php echo CHtml::link("Konten", array('/konten/adminContent/index'),array('style'=>"color: #ecf0f1")); ?>
                             </li>
                             <li class="<?php echo (in_array($controllerName, array("adminTryout")))?"active":""?>">
                                 <?php echo CHtml::link("Tryout", array('/tryout/adminTryout/index'),array('style'=>"color: #ecf0f1")); ?>
                             </li>
                             <li class="<?php echo (in_array($controllerName, array("kategori")))?"active":""?>">
-                                <?php echo CHtml::link("Kategori", array('/konten/kategori/index'),array('style'=>"color: #ecf0f1")); ?>
+                                <?php echo CHtml::link("Kategori", array('/konten/viewbycategory/index'),array('style'=>"color: #ecf0f1")); ?>
                             </li>
                         <?php endif;?>
                         <li>
@@ -142,10 +142,10 @@
                 </div>
             </footer>
 
-            <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<!--            <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>-->
             <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+            <script src="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/jquery-1.11.0.min.js"></script>x
             <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/gmaps.js"></script>
-            <script src="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/jquery-1.11.0.min.js"></script>
             <script src="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/bootstrap.min.js"></script>
             <script src="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/main.js"></script>
             <script>
@@ -161,3 +161,34 @@
 
                     zoom: function() {
                         $('#zoom').elevateZoom({
+                            zoomWindowWidth: 300,
+                            zoomWindowHeight: 300,
+                            easing:true
+                        });
+                    },
+
+                    map: function() {
+                        var mark = new GMaps({
+                            div:"#map",
+                            lat: -6.368074,
+                            lng: 106.829559
+
+                        })
+                        mark.addMarker({
+                            lat: -6.368074,
+                            lng: 106.829559,
+                            title: 'Universitas Indonesia',
+                            click: function(e) {
+                                alert('You clicked in this marker');
+                            }
+                        });
+                    },
+                };
+
+                $(function (){
+                    Site.init();
+                });
+
+            </script>
+</body>
+</html>

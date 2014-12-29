@@ -41,7 +41,7 @@ class KategoriController extends Controller
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed
 	 */
-	public function actionViewByID($id)
+	public function actionView($id)
 	{
 		$this->render('view',array(
 			'kategoriModel'=>$this->loadKategoriModel($id),
@@ -54,7 +54,7 @@ class KategoriController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$kategoriModel = new KategoriKonten;
+		$kategoriModel = new ContentCategory;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -115,7 +115,7 @@ class KategoriController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$kategoriModel = new KategoriKonten('search');
+		$kategoriModel = new ContentCategory('search');
 		$kategoriModel->unsetAttributes();  // clear any default values
 		if(isset($_GET['Kategori']))
 			$kategoriModel->attributes=$_GET['Kategori'];
@@ -129,12 +129,12 @@ class KategoriController extends Controller
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return KategoriKonten the loaded model
+	 * @return ContentCategory the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadKategoriModel($id)
 	{
-		$kategoriModel = KategoriKonten::model()->findByPk($id);
+		$kategoriModel = ContentCategory::model()->findByPk($id);
 		if($kategoriModel===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $kategoriModel;
@@ -142,7 +142,7 @@ class KategoriController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param KategoriKonten $model the model to be validated
+	 * @param ContentCategory $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{

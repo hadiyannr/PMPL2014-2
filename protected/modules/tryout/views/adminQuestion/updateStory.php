@@ -17,4 +17,4 @@ $this->menu=array(
 
     <h1>Ubah Soal <?php echo $questionModel->id; ?></h1>
 
-<?php $this->renderPartial('_formStory', array('questionModel'=>$questionModel)); ?>
+<?php $this->renderPartial('_formStory', array('questionModel'=>$questionModel), false, true); ?>

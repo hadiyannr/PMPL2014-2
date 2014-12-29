@@ -183,7 +183,9 @@ class Thread extends CActiveRecord
         $subjlink = CHtml::link(CHtml::encode($this->subject), $this->url);
         //$authorlink = CHtml::link(CHtml::encode($firstpost->author->name), $firstpost->author->url);
         $authorlink = CHtml::link(CHtml::encode($firstpost->author->name) ,array('/profile/viewbyid/','id'=>$firstpost->author->siteid));
-
+        if(!is_numeric($firstpost->author->siteid)){
+            $authorlink = CHtml::link(CHtml::encode($firstpost->author->name) ,array('/profile/viewbyid/','id'=>0));
+        }
         return '<div class="name">'. $subjlink .'</div>'.
                 '<div class="level2">by '. $authorlink .'</div>';
     }
@@ -197,7 +199,9 @@ class Thread extends CActiveRecord
 
         //$authorlink = CHtml::link(CHtml::encode($author->name), $author->url);
         $authorlink = CHtml::link($author->name ,array('/profile/viewbyid/','id'=>$author->siteid));
-
+        if(!is_numeric($author->siteid)){
+            $authorlink = CHtml::link($author->name ,array('/profile/viewbyid/','id'=>0));
+        }
         return '<div class="level2">'. Yii::app()->controller->module->format_date($lastpost->created) .'</div>'.
                 '<div class="level3">by '. $authorlink .'</div>';
     }

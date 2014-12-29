@@ -49,11 +49,11 @@ class SiteController extends Controller
 	}
         
     public function actionActivationAccount($username, $code){           
-        $penggunaModel = User::model()->findByAttributes(array('username'=>$username));
-        $correctCode = crypt(Yii::app()->params['adminPassword'], $penggunaModel->username.$penggunaModel->email);
+        $userModel = User::model()->findByAttributes(array('username'=>$username));
+        $correctCode = crypt(Yii::app()->params['adminPassword'], $userModel->username.$userModel->email);
         if(strcmp($code, $correctCode) == 0){                
-            $penggunaModel->isActive = 1;                                
-            $penggunaModel->save();                
+            $userModel->isActive = 1;                                
+            $userModel->save();                
             Yii::app()->user->setFlash('message',"Selamat, akun anda telah aktif. Silahkan login.");
             $this->redirect(array('index'));
         }else{
@@ -65,13 +65,15 @@ class SiteController extends Controller
     public function actionForgetPassword()
     {
         if(isset($_POST['submit'])){
-            $penggunaModel = User::model()->findByAttributes(array("username"=>$_POST['username']));
-            if($penggunaModel == null || $penggunaModel->email != $_POST['email']){
+            $userModel = User::model()->findByAttributes(array("username"=>$_POST['username']));
+            if($userModel == null || $userModel->email != $_POST['email']){
                 Yii::app()->user->setFlash('message',"username atau email tidak cocok");
                 $this->refresh();
-            }elseif(!$this->sendEmailActivation($penggunaModel)){
+            }
+            elseif(!$this->sendEmailActivation($userModel)){
                 Yii::app()->user->setFlash('message',"Email tidak terkirim, silahkan coba lagi");
-            }else{
+            }
+            else{
                 Yii::app()->user->setFlash('message',"Silahkan cek email untuk melanjutkan proses penggantian password");
                 $this->redirect(array("index"));
             }
@@ -79,29 +81,10 @@ class SiteController extends Controller
         $this->render('forgetPasswordForm');
     }
 
-    public function sendEmailActivation($pengguna){
-            $activationCode = crypt(Yii::app()->params['adminPassword'], $pengguna->username.$pengguna->email);
-            $link = Yii::app()->params['site'].'/siapmasukui/index.php/site/confirmForgetPassword?username='.$pengguna->username.'&code='.$activationCode.'';
-            Yii::import('application.extensions.phpmailer.JPhpMailer');
-            $mail = new JPhpMailer();
-            $mail->IsSMTP();
-            $mail->Host = 'smtp.gmail.com';
-            $mail->Port = 587;
-            $mail->SMTPAuth = true;        
-            $mail->SMTPSecure = 'tls';
-            $mail->Username = Yii::app()->params['adminEmail'];
-            $mail->Password = Yii::app()->params['adminPassword'];
-            $mail->CharSet="utf-8";
-            $mail->SetFrom(Yii::app()->params['adminEmail'], 'Admin SiapMasukUI.com');
-            $mail->Subject = "[SiapMasukUI.com] Lupa Password";
-            $mail->MsgHTML('<div style="text-align:left">'
-                    . '<h1>SiapMasukUI.com</h1><br>'
-                    . '<p>Selamat datang '.$pengguna->username.',</p> '
-                    . '<p>Ikuti tautan di bawah ini untuk melanjutkan proses penggantian password</p> '
-                    . '<p><a href="'.$link.'">klik untuk mengganti password</a></p>'
-                    . '<br><p>Hormat kami,</p> <p>Admin <a href="'.Yii::app()->params['site'].'">'.Yii::app()->params['site'].'</a></p> '
-                    . '</div>');
-            $mail->AddAddress($pengguna->email, $pengguna->username);
+    public function sendEmailActivation($user){
+            $activationCode = crypt(Yii::app()->params['adminPassword'], $user->username.$user->email);
+            $link = Yii::app()->params['site'].'/siapmasukui/index.php/site/confirmForgetPassword?username='.$user->username.'&code='.$activationCode.'';
+            $mail = $this->setMailer($user, $link);
             return $mail->Send();
         }
 
@@ -160,5 +143,30 @@ class SiteController extends Controller
                 'class'=>'ext.hoauth.HOAuthAdminAction',
             ),
         );
+    }
+    
+    public function setMailer($user, $link) {
+            Yii::import('application.extensions.phpmailer.JPhpMailer');
+            $mail = new JPhpMailer();
+            $mail->IsSMTP();
+            $mail->Host = 'smtp.gmail.com';
+            $mail->Port = 587;
+            $mail->SMTPAuth = true;        
+            $mail->SMTPSecure = 'tls';
+            $mail->Username = Yii::app()->params['adminEmail'];
+            $mail->Password = Yii::app()->params['adminPassword'];
+            $mail->CharSet="utf-8";
+            $mail->SetFrom(Yii::app()->params['adminEmail'], 'Admin SiapMasukUI.com');
+            $mail->Subject = "[SiapMasukUI.com] Lupa Password";
+            $mail->MsgHTML('<div style="text-align:left">'
+                    . '<h1>SiapMasukUI.com</h1><br>'
+                    . '<p>Selamat datang '.$user->username.',</p> '
+                    . '<p>Ikuti tautan di bawah ini untuk melanjutkan proses penggantian password</p> '
+                    . '<p><a href="'.$link.'">klik untuk mengganti password</a></p>'
+                    . '<br><p>Hormat kami,</p> <p>Admin <a href="'.Yii::app()->params['site'].'">'.Yii::app()->params['site'].'</a></p> '
+                    . '</div>');
+            $mail->AddAddress($user->email, $user->username);
+            
+            return $mail;
     }
 }

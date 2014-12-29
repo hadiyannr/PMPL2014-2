@@ -17,4 +17,4 @@ $this->menu=array(
 
 <h1>Ubah Tryout <?php echo $tryoutModel->nama; ?></h1>
 
-<?php $this->renderPartial('_form', array('tryoutModel'=>$tryoutModel)); ?>
+<?php $this->renderPartial('_form', array('tryoutModel'=>$tryoutModel),false,true); ?>

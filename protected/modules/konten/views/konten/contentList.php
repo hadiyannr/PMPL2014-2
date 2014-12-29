@@ -5,62 +5,19 @@
 $this->breadcrumbs=array(
     'Daftar Konten',
 );?>
-<!--<div class="container">-->
-<!--	<div class="row clearfix">-->
-<!--		<div class="col-md-12 column">- ->
-<!--			<div class="row clearfix">-->
-<!--                --><?php //$counter = 0; ?>
-<!--				<div class="col-md-12 column">-->
-<!--                    <div>--><?php //if(isset($title)){echo '<h2>'.$title.'</h2>';}?><!--</div>-->
-<!--                    <br/><br/>-->
-<!--                    --><?php //if(isset($searchMessage)){echo '<h4>'.$searchMessage.'</h4>';}?>
-<!--					--><?php //foreach ($contentModelList as $konten):?>
-<!--						--><?php //if($counter%3==0):?>
-<!--							<div class="row">-->
-<!--						--><?php //endif;?>
-<!--                        <div class="col-md-3" style="padding:10px;">-->
-<!--                            <div class="column home-group">-->
-<!--                                <h3>--><?php //echo CHtml::link($konten->judul,array('index','id'=>$konten->id))?><!--</h3>-->
-<!--                                <p> --><?php
-//                                    $prev = strip_tags($konten->isi);
-//                                    echo substr($prev, 0, 100);
-//                                    ?>
-<!--                                </p>-->
-<!--                                <p class="more">-->
-<!--                                    --><?php //echo CHtml::link("More details",array('index','id'=>$konten->id))?>
-<!--                                </p>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--						--><?php //if($counter%3==2 || $counter == sizeof($contentModelList)-1):?>
-<!--							</div>-->
-<!--						--><?php //endif;?>
-<!--							-->
-<!--						--><?php //$counter++;?>
-<!--					--><?php //endforeach;?>
-<!--				</div>-->
-<!--			</div>-->
-<!--            <div class="row clearfix text-center" style="margin:40px;">-->
-<!--                <div class="col-md-4 col-md-offset-4">-->
-<!--                    --><?php //$this->widget('CLinkPager', array(
-//                        'pages' => $pages,
-//                    )) ?>
-<!--                </div>-->
-<!--            </div>-->
-<!--		</div>-->
-<!--	</div>-->
-<!--</div>-->
-
-
-
 <div class="container">
     <div class="row">
         <div class="col-md-12">
             <h2 class="judul-konten pull-left force-margin-0"><?php echo $title;?></h2>
             <div class="col-md-3 pull-right search-bar-content">
-                <form class="navbar-form cari-berita" role="search" method="post">
+                <form class="navbar-form cari-berita" role="search" method="get">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Cari berita" name="keyword" id="srch-term" size="14">
+                        <input type="text" class="form-control" placeholder="Cari" name="keyword" id="srch-term" size="14">
+                        <input type="hidden" name="search"/>
                         <div class="input-group-btn">
+<!--                            --><?php
+//                                echo CHtml::htmlButton('<span class="glyphicon glyphicon-search"></span>', array('class' => 'btn btn-default'));
+//                            ?>
                             <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
                         </div>
                     </div>

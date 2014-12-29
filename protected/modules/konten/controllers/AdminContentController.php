@@ -60,40 +60,41 @@ class AdminContentController extends Controller
 		if(isset($_POST['Konten']))
 		{
 			$contentModel->attributes=$_POST['Konten'];
-            $contentModel->idAdmin = Yii::app()->user->id;
-            $contentModel->image=CUploadedFile::getInstance($contentModel,'image');
-            $uploading = $contentModel->image != null;
+                        $contentModel->idAdmin = Yii::app()->user->id;
+                        $contentModel->image=CUploadedFile::getInstance($contentModel,'image');
+                        $uploading = $contentModel->image != null;
 
-            if($uploading){
-                $filetype = explode("/", $contentModel->image->getType())[1];
-                $contentModel->imagepath= Yii::app()->user->id . '.' .$filetype;
+                        if($uploading){
+                            $filetype = explode("/", $contentModel->image->getType())[1];
+                            $contentModel->imagepath= Yii::app()->user->id . '.' .$filetype;
 
 
-                $imageValidation = true;
-                $message= '';
+                            $imageValidation = true;
+                            $message= '';
 
-                if($filetype != 'jpeg' && $filetype != 'png'&& $filetype != 'jpg'){
-                    $imageValidation = false;
-                    $message = 'Tipe file salah, harus .jpg atau .png';
-                }
+                            if($filetype != 'jpeg' && $filetype != 'png'&& $filetype != 'jpg'){
+                                $imageValidation = false;
+                                $message = 'Tipe file salah, harus .jpg atau .png';
+                            }
 
-                if($contentModel->image->getSize() > 20000000){
-                    $imageValidation = false;
-                    $message = 'Ukuran harus kurang dari 20MB';
-                }
+                            if($contentModel->image->getSize() > 20000000){
+                                $imageValidation = false;
+                                $message = 'Ukuran harus kurang dari 20MB';
+                            }
 
-                if(!$imageValidation){
-                    $contentModel->addError('image', $message);
-                }
-            }
+                            if(!$imageValidation){
+                                $contentModel->addError('image', $message);
+                            }
+                        }else{
+                            $contentModel->imagepath = Yii::app()->request->baseUrl.'/images/park-chan-hee.png';
+                        }
 
-			if(!$contentModel->hasErrors() && $contentModel->save()){
-            //if(!$contentModel->hasErrors()){
-                if($uploading){
-                    $contentModel->image->saveAs(Yii::app()->basePath.'/../images/ContentPic/'.$contentModel->imagepath);
-                }
-				$this->redirect(array('view','id'=>$contentModel->id));
-            }
+                        if(!$contentModel->hasErrors() && $contentModel->save()){
+                            if($uploading){
+                                $contentModel->image->saveAs(Yii::app()->basePath.'/../images/ContentPic/'.$contentModel->imagepath);
+                            }
+                            $this->redirect(array('view','id'=>$contentModel->id));
+                        }
 		}
 
 		$this->render('create',array(
@@ -118,35 +119,34 @@ class AdminContentController extends Controller
 			$contentModel->attributes=$_POST['Konten'];
                         $contentModel->idAdmin = Yii::app()->user->id;
 
-            $uploading = $contentModel->image != null;
-            if($uploading){
-                $filetype = explode("/", $contentModel->image->getType())[1];
-                $contentModel->imagepath= Yii::app()->user->id . '.' .$filetype;
+                        $uploading = $contentModel->image != null;
+                        if($uploading){
+                            $filetype = explode("/", $contentModel->image->getType())[1];
+                            $contentModel->imagepath= Yii::app()->user->id . '.' .$filetype;
 
+                            $imageValidation = true;
+                            $message= '';
 
-                $imageValidation = true;
-                $message= '';
+                            if($filetype != 'jpeg' && $filetype != 'png'&& $filetype != 'jpg'){
+                                $imageValidation = false;
+                                $message = 'Tipe file salah, harus .jpg atau .png';
+                            }
 
-                if($filetype != 'jpeg' && $filetype != 'png'&& $filetype != 'jpg'){
-                    $imageValidation = false;
-                    $message = 'Tipe file salah, harus .jpg atau .png';
-                }
+                            if($contentModel->image->getSize() > 20000000){
+                                $imageValidation = false;
+                                $message = 'Ukuran harus kurang dari 20MB';
+                            }
 
-                if($contentModel->image->getSize() > 20000000){
-                    $imageValidation = false;
-                    $message = 'Ukuran harus kurang dari 20MB';
-                }
-
-                if(!$imageValidation){
-                    $contentModel->addError('image', $message);
-                }
-            }
-            if(!$contentModel->hasErrors() && $contentModel->save()){
-                if($uploading){
-                    $contentModel->image->saveAs(Yii::app()->basePath.'/../images/ContentPic/'.$contentModel->imagepath);
-                }
-                $this->redirect(array('view','id'=>$contentModel->id));
-            }
+                            if(!$imageValidation){
+                                $contentModel->addError('image', $message);
+                            }
+                        }
+                        if(!$contentModel->hasErrors() && $contentModel->save()){
+                            if($uploading){
+                                $contentModel->image->saveAs(Yii::app()->basePath.'/../images/ContentPic/'.$contentModel->imagepath);
+                            }
+                            $this->redirect(array('view','id'=>$contentModel->id));
+                        }
 		}
 
 		$this->render('update',array(

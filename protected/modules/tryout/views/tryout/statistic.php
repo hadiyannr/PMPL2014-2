@@ -20,7 +20,11 @@
                 <tr>                    
                     <td><?php echo $no++; ?></td>
                     <?php $profileModel = Profile::model()->findByAttributes(array('idPengguna'=>$answerSheet->idPengguna))?>
-                    <?php $profileLink = CHtml::link($answerSheet->idPengguna0->username ,array('/profile/view/','id'=>$profileModel->idPengguna)); ?>
+                    <?php 
+                        $profileLink = CHtml::link($answerSheet->idPengguna0->username ,array('/profile/viewbyid/','id'=>$profileModel->idPengguna)); 
+                        if(!is_numeric($profileModel->idPengguna)){
+                        $profileLink = CHtml::link($answerSheet->idPengguna0->username ,array('/profile/viewbyid/','id'=>0));         }
+                    ?>
                     <td><?php echo $profileLink; ?></td>
 
                     <td><?php echo $answerSheet->nilai; ?></td>

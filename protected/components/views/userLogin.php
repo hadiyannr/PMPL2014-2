@@ -22,7 +22,7 @@
                         <input type="checkbox" name="LoginForm[rememberMe]">
                     </div>
 					<!-- Untuk lupa password -->
-					<p> <?php echo CHtml::link('Lupa password?',array('/site/Forget'),array('style'=>'color:#6fc5a4 !important;')) ?> </p>
+					<p> <?php echo CHtml::link('Lupa password?',array('/site/ForgetPassword'),array('style'=>'color:#6fc5a4 !important;')) ?> </p>
                     <button type="submit" class="btn btn-primary">Masuk</button>					
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Batal</button>
                     <br><br><br>

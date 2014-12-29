@@ -69,6 +69,24 @@ input, .form-control {
   background-color: red;
 }
 
+.form-control:focus {
+  border-color: #fedc00;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(254, 220, 0, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(254, 220, 0, 0.6);
+}
+
+input[type="text"]:focus {
+  outline-color: #fedc00;
+}
+
+select:focus {
+  outline-color: #fedc00;
+}
+
+textarea:focus {
+  outline-color: #fedc00;
+}
+
 /* Button */
 .btn {
   font-family: LatoLatin;
@@ -411,6 +429,10 @@ nav li.active:hover, a:hover {
   margin-right: 10.417%;/* 200px; */
 }
 
+.carousel-indicators .active {
+  background-color: #fedc00;
+}
+
 .modal-content {
   padding: 15px;
 }
@@ -419,8 +441,51 @@ nav li.active:hover, a:hover {
   content: url("view.png");
 }
 
+.grid-view .items .delete,
+.grid-view .items .update {
+  padding: 15px;
+}
+
 .newthread img {
   content: url("view.png");
+}
+
+.newthread .btn-primary {
+  margin-bottom: 10px;
+}
+
+.post .footer .btn-primary {
+  text-decoration: none;
+  margin-right: -5px;
+  font-size: 12px;
+}
+
+#post-form .buttons input[type="submit"]{
+  padding: 10px
+}
+
+.form .buttons input[type="button"] {
+padding: 10px;
+}
+
+.form .buttons input[type="submit"]{
+  padding: 10px
+}
+
+#tryout-form .btn-danger {
+  padding: 7px;
+}
+
+#konten-form .btn-danger {
+  padding: 7px;
+}
+
+#soal-form textarea {
+  height: 100px !important;
+}
+
+.overflow-auto {
+  overflow: auto;
 }
 
 .zocial {

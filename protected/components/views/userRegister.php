@@ -10,7 +10,7 @@
                     <div class="form-group">
                         <label data-toggle="tooltip" data-placement="top" title="Please use your real name">Nama pengguna</label>
                         <br>
-                        <input name="DaftarForm[username]" type="text" class="form-control" placeholder="No Space, min 5 characters" pattern="^[a-zA-Z0-9]{5,}$" required>
+                        <input name="DaftarForm[username]" type="text" class="form-control" placeholder="Tanpa spasi, minimal 5 karakter" pattern="^[a-zA-Z0-9]{5,}$" required>
                     </div>
                     <div class="form-group">
                         <label >Alamat e-mail</label>
@@ -20,7 +20,7 @@
                     <div class="form-group">
                         <label data-toggle="tooltip" data-placement="top" title="At least 5 characters, No Space, max 32 characters">Password</label>
                         <br>
-                        <input name="DaftarForm[password]" type="password" class="form-control" placeholder="No Space, 5-32 characters" pattern="^[a-zA-Z0-9]*{5,32}$" required>
+                        <input name="DaftarForm[password]" type="password" class="form-control" placeholder="Tanpa spasi, 5-32 karakter" pattern="^[a-zA-Z0-9]*{5,32}$" required>
                     </div>				
                     <div class="form-group">
                         <label>Konfirmasi password</label>
