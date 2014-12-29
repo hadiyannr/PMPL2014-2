@@ -19,6 +19,7 @@ $this->menu=array(
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'konten-grid',
+	'summaryText' => 'Menampilkan {start} - {end} dari {count} daftar konten ',
 	'dataProvider'=>new CActiveDataProvider(Konten::model()),
     'ajaxUpdate'=>false,
 	'columns'=>array(
