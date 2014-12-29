@@ -81,7 +81,7 @@
         <?php endforeach; ?>
 
     </div>
-    <div class="col-md-2 home-more">
+    <div class="col-md-2 home-more" style="font-size:8pt">
 <!--        <p><a class="btn bg-black ft-bright-yellow" href="">MORE</a></p>-->
         <p>
             <?php

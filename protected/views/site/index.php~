@@ -81,12 +81,12 @@
         <?php endforeach; ?>
 
     </div>
-    <div class="col-md-2 home-more">
+    <div class="col-md-2 home-more" style="font-size:12pt">
 <!--        <p><a class="btn bg-black ft-bright-yellow" href="">MORE</a></p>-->
         <p>
             <?php
             
-                echo CHtml::link('Berita Lainnya',array('/konten/konten/viewbycategory', 'idcategory'=>3),array('class'=>'btn bg-black ft-bright-yellow btn-more'),array('style'=>'font-size:30px'));
+                echo CHtml::link('Berita Lainnya',array('/konten/konten/viewbycategory', 'idcategory'=>3),array('class'=>'btn bg-black ft-bright-yellow btn-more'));
 				            
             ?>
         </p>

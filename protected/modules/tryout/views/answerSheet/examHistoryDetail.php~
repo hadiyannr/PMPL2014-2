@@ -6,8 +6,8 @@
 
 <?php
 $this->breadcrumbs = array(
-    'Uji Coba Kemampuan'=>array("index"),
-    'Riwayat Uji Coba',
+    'Riwayat Uji Coba'=>array("index"),
+    'Hasil Uji Coba',
     );
 echo '<br>';
 ?>

@@ -9,7 +9,7 @@ $this->renderPartial('_subforums', array(
     'subforums' => $subforumsProvider,
 ));
 
-$newthread = $forum->is_locked?'':'<div class="newthread" style="float:right;">'. CHtml::link('New Thread', array('/forum/thread/create', 'id'=>$forum->id),array('class'=>'btn btn-primary')) .'</div>';
+$newthread = $forum->is_locked?'':'<div class="newthread" style="float:right;">'. CHtml::link('Buat Thread baru', array('/forum/thread/create', 'id'=>$forum->id),array('class'=>'btn btn-primary')) .'</div>';
 
 $gridColumns = array(
     array(

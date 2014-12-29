@@ -48,7 +48,7 @@
         <?php endif; ?>
 
         <div class="row buttons">
-            <?php echo CHtml::submitButton('Buat Thread'); ?>
+            <?php echo CHtml::submitButton('Buat Threat'); ?>
         </div>
     <?php $this->endWidget(); ?>
 </div><!-- form -->
